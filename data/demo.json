@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "userId": "u001",
+    "nombre": "JOSE GUILLERMO CALDERON",
+    "genero": "Hombre",
+    "edad": 39,
+    "pais": "CO",
+    "avatar": "🏃",
+    "prs": [
+      { "dist": "10K", "mark": "48:32", "color": "#7EB8FF" },
+      { "dist": "21K", "mark": "1:52:14", "color": "#CAFF00" },
+      { "dist": "42K", "mark": "4:05:00", "color": "#FFB800" }
+    ],
+    "metaCarrera": {
+      "nombre": "Maraton Seoul",
+      "fecha": "2026-03-16",
+      "label": "SEUL",
+      "diasPrep": 90
+    },
+    "isPro": true,
+    "generadoEn": "2026-02-22T09:00:00Z"
+  },
+  "activities": [
+    {"date":"2025-11-02","name":"Ricaurte Corrida","dist_km":8.77,"duration_min":70.8,"pace":"8:03","pace_raw":8.066,"hr":144,"kcal":673,"elevation":24.0,"points":13,"effort":null,"heart_eff":0.01435},
+    {"date":"2025-11-05","name":"La Calera Corrida","dist_km":15.01,"duration_min":119.7,"pace":"7:58","pace_raw":7.973,"hr":141,"kcal":1145,"elevation":77.0,"points":23,"effort":null,"heart_eff":0.01482},
+    {"date":"2025-11-07","name":"La Calera Corrida","dist_km":10.01,"duration_min":75.4,"pace":"7:31","pace_raw":7.528,"hr":143,"kcal":789,"elevation":77.0,"points":15,"effort":null,"heart_eff":0.01548},
+    {"date":"2025-02-15","name":"La Calera - 7k Tempo","dist_km":7.01,"duration_min":40.7,"pace":"5:48","pace_raw":5.808,"hr":159,"kcal":545,"elevation":null,"points":9,"effort":13.39,"heart_eff":0.01805},
+    {"date":"2026-02-17","name":"La Calera - 10k","dist_km":12.0,"duration_min":92.3,"pace":"7:41","pace_raw":7.689,"hr":149,"kcal":944,"elevation":null,"points":18,"effort":10.23,"heart_eff":0.01455},
+    {"date":"2026-02-19","name":"La Calera - 30k","dist_km":30.01,"duration_min":223.4,"pace":"7:26","pace_raw":7.445,"hr":155,"kcal":2372,"elevation":null,"points":43,"effort":10.62,"heart_eff":0.01445},
+    {"date":"2026-02-21","name":"La Calera - 5 X 1200","dist_km":7.49,"duration_min":48.9,"pace":"6:31","pace_raw":6.527,"hr":154,"kcal":593,"elevation":null,"points":10,"effort":12.14,"heart_eff":0.01658}
+  ],
+  "weekly": [
+    {"week":"2025-11-03/2025-11-09","total_km":35.0,"sessions":3,"avg_hr":141.3,"total_kcal":2720,"avg_pace":7.589},
+    {"week":"2025-11-10/2025-11-16","total_km":31.1,"sessions":2,"avg_hr":143.0,"total_kcal":2407,"avg_pace":7.823},
+    {"week":"2025-11-17/2025-11-23","total_km":40.1,"sessions":4,"avg_hr":146.2,"total_kcal":3148,"avg_pace":7.168},
+    {"week":"2025-11-24/2025-11-30","total_km":37.3,"sessions":2,"avg_hr":164.0,"total_kcal":3136,"avg_pace":6.232},
+    {"week":"2026-01-26/2026-02-01","total_km":35.0,"sessions":3,"avg_hr":159.7,"total_kcal":2791,"avg_pace":6.7},
+    {"week":"2026-02-02/2026-02-08","total_km":30.8,"sessions":3,"avg_hr":153.0,"total_kcal":2453,"avg_pace":7.012},
+    {"week":"2026-02-09/2026-02-15","total_km":45.8,"sessions":3,"avg_hr":153.7,"total_kcal":3684,"avg_pace":7.305},
+    {"week":"2026-02-16/2026-02-22","total_km":49.5,"sessions":3,"avg_hr":152.7,"total_kcal":3909,"avg_pace":7.22}
+  ],
+  "sway": {
+    "semana": "16 – 22 feb 2026",
+    "score": 84,
+    "headline": "Tu mejor semana del ciclo",
+    "subheadline": "49.5 km con carga controlada y progresión sostenida",
+    "readiness": 78,
+    "projectedTime": "3:58:00",
+    "projectedPace": "5:39",
+    "aiVerdict": "Esta semana consolidaste el volumen más alto del ciclo con una distribución inteligente: el 30k del jueves fue exigente pero tu FC se mantuvo dentro del rango esperado para ese esfuerzo. Los intervalos del viernes confirman que tu velocidad de umbral está subiendo. Con Seoul a 23 días, el timing es perfecto para iniciar el taper.",
+    "strengths": [
+      "Volumen récord del ciclo (49.5 km) con FC estable",
+      "Tempo del martes mostró mejora de 8 seg/km vs hace 4 semanas",
+      "Intervalos ejecutados en zona 4 sostenida sin deriva de FC"
+    ],
+    "warnings": [
+      "ACWR en 1.31 — zona de alerta leve, iniciar reducción esta semana",
+      "Esfuerzo percibido en el 30k fue alto (10.62) — priorizar recuperación"
+    ],
+    "keyMetrics": [
+      {"label":"ACWR","value":"1.31x","trend":"up","status":"yellow","note":"Límite superior zona segura"},
+      {"label":"HeartEff","value":"0.0155","trend":"up","status":"green","note":"Mejorando consistentemente"},
+      {"label":"Carga crónica","value":"37.8 km","trend":"up","status":"green","note":"Base sólida para taper"},
+      {"label":"% sesiones fáciles","value":"67%","trend":"stable","status":"yellow","note":"Ideal: 80% — ligeramente alto en intensidad"}
+    ],
+    "weekPlan": [
+      {"day":"Lun","type":"Descanso activo","km":"—","notes":"Caminata 20-30 min. Estiramientos."},
+      {"day":"Mié","type":"Rodaje suave","km":"14-16 km","notes":"Ritmo 8:00-8:30/km. Conversacional."},
+      {"day":"Vie","type":"Rodaje medio","km":"10-12 km","notes":"Incluir 4x200m de strides al final."},
+      {"day":"Dom","type":"Último largo","km":"18-20 km","notes":"Ritmo maratón + 30 seg. Último long run antes de Seoul."}
+    ],
+    "injuryRisk": {
+      "level": "medium",
+      "score": 38,
+      "topRisk": "Isquiotibiales / rodilla derecha",
+      "action": "Foam roller post-sesión. Reducir volumen 25% esta semana."
+    },
+    "funFact": "En las últimas 8 semanas corriste 312 km — equivale a Bogotá → Medellín en línea recta.",
+    "seoulTip": "La maratón de Seoul tiene los primeros 10K casi planos. Sal conservador — el muro llega en el km 32 por el puente Mapo."
+  },
+  "taper": [
+    {"week":"Feb 23 – Mar 1","label":"REDUCCION ACTIVA","km":"32-36","sessions":3,"focus":"Último rodaje largo 18-20km. Reducir 30% volumen. Mantener strides.","color":"#CAFF00"},
+    {"week":"Mar 2 – Mar 9","label":"TAPER PROFUNDO","km":"20-25","sessions":3,"focus":"Rodajes cortos. Dos sesiones de aceleraciones. Sueño y nutrición.","color":"#0054FF"},
+    {"week":"Mar 10 – Mar 15","label":"SEMANA DE CARRERA","km":"10-15","sessions":2,"focus":"Rodajes suaves 20-30min. Activación 3km el sábado. Carbo-loading.","color":"#FFB800"}
+  ],
+  "retos": [
+    {
+      "id": 1,
+      "name": "Spring 120K",
+      "org": "SWETRO",
+      "type": "distancia",
+      "typeIcon": "🏃",
+      "goal": 120,
+      "unit": "km",
+      "userProgress": 49.5,
+      "startDate": "1 mar",
+      "endDate": "30 abr",
+      "daysLeft": 34,
+      "totalDays": 60,
+      "participants": 69,
+      "status": "activo",
+      "virtual": true,
+      "rank": 12,
+      "totalRanked": 69,
+      "prizeTiers": [],
+      "description": "Corre 120km en 60 dias.",
+      "leaderboard": [
+        {"pos":1,"name":"Carlos M.","avatar":"CM","km":89.2,"delta":"+4.1"},
+        {"pos":2,"name":"Andrea P.","avatar":"AP","km":81.5,"delta":"+2.8"},
+        {"pos":3,"name":"Luis R.","avatar":"LR","km":76.3,"delta":"+5.2"},
+        {"pos":11,"name":"Sofia V.","avatar":"SV","km":51.8,"delta":"+1.2"},
+        {"pos":12,"name":"Tu","avatar":"JC","km":49.5,"delta":"+7.5","isUser":true},
+        {"pos":13,"name":"Miguel A.","avatar":"MA","km":47.1,"delta":"+0.9"}
+      ]
+    }
+  ]
+}
