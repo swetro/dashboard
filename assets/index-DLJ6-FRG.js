@@ -21,7 +21,7 @@ Error generating stack: `+e.message+`
     .sidebar { width: 240px; background: ${p.bg}; border-right: 1px solid ${p.border};
       display: flex; flex-direction: column; position: fixed; top: 0; bottom: 0; left: 0;
       z-index: 10; padding: 24px 14px; gap: 4px }
-    .side-logo { height: 24px; width: auto; display: block; margin: 0 10px 24px }
+    .side-logo { height: 24px; width: auto; object-fit: contain; display: block; margin: 0 10px 24px }
     .nav-btn { display: flex; align-items: center; gap: 10px; padding: 10px 12px;
       background: transparent; border: 1px solid transparent; border-radius: 10px;
       color: ${p.muted}; font-size: 12px; font-weight: 600; letter-spacing: .04em;
