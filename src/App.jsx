@@ -664,3 +664,4 @@ export default function App() {
     </div>
   );
 }
+// práctica de git para entrevista
