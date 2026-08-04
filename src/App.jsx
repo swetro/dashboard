@@ -38,13 +38,6 @@ function getDataUrl(userId) {
   return `${import.meta.env.BASE_URL}data/${userId}.json`;
 }
 
-function calcACWR(weekly) {
-  if (!weekly || weekly.length < 5) return 1.0;
-  const last = weekly[weekly.length - 1].total_km;
-  const prev4 = weekly.slice(-5, -1).map(w => w.total_km);
-  const chronic = prev4.reduce((s, v) => s + v, 0) / 4;
-  return chronic === 0 ? 0 : Math.round((last / chronic) * 100) / 100;
-}
 
 function daysUntil(dateStr, fromStr) {
   const target = new Date(dateStr);
@@ -181,14 +174,14 @@ function ErrorScreen({ msg }) {
 }
 
 // ── TABS (Retos oculto por ahora) ────────────────────────────
-const TABS = ["SWAY", "SEMANA", "CARGA"];
+const TABS = ["PULSE", "SEMANA", "CARGA"];
 
 // ── MAIN ─────────────────────────────────────────────────────
 export default function App() {
   const [data, setData]   = useState(null);
   const [error, setError] = useState(null);
-  const [tab, setTab]     = useState("SWAY");
-  const [swayExp, setSwayExp] = useState(false);
+  const [tab, setTab]     = useState("PULSE");
+  const [pulseExp, setPulseExp] = useState(false);
 
   useEffect(() => {
     fetch(getDataUrl(getUserId()))
@@ -200,19 +193,27 @@ export default function App() {
   if (error) return <ErrorScreen msg={error} />;
   if (!data) return <LoadingScreen />;
 
-  const { meta, activities, weekly, sway, taper } = data;
+  const { meta, activities, weekly, acwr: acwrData, pulse, taper } = data;
   const hasMeta = meta.metaCarrera.fecha !== "2027-01-01";
   const daysLeft = daysUntil(meta.metaCarrera.fecha, meta.generadoEn);
   const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScpOyf-mD9AjSIlLm1zGIiZQN8E7Dj1yv6tu0-Pj7EMBGL2ow/viewform";
   const lastWeek = weekly[weekly.length - 1];
   const prevWeek = weekly[weekly.length - 2];
-  const acwr = calcACWR(weekly);
+  const acwr = acwrData?.valor ?? null;
+  const acwrConfiable = !!acwrData?.confiable;
   const weeklyIncrease = prevWeek && prevWeek.total_km > 0
     ? Math.round(((lastWeek.total_km - prevWeek.total_km) / prevWeek.total_km) * 100)
     : 0;
   const incSign = (weeklyIncrease >= 0 ? "+" : "") + weeklyIncrease + "%";
-  const acwrColor = acwr > 1.5 ? S.danger : acwr > 1.3 ? S.warning : acwr < 0.8 ? S.cobalt : S.neon;
-  const acwrLabel = acwr > 1.5 ? "ZONA DE RIESGO" : acwr > 1.3 ? "ZONA DE ALERTA" : acwr < 0.8 ? "SUBENTRENAMIENTO" : "ZONA SEGURA";
+  const acwrColor = acwr === null || !acwrConfiable
+    ? S.dim
+    : acwr > 1.5 ? S.danger : acwr > 1.3 ? S.warning : acwr < 0.8 ? S.cobalt : S.neon;
+  const acwrLabel = acwr === null
+    ? "SIN DATOS SUFICIENTES"
+    : !acwrConfiable
+      ? "BASE AÚN LIMITADA"
+      : acwr > 1.5 ? "ZONA DE RIESGO" : acwr > 1.3 ? "ZONA DE ALERTA" : acwr < 0.8 ? "SUBENTRENAMIENTO" : "ZONA SEGURA";
+  const acwrDisplay = acwr === null ? "—" : `${acwr}x`;
 
   const last8 = weekly.slice(-8);
   const maxKm = Math.max(...last8.map(w => w.total_km), 1);
@@ -220,10 +221,10 @@ export default function App() {
 
   const recentSessions = [...activities].reverse().slice(0, 6).map(a => ({ ...a, tag: getTag(a) }));
 
-  const nextSession = sway?.weekPlan?.[0] || null;
-  const restWeekPlan = sway?.weekPlan?.slice(1) || [];
+  const nextSession = pulse?.weekPlan?.[0] || null;
+  const restWeekPlan = pulse?.weekPlan?.slice(1) || [];
 
-  const balanceMetric = sway?.keyMetrics?.find(m => (m.label || "").toLowerCase().includes("fácil"));
+  const balanceMetric = pulse?.keyMetrics?.find(m => (m.label || "").toLowerCase().includes("fácil"));
 
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap');
@@ -328,25 +329,25 @@ export default function App() {
 
         <div className="content">
 
-          {/* ══ SWAY ══ */}
-          {tab === "SWAY" && sway && (
+          {/* ══ PULSE ══ */}
+          {tab === "PULSE" && pulse && (
             <div>
-              <h1 className="page-title">Análisis SWAY</h1>
+              <h1 className="page-title">Análisis PULSE</h1>
 
               <div className="grid2">
                 {/* Score */}
                 <div className="card" style={{ background: "linear-gradient(160deg,rgba(202,255,0,.09),rgba(61,126,255,.07) 70%)", borderColor: "rgba(202,255,0,.22)" }}>
                   <div style={{ fontSize: 10, color: S.neon, fontWeight: 700, letterSpacing: ".08em", marginBottom: 12 }}>
-                    TU SWAY DE HOY
+                    TU PULSE DE HOY
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 72, fontWeight: 900, color: S.text, lineHeight: 1 }}>
-                    {sway.score}<span style={{ fontSize: 22, color: S.dim, fontFamily: "Poppins", fontWeight: 600 }}>/100</span>
+                    {pulse.score}<span style={{ fontSize: 22, color: S.dim, fontFamily: "Poppins", fontWeight: 600 }}>/100</span>
                   </div>
                   <div style={{ fontSize: 15, fontWeight: 600, color: S.text, marginTop: 12, lineHeight: 1.4 }}>
-                    {sway.headline}
+                    {pulse.headline}
                   </div>
                   {(() => {
-                    const s = sway.score;
+                    const s = pulse.score;
                     const ranges = [
                       { max: 30, label: "Necesita atención urgente", color: S.danger },
                       { max: 50, label: "Por debajo de lo esperado", color: S.warning },
@@ -379,11 +380,11 @@ export default function App() {
                       borderRadius: 20, padding: "3px 10px", letterSpacing: ".06em" }}>{acwrLabel}</span>
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 56, fontWeight: 900, color: acwrColor, lineHeight: 1 }}>
-                    {acwr}x
+                    {acwrDisplay}
                   </div>
                   <ACWRSlider acwr={acwr} color={acwrColor} />
                   <div style={{ fontSize: 12, color: S.muted, marginTop: 12, lineHeight: 1.6 }}>
-                    {sway.injuryRisk?.action || sway.warnings?.[0] || "Óptimo: 0.8 – 1.3x"}
+                    {pulse.injuryRisk?.action || pulse.warnings?.[0] || "Óptimo: 0.8 – 1.3x"}
                   </div>
                 </div>
               </div>
@@ -391,15 +392,15 @@ export default function App() {
               {/* Análisis */}
               <div className="card" style={{ marginBottom: 16 }}>
                 <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 14 }}>
-                  ANÁLISIS SWAY
+                  ANÁLISIS PULSE
                 </div>
                 <div style={{ fontSize: 13, color: S.muted, lineHeight: 1.8, textAlign: "justify" }}>
-                  {swayExp ? sway.aiVerdict : (sway.aiVerdict || "").slice(0, 280) + ((sway.aiVerdict || "").length > 280 ? "..." : "")}
+                  {pulseExp ? pulse.aiVerdict : (pulse.aiVerdict || "").slice(0, 280) + ((pulse.aiVerdict || "").length > 280 ? "..." : "")}
                 </div>
-                {swayExp && sway.strengths?.length > 0 && (
+                {pulseExp && pulse.strengths?.length > 0 && (
                   <div style={{ marginTop: 16 }}>
                     <div style={{ fontSize: 10, color: S.neon, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>FORTALEZAS</div>
-                    {sway.strengths.map((s, i) => (
+                    {pulse.strengths.map((s, i) => (
                       <div key={i} style={{ display: "flex", gap: 8, marginBottom: 7 }}>
                         <span style={{ color: S.neon, fontSize: 13, flexShrink: 0 }}>✓</span>
                         <span style={{ fontSize: 12, color: S.muted, lineHeight: 1.5 }}>{s}</span>
@@ -407,10 +408,10 @@ export default function App() {
                     ))}
                   </div>
                 )}
-                {swayExp && sway.warnings?.length > 0 && (
+                {pulseExp && pulse.warnings?.length > 0 && (
                   <div style={{ marginTop: 14 }}>
                     <div style={{ fontSize: 10, color: S.warning, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>ALERTAS</div>
-                    {sway.warnings.map((w, i) => (
+                    {pulse.warnings.map((w, i) => (
                       <div key={i} style={{ display: "flex", gap: 8, marginBottom: 7 }}>
                         <span style={{ color: S.warning, fontSize: 13, flexShrink: 0 }}>⚠</span>
                         <span style={{ fontSize: 12, color: S.muted, lineHeight: 1.5 }}>{w}</span>
@@ -418,11 +419,11 @@ export default function App() {
                     ))}
                   </div>
                 )}
-                {(sway.aiVerdict || "").length > 280 && (
-                  <button onClick={() => setSwayExp(!swayExp)} style={{
+                {(pulse.aiVerdict || "").length > 280 && (
+                  <button onClick={() => setPulseExp(!pulseExp)} style={{
                     background: "none", border: "none", color: S.cobalt, fontSize: 12,
                     fontWeight: 600, marginTop: 12, padding: 0 }}>
-                    {swayExp ? "Ver menos ↑" : "Ver análisis completo ↓"}
+                    {pulseExp ? "Ver menos ↑" : "Ver análisis completo ↓"}
                   </button>
                 )}
               </div>
@@ -455,7 +456,7 @@ export default function App() {
               )}
 
               {/* Proyección */}
-              {sway.projectedTime && (
+              {pulse.projectedTime && (
                 <div className="card" style={{ background: "rgba(61,126,255,.07)", borderColor: "rgba(61,126,255,.2)" }}>
                   <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10 }}>
                     PROYECCIÓN {meta.metaCarrera.nombre.toUpperCase()}
@@ -463,16 +464,16 @@ export default function App() {
                   <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap" }}>
                     <div>
                       <div style={{ fontFamily: FONT_NUM, fontSize: 48, fontWeight: 900, color: S.cobalt, lineHeight: 1 }}>
-                        {sway.projectedTime}
+                        {pulse.projectedTime}
                       </div>
                       <div style={{ fontSize: 12, color: S.muted, marginTop: 4 }}>
-                        Ritmo: <strong style={{ color: S.text }}>{sway.projectedPace}/km</strong>
+                        Ritmo: <strong style={{ color: S.text }}>{pulse.projectedPace}/km</strong>
                       </div>
                     </div>
-                    {sway.funFact && (
+                    {pulse.funFact && (
                       <div style={{ flex: 1, minWidth: 200, fontSize: 12, color: S.muted, lineHeight: 1.7,
                         borderLeft: `2px solid ${S.border}`, paddingLeft: 20 }}>
-                        🏃 {sway.funFact}
+                        🏃 {pulse.funFact}
                       </div>
                     )}
                   </div>
@@ -590,9 +591,10 @@ export default function App() {
               {/* Explicación ACWR */}
               <div className="card" style={{ marginBottom: 16, padding: "16px 20px" }}>
                 <div style={{ fontSize: 12.5, color: S.muted, lineHeight: 1.7 }}>
-                  <strong style={{ color: S.text }}>¿Qué es el ACWR?</strong> Compara los kilómetros
-                  de tu última semana (carga aguda) contra el promedio de tus últimas 4 semanas
-                  (carga crónica). Entre <strong style={{ color: S.neon }}>0.8x y 1.3x</strong> estás
+                  <strong style={{ color: S.text }}>¿Qué es el ACWR?</strong> Compara tu carga semanal
+                  (minutos totales de entrenamiento) de tu última semana (carga aguda) contra el
+                  promedio de tus últimas 4 semanas (carga crónica). Entre{" "}
+                  <strong style={{ color: S.neon }}>0.8x y 1.3x</strong> estás
                   en la zona óptima. Por encima, el aumento brusco de carga eleva el riesgo de lesión;
                   por debajo, pierdes las adaptaciones que ya habías ganado.
                 </div>
@@ -604,7 +606,7 @@ export default function App() {
                     CARGA · ACWR
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 44, fontWeight: 900, color: acwrColor, lineHeight: 1 }}>
-                    {acwr}x
+                    {acwrDisplay}
                   </div>
                   <ACWRSlider acwr={acwr} color={acwrColor} />
                   <div style={{ fontSize: 11, color: S.muted, marginTop: 10 }}>Óptimo: 0.8 – 1.3x</div>

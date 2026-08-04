@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Mapeo userId -> token de acceso (nunca versionado, ver CLAUDE.md)
+private/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

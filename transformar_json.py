@@ -5,26 +5,41 @@ al formato que espera el dashboard de Swetro.
 USO:
   python transformar_json.py input.json
   python transformar_json.py input.json --output public/data/u002.json
-  python transformar_json.py input.json --con-sway   # genera Pulse via Anthropic
+  python transformar_json.py input.json --con-pulse   # genera Pulse via Anthropic
 
 DEPENDENCIAS:
-  pip install anthropic   # solo si usas --con-sway
+  pip install anthropic   # solo si usas --con-pulse
 """
 
+import csv
 import json
 import sys
 import os
+import secrets
 import argparse
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from collections import defaultdict
+
+TOKENS_PATH = "private/tokens.csv"
 
 
 # ── Constantes de disciplinas ─────────────────────────────────
 
-RUNNING_TIPOS   = {"running", "trail_running", "treadmill", "virtualrun"}
-CYCLING_TIPOS   = {"cycling", "indoorcycling", "virtualride", "mountainbiking", "gravel_cycling"}
+RUNNING_TIPOS   = {"running", "trail_running", "treadmill", "treadmillrunning", "treadmill_running", "virtualrun"}
+CYCLING_TIPOS   = {"cycling", "indoorcycling", "indoor_cycling", "virtualride", "mountainbiking", "gravel_cycling"}
 SWIMMING_TIPOS  = {"swimming", "openwater"}
 STRENGTH_TIPOS  = {"strength", "strength_training", "weighttraining", "gym"}
+
+# Mismas reglas que swetro-retro/config.py: estas disciplinas no cuentan
+# para la carga de entrenamiento (ni para ACWR ni para el ancla de semana 1).
+TIPOS_FUERA_DE_CARGA = {"walking", "other"}
+
+# ACWR (acute:chronic workload ratio) — mismos umbrales que
+# swetro-retro/config.py: sin al menos 5 semanas de historial no hay base
+# crónica que comparar, y con menos de 150 min/semana de crónica el
+# indicador se dispara por ruido, no por riesgo real.
+ACWR_SEMANA_MINIMA = 5
+ACWR_BASE_CRONICA_MINIMA = 150
 
 def normalizar_tipo(tipo_raw):
     if not tipo_raw:
@@ -35,6 +50,38 @@ def normalizar_tipo(tipo_raw):
     if t in SWIMMING_TIPOS:  return "swimming"
     if t in STRENGTH_TIPOS:  return "strength"
     return t
+
+
+# ── Tokens de acceso (reemplazan userId secuencial en el link público) ──
+
+def obtener_token(user_id):
+    """
+    Devuelve el token público de user_id, generándolo si no existe. El
+    mapeo userId -> token vive en TOKENS_PATH (no versionado — ver
+    .gitignore) y es la única forma de saber, puertas adentro, a quién
+    pertenece cada archivo public/data/<token>.json. Idempotente: correr el
+    pipeline de nuevo para el mismo usuario reutiliza su token, no invalida
+    el link que ya le mandamos.
+    """
+    filas = []
+    if os.path.exists(TOKENS_PATH):
+        with open(TOKENS_PATH, "r", encoding="utf-8", newline="") as f:
+            filas = list(csv.DictReader(f))
+
+    for fila in filas:
+        if fila["user_id"] == str(user_id):
+            return fila["token"]
+
+    token = secrets.token_urlsafe(8)
+    filas.append({"user_id": str(user_id), "token": token})
+
+    os.makedirs(os.path.dirname(TOKENS_PATH), exist_ok=True)
+    with open(TOKENS_PATH, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["user_id", "token"])
+        writer.writeheader()
+        writer.writerows(filas)
+
+    return token
 
 
 # ── Helpers ───────────────────────────────────────────────────
@@ -135,8 +182,8 @@ def transformar_actividad(a):
         "duration_min": duration_min,
         "pace":         pace_a_string(pace_raw),
         "pace_raw":     round(pace_raw, 3) if pace_raw else 0,
-        "hr":           a.get("average_heart_rate_in_beats_per_minute", 0),
-        "kcal":         a.get("active_kilocalories", 0),
+        "hr":           a.get("average_heart_rate_in_beats_per_minute") or 0,
+        "kcal":         a.get("active_kilocalories") or 0,
         "elevation":    a.get("total_elevation_gain_in_meters"),
         "points":       0,
         "effort":       a.get("effort_density"),
@@ -236,6 +283,53 @@ def calcular_weekly_multidisciplina(activities):
     return weekly
 
 
+# ── ACWR (carga semanal, no km) ──────────────────────────────
+
+def lunes_de(date_str):
+    """YYYY-MM-DD -> date del lunes de esa semana."""
+    d = datetime.fromisoformat(date_str).date()
+    return d - timedelta(days=d.weekday())
+
+
+def calcular_acwr(activities):
+    """
+    ACWR sobre minutos totales de carga (todas las disciplinas, Walking y
+    Other excluidos), mismas reglas que swetro-retro/metrics.py: semanas
+    llenas de ceros donde no hubo carga, semana 1 ancla en la primera
+    actividad que cuenta para carga, solo confiable desde la semana
+    ACWR_SEMANA_MINIMA y con base crónica >= ACWR_BASE_CRONICA_MINIMA.
+
+    Retorna la última semana disponible: {"valor", "confiable", "semana"}.
+    """
+    cuenta_carga = [
+        a for a in activities
+        if a.get("date") and a.get("type") not in TIPOS_FUERA_DE_CARGA
+    ]
+    if not cuenta_carga:
+        return {"valor": None, "confiable": False, "semana": None}
+
+    primer_lunes  = min(lunes_de(a["date"]) for a in cuenta_carga)
+    ultimo_lunes  = max(lunes_de(a["date"]) for a in cuenta_carga)
+    semanas       = (ultimo_lunes - primer_lunes).days // 7 + 1
+
+    if semanas < ACWR_SEMANA_MINIMA:
+        return {"valor": None, "confiable": False, "semana": None}
+
+    carga_por_semana = [0.0] * semanas
+    for a in cuenta_carga:
+        idx = (lunes_de(a["date"]) - primer_lunes).days // 7
+        carga_por_semana[idx] += a["duration_min"]
+
+    semana  = semanas
+    aguda   = carga_por_semana[semana - 1]
+    previas = carga_por_semana[semana - 5 : semana - 1]
+    cronica = sum(previas) / 4
+    confiable = cronica >= ACWR_BASE_CRONICA_MINIMA
+    valor = round(aguda / cronica, 2) if cronica > 0 else None
+
+    return {"valor": valor, "confiable": confiable, "semana": semana}
+
+
 # ── Resumen de disciplinas para Pulse ────────────────────────
 
 def resumen_disciplinas(activities):
@@ -270,7 +364,7 @@ def resumen_disciplinas(activities):
 
 # ── Generar Pulse via Anthropic ───────────────────────────────
 
-def generar_sway(activities, weekly, meta, profile):
+def generar_pulse(activities, weekly, meta, profile):
     """Llama a Anthropic para generar el análisis Pulse."""
     try:
         import anthropic
@@ -361,7 +455,7 @@ Responde con JSON: {{"semana":"rango fechas","score":0-100,"headline":"máx 8 pa
 
 # ── Construir JSON final ──────────────────────────────────────
 
-def transformar(input_data, meta_override=None, con_sway=False):
+def transformar(input_data, meta_override=None, con_pulse=False):
     profile        = input_data.get("profile", {})
     raw_activities = input_data.get("activities", [])
     raw_challenges = input_data.get("challenges")
@@ -385,6 +479,9 @@ def transformar(input_data, meta_override=None, con_sway=False):
     # ── Métricas semanales multidisciplina ──
     weekly = calcular_weekly_multidisciplina(activities)
 
+    # ── ACWR (carga semanal, minutos totales) ──
+    acwr = calcular_acwr(activities)
+
     meta = {
         "userId":     str(profile.get("user_id", "u000")),
         "nombre":     nombre.upper(),
@@ -399,12 +496,12 @@ def transformar(input_data, meta_override=None, con_sway=False):
     }
 
     # ── Pulse ──
-    sway = None
-    if con_sway and activities and weekly:
+    pulse = None
+    if con_pulse and activities and weekly:
         print("  → Generando Pulse...")
-        sway = generar_sway(activities, weekly, meta, profile)
-        if sway:
-            print(f"  ✓ Pulse generado (score: {sway.get('score', '?')})")
+        pulse = generar_pulse(activities, weekly, meta, profile)
+        if pulse:
+            print(f"  ✓ Pulse generado (score: {pulse.get('score', '?')})")
 
     # ── Retos ──
     retos = []
@@ -437,7 +534,8 @@ def transformar(input_data, meta_override=None, con_sway=False):
         "meta":       meta,
         "activities": activities,
         "weekly":     weekly,
-        "sway":       sway,
+        "acwr":       acwr,
+        "pulse":      pulse,
         "taper":      [],
         "retos":      retos,
     }
@@ -450,8 +548,8 @@ def main():
         description="Transforma JSON del socio → formato dashboard Swetro"
     )
     parser.add_argument("input",         help="Archivo JSON de entrada")
-    parser.add_argument("--output", "-o", help="Archivo de salida (default: public/data/<userId>.json)")
-    parser.add_argument("--con-sway",    action="store_true", help="Generar Pulse via Anthropic API")
+    parser.add_argument("--output", "-o", help="Archivo de salida (default: public/data/<token>.json)")
+    parser.add_argument("--con-pulse",   action="store_true", help="Generar Pulse via Anthropic API")
     parser.add_argument("--meta",  "-m", help="Archivo JSON con metaCarrera y otras configuraciones")
     args = parser.parse_args()
 
@@ -475,21 +573,22 @@ def main():
     for t, n in sorted(tipos.items(), key=lambda x: -x[1]):
         print(f"    {t}: {n}")
 
-    result  = transformar(input_data, meta_override, con_sway=args.con_sway)
+    result  = transformar(input_data, meta_override, con_pulse=args.con_pulse)
     user_id = result["meta"]["userId"]
+    token   = obtener_token(user_id)
 
     if args.output:
         output_path = args.output
     else:
         os.makedirs("public/data", exist_ok=True)
-        output_path = f"public/data/{user_id}.json"
+        output_path = f"public/data/{token}.json"
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, separators=(",", ":"))
 
     size_kb = os.path.getsize(output_path) // 1024
     print(f"  ✓ Guardado: {output_path} ({size_kb} KB)")
-    print(f"  → Dashboard: ?u={user_id}")
+    print(f"  → Dashboard: ?u={token}")
     print(f"  → Semanas calculadas: {len(result['weekly'])}")
 
 
