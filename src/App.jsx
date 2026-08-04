@@ -194,6 +194,10 @@ export default function App() {
   if (!data) return <LoadingScreen />;
 
   const { meta, activities, weekly, acwr: acwrData, pulse, taper } = data;
+  const primerNombre = (meta.nombre || "").split(" ")[0];
+  const nombreDisplay = primerNombre
+    ? primerNombre.charAt(0) + primerNombre.slice(1).toLowerCase()
+    : "";
   const hasMeta = meta.metaCarrera.fecha !== "2027-01-01";
   const daysLeft = daysUntil(meta.metaCarrera.fecha, meta.generadoEn);
   const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScpOyf-mD9AjSIlLm1zGIiZQN8E7Dj1yv6tu0-Pj7EMBGL2ow/viewform";
@@ -318,6 +322,8 @@ export default function App() {
       {/* ── MAIN ── */}
       <div className="main">
         <div className="topbar">
+          {nombreDisplay && <strong style={{ color: S.text }}>{nombreDisplay}</strong>}
+          {nombreDisplay && " · "}
           {hasMeta
             ? <>{daysLeft} días para tu <strong style={{ color: S.text }}>{meta.metaCarrera.nombre}</strong></>
             : <a href={FORM_URL} target="_blank" rel="noopener noreferrer"
