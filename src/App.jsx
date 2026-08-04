@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ── BRAND ────────────────────────────────────────────────────
 const S = {
@@ -56,6 +56,47 @@ function SwetroLogo({ className }) {
   );
 }
 
+// Ícono de info con popover que se abre/cierra con tap — funciona en móvil,
+// a diferencia de title (que depende de hover) o CSS-only :hover tooltips.
+function InfoTip({ text }) {
+  const [open, setOpen] = useState(false);
+  const wrapRef = useRef(null);
+  const [pos, setPos] = useState({ top: 0, left: 0 });
+
+  useEffect(() => {
+    if (!open) return;
+    const closeIfOutside = (e) => {
+      if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", closeIfOutside);
+    document.addEventListener("keydown", (e) => e.key === "Escape" && setOpen(false));
+    return () => document.removeEventListener("pointerdown", closeIfOutside);
+  }, [open]);
+
+  const toggle = (e) => {
+    e.stopPropagation();
+    if (!open && wrapRef.current) {
+      const r = wrapRef.current.getBoundingClientRect();
+      const width = Math.min(240, window.innerWidth - 24);
+      let left = r.left + r.width / 2 - width / 2;
+      left = Math.max(12, Math.min(left, window.innerWidth - width - 12));
+      setPos({ top: r.bottom + 8, left, width });
+    }
+    setOpen(o => !o);
+  };
+
+  return (
+    <span ref={wrapRef} style={{ position: "relative", display: "inline-flex", verticalAlign: "middle" }}>
+      <button type="button" className="infotip-btn" aria-label="Más información" aria-expanded={open} onClick={toggle}>?</button>
+      {open && (
+        <div className="infotip-pop" style={{ top: pos.top, left: pos.left, width: pos.width || 240 }}>
+          {text}
+        </div>
+      )}
+    </span>
+  );
+}
+
 function ACWRSlider({ acwr, color }) {
   const pct = Math.min(Math.max(((acwr - 0.5) / 1.5) * 100, 2), 97);
   return (
@@ -77,7 +118,7 @@ function TagBadge({ tag }) {
   };
   const c = colors[tag] || colors.RODAJE;
   return (
-    <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: ".06em",
+    <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: ".06em",
       background: c.bg, color: c.color, border: `1px solid ${c.border}`,
       borderRadius: 4, padding: "3px 7px", flexShrink: 0 }}>{tag}</span>
   );
@@ -115,7 +156,7 @@ function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals 
 
   return (
     <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11, marginBottom: 6 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, marginBottom: 6 }}>
         <span style={{ color: deltaColor, fontWeight: 700 }}>
           {arrow} {fmt(Math.abs(delta))}{unit ? " " + unit : ""}
         </span>
@@ -137,7 +178,7 @@ function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals 
             vectorEffect="non-scaling-stroke" />
         </svg>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 8.5, color: S.dim, marginTop: 4 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: S.dim, marginTop: 4 }}>
         <span>{labels[0]}</span>
         <span>{fmt(min)} – {fmt(max)}</span>
         <span>{labels[labels.length - 1]}</span>
@@ -167,8 +208,8 @@ function ErrorScreen({ msg }) {
       flexDirection: "column", alignItems: "center", justifyContent: "center",
       fontFamily: "Poppins, sans-serif", gap: 12 }}>
       <SwetroLogo className="side-logo" />
-      <div style={{ fontSize: 14, color: S.danger, marginTop: 12 }}>No se pudo cargar el perfil</div>
-      <div style={{ fontSize: 12, color: S.muted }}>{msg}</div>
+      <div style={{ fontSize: 16, color: S.danger, marginTop: 12 }}>No se pudo cargar el perfil</div>
+      <div style={{ fontSize: 14, color: S.muted }}>{msg}</div>
     </div>
   );
 }
@@ -235,10 +276,19 @@ export default function App() {
     @keyframes spin { to { transform: rotate(360deg) } }
     * { box-sizing: border-box; margin: 0; padding: 0 }
     html, body, #root { width: 100%; background: ${S.bg}; text-align: left }
-    body { font-family: 'Poppins', sans-serif; color: ${S.text} }
+    body { font-family: 'Poppins', sans-serif; color: ${S.text}; font-size: 16px }
     ::-webkit-scrollbar { width: 3px; height: 3px }
     ::-webkit-scrollbar-thumb { background: #2A2D32; border-radius: 2px }
     button { font-family: 'Poppins', sans-serif; cursor: pointer }
+
+    .infotip-btn { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(255,255,255,.06); border: 1px solid ${S.border}; color: ${S.muted};
+      font-size: 12px; font-weight: 700; line-height: 1; display: inline-flex;
+      align-items: center; justify-content: center; padding: 0; margin-left: 2px }
+    .infotip-btn:hover, .infotip-btn[aria-expanded="true"] { color: ${S.text}; border-color: ${S.muted} }
+    .infotip-pop { position: fixed; z-index: 100; background: #1E2024; border: 1px solid ${S.border};
+      border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.5; color: ${S.muted};
+      box-shadow: 0 8px 24px rgba(0,0,0,.5); text-align: left }
 
     .app { display: flex; min-height: 100vh; background: ${S.bg} }
 
@@ -248,7 +298,7 @@ export default function App() {
     .side-logo { height: 24px; width: auto; display: block; margin: 0 10px 24px }
     .nav-btn { display: flex; align-items: center; gap: 10px; padding: 10px 12px;
       background: transparent; border: 1px solid transparent; border-radius: 10px;
-      color: ${S.muted}; font-size: 12px; font-weight: 600; letter-spacing: .04em;
+      color: ${S.muted}; font-size: 14px; font-weight: 600; letter-spacing: .04em;
       text-align: left; transition: all .15s; white-space: nowrap }
     .nav-btn.active { background: rgba(202,255,0,.08); border-color: rgba(202,255,0,.25);
       color: ${S.neon}; font-weight: 700 }
@@ -258,7 +308,7 @@ export default function App() {
       border-radius: 16px; padding: 16px 18px }
 
     .main { margin-left: 240px; flex: 1; display: flex; flex-direction: column; min-width: 0 }
-    .topbar { border-bottom: 1px solid ${S.border}; padding: 14px 32px; font-size: 12px;
+    .topbar { border-bottom: 1px solid ${S.border}; padding: 14px 32px; font-size: 15px;
       color: ${S.muted}; position: sticky; top: 0; background: ${S.bg}; z-index: 5 }
     .content { padding: 28px 32px }
     .page-title { font-family: ${FONT_NUM}; font-size: 36px; font-weight: 900;
@@ -268,7 +318,7 @@ export default function App() {
     .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px }
     .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px }
 
-    .session-date { width: 56px; flex-shrink: 0; font-size: 12px; color: ${S.muted};
+    .session-date { width: 56px; flex-shrink: 0; font-size: 14px; color: ${S.muted};
       white-space: nowrap; font-weight: 500 }
 
     @media (max-width: 820px) {
@@ -277,15 +327,15 @@ export default function App() {
         border-bottom: 1px solid ${S.border}; overflow-x: auto }
       .side-logo { height: 18px; margin: 0 10px 0 0 }
       .countdown-box { display: none }
-      .nav-btn { padding: 8px 10px; font-size: 11px }
+      .nav-btn { padding: 8px 10px; font-size: 13px }
       .main { margin-left: 0; margin-top: 54px }
       .topbar { padding: 12px 16px }
       .content { padding: 16px 14px }
       .grid2, .grid3 { grid-template-columns: 1fr } .card { min-height: auto !important }
       .page-title { font-size: 30px; margin-bottom: 16px }
       .card { padding: 18px 16px; border-radius: 16px }
-      .bar-lbl { font-size: 6.5px !important }
-      .bar-val { font-size: 8px !important }
+      .bar-lbl { font-size: 13px !important }
+      .bar-val { font-size: 13px !important }
     }
   `;
 
@@ -307,11 +357,11 @@ export default function App() {
               {daysLeft}<span style={{ fontSize: 14, color: S.muted, fontFamily: "Poppins", marginLeft: 4 }}>D</span>
             </div>
           )}
-          <div style={{ fontSize: 11, color: S.muted, marginTop: hasMeta ? 4 : 0 }}>
+          <div style={{ fontSize: 14, color: S.muted, marginTop: hasMeta ? 4 : 0 }}>
             {hasMeta
               ? <>para tu <strong style={{ color: S.text }}>{meta.metaCarrera.nombre}</strong></>
               : <a href={FORM_URL} target="_blank" rel="noopener noreferrer"
-                  style={{ color: S.neon, fontWeight: 700, textDecoration: "none", fontSize: 12, lineHeight: 1.5 }}>
+                  style={{ color: S.neon, fontWeight: 700, textDecoration: "none", fontSize: 14, lineHeight: 1.5 }}>
                   ¿Cuál es tu próxima carrera? →
                 </a>
             }
@@ -343,13 +393,14 @@ export default function App() {
               <div className="grid2">
                 {/* Score */}
                 <div className="card" style={{ background: "linear-gradient(160deg,rgba(202,255,0,.09),rgba(61,126,255,.07) 70%)", borderColor: "rgba(202,255,0,.22)" }}>
-                  <div style={{ fontSize: 10, color: S.neon, fontWeight: 700, letterSpacing: ".08em", marginBottom: 12 }}>
+                  <div style={{ fontSize: 13, color: S.neon, fontWeight: 700, letterSpacing: ".08em", marginBottom: 12, display: "flex", alignItems: "center" }}>
                     TU PULSE DE HOY
+                    <InfoTip text="Puntaje 0-100 que resume tu semana de entrenamiento: volumen, intensidad y recuperación, generado por IA. Más alto no siempre es mejor — una semana de descanso planeado también puede dar un puntaje bajo." />
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 72, fontWeight: 900, color: S.text, lineHeight: 1 }}>
                     {pulse.score}<span style={{ fontSize: 22, color: S.dim, fontFamily: "Poppins", fontWeight: 600 }}>/100</span>
                   </div>
-                  <div style={{ fontSize: 15, fontWeight: 600, color: S.text, marginTop: 12, lineHeight: 1.4 }}>
+                  <div style={{ fontSize: 16, fontWeight: 600, color: S.text, marginTop: 12, lineHeight: 1.4 }}>
                     {pulse.headline}
                   </div>
                   {(() => {
@@ -371,7 +422,7 @@ export default function App() {
                               : "#2A2D32", opacity: s >= seg - 19 ? 1 : 0.3 }} />
                           ))}
                         </div>
-                        <div style={{ fontSize: 11, color: r.color, fontWeight: 600 }}>{r.label}</div>
+                        <div style={{ fontSize: 13, color: r.color, fontWeight: 600 }}>{r.label}</div>
                       </div>
                     );
                   })()}
@@ -380,8 +431,11 @@ export default function App() {
                 {/* ACWR */}
                 <div className="card">
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12, gap: 8, flexWrap: "wrap" }}>
-                    <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em" }}>RIESGO · ACWR</div>
-                    <span style={{ fontSize: 9, fontWeight: 700, color: acwrColor,
+                    <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", display: "flex", alignItems: "center" }}>
+                      RIESGO · ACWR
+                      <InfoTip text="Compara tu carga de entrenamiento de esta semana contra el promedio de las últimas 4. Entre 0.8x y 1.3x estás en zona segura: más alto sube el riesgo de lesión, más bajo significa que estás perdiendo la forma ganada." />
+                    </div>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: acwrColor,
                       background: `${acwrColor}15`, border: `1px solid ${acwrColor}44`,
                       borderRadius: 20, padding: "3px 10px", letterSpacing: ".06em" }}>{acwrLabel}</span>
                   </div>
@@ -389,7 +443,7 @@ export default function App() {
                     {acwrDisplay}
                   </div>
                   <ACWRSlider acwr={acwr} color={acwrColor} />
-                  <div style={{ fontSize: 12, color: S.muted, marginTop: 12, lineHeight: 1.6 }}>
+                  <div style={{ fontSize: 15, color: S.muted, marginTop: 12, lineHeight: 1.6 }}>
                     {pulse.injuryRisk?.action || pulse.warnings?.[0] || "Óptimo: 0.8 – 1.3x"}
                   </div>
                 </div>
@@ -397,37 +451,37 @@ export default function App() {
 
               {/* Análisis */}
               <div className="card" style={{ marginBottom: 16 }}>
-                <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 14 }}>
+                <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 14 }}>
                   ANÁLISIS PULSE
                 </div>
-                <div style={{ fontSize: 13, color: S.muted, lineHeight: 1.8, textAlign: "justify" }}>
+                <div style={{ fontSize: 16, color: S.muted, lineHeight: 1.8, textAlign: "justify" }}>
                   {pulseExp ? pulse.aiVerdict : (pulse.aiVerdict || "").slice(0, 280) + ((pulse.aiVerdict || "").length > 280 ? "..." : "")}
                 </div>
                 {pulseExp && pulse.strengths?.length > 0 && (
                   <div style={{ marginTop: 16 }}>
-                    <div style={{ fontSize: 10, color: S.neon, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>FORTALEZAS</div>
+                    <div style={{ fontSize: 13, color: S.neon, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>FORTALEZAS</div>
                     {pulse.strengths.map((s, i) => (
                       <div key={i} style={{ display: "flex", gap: 8, marginBottom: 7 }}>
-                        <span style={{ color: S.neon, fontSize: 13, flexShrink: 0 }}>✓</span>
-                        <span style={{ fontSize: 12, color: S.muted, lineHeight: 1.5 }}>{s}</span>
+                        <span style={{ color: S.neon, fontSize: 15, flexShrink: 0 }}>✓</span>
+                        <span style={{ fontSize: 15, color: S.muted, lineHeight: 1.5 }}>{s}</span>
                       </div>
                     ))}
                   </div>
                 )}
                 {pulseExp && pulse.warnings?.length > 0 && (
                   <div style={{ marginTop: 14 }}>
-                    <div style={{ fontSize: 10, color: S.warning, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>ALERTAS</div>
+                    <div style={{ fontSize: 13, color: S.warning, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>ALERTAS</div>
                     {pulse.warnings.map((w, i) => (
                       <div key={i} style={{ display: "flex", gap: 8, marginBottom: 7 }}>
-                        <span style={{ color: S.warning, fontSize: 13, flexShrink: 0 }}>⚠</span>
-                        <span style={{ fontSize: 12, color: S.muted, lineHeight: 1.5 }}>{w}</span>
+                        <span style={{ color: S.warning, fontSize: 15, flexShrink: 0 }}>⚠</span>
+                        <span style={{ fontSize: 15, color: S.muted, lineHeight: 1.5 }}>{w}</span>
                       </div>
                     ))}
                   </div>
                 )}
                 {(pulse.aiVerdict || "").length > 280 && (
                   <button onClick={() => setPulseExp(!pulseExp)} style={{
-                    background: "none", border: "none", color: S.cobalt, fontSize: 12,
+                    background: "none", border: "none", color: S.cobalt, fontSize: 14,
                     fontWeight: 600, marginTop: 12, padding: 0 }}>
                     {pulseExp ? "Ver menos ↑" : "Ver análisis completo ↓"}
                   </button>
@@ -437,21 +491,21 @@ export default function App() {
               {/* Siguiente sesión — full width */}
               {nextSession && (
                 <div className="card" style={{ marginBottom: 16 }}>
-                  <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>
                     SIGUIENTE SESIÓN · {nextSession.day?.toUpperCase()}
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 28, fontWeight: 900, color: S.text, marginBottom: 4 }}>
                     {nextSession.type}
                   </div>
-                  <div style={{ fontSize: 12.5, color: S.muted, marginBottom: 18, lineHeight: 1.6 }}>
+                  <div style={{ fontSize: 15, color: S.muted, marginBottom: 18, lineHeight: 1.6 }}>
                     {nextSession.km && nextSession.km !== "—" ? `${nextSession.km} · ` : ""}{nextSession.notes}
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 8 }}>
                     {restWeekPlan.map((p, i) => (
                       <div key={i} style={{ background: S.bg, border: `1px solid ${S.border}`,
                         borderRadius: 10, padding: "10px 12px", textAlign: "center" }}>
-                        <div style={{ fontSize: 10, color: S.cobalt, fontWeight: 700, marginBottom: 3 }}>{p.day}</div>
-                        <div style={{ fontSize: 11.5, color: S.muted, lineHeight: 1.4 }}>{p.type}</div>
+                        <div style={{ fontSize: 13, color: S.cobalt, fontWeight: 700, marginBottom: 3 }}>{p.day}</div>
+                        <div style={{ fontSize: 13, color: S.muted, lineHeight: 1.4 }}>{p.type}</div>
                         {p.km && p.km !== "—" && (
                           <div style={{ fontFamily: FONT_NUM, fontSize: 14, fontWeight: 800, color: S.text, marginTop: 3 }}>{p.km}</div>
                         )}
@@ -464,20 +518,21 @@ export default function App() {
               {/* Proyección */}
               {pulse.projectedTime && (
                 <div className="card" style={{ background: "rgba(61,126,255,.07)", borderColor: "rgba(61,126,255,.2)" }}>
-                  <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10, display: "flex", alignItems: "center" }}>
                     PROYECCIÓN {meta.metaCarrera.nombre.toUpperCase()}
+                    <InfoTip text="Tiempo estimado de meta según tu ritmo y volumen actuales de entrenamiento. Es una proyección, no una garantía — mejora si sigues el plan semanal." />
                   </div>
                   <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap" }}>
                     <div>
                       <div style={{ fontFamily: FONT_NUM, fontSize: 48, fontWeight: 900, color: S.cobalt, lineHeight: 1 }}>
                         {pulse.projectedTime}
                       </div>
-                      <div style={{ fontSize: 12, color: S.muted, marginTop: 4 }}>
+                      <div style={{ fontSize: 15, color: S.muted, marginTop: 4 }}>
                         Ritmo: <strong style={{ color: S.text }}>{pulse.projectedPace}/km</strong>
                       </div>
                     </div>
                     {pulse.funFact && (
-                      <div style={{ flex: 1, minWidth: 200, fontSize: 12, color: S.muted, lineHeight: 1.7,
+                      <div style={{ flex: 1, minWidth: 200, fontSize: 15, color: S.muted, lineHeight: 1.7,
                         borderLeft: `2px solid ${S.border}`, paddingLeft: 20 }}>
                         🏃 {pulse.funFact}
                       </div>
@@ -495,15 +550,16 @@ export default function App() {
 
               {/* KM esta semana */}
               <div className="card" style={{ marginBottom: 16 }}>
-                <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10 }}>
+                <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10, display: "flex", alignItems: "center" }}>
                   KILÓMETROS ESTA SEMANA
+                  <InfoTip text="Total de kilómetros de running que acumulaste esta semana, y las barras de abajo muestran cómo se compara con tus últimas 8 semanas." />
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 22, flexWrap: "wrap" }}>
                   <span style={{ fontFamily: FONT_NUM, fontSize: 60, fontWeight: 900, color: S.text, lineHeight: 1 }}>
                     {lastWeek.total_km}
                   </span>
                   <span style={{ fontSize: 18, color: S.muted }}>km</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: weeklyIncrease >= 0 ? S.neon : S.danger }}>
+                  <span style={{ fontSize: 14, fontWeight: 700, color: weeklyIncrease >= 0 ? S.neon : S.danger }}>
                     {incSign} vs. semana anterior
                   </span>
                 </div>
@@ -517,7 +573,7 @@ export default function App() {
                     return (
                       <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column",
                         alignItems: "center", justifyContent: "flex-end", minWidth: 0 }}>
-                        <div className="bar-val" style={{ fontFamily: FONT_NUM, fontSize: 11, fontWeight: 800,
+                        <div className="bar-val" style={{ fontFamily: FONT_NUM, fontSize: 13, fontWeight: 800,
                           color: isLast ? S.neon : S.muted, marginBottom: 4, whiteSpace: "nowrap" }}>
                           {val}
                         </div>
@@ -532,25 +588,28 @@ export default function App() {
                 </div>
                 <div style={{ display: "flex", gap: 6, marginTop: 6 }}>
                   {weekLabels.map((l, i) => (
-                    <div key={i} className="bar-lbl" style={{ flex: 1, fontSize: 8.5, color: S.dim,
+                    <div key={i} className="bar-lbl" style={{ flex: 1, fontSize: 13, color: S.dim,
                       textAlign: "center", whiteSpace: "nowrap", overflow: "hidden" }}>{l}</div>
                   ))}
                 </div>
               </div>
 
               {/* Métricas con tendencia */}
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 16 }}>
+              <div className="grid3">
                 {[
                   { label: "RITMO PROMEDIO (MIN/KM)", val: lastWeek.avg_pace.toFixed(2), color: S.cobalt,
-                    data: last8.map(w => w.avg_pace), goodWhen: "down", decimals: 2 },
+                    data: last8.map(w => w.avg_pace), goodWhen: "down", decimals: 2,
+                    tip: "Minutos por kilómetro promedio de tus sesiones de running esta semana, sin contar la carrera. Bajar el número es correr más rápido." },
                   { label: "FC PROMEDIO (BPM)", val: Math.round(lastWeek.avg_hr), color: S.warning,
-                    data: last8.map(w => w.avg_hr), unit: "bpm", goodWhen: "down" },
+                    data: last8.map(w => w.avg_hr), unit: "bpm", goodWhen: "down",
+                    tip: "Pulsaciones por minuto promedio durante tus sesiones de running esta semana. Ayuda a ver si el esfuerzo percibido coincide con el esfuerzo real." },
                   { label: "SESIONES / SEMANA", val: lastWeek.sessions, color: S.neon,
-                    data: last8.map(w => w.sessions), goodWhen: "up" },
+                    data: last8.map(w => w.sessions), goodWhen: "up",
+                    tip: "Cantidad de entrenamientos que registraste esta semana, sin importar la disciplina." },
                 ].map((m, i) => (
                   <div key={i} className="card" style={{ display: "flex", flexDirection: "column", minHeight: 220 }}>
-                    <div style={{ fontSize: 9, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 6 }}>
-                      {m.label}
+                    <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 6, display: "flex", alignItems: "center" }}>
+                      {m.label}<InfoTip text={m.tip} />
                     </div>
                     <div style={{ fontFamily: FONT_NUM, fontSize: 34, fontWeight: 900, color: m.color, lineHeight: 1, marginBottom: 4 }}>
                       {m.val}
@@ -563,7 +622,7 @@ export default function App() {
 
               {/* Sesiones recientes */}
               <div className="card">
-                <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 6 }}>
+                <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 6 }}>
                   SESIONES RECIENTES
                 </div>
                 {recentSessions.map((a, i) => {
@@ -574,13 +633,13 @@ export default function App() {
                       borderBottom: i < recentSessions.length - 1 ? `1px solid ${S.border}` : "none" }}>
                       <div className="session-date">{fmtDate(a.date)}</div>
                       <TagBadge tag={a.tag} />
-                      <div style={{ flex: 1, fontSize: 13, color: S.text, minWidth: 0,
+                      <div style={{ flex: 1, fontSize: 15, color: S.text, minWidth: 0,
                         overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                         {a.name}
                       </div>
                       <div style={{ fontFamily: FONT_NUM, fontSize: 18, fontWeight: 800,
                         color: tagColors[a.tag] || S.text, whiteSpace: "nowrap" }}>
-                        {a.dist_km}<span style={{ fontSize: 10, color: S.dim, marginLeft: 2 }}>km</span>
+                        {a.dist_km}<span style={{ fontSize: 13, color: S.dim, marginLeft: 2 }}>km</span>
                       </div>
                     </div>
                   );
@@ -596,7 +655,7 @@ export default function App() {
 
               {/* Explicación ACWR */}
               <div className="card" style={{ marginBottom: 16, padding: "16px 20px" }}>
-                <div style={{ fontSize: 12.5, color: S.muted, lineHeight: 1.7 }}>
+                <div style={{ fontSize: 16, color: S.muted, lineHeight: 1.7 }}>
                   <strong style={{ color: S.text }}>¿Qué es el ACWR?</strong> Compara tu carga semanal
                   (minutos totales de entrenamiento) de tu última semana (carga aguda) contra el
                   promedio de tus últimas 4 semanas (carga crónica). Entre{" "}
@@ -608,57 +667,64 @@ export default function App() {
 
               <div className="grid3">
                 <div className="card">
-                  <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8, display: "flex", alignItems: "center" }}>
                     CARGA · ACWR
+                    <InfoTip text="Compara tu carga de entrenamiento de esta semana contra el promedio de las últimas 4. Entre 0.8x y 1.3x estás en zona segura: más alto sube el riesgo de lesión, más bajo significa que estás perdiendo la forma ganada." />
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 44, fontWeight: 900, color: acwrColor, lineHeight: 1 }}>
                     {acwrDisplay}
                   </div>
                   <ACWRSlider acwr={acwr} color={acwrColor} />
-                  <div style={{ fontSize: 11, color: S.muted, marginTop: 10 }}>Óptimo: 0.8 – 1.3x</div>
+                  <div style={{ fontSize: 14, color: S.muted, marginTop: 10 }}>Óptimo: 0.8 – 1.3x</div>
                 </div>
 
                 <div className="card">
-                  <div style={{ fontSize: 13, fontWeight: 700, color: S.text, marginBottom: 8 }}>Incremento semanal</div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: S.text, marginBottom: 8, display: "flex", alignItems: "center" }}>
+                    Incremento semanal
+                    <InfoTip text="Cuánto subió o bajó tu volumen de running frente a la semana anterior. Subir más de 10% por semana eleva el riesgo de lesión." />
+                  </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 40, fontWeight: 900, lineHeight: 1,
                     color: weeklyIncrease > 15 ? S.danger : weeklyIncrease > 10 ? S.warning : weeklyIncrease < 0 ? S.danger : S.neon }}>
                     {incSign}
                   </div>
-                  <div style={{ fontSize: 12, color: S.muted, marginTop: 10 }}>
+                  <div style={{ fontSize: 15, color: S.muted, marginTop: 10 }}>
                     De {prevWeek?.total_km ?? "—"} km a {lastWeek.total_km} km
                   </div>
-                  <div style={{ fontSize: 11, color: S.warning, marginTop: 4 }}>Recomendado: &lt; 10% / semana</div>
+                  <div style={{ fontSize: 13, color: S.warning, marginTop: 4 }}>Recomendado: &lt; 10% / semana</div>
                 </div>
 
                 <div className="card">
-                  <div style={{ fontSize: 13, fontWeight: 700, color: S.text, marginBottom: 8 }}>Balance 80/20</div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: S.text, marginBottom: 8, display: "flex", alignItems: "center" }}>
+                    Balance 80/20
+                    <InfoTip text="Proporción de tus sesiones en ritmo fácil vs. exigente. La regla 80/20 dice que el 80% de tu entrenamiento debería ser a ritmo cómodo para rendir mejor en el 20% restante." />
+                  </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 40, fontWeight: 900, color: S.warning, lineHeight: 1 }}>
                     {balanceMetric?.value || "—"}
                   </div>
-                  <div style={{ fontSize: 12, color: S.muted, marginTop: 10 }}>
+                  <div style={{ fontSize: 15, color: S.muted, marginTop: 10 }}>
                     {balanceMetric?.note || "Proporción de sesiones fáciles"}
                   </div>
-                  <div style={{ fontSize: 11, color: S.warning, marginTop: 4 }}>Ideal: ≥ 80% en zona baja</div>
+                  <div style={{ fontSize: 13, color: S.warning, marginTop: 4 }}>Ideal: ≥ 80% en zona baja</div>
                 </div>
               </div>
 
               {/* Plan taper */}
               {taper && taper.length > 0 && (
                 <div className="card">
-                  <div style={{ fontSize: 10, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 18 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 18 }}>
                     PLAN DE TAPER · {daysLeft} DÍAS
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`, gap: 12 }}>
                     {taper.map((t, i) => (
                       <div key={i} style={{ background: S.bg, border: `1px solid ${t.color || "#2A2D32"}22`,
                         borderTop: `3px solid ${t.color || "#2A2D32"}`, borderRadius: "0 0 12px 12px", padding: 16 }}>
-                        <div style={{ fontSize: 11, fontWeight: 700, color: t.color || S.muted, marginBottom: 4 }}>{t.label}</div>
-                        <div style={{ fontSize: 10, color: S.dim, marginBottom: 12 }}>{t.week}</div>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: t.color || S.muted, marginBottom: 4 }}>{t.label}</div>
+                        <div style={{ fontSize: 13, color: S.dim, marginBottom: 12 }}>{t.week}</div>
                         <div style={{ fontFamily: FONT_NUM, fontSize: 28, fontWeight: 900, color: S.text, lineHeight: 1 }}>
-                          {t.km}<span style={{ fontSize: 12, color: S.muted, marginLeft: 4 }}>km</span>
+                          {t.km}<span style={{ fontSize: 13, color: S.muted, marginLeft: 4 }}>km</span>
                         </div>
-                        <div style={{ fontSize: 11, color: S.muted, marginTop: 4 }}>{t.sessions} sesiones</div>
-                        <div style={{ fontSize: 11, color: S.muted, marginTop: 8, lineHeight: 1.5 }}>{t.focus}</div>
+                        <div style={{ fontSize: 13, color: S.muted, marginTop: 4 }}>{t.sessions} sesiones</div>
+                        <div style={{ fontSize: 15, color: S.muted, marginTop: 8, lineHeight: 1.5 }}>{t.focus}</div>
                       </div>
                     ))}
                   </div>
