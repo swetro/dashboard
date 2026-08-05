@@ -8,6 +8,7 @@ const S = {
   border:  "rgba(255,255,255,.08)",
   neon:    "#CAFF00",
   cobalt:  "#3D7EFF",
+  green:   "#4CD97A",
   warning: "#FFB800",
   danger:  "#FF5C5C",
   text:    "#F5F6F7",
@@ -147,6 +148,162 @@ function getTag(a) {
   return "RODAJE";
 }
 
+// ── MÉTRICA POR TIPO DE ACTIVIDAD (pestaña SEMANA) ────────────
+// Mismas reglas que el prompt de Pulse: la métrica visible depende del
+// deporte, no todas las disciplinas se miden en km.
+function getSessionMetric(a) {
+  const type = (a.type || "").toLowerCase();
+  const kcalTxt = a.kcal ? `${Math.round(a.kcal)} kcal` : null;
+
+  if (type.includes("running")) {
+    return { primary: a.dist_km, unit: "km", sub: a.pace && a.pace !== "—" ? `${a.pace}/km` : null };
+  }
+  if (type.includes("cycling")) {
+    if (a.dist_km > 0) {
+      const kmh = a.duration_min > 0 ? (a.dist_km / (a.duration_min / 60)) : 0;
+      return { primary: a.dist_km, unit: "km", sub: kmh > 0 ? `${kmh.toFixed(1)} km/h` : null };
+    }
+    return { primary: Math.round(a.duration_min), unit: "min", sub: kcalTxt };
+  }
+  if (type === "swimming") {
+    return { primary: Math.round(a.dist_km * 1000), unit: "m", sub: null };
+  }
+  if (type === "strength") {
+    return { primary: Math.round(a.duration_min), unit: "min", sub: kcalTxt };
+  }
+  return { primary: Math.round(a.duration_min), unit: "min", sub: null };
+}
+
+// ── ACWR: viene del export de Azure (acwrData.series), no se calcula en
+// el cliente. "aerobic" alimenta la línea de tendencia; el status de cada
+// semana (optimal/elevated/high_risk/undertraining) define color y
+// etiqueta, igual que en la caja de Pulse — ver getAcwrUi.
+const ACWR_STATUS_UI = {
+  optimal:       { label: "ZONA SEGURA", color: S.neon },
+  elevated:      { label: "ELEVADO",     color: S.warning },
+  high_risk:     { label: "RIESGO ALTO", color: S.danger },
+  undertraining: { label: "BAJA CARGA",  color: S.dim },
+};
+
+function getAcwrUi(acwrData) {
+  const status = acwrData?.status;
+  if (status && ACWR_STATUS_UI[status]) return ACWR_STATUS_UI[status];
+  // Perfiles aún no regenerados con el export nuevo (sin status/series):
+  // fallback a los umbrales numéricos anteriores para no romper la caja.
+  const v = acwrData?.valor;
+  if (v == null || !acwrData?.confiable) return { label: "DATOS INSUFICIENTES", color: S.dim };
+  if (v > 1.5) return { label: "RIESGO ALTO", color: S.danger };
+  if (v > 1.3) return { label: "ELEVADO", color: S.warning };
+  if (v < 0.8) return { label: "BAJA CARGA", color: S.dim };
+  return { label: "ZONA SEGURA", color: S.neon };
+}
+
+const ACWR_DISCIPLINE_LABELS = { running: "Running", cycling: "Cycling", strength: "Strength" };
+
+function getAcwrDisciplineContext(acwrData) {
+  const series = acwrData?.series || {};
+  return ["running", "cycling", "strength"]
+    .map(key => {
+      const entries = series[key] || [];
+      if (entries.length === 0) return null;
+      const last = entries[entries.length - 1];
+      return { key, label: ACWR_DISCIPLINE_LABELS[key], valor: last.valor, ui: getAcwrUi(last) };
+    })
+    .filter(Boolean);
+}
+
+// Barras de minutos de carga semanal (Walking y Other excluidos), alineadas
+// a las mismas semanas que trae la serie "aerobic" del export — así la
+// línea de ACWR y las barras siempre corresponden a la misma ventana.
+function computeLoadWeeks(activities, acwrData) {
+  const aerobicSeries = acwrData?.series?.aerobic || [];
+  if (aerobicSeries.length < 2) return { weeks: [], acwrSeries: [] };
+
+  const countable = (activities || []).filter(a => a.date && a.type !== "walking" && a.type !== "other");
+
+  const weeks = aerobicSeries.map(w => {
+    const start = new Date(w.weekStart + "T00:00:00Z");
+    const end = new Date(w.weekEnd + "T23:59:59Z");
+    const min = countable.reduce((sum, a) => {
+      const d = new Date(a.date + "T00:00:00Z");
+      return (d >= start && d <= end) ? sum + (a.duration_min || 0) : sum;
+    }, 0);
+    return { min: Math.round(min), start };
+  });
+
+  const acwrSeries = aerobicSeries.map(w => w.valor);
+
+  return { weeks, acwrSeries };
+}
+
+const MS_WEEK = 7 * 86400000;
+
+function mondayOf(dateStr) {
+  const d = new Date(dateStr + "T00:00:00Z");
+  const dow = (d.getUTCDay() + 6) % 7; // lunes=0 ... domingo=6
+  d.setUTCDate(d.getUTCDate() - dow);
+  return d;
+}
+
+// Consistencia es independiente del ACWR: reconstruye el rango completo de
+// semanas (con huecos) directo de las actividades, porque la serie de ACWR
+// del export solo trae semanas con carga y no puede revelar semanas vacías.
+function computeConsistency(activities) {
+  const dated = (activities || []).filter(a => a.date);
+  if (dated.length === 0) return null;
+
+  const mondays = dated.map(a => mondayOf(a.date).getTime());
+  const first = Math.min(...mondays);
+  const last = Math.max(...mondays);
+  const numWeeks = Math.round((last - first) / MS_WEEK) + 1;
+  if (numWeeks < 2) return null;
+
+  const activeSet = new Set(mondays.map(m => Math.round((m - first) / MS_WEEK)));
+  let longest = 0, current = 0;
+  for (let i = 0; i < numWeeks; i++) {
+    if (activeSet.has(i)) { current++; longest = Math.max(longest, current); }
+    else current = 0;
+  }
+  return { totalWeeks: numWeeks, activeWeeks: activeSet.size, longest };
+}
+
+const DISCIPLINE_LABELS = {
+  running:  { label: "Running",  color: S.neon },
+  cycling:  { label: "Cycling",  color: S.cobalt },
+  swimming: { label: "Swimming", color: "#7EB8FF" },
+  strength: { label: "Strength", color: S.warning },
+  otros:    { label: "Otros",    color: S.dim },
+};
+
+function computeDisciplineBreakdown(activities) {
+  const totals = { running: 0, cycling: 0, swimming: 0, strength: 0, otros: 0 };
+  let grandTotal = 0;
+  (activities || []).forEach(a => {
+    const min = a.duration_min || 0;
+    const key = totals.hasOwnProperty(a.type) ? a.type : "otros";
+    totals[key] += min;
+    grandTotal += min;
+  });
+  if (grandTotal === 0) return [];
+  return Object.entries(totals)
+    .map(([key, min]) => ({ key, ...DISCIPLINE_LABELS[key], pct: Math.round((min / grandTotal) * 100) }))
+    .filter(d => d.pct > 0)
+    .sort((a, b) => b.pct - a.pct);
+}
+
+function computeCardiacEfficiency(activities) {
+  const runs = (activities || [])
+    .filter(a => (a.type || "").toLowerCase().includes("running") && a.heart_eff > 0 && a.date)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  if (runs.length < 6) return null;
+  const mid = Math.floor(runs.length / 2);
+  const avg = arr => arr.reduce((s, a) => s + a.heart_eff, 0) / arr.length;
+  const first = avg(runs.slice(0, mid));
+  const second = avg(runs.slice(mid));
+  if (first <= 0) return null;
+  return { first, second, deltaPct: Math.round(((second - first) / first) * 100), n: runs.length };
+}
+
 // Gráfica de tendencia con delta, área y rango
 function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals = 0 }) {
   if (!data || data.length < 2) return null;
@@ -203,6 +360,70 @@ function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals 
   );
 }
 
+// Barras de carga semanal (minutos) con línea de ACWR superpuesta.
+// Le da contexto al número de la caja de Pulse: de dónde viene el ACWR,
+// no solo el valor final.
+function LoadACWRChart({ weeks, acwrSeries }) {
+  if (!weeks || weeks.length < 2) return null;
+  const maxMin = Math.max(...weeks.map(w => w.min), 1);
+  const acwrValues = acwrSeries.filter(v => v != null);
+  const hasAcwr = acwrValues.length >= 2;
+  const minA = hasAcwr ? Math.min(...acwrValues) : 0;
+  const maxA = hasAcwr ? Math.max(...acwrValues) : 1;
+  const rangeA = (maxA - minA) || 1;
+  const n = weeks.length;
+
+  const linePts = acwrSeries.map((v, i) => {
+    if (v == null) return null;
+    const x = n === 1 ? 50 : (i / (n - 1)) * 100;
+    const y = 100 - ((v - minA) / rangeA) * 100;
+    return { x, y, v };
+  });
+
+  return (
+    <div>
+      <div style={{ position: "relative", height: 140 }}>
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", gap: 6 }}>
+          {weeks.map((w, i) => (
+            <div key={i} style={{ flex: 1, height: `${Math.max((w.min / maxMin) * 100, 2)}%`,
+              background: "rgba(202,255,0,.16)", borderRadius: "3px 3px 0 0" }} />
+          ))}
+        </div>
+        {hasAcwr && (
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
+            <polyline
+              points={linePts.filter(Boolean).map(p => `${p.x},${p.y}`).join(" ")}
+              fill="none" stroke={S.cobalt} strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+            {linePts.map((p, i) => p && (
+              <circle key={i} cx={p.x} cy={p.y} r="1.8" fill={S.cobalt} vectorEffect="non-scaling-stroke" />
+            ))}
+          </svg>
+        )}
+      </div>
+      <div style={{ display: "flex", gap: 6, marginTop: 8 }}>
+        {weeks.map((w, i) => (
+          <div key={i} style={{ flex: 1, fontSize: 12, color: S.dim, textAlign: "center", whiteSpace: "nowrap" }}>
+            {MESES[w.start.getUTCMonth()]} {w.start.getUTCDate()}
+          </div>
+        ))}
+      </div>
+      <div style={{ display: "flex", gap: 20, marginTop: 12, fontSize: 13, color: S.muted, flexWrap: "wrap" }}>
+        <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+          <span style={{ width: 10, height: 10, background: "rgba(202,255,0,.5)", borderRadius: 2 }} />
+          Minutos de carga semanal
+        </span>
+        {hasAcwr && (
+          <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <span style={{ width: 10, height: 10, background: S.cobalt, borderRadius: "50%" }} />
+            ACWR
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
 
 function LoadingScreen() {
   return (
@@ -231,7 +452,15 @@ function ErrorScreen({ msg }) {
 }
 
 // ── TABS (Retos oculto por ahora) ────────────────────────────
-const TABS = ["PULSE", "SEMANA", "CARGA"];
+const TABS = ["PULSE", "SEMANA", "TENDENCIA"];
+
+// Rangos del score de Pulse, usados en la barra y el tooltip de "TU PULSE DE HOY"
+const PULSE_RANGES = [
+  { min: 0,  max: 39,  label: "Semana de recuperación", color: S.danger },
+  { min: 40, max: 59,  label: "Semana con oportunidad", color: S.warning },
+  { min: 60, max: 79,  label: "Semana sólida",          color: S.green },
+  { min: 80, max: 100, label: "Semana excepcional",     color: S.neon },
+];
 
 // ── MAIN ─────────────────────────────────────────────────────
 export default function App() {
@@ -261,19 +490,13 @@ export default function App() {
   const lastWeek = weekly[weekly.length - 1];
   const prevWeek = weekly[weekly.length - 2];
   const acwr = acwrData?.valor ?? null;
-  const acwrConfiable = !!acwrData?.confiable;
+  const acwrUi = getAcwrUi(acwrData);
   const weeklyIncrease = prevWeek && prevWeek.total_km > 0
     ? Math.round(((lastWeek.total_km - prevWeek.total_km) / prevWeek.total_km) * 100)
     : 0;
   const incSign = (weeklyIncrease >= 0 ? "+" : "") + weeklyIncrease + "%";
-  const acwrColor = acwr === null || !acwrConfiable
-    ? S.dim
-    : acwr > 1.5 ? S.danger : acwr > 1.3 ? S.warning : acwr < 0.8 ? S.cobalt : S.neon;
-  const acwrLabel = acwr === null
-    ? "SIN DATOS SUFICIENTES"
-    : !acwrConfiable
-      ? "BASE AÚN LIMITADA"
-      : acwr > 1.5 ? "ZONA DE RIESGO" : acwr > 1.3 ? "ZONA DE ALERTA" : acwr < 0.8 ? "SUBENTRENAMIENTO" : "ZONA SEGURA";
+  const acwrColor = acwr === null ? S.dim : acwrUi.color;
+  const acwrLabel = acwr === null ? "SIN DATOS SUFICIENTES" : acwrUi.label;
   const acwrDisplay = acwr === null ? "—" : `${acwr}x`;
 
   const last8 = weekly.slice(-8);
@@ -286,6 +509,14 @@ export default function App() {
   const restWeekPlan = pulse?.weekPlan?.slice(1) || [];
 
   const balanceMetric = pulse?.keyMetrics?.find(m => (m.label || "").toLowerCase().includes("fácil"));
+
+  const { weeks: loadWeeks, acwrSeries } = computeLoadWeeks(activities, acwrData);
+  const loadWeeksDisplay = loadWeeks.slice(-10);
+  const acwrSeriesDisplay = acwrSeries.slice(-10);
+  const consistency = computeConsistency(activities);
+  const acwrDisciplineContext = getAcwrDisciplineContext(acwrData);
+  const disciplineBreakdown = computeDisciplineBreakdown(activities);
+  const cardiacEfficiency = computeCardiacEfficiency(activities);
 
   const css = `
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap');
@@ -416,7 +647,7 @@ export default function App() {
                 <div className="card" style={{ background: "linear-gradient(160deg,rgba(202,255,0,.09),rgba(61,126,255,.07) 70%)", borderColor: "rgba(202,255,0,.22)" }}>
                   <div style={{ fontSize: 13, color: S.neon, fontWeight: 700, letterSpacing: ".08em", marginBottom: 12, display: "flex", alignItems: "center" }}>
                     TU PULSE DE HOY
-                    <InfoTip text="Puntaje 0-100 que resume tu semana de entrenamiento: volumen, intensidad y recuperación, generado por IA. Más alto no siempre es mejor — una semana de descanso planeado también puede dar un puntaje bajo." />
+                    <InfoTip text="Puntaje 0-100 que resume tu semana de entrenamiento: volumen, intensidad y recuperación, generado por IA. 80-100 semana excepcional, 60-79 semana sólida, 40-59 semana con oportunidad, 0-39 semana de recuperación." />
                   </div>
                   <div style={{ fontFamily: FONT_NUM, fontSize: 72, fontWeight: 900, color: S.text, lineHeight: 1 }}>
                     {pulse.score}<span style={{ fontSize: 22, color: S.dim, fontFamily: "Poppins", fontWeight: 600 }}>/100</span>
@@ -426,24 +657,31 @@ export default function App() {
                   </div>
                   {(() => {
                     const s = pulse.score;
-                    const ranges = [
-                      { max: 30, label: "Necesita atención urgente", color: S.danger },
-                      { max: 50, label: "Por debajo de lo esperado", color: S.warning },
-                      { max: 70, label: "En camino, puede mejorar", color: S.warning },
-                      { max: 85, label: "Buena semana de entrenamiento", color: S.neon },
-                      { max: 100, label: "Semana excelente", color: S.neon },
-                    ];
-                    const r = ranges.find(r => s <= r.max) || ranges[ranges.length - 1];
+                    const current = PULSE_RANGES.find(r => s <= r.max) || PULSE_RANGES[PULSE_RANGES.length - 1];
+                    const markerPos = Math.min(Math.max(s, 2), 98);
                     return (
                       <div style={{ marginTop: 14 }}>
-                        <div style={{ display: "flex", gap: 2, marginBottom: 6, height: 4, borderRadius: 2, overflow: "hidden" }}>
-                          {[20, 40, 60, 80, 100].map((seg, i) => (
-                            <div key={i} style={{ flex: 1, background: s >= seg - 19
-                              ? (seg <= 30 ? S.danger : seg <= 50 ? S.warning : seg <= 70 ? "#E8C547" : S.neon)
-                              : "#2A2D32", opacity: s >= seg - 19 ? 1 : 0.3 }} />
+                        <div style={{ position: "relative", marginTop: 8 }}>
+                          <div style={{ display: "flex", gap: 2, height: 8, borderRadius: 4, overflow: "hidden" }}>
+                            {PULSE_RANGES.map((r, i) => (
+                              <div key={i} style={{ flex: r.max - r.min + 1, background: r.color,
+                                opacity: s >= r.min ? 1 : 0.3 }} />
+                            ))}
+                          </div>
+                          <div style={{ position: "absolute", left: `${markerPos}%`, top: -4, width: 16, height: 16,
+                            background: S.text, borderRadius: "50%", transform: "translateX(-50%)",
+                            border: `2px solid ${current.color}`, boxShadow: "0 1px 4px rgba(0,0,0,.4)" }} />
+                        </div>
+                        <div style={{ display: "flex", gap: 12, marginTop: 16, fontSize: 12, flexWrap: "wrap" }}>
+                          {PULSE_RANGES.map((r, i) => (
+                            <span key={i} style={{ display: "flex", alignItems: "center", gap: 5,
+                              color: r === current ? r.color : S.dim, fontWeight: r === current ? 700 : 500 }}>
+                              <span style={{ width: 8, height: 8, borderRadius: 2, background: r.color,
+                                opacity: r === current ? 1 : 0.5, flexShrink: 0 }} />
+                              {r.min}-{r.max}: {r.label}
+                            </span>
                           ))}
                         </div>
-                        <div style={{ fontSize: 13, color: r.color, fontWeight: 600 }}>{r.label}</div>
                       </div>
                     );
                   })()}
@@ -648,6 +886,7 @@ export default function App() {
                 </div>
                 {recentSessions.map((a, i) => {
                   const tagColors = { LARGO: S.neon, INTERVALOS: S.cobalt, TEMPO: S.danger, RODAJE: S.text };
+                  const m = getSessionMetric(a);
                   return (
                     <div key={i} style={{ display: "flex", alignItems: "center", gap: 14,
                       padding: "14px 0",
@@ -658,9 +897,14 @@ export default function App() {
                         overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                         {a.name}
                       </div>
-                      <div style={{ fontFamily: FONT_NUM, fontSize: 18, fontWeight: 800,
-                        color: tagColors[a.tag] || S.text, whiteSpace: "nowrap" }}>
-                        {a.dist_km}<span style={{ fontSize: 13, color: S.dim, marginLeft: 2 }}>km</span>
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
+                        <div style={{ fontFamily: FONT_NUM, fontSize: 18, fontWeight: 800,
+                          color: tagColors[a.tag] || S.text, whiteSpace: "nowrap" }}>
+                          {m.primary}<span style={{ fontSize: 13, color: S.dim, marginLeft: 2 }}>{m.unit}</span>
+                        </div>
+                        {m.sub && (
+                          <div style={{ fontSize: 12, color: S.dim, marginTop: 2, whiteSpace: "nowrap" }}>{m.sub}</div>
+                        )}
                       </div>
                     </div>
                   );
@@ -670,9 +914,9 @@ export default function App() {
           )}
 
           {/* ══ CARGA ══ */}
-          {tab === "CARGA" && (
+          {tab === "TENDENCIA" && (
             <div>
-              <h1 className="page-title">Carga y prevención</h1>
+              <h1 className="page-title">Tendencia</h1>
 
               {/* Explicación ACWR */}
               <div className="card" style={{ marginBottom: 16, padding: "16px 20px" }}>
@@ -728,6 +972,108 @@ export default function App() {
                   <div style={{ fontSize: 13, color: S.warning, marginTop: 4 }}>Ideal: ≥ 80% en zona baja</div>
                 </div>
               </div>
+
+              {/* Carga semanal en minutos + ACWR superpuesto */}
+              {loadWeeksDisplay.length >= 2 && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 18, display: "flex", alignItems: "center" }}>
+                    CARGA SEMANAL Y ACWR · ÚLTIMAS {loadWeeksDisplay.length} SEMANAS
+                    <InfoTip text="Minutos totales de entrenamiento por semana (todas las disciplinas, sin caminatas ni actividades sueltas) y cómo se movió tu ACWR semana a semana. Muestra de dónde viene el número de la caja de arriba, no solo el valor final." />
+                  </div>
+                  <LoadACWRChart weeks={loadWeeksDisplay} acwrSeries={acwrSeriesDisplay} />
+                  {acwrDisciplineContext.length > 0 && (
+                    <div style={{ display: "flex", gap: 24, marginTop: 20, paddingTop: 16,
+                      borderTop: `1px solid ${S.border}`, flexWrap: "wrap" }}>
+                      {acwrDisciplineContext.map(d => (
+                        <div key={d.key} style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+                          <span style={{ fontSize: 13, color: S.muted, fontWeight: 600 }}>{d.label}</span>
+                          <span style={{ fontFamily: FONT_NUM, fontSize: 16, fontWeight: 800, color: d.ui.color }}>
+                            {d.valor != null ? `${d.valor.toFixed(2)}x` : "—"}
+                          </span>
+                          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".04em", color: d.ui.color }}>
+                            {d.ui.label}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Desglose por disciplina + Consistencia */}
+              <div className="grid2">
+                <div className="card">
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 16, display: "flex", alignItems: "center" }}>
+                    DESGLOSE POR DISCIPLINA
+                    <InfoTip text="Porcentaje de tus minutos de entrenamiento por deporte. Si entrenas multideporte, esto te muestra qué tanto pesa cada disciplina en tu carga total." />
+                  </div>
+                  {disciplineBreakdown.length > 0 ? disciplineBreakdown.map((d, i) => (
+                    <div key={d.key} style={{ marginBottom: i < disciplineBreakdown.length - 1 ? 14 : 0 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, marginBottom: 5 }}>
+                        <span style={{ color: S.text, fontWeight: 600 }}>{d.label}</span>
+                        <span style={{ color: d.color, fontWeight: 700, fontFamily: FONT_NUM, fontSize: 16 }}>{d.pct}%</span>
+                      </div>
+                      <div style={{ height: 6, borderRadius: 3, background: "#2A2D32", overflow: "hidden" }}>
+                        <div style={{ width: `${d.pct}%`, height: "100%", background: d.color, borderRadius: 3 }} />
+                      </div>
+                    </div>
+                  )) : <div style={{ fontSize: 14, color: S.muted }}>Sin datos suficientes.</div>}
+                </div>
+
+                <div className="card">
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 16, display: "flex", alignItems: "center" }}>
+                    CONSISTENCIA
+                    <InfoTip text="Semanas en las que registraste al menos una actividad, sobre el total de semanas del período analizado, y tu racha más larga de semanas activas seguidas." />
+                  </div>
+                  {consistency ? (
+                    <>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+                        <span style={{ fontFamily: FONT_NUM, fontSize: 44, fontWeight: 900, color: S.text, lineHeight: 1 }}>
+                          {consistency.activeWeeks}
+                        </span>
+                        <span style={{ fontSize: 16, color: S.muted }}>/ {consistency.totalWeeks} semanas activas</span>
+                      </div>
+                      <div style={{ fontSize: 15, color: S.muted, marginTop: 14 }}>
+                        Racha más larga: <strong style={{ color: S.neon }}>
+                          {consistency.longest} semana{consistency.longest === 1 ? "" : "s"}
+                        </strong> seguidas
+                      </div>
+                    </>
+                  ) : <div style={{ fontSize: 14, color: S.muted }}>Sin datos suficientes.</div>}
+                </div>
+              </div>
+
+              {/* Eficiencia cardiaca: progresión FC vs. ritmo, primera vs. segunda mitad del período */}
+              {cardiacEfficiency && (
+                <div className="card" style={{ marginBottom: 16 }}>
+                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 16, display: "flex", alignItems: "center" }}>
+                    EFICIENCIA CARDIACA
+                    <InfoTip text="Compara tu velocidad relativa a la frecuencia cardíaca entre la primera y la segunda mitad del período. Subir esta cifra sin cambiar el esfuerzo percibido es la señal más clara de adaptación aeróbica." />
+                  </div>
+                  <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap" }}>
+                    <div>
+                      <div style={{ fontSize: 13, color: S.dim, marginBottom: 4 }}>Primera mitad</div>
+                      <div style={{ fontFamily: FONT_NUM, fontSize: 32, fontWeight: 900, color: S.muted, lineHeight: 1 }}>
+                        {(cardiacEfficiency.first * 1000).toFixed(1)}
+                      </div>
+                    </div>
+                    <div style={{ fontSize: 22, color: S.dim }}>→</div>
+                    <div>
+                      <div style={{ fontSize: 13, color: S.dim, marginBottom: 4 }}>Segunda mitad</div>
+                      <div style={{ fontFamily: FONT_NUM, fontSize: 32, fontWeight: 900, color: S.text, lineHeight: 1 }}>
+                        {(cardiacEfficiency.second * 1000).toFixed(1)}
+                      </div>
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 700,
+                      color: cardiacEfficiency.deltaPct > 0 ? S.neon : cardiacEfficiency.deltaPct < 0 ? S.warning : S.muted }}>
+                      {cardiacEfficiency.deltaPct > 0 ? "▲" : cardiacEfficiency.deltaPct < 0 ? "▼" : "→"} {Math.abs(cardiacEfficiency.deltaPct)}%
+                    </div>
+                  </div>
+                  <div style={{ fontSize: 14, color: S.muted, marginTop: 14, lineHeight: 1.6 }}>
+                    Basado en {cardiacEfficiency.n} sesiones de running. Más alto es más eficiente: más velocidad por cada pulsación.
+                  </div>
+                </div>
+              )}
 
               {/* Plan taper */}
               {taper && taper.length > 0 && (

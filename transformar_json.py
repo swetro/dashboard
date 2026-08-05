@@ -30,17 +30,6 @@ CYCLING_TIPOS   = {"cycling", "indoorcycling", "indoor_cycling", "virtualride", 
 SWIMMING_TIPOS  = {"swimming", "openwater"}
 STRENGTH_TIPOS  = {"strength", "strength_training", "weighttraining", "gym"}
 
-# Mismas reglas que swetro-retro/config.py: estas disciplinas no cuentan
-# para la carga de entrenamiento (ni para ACWR ni para el ancla de semana 1).
-TIPOS_FUERA_DE_CARGA = {"walking", "other"}
-
-# ACWR (acute:chronic workload ratio) — mismos umbrales que
-# swetro-retro/config.py: sin al menos 5 semanas de historial no hay base
-# crónica que comparar, y con menos de 150 min/semana de crónica el
-# indicador se dispara por ruido, no por riesgo real.
-ACWR_SEMANA_MINIMA = 5
-ACWR_BASE_CRONICA_MINIMA = 150
-
 def normalizar_tipo(tipo_raw):
     if not tipo_raw:
         return "other"
@@ -288,13 +277,7 @@ def calcular_weekly_multidisciplina(activities):
     return weekly
 
 
-# ── ACWR (carga semanal, no km) ──────────────────────────────
-
-def lunes_de(date_str):
-    """YYYY-MM-DD -> date del lunes de esa semana."""
-    d = datetime.fromisoformat(date_str).date()
-    return d - timedelta(days=d.weekday())
-
+# ── ACWR ──────────────────────────────────────────────────────
 
 def ultima_semana_completa(hoy=None):
     """
@@ -323,55 +306,89 @@ def fmt_rango_semana_es(inicio, fin):
     return f"{fmt_fecha_es(inicio, incluir_anio)} al {fmt_fecha_es(fin, incluir_anio)}"
 
 
-def calcular_acwr(activities):
+def _date_de_iso_z(iso_str):
+    """Azure exporta fechas con sufijo 'Z' (p.ej. '2026-07-27T00:00:00Z') que
+    datetime.fromisoformat no soporta en Python 3.9. Los primeros 10
+    caracteres siempre son la fecha, así que basta con parsear eso."""
+    return date.fromisoformat(iso_str[:10])
+
+
+# Disciplinas de ACWR que sí se muestran en el dashboard. "aerobic" es el
+# indicador global (suma de todas las disciplinas aeróbicas) y es el que
+# alimenta la caja de riesgo; "impact" viene en el export pero no se usa acá.
+ACWR_DISCIPLINAS = ("aerobic", "running", "cycling", "strength")
+
+# Traducción del status para el prompt de Pulse. El modelo interpreta el
+# status, nunca la cifra (ver reglas del system_prompt en generar_pulse).
+ACWR_STATUS_ES = {
+    "optimal":           "zona segura",
+    "elevated":          "elevado",
+    "high_risk":         "riesgo alto",
+    "undertraining":     "baja carga",
+    "insufficient_data": "datos insuficientes",
+}
+
+
+def _acwr_status_es(status):
+    return ACWR_STATUS_ES.get(status, "sin datos")
+
+
+def _round2(v):
+    return round(v, 2) if v is not None else None
+
+
+def procesar_acwr(acwr_raw, lunes_analizado, domingo_analizado):
     """
-    ACWR sobre minutos totales de carga (todas las disciplinas, Walking y
-    Other excluidos), mismas reglas que swetro-retro/metrics.py: semanas
-    llenas de ceros donde no hubo carga, semana 1 ancla en la primera
-    actividad que cuenta para carga, solo confiable desde la semana
-    ACWR_SEMANA_MINIMA y con base crónica >= ACWR_BASE_CRONICA_MINIMA.
+    El ACWR ya no se calcula localmente: viene del export de Azure como una
+    lista de registros semana × disciplina (ver private/inputs/export_2.json
+    para un ejemplo real), con carga en calorías (minutos para "strength"),
+    no en minutos totales como el cálculo local que reemplaza. "aerobic" es
+    el indicador global, tal como antes.
 
-    "Esta semana" (la última, semana=aguda) es siempre la última semana
-    COMPLETA — la semana en curso (la que contiene hoy) se excluye. A
-    diferencia de calcular_weekly_multidisciplina (que sí incluye la semana
-    en curso, para la pestaña SEMANA), el ACWR nunca debe calcularse sobre
-    una semana parcial: una carga aguda artificialmente baja por tener solo
-    1-2 días de datos daría una lectura de riesgo engañosa.
+    Se descarta cualquier semana posterior a la última semana completa — el
+    ACWR nunca se calcula ni se grafica sobre una semana en curso, mismo
+    criterio que Pulse (ver ultima_semana_completa) — y la disciplina
+    "impact" (no se muestra en el dashboard).
 
-    Retorna la última semana disponible: {"valor", "confiable", "semana"}.
+    Retorna {"valor", "status", "confiable", "semana", "series"}, donde
+    "series" trae, por disciplina, la lista de semanas ya filtrada y
+    ordenada (para la pestaña TENDENCIA). Si el export no trae bloque
+    "acwr" (exports viejos, bootstrapeados desde el CSV de la retro), todo
+    queda en None/vacío y el frontend lo maneja con su propio fallback.
     """
-    hoy = date.today()
-    lunes_semana_actual = hoy - timedelta(days=hoy.weekday())
+    if not acwr_raw:
+        return {"valor": None, "status": None, "confiable": False, "semana": None, "series": {}}
 
-    cuenta_carga = [
-        a for a in activities
-        if a.get("date")
-        and a.get("type") not in TIPOS_FUERA_DE_CARGA
-        and lunes_de(a["date"]) < lunes_semana_actual
+    registros = [
+        r for r in acwr_raw
+        if r.get("activity_type") in ACWR_DISCIPLINAS
+        and _date_de_iso_z(r["week_start_date"]) <= lunes_analizado
     ]
-    if not cuenta_carga:
-        return {"valor": None, "confiable": False, "semana": None}
 
-    primer_lunes  = min(lunes_de(a["date"]) for a in cuenta_carga)
-    ultimo_lunes  = max(lunes_de(a["date"]) for a in cuenta_carga)
-    semanas       = (ultimo_lunes - primer_lunes).days // 7 + 1
+    series = {tipo: [] for tipo in ACWR_DISCIPLINAS}
+    for r in sorted(registros, key=lambda r: r["week_start_date"]):
+        series[r["activity_type"]].append({
+            "weekStart": r["week_start_date"][:10],
+            "weekEnd":   r["week_end_date"][:10],
+            "valor":     _round2(r.get("acwr_value")),
+            "status":    r.get("status"),
+        })
 
-    if semanas < ACWR_SEMANA_MINIMA:
-        return {"valor": None, "confiable": False, "semana": None}
+    aerobic_actual = next(
+        (r for r in registros
+         if r["activity_type"] == "aerobic" and _date_de_iso_z(r["week_start_date"]) == lunes_analizado),
+        None,
+    )
+    if not aerobic_actual:
+        return {"valor": None, "status": None, "confiable": False, "semana": None, "series": series}
 
-    carga_por_semana = [0.0] * semanas
-    for a in cuenta_carga:
-        idx = (lunes_de(a["date"]) - primer_lunes).days // 7
-        carga_por_semana[idx] += a["duration_min"]
-
-    semana  = semanas
-    aguda   = carga_por_semana[semana - 1]
-    previas = carga_por_semana[semana - 5 : semana - 1]
-    cronica = sum(previas) / 4
-    confiable = cronica >= ACWR_BASE_CRONICA_MINIMA
-    valor = round(aguda / cronica, 2) if cronica > 0 else None
-
-    return {"valor": valor, "confiable": confiable, "semana": semana}
+    return {
+        "valor":     _round2(aerobic_actual.get("acwr_value")),
+        "status":    aerobic_actual.get("status"),
+        "confiable": bool(aerobic_actual.get("has_sufficient_history")),
+        "semana":    f"{lunes_analizado.isoformat()}/{domingo_analizado.isoformat()}",
+        "series":    series,
+    }
 
 
 # ── Resumen de disciplinas para Pulse ────────────────────────
@@ -408,7 +425,7 @@ def resumen_disciplinas(activities):
 
 # ── Generar Pulse via Anthropic ───────────────────────────────
 
-def generar_pulse(activities, weekly, meta, profile):
+def generar_pulse(activities, weekly, meta, profile, acwr_info):
     """Llama a Anthropic para generar el análisis Pulse."""
     try:
         import anthropic
@@ -442,14 +459,16 @@ def generar_pulse(activities, weekly, meta, profile):
     last_week   = next((w for w in weekly_cerrado if w["week"] == semana_analizada_str), {})
     recent_run  = run_acts[-1] if run_acts else (activities_cerradas[-1] if activities_cerradas else {})
 
-    # ACWR basado solo en km de running
-    run_kms_weekly = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly_cerrado]
-    if len(run_kms_weekly) >= 5:
-        acute   = run_kms_weekly[-1]
-        chronic = sum(run_kms_weekly[-5:-1]) / 4
-        acwr    = round(acute / chronic, 2) if chronic > 0 else 0.0
-    else:
-        acwr = 1.0
+    # Estado de carga (ACWR) para el prompt: SOLO el status interpretado,
+    # nunca la cifra — el valor exacto ya viene de procesar_acwr() y se
+    # muestra en la caja del dashboard (ver ACWR_STATUS_ES más arriba).
+    estado_carga = _acwr_status_es((acwr_info or {}).get("status"))
+    desglose_disciplinas = []
+    for tipo, nombre_es in (("running", "Running"), ("cycling", "Cycling"), ("strength", "Strength")):
+        serie_tipo = (acwr_info or {}).get("series", {}).get(tipo) or []
+        if serie_tipo:
+            desglose_disciplinas.append(f"{nombre_es}: {_acwr_status_es(serie_tipo[-1].get('status'))}")
+    desglose_carga_str = ", ".join(desglose_disciplinas) if desglose_disciplinas else "sin desglose por disciplina disponible"
 
     nombre   = meta.get("nombre", profile.get("full_name", "Atleta"))
     carrera  = meta.get("metaCarrera", {})
@@ -472,6 +491,8 @@ Generas análisis de entrenamiento personalizados para atletas que pueden practi
 Español latinoamericano. SIEMPRE en segunda persona dirigiéndote al atleta por su nombre — escribe "Juan, cerraste..." nunca "Juan cerró...".
 Sin bullets en aiVerdict. Sin emojis en texto de análisis.
 IMPORTANTE: Las métricas semanales de km y ACWR reflejan SOLO running. El atleta puede tener otras disciplinas que complementan su carga total. No interpretes semanas de bajo km de running como inactividad si hay otras disciplinas activas esa semana. Cuando calcules fatiga o recuperación, considera la carga total de todas las disciplinas.
+El valor exacto de ACWR ya se muestra en la interfaz. NUNCA lo menciones con cifra en el texto. Si necesitas referirte a la carga, usa "tu carga está en zona segura" o "tu carga subió respecto a semanas anteriores", sin número específico.
+Esta regla aplica a TODA métrica que se muestre como número en una caja de la interfaz: ACWR, Pulse score, ritmo promedio, FC promedio. El texto interpreta, las cajas muestran los números. Nunca dupliques una cifra que ya está visible.
 Responde ÚNICAMENTE con JSON válido, sin markdown, sin backticks."""
 
     user_prompt = f"""Genera análisis Pulse semanal.
@@ -491,7 +512,8 @@ Fuerza esta semana: {last_week.get('strength', {}).get('minutos', 0)} min | {las
 
 CONTEXTO HISTÓRICO ({len(activities_cerradas)} actividades totales):
 {resumen}
-ACWR running: {acwr}x
+Estado de tu carga (ACWR): {estado_carga}
+Desglose de carga por disciplina: {desglose_carga_str}
 Últimas 8 semanas (km running): {ultimas_run_km}
 
 Responde con JSON: {{"semana":"rango fechas","score":0-100,"headline":"máx 8 palabras","subheadline":"máx 12 palabras","readiness":0-100,"projectedTime":"hh:mm:ss o null","projectedPace":"m:ss o null","aiVerdict":"párrafo 3-4 oraciones análisis longitudinal en segunda persona","strengths":["s1","s2","s3"],"warnings":["w1","w2"],"keyMetrics":[{{"label":"nombre","value":"valor","trend":"up|down|stable","status":"green|yellow|red","note":"nota corta"}}],"weekPlan":[{{"day":"Lun|Mar|Mié|Jue|Vie|Sáb|Dom","type":"tipo sesión","km":"X km o —","notes":"instrucción concreta"}}],"injuryRisk":{{"level":"low|medium|high","score":0-100,"topRisk":"zona anatómica","action":"acción concreta"}},"funFact":"dato curioso sobre su entrenamiento o null","seoulTip":null}}"""
@@ -538,9 +560,6 @@ def transformar(input_data, meta_override=None, con_pulse=False):
     # ── Métricas semanales multidisciplina ──
     weekly = calcular_weekly_multidisciplina(activities)
 
-    # ── ACWR (carga semanal, minutos totales) ──
-    acwr = calcular_acwr(activities)
-
     meta = {
         "userId":     str(profile.get("user_id", "u000")),
         "nombre":     nombre.upper(),
@@ -561,11 +580,14 @@ def transformar(input_data, meta_override=None, con_pulse=False):
         "fin":    domingo_analizado.isoformat(),
     }
 
+    # ── ACWR (del export de Azure, ver procesar_acwr) ──
+    acwr = procesar_acwr(input_data.get("acwr"), lunes_analizado, domingo_analizado)
+
     # ── Pulse ──
     pulse = None
     if con_pulse and activities and weekly:
         print("  → Generando Pulse...")
-        pulse = generar_pulse(activities, weekly, meta, profile)
+        pulse = generar_pulse(activities, weekly, meta, profile, acwr)
         if pulse:
             print(f"  ✓ Pulse generado (score: {pulse.get('score', '?')})")
 
