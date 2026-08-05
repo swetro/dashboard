@@ -212,6 +212,11 @@ def calcular_weekly_multidisciplina(activities):
     """
     Calcula métricas semanales agrupando por semana ISO y disciplina.
     Retorna lista de semanas con breakdown por deporte.
+
+    Incluye la semana en curso (incompleta) a propósito: esta lista alimenta
+    la pestaña SEMANA, que muestra progreso en vivo. El análisis de Pulse
+    NO usa esta lista directamente — filtra a la última semana completa por
+    su cuenta (ver `ultima_semana_completa` y `generar_pulse`).
     """
     from datetime import datetime, timedelta
 
@@ -291,6 +296,33 @@ def lunes_de(date_str):
     return d - timedelta(days=d.weekday())
 
 
+def ultima_semana_completa(hoy=None):
+    """
+    (lunes, domingo) de la última semana COMPLETA relativa a hoy. La semana
+    que contiene "hoy" nunca cuenta como completa, sin importar qué día de
+    esa semana sea — lunes o domingo, siempre es la semana anterior.
+    """
+    hoy = hoy or date.today()
+    lunes_semana_actual = hoy - timedelta(days=hoy.weekday())
+    lunes = lunes_semana_actual - timedelta(days=7)
+    domingo = lunes_semana_actual - timedelta(days=1)
+    return lunes, domingo
+
+
+MESES_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+            "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+
+def fmt_fecha_es(d, incluir_anio):
+    base = f"{d.day} de {MESES_ES[d.month - 1]}"
+    return f"{base} de {d.year}" if incluir_anio else base
+
+
+def fmt_rango_semana_es(inicio, fin):
+    incluir_anio = inicio.year != fin.year
+    return f"{fmt_fecha_es(inicio, incluir_anio)} al {fmt_fecha_es(fin, incluir_anio)}"
+
+
 def calcular_acwr(activities):
     """
     ACWR sobre minutos totales de carga (todas las disciplinas, Walking y
@@ -299,11 +331,23 @@ def calcular_acwr(activities):
     actividad que cuenta para carga, solo confiable desde la semana
     ACWR_SEMANA_MINIMA y con base crónica >= ACWR_BASE_CRONICA_MINIMA.
 
+    "Esta semana" (la última, semana=aguda) es siempre la última semana
+    COMPLETA — la semana en curso (la que contiene hoy) se excluye. A
+    diferencia de calcular_weekly_multidisciplina (que sí incluye la semana
+    en curso, para la pestaña SEMANA), el ACWR nunca debe calcularse sobre
+    una semana parcial: una carga aguda artificialmente baja por tener solo
+    1-2 días de datos daría una lectura de riesgo engañosa.
+
     Retorna la última semana disponible: {"valor", "confiable", "semana"}.
     """
+    hoy = date.today()
+    lunes_semana_actual = hoy - timedelta(days=hoy.weekday())
+
     cuenta_carga = [
         a for a in activities
-        if a.get("date") and a.get("type") not in TIPOS_FUERA_DE_CARGA
+        if a.get("date")
+        and a.get("type") not in TIPOS_FUERA_DE_CARGA
+        and lunes_de(a["date"]) < lunes_semana_actual
     ]
     if not cuenta_carga:
         return {"valor": None, "confiable": False, "semana": None}
@@ -379,15 +423,27 @@ def generar_pulse(activities, weekly, meta, profile):
 
     client = anthropic.Anthropic(api_key=api_key)
 
-    # Solo running para métricas de pace/ACWR
-    run_acts    = [a for a in activities if a.get("type") == "running"]
-    run_weekly  = [w for w in weekly if w.get("total_km", 0) > 0 or w.get("running", {}).get("km", 0) > 0]
+    # Pulse SIEMPRE analiza la última semana COMPLETA (lunes a domingo). La
+    # semana en curso puede existir en `activities`/`weekly` (los usa la
+    # pestaña SEMANA para mostrar progreso en vivo) pero no debe llegar al
+    # modelo bajo ningún concepto: ni en la semana analizada, ni en el
+    # contexto histórico, ni como "última sesión".
+    lunes_analizado, domingo_analizado = ultima_semana_completa()
+    lunes_semana_actual = lunes_analizado + timedelta(days=7)
+    semana_analizada_str = f"{lunes_analizado.isoformat()}/{domingo_analizado.isoformat()}"
 
-    last_week   = weekly[-1] if weekly else {}
-    recent_run  = run_acts[-1] if run_acts else (activities[-1] if activities else {})
+    activities_cerradas = [a for a in activities if a.get("date", "9999") < lunes_semana_actual.isoformat()]
+    weekly_cerrado       = [w for w in weekly if w["week"].split("/")[0] < lunes_semana_actual.isoformat()]
+
+    # Solo running para métricas de pace/ACWR
+    run_acts    = [a for a in activities_cerradas if a.get("type") == "running"]
+    run_weekly  = [w for w in weekly_cerrado if w.get("total_km", 0) > 0 or w.get("running", {}).get("km", 0) > 0]
+
+    last_week   = next((w for w in weekly_cerrado if w["week"] == semana_analizada_str), {})
+    recent_run  = run_acts[-1] if run_acts else (activities_cerradas[-1] if activities_cerradas else {})
 
     # ACWR basado solo en km de running
-    run_kms_weekly = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly]
+    run_kms_weekly = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly_cerrado]
     if len(run_kms_weekly) >= 5:
         acute   = run_kms_weekly[-1]
         chronic = sum(run_kms_weekly[-5:-1]) / 4
@@ -397,7 +453,7 @@ def generar_pulse(activities, weekly, meta, profile):
 
     nombre   = meta.get("nombre", profile.get("full_name", "Atleta"))
     carrera  = meta.get("metaCarrera", {})
-    resumen  = resumen_disciplinas(activities)
+    resumen  = resumen_disciplinas(activities_cerradas)
 
     # PRs para contexto
     prs_str = ""
@@ -406,9 +462,12 @@ def generar_pulse(activities, weekly, meta, profile):
         prs_str = "PRs registrados: " + ", ".join(f"{p['dist']} {p['mark']}" for p in prs)
 
     # Últimas 8 semanas de running
-    ultimas_run_km = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly[-8:]]
+    ultimas_run_km = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly_cerrado[-8:]]
 
-    system_prompt = """Eres Pulse, el motor de análisis semanal de Swetro.
+    rango_semana_es = fmt_rango_semana_es(lunes_analizado, domingo_analizado)
+
+    system_prompt = f"""Eres Pulse, el motor de análisis semanal de Swetro.
+Analizas la semana del {rango_semana_es}. Las actividades posteriores al domingo {fmt_fecha_es(domingo_analizado, False)} no existen para este análisis, aunque estén en los datos. Nunca menciones actividades de la semana en curso.
 Generas análisis de entrenamiento personalizados para atletas que pueden practicar múltiples deportes.
 Español latinoamericano. SIEMPRE en segunda persona dirigiéndote al atleta por su nombre — escribe "Juan, cerraste..." nunca "Juan cerró...".
 Sin bullets en aiVerdict. Sin emojis en texto de análisis.
@@ -430,7 +489,7 @@ Fuerza esta semana: {last_week.get('strength', {}).get('minutos', 0)} min | {las
 ÚLTIMA SESIÓN DE RUNNING: {recent_run.get('name', 'N/A')} ({recent_run.get('date', 'N/A')})
 {recent_run.get('dist_km', 0)}km | {recent_run.get('pace', 'N/A')}/km | {recent_run.get('hr', 0)}bpm
 
-CONTEXTO HISTÓRICO ({len(activities)} actividades totales):
+CONTEXTO HISTÓRICO ({len(activities_cerradas)} actividades totales):
 {resumen}
 ACWR running: {acwr}x
 Últimas 8 semanas (km running): {ultimas_run_km}
@@ -495,6 +554,13 @@ def transformar(input_data, meta_override=None, con_pulse=False):
         "generadoEn": datetime.utcnow().isoformat() + "Z",
     }
 
+    # ── Semana analizada por Pulse (última semana completa, lunes a domingo) ──
+    lunes_analizado, domingo_analizado = ultima_semana_completa()
+    semana_analizada = {
+        "inicio": lunes_analizado.isoformat(),
+        "fin":    domingo_analizado.isoformat(),
+    }
+
     # ── Pulse ──
     pulse = None
     if con_pulse and activities and weekly:
@@ -531,13 +597,14 @@ def transformar(input_data, meta_override=None, con_pulse=False):
             })
 
     return {
-        "meta":       meta,
-        "activities": activities,
-        "weekly":     weekly,
-        "acwr":       acwr,
-        "pulse":      pulse,
-        "taper":      [],
-        "retos":      retos,
+        "meta":            meta,
+        "activities":      activities,
+        "weekly":          weekly,
+        "acwr":            acwr,
+        "pulse":           pulse,
+        "semanaAnalizada": semana_analizada,
+        "taper":           [],
+        "retos":           retos,
     }
 
 

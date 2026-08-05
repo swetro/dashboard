@@ -30,6 +30,22 @@ function fmtDate(d) {
   return parseInt(d.slice(8, 10)) + " " + MESES[parseInt(d.slice(5, 7)) - 1];
 }
 
+const MESES_LARGOS = ["enero","febrero","marzo","abril","mayo","junio","julio",
+  "agosto","septiembre","octubre","noviembre","diciembre"];
+
+function fmtFechaEs(iso, incluirAnio) {
+  const anio = parseInt(iso.slice(0, 4));
+  const mes  = parseInt(iso.slice(5, 7));
+  const dia  = parseInt(iso.slice(8, 10));
+  const base = `${dia} de ${MESES_LARGOS[mes - 1]}`;
+  return incluirAnio ? `${base} de ${anio}` : base;
+}
+
+function fmtRangoSemana(inicioIso, finIso) {
+  const incluirAnio = inicioIso.slice(0, 4) !== finIso.slice(0, 4);
+  return `${fmtFechaEs(inicioIso, incluirAnio)} al ${fmtFechaEs(finIso, incluirAnio)}`;
+}
+
 function getUserId() {
   return new URLSearchParams(window.location.search).get("u") || "demo";
 }
@@ -234,7 +250,7 @@ export default function App() {
   if (error) return <ErrorScreen msg={error} />;
   if (!data) return <LoadingScreen />;
 
-  const { meta, activities, weekly, acwr: acwrData, pulse, taper } = data;
+  const { meta, activities, weekly, acwr: acwrData, pulse, taper, semanaAnalizada } = data;
   const primerNombre = (meta.nombre || "").split(" ")[0];
   const nombreDisplay = primerNombre
     ? primerNombre.charAt(0) + primerNombre.slice(1).toLowerCase()
@@ -389,6 +405,11 @@ export default function App() {
           {tab === "PULSE" && pulse && (
             <div>
               <h1 className="page-title">Análisis PULSE</h1>
+              {semanaAnalizada && (
+                <div style={{ fontSize: 13, fontWeight: 400, color: S.dim, marginTop: -14, marginBottom: 18 }}>
+                  Semana del {fmtRangoSemana(semanaAnalizada.inicio, semanaAnalizada.fin)}
+                </div>
+              )}
 
               <div className="grid2">
                 {/* Score */}
