@@ -31,6 +31,14 @@ function fmtDate(d) {
   return parseInt(d.slice(8, 10)) + " " + MESES[parseInt(d.slice(5, 7)) - 1];
 }
 
+// "28 jul - 3 ago" — rango completo de una semana "YYYY-MM-DD/YYYY-MM-DD"
+function fmtRangoCorto(weekStr) {
+  const [inicio, fin] = weekStr.split("/");
+  const dia1 = parseInt(inicio.slice(8, 10)), mes1 = MESES[parseInt(inicio.slice(5, 7)) - 1].toLowerCase();
+  const dia2 = parseInt(fin.slice(8, 10)), mes2 = MESES[parseInt(fin.slice(5, 7)) - 1].toLowerCase();
+  return `${dia1} ${mes1} - ${dia2} ${mes2}`;
+}
+
 const MESES_LARGOS = ["enero","febrero","marzo","abril","mayo","junio","julio",
   "agosto","septiembre","octubre","noviembre","diciembre"];
 
@@ -502,6 +510,11 @@ export default function App() {
   const last8 = weekly.slice(-8);
   const maxKm = Math.max(...last8.map(w => w.total_km), 1);
   const weekLabels = last8.map(w => fmtWeek(w.week));
+  const semanaAnalizadaStr = semanaAnalizada ? `${semanaAnalizada.inicio}/${semanaAnalizada.fin}` : null;
+  const esSemanaEnCurso = w => !!(semanaAnalizada && w.week.split("/")[0] > semanaAnalizada.fin);
+  const esSemanaAnalizada = w => w.week === semanaAnalizadaStr;
+  const lastWeekRunSessions = lastWeek.running ? lastWeek.running.sessions : lastWeek.sessions;
+  const hasRunDataLastWeek = (lastWeekRunSessions || 0) > 0;
 
   const recentSessions = [...activities].reverse().slice(0, 6).map(a => ({ ...a, tag: getTag(a) }));
 
@@ -826,40 +839,65 @@ export default function App() {
                 {/* Barras con valores */}
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 112 }}>
                   {last8.map((w, i) => {
-                    const isLast = i === last8.length - 1;
+                    const enCurso = esSemanaEnCurso(w);
+                    const analizada = esSemanaAnalizada(w);
                     const hPx = Math.max((w.total_km / maxKm) * 78, 3);
                     const val = w.total_km >= 10 ? Math.round(w.total_km) : w.total_km.toFixed(1);
                     return (
                       <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column",
                         alignItems: "center", justifyContent: "flex-end", minWidth: 0 }}>
                         <div className="bar-val" style={{ fontFamily: FONT_NUM, fontSize: 13, fontWeight: 800,
-                          color: isLast ? S.neon : S.muted, marginBottom: 4, whiteSpace: "nowrap" }}>
+                          color: analizada ? S.cobalt : enCurso ? S.dim : S.muted, marginBottom: 4, whiteSpace: "nowrap" }}>
                           {val}
                         </div>
-                        <div style={{ width: "100%", height: hPx,
-                          background: isLast ? `linear-gradient(180deg, ${S.neon}, ${S.cobalt})` : "rgba(202,255,0,.16)",
-                          cursor: "default", title: `${w.total_km} km · ${w.sessions} sesiones · ${fmtWeek(w.week)}`,
-                          borderRadius: "4px 4px 0 0",
-                          border: isLast ? "1px solid rgba(202,255,0,.4)" : "none" }} />
+                        <div
+                          title={`${w.total_km} km · ${w.sessions} sesiones · ${fmtRangoCorto(w.week)}${enCurso ? " (en curso)" : ""}${analizada ? " (analizada por Pulse)" : ""}`}
+                          style={{ width: "100%", height: hPx,
+                            background: enCurso
+                              ? "rgba(255,255,255,.05)"
+                              : analizada ? "rgba(61,126,255,.22)" : "rgba(202,255,0,.16)",
+                            cursor: "default", borderRadius: "4px 4px 0 0",
+                            border: enCurso ? `1px dashed ${S.dim}` : analizada ? `1px solid ${S.cobalt}` : "none" }} />
                       </div>
                     );
                   })}
                 </div>
                 <div style={{ display: "flex", gap: 6, marginTop: 6 }}>
-                  {weekLabels.map((l, i) => (
-                    <div key={i} className="bar-lbl" style={{ flex: 1, fontSize: 13, color: S.dim,
-                      textAlign: "center", whiteSpace: "nowrap", overflow: "hidden" }}>{l}</div>
-                  ))}
+                  {last8.map((w, i) => {
+                    const enCurso = esSemanaEnCurso(w);
+                    const analizada = esSemanaAnalizada(w);
+                    return (
+                      <div key={i} className="bar-lbl" style={{ flex: 1, textAlign: "center", minWidth: 0 }}>
+                        <div style={{ fontSize: 13, color: analizada ? S.cobalt : S.dim,
+                          fontWeight: analizada ? 700 : 400, whiteSpace: "nowrap", overflow: "hidden" }}>
+                          {fmtWeek(w.week)}
+                        </div>
+                        <div style={{ fontSize: 11, color: S.dim, opacity: .75, whiteSpace: "nowrap", overflow: "hidden" }}>
+                          {fmtRangoCorto(w.week)}
+                        </div>
+                        {enCurso && (
+                          <div style={{ fontSize: 10, color: S.dim, fontWeight: 700, letterSpacing: ".04em", marginTop: 3 }}>
+                            EN CURSO
+                          </div>
+                        )}
+                        {analizada && (
+                          <div style={{ fontSize: 10, color: S.cobalt, fontWeight: 700, letterSpacing: ".04em", marginTop: 3 }}>
+                            ANALIZADA
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
               {/* Métricas con tendencia */}
               <div className="grid3">
                 {[
-                  { label: "RITMO PROMEDIO (MIN/KM)", val: lastWeek.avg_pace.toFixed(2), color: S.cobalt,
+                  { label: "RITMO PROMEDIO (MIN/KM)", val: lastWeek.avg_pace.toFixed(2), noData: !hasRunDataLastWeek, color: S.cobalt,
                     data: last8.map(w => w.avg_pace), goodWhen: "down", decimals: 2,
                     tip: "Minutos por kilómetro promedio de tus sesiones de running esta semana, sin contar la carrera. Bajar el número es correr más rápido." },
-                  { label: "FC PROMEDIO (BPM)", val: Math.round(lastWeek.avg_hr), color: S.warning,
+                  { label: "FC PROMEDIO (BPM)", val: Math.round(lastWeek.avg_hr), noData: !hasRunDataLastWeek, color: S.warning,
                     data: last8.map(w => w.avg_hr), unit: "bpm", goodWhen: "down",
                     tip: "Pulsaciones por minuto promedio durante tus sesiones de running esta semana. Ayuda a ver si el esfuerzo percibido coincide con el esfuerzo real." },
                   { label: "SESIONES / SEMANA", val: lastWeek.sessions, color: S.neon,
@@ -870,9 +908,15 @@ export default function App() {
                     <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 6, display: "flex", alignItems: "center" }}>
                       {m.label}<InfoTip text={m.tip} />
                     </div>
-                    <div style={{ fontFamily: FONT_NUM, fontSize: 34, fontWeight: 900, color: m.color, lineHeight: 1, marginBottom: 4 }}>
-                      {m.val}
-                    </div>
+                    {m.noData ? (
+                      <div style={{ fontSize: 20, fontWeight: 700, color: S.dim, lineHeight: 1, marginBottom: 4 }}>
+                        Sin datos aún
+                      </div>
+                    ) : (
+                      <div style={{ fontFamily: FONT_NUM, fontSize: 34, fontWeight: 900, color: m.color, lineHeight: 1, marginBottom: 4 }}>
+                        {m.val}
+                      </div>
+                    )}
                     <TrendChart data={m.data} labels={weekLabels} color={m.color}
                       goodWhen={m.goodWhen} unit={m.unit || ""} decimals={m.decimals || 0} />
                   </div>

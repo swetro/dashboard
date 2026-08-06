@@ -474,6 +474,20 @@ def generar_pulse(activities, weekly, meta, profile, acwr_info):
     carrera  = meta.get("metaCarrera", {})
     resumen  = resumen_disciplinas(activities_cerradas)
 
+    # Tiempo restante hasta la carrera para el prompt: se precalcula acá,
+    # nunca lo estima el modelo (mismo motivo que ACWR — un LLM calculando
+    # diferencias de fecha a mano se equivoca, p.ej. confundió 115 días con
+    # "16 meses"). Referencia: domingo de la semana analizada, no "hoy", para
+    # que sea coherente con el resto del análisis (que tampoco conoce "hoy").
+    tiene_meta = carrera.get("nombre") and carrera.get("nombre") != "¿Cuál es tu próxima carrera?"
+    dias_restantes = None
+    if tiene_meta and carrera.get("fecha"):
+        try:
+            fecha_carrera = date.fromisoformat(carrera["fecha"][:10])
+            dias_restantes = (fecha_carrera - domingo_analizado).days
+        except ValueError:
+            dias_restantes = None
+
     # PRs para contexto
     prs_str = ""
     prs = meta.get("prs", [])
@@ -492,13 +506,15 @@ Español latinoamericano. SIEMPRE en segunda persona dirigiéndote al atleta por
 Sin bullets en aiVerdict. Sin emojis en texto de análisis.
 IMPORTANTE: Las métricas semanales de km y ACWR reflejan SOLO running. El atleta puede tener otras disciplinas que complementan su carga total. No interpretes semanas de bajo km de running como inactividad si hay otras disciplinas activas esa semana. Cuando calcules fatiga o recuperación, considera la carga total de todas las disciplinas.
 El valor exacto de ACWR ya se muestra en la interfaz. NUNCA lo menciones con cifra en el texto. Si necesitas referirte a la carga, usa "tu carga está en zona segura" o "tu carga subió respecto a semanas anteriores", sin número específico.
-Esta regla aplica a TODA métrica que se muestre como número en una caja de la interfaz: ACWR, Pulse score, ritmo promedio, FC promedio. El texto interpreta, las cajas muestran los números. Nunca dupliques una cifra que ya está visible.
+El tiempo restante hasta la carrera ya está calculado y se muestra en la interfaz. NO lo calcules ni lo conviertas a meses o semanas. Si necesitas referirte al tiempo restante, usa la cifra exacta de días que viene en los datos.
+Esta regla aplica a TODA métrica que se muestre como número en una caja de la interfaz: ACWR, Pulse score, ritmo promedio, FC promedio, días restantes. El texto interpreta, las cajas muestran los números. Nunca dupliques una cifra que ya está visible.
 Responde ÚNICAMENTE con JSON válido, sin markdown, sin backticks."""
 
     user_prompt = f"""Genera análisis Pulse semanal.
 
 ATLETA: {nombre}
-{f"Meta: {carrera.get('nombre', '')} el {carrera.get('fecha', 'TBD')}" if carrera.get('nombre') and carrera.get('nombre') != '¿Cuál es tu próxima carrera?' else "Sin meta de carrera definida"}
+{f"Meta: {carrera.get('nombre', '')} el {carrera.get('fecha', 'TBD')}" if tiene_meta else "Sin meta de carrera definida"}
+{f"Faltan {dias_restantes} días para {carrera.get('nombre', '')}." if dias_restantes is not None else ""}
 {prs_str}
 
 SEMANA ANALIZADA: {last_week.get('week', 'N/A')}
