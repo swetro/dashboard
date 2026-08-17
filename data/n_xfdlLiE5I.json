@@ -1,1 +1,1510 @@
-{"meta":{"userId":"5225","nombre":"WILLIAM RICARDO ALBORNOZ","genero":"Male","edad":42,"pais":"COL","avatar":"🇨🇴","prs":[{"dist":"1K","mark":"4:47","color":"#9CA0AA"},{"dist":"5K","mark":"25:33","color":"#3D7EFF"},{"dist":"10K","mark":"53:45","color":"#7EB8FF"}],"metaCarrera":{"nombre":"Maratón de Medellín","fecha":"2026-09-04","label":"42K MED","diasPrep":18},"isPro":true,"generadoEn":"2026-08-17T22:22:09.872487Z"},"activities":[{"date":"2026-07-14","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":3.22,"duration_min":72.2,"pace":"22:26","pace_raw":22.441,"hr":91,"kcal":276,"elevation":252.0,"points":0,"effort":3.8244803695150114,"heart_eff":0.00816},{"date":"2026-07-16","name":"Bogotá, D.C. Carrera","type":"running","dist_km":8.02,"duration_min":50.0,"pace":"6:13","pace_raw":6.224,"hr":145,"kcal":591,"elevation":142.0,"points":0,"effort":11.831831831831831,"heart_eff":0.01846},{"date":"2026-07-16","name":"Bogotá, D.C. - trabajo velocidad","type":"running","dist_km":7.27,"duration_min":49.9,"pace":"6:52","pace_raw":6.87,"hr":142,"kcal":537,"elevation":95.0,"points":0,"effort":10.757929883138564,"heart_eff":0.01708},{"date":"2026-07-17","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.94,"duration_min":14.2,"pace":"15:12","pace_raw":15.197,"hr":100,"kcal":72,"elevation":116.0,"points":0,"effort":5.058548009367682,"heart_eff":0.01096},{"date":"2026-07-18","name":"Bogotá, D.C. Carrera","type":"running","dist_km":3.0,"duration_min":57.9,"pace":"19:16","pace_raw":19.272,"hr":121,"kcal":403,"elevation":152.0,"points":0,"effort":6.966292134831461,"heart_eff":0.00715},{"date":"2026-07-18","name":"La Calera Carrera","type":"running","dist_km":28.02,"duration_min":220.2,"pace":"7:51","pace_raw":7.858,"hr":147,"kcal":2134,"elevation":660.0,"points":0,"effort":9.691923397169026,"heart_eff":0.01443},{"date":"2026-07-19","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":14.36,"duration_min":49.1,"pace":"3:25","pace_raw":3.417,"hr":141,"kcal":499,"elevation":94.0,"points":0,"effort":10.169836956521738,"heart_eff":0.03458},{"date":"2026-07-19","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":13.14,"duration_min":56.9,"pace":"4:20","pace_raw":4.332,"hr":125,"kcal":418,"elevation":134.0,"points":0,"effort":7.34407027818448,"heart_eff":0.03078},{"date":"2026-07-19","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":2.59,"duration_min":57.7,"pace":"22:19","pace_raw":22.308,"hr":94,"kcal":237,"elevation":206.0,"points":0,"effort":4.106266243141785,"heart_eff":0.00795},{"date":"2026-07-20","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":8.56,"duration_min":43.5,"pace":"5:05","pace_raw":5.079,"hr":112,"kcal":262,"elevation":134.0,"points":0,"effort":6.02760736196319,"heart_eff":0.02929},{"date":"2026-07-20","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":2.8,"duration_min":48.7,"pace":"17:24","pace_raw":17.399,"hr":99,"kcal":225,"elevation":141.0,"points":0,"effort":4.620123203285421,"heart_eff":0.00968},{"date":"2026-07-20","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":30.51,"duration_min":147.3,"pace":"4:50","pace_raw":4.828,"hr":122,"kcal":891,"elevation":279.0,"points":0,"effort":6.0481954972281935,"heart_eff":0.0283},{"date":"2026-07-20","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":2.94,"duration_min":62.3,"pace":"21:12","pace_raw":21.203,"hr":93,"kcal":262,"elevation":249.0,"points":0,"effort":4.206582820444207,"heart_eff":0.00845},{"date":"2026-07-21","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":4.32,"duration_min":19.4,"pace":"4:30","pace_raw":4.5,"hr":109,"kcal":121,"elevation":33.0,"points":0,"effort":6.23175965665236,"heart_eff":0.03395},{"date":"2026-07-21","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":4.08,"duration_min":20.3,"pace":"4:58","pace_raw":4.971,"hr":106,"kcal":117,"elevation":56.0,"points":0,"effort":5.763546798029556,"heart_eff":0.0316},{"date":"2026-07-23","name":"Bogotá, D.C. - velocidad Willy pre mmb","type":"running","dist_km":2.71,"duration_min":25.2,"pace":"9:19","pace_raw":9.316,"hr":120,"kcal":205,"elevation":40.0,"points":0,"effort":8.118811881188119,"heart_eff":0.0149},{"date":"2026-07-24","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.89,"duration_min":16.2,"pace":"18:14","pace_raw":18.238,"hr":93,"kcal":72,"elevation":78.0,"points":0,"effort":4.45360824742268,"heart_eff":0.00982},{"date":"2026-07-24","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":3.55,"duration_min":44.2,"pace":"12:27","pace_raw":12.45,"hr":100,"kcal":221,"elevation":175.0,"points":0,"effort":4.996232102486812,"heart_eff":0.01339},{"date":"2026-07-24","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.39,"duration_min":21.0,"pace":"15:09","pace_raw":15.155,"hr":95,"kcal":124,"elevation":124.0,"points":0,"effort":5.904761904761905,"heart_eff":0.01157},{"date":"2026-07-25","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.72,"duration_min":21.2,"pace":"12:20","pace_raw":12.333,"hr":89,"kcal":109,"elevation":74.0,"points":0,"effort":5.133437990580847,"heart_eff":0.01518},{"date":"2026-07-25","name":"Bogotá, D.C. Carrera","type":"running","dist_km":5.01,"duration_min":35.8,"pace":"7:09","pace_raw":7.147,"hr":131,"kcal":360,"elevation":58.0,"points":0,"effort":10.05586592178771,"heart_eff":0.0178},{"date":"2026-07-25","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.16,"duration_min":16.9,"pace":"14:36","pace_raw":14.594,"hr":110,"kcal":94,"elevation":59.0,"points":0,"effort":5.545722713864307,"heart_eff":0.01038},{"date":"2026-07-26","name":"Bogotá, D.C. Carrera","type":"running","dist_km":21.42,"duration_min":118.0,"pace":"5:31","pace_raw":5.509,"hr":170,"kcal":1613,"elevation":629.0,"points":0,"effort":13.669491525423728,"heart_eff":0.01779},{"date":"2026-07-28","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.89,"duration_min":14.3,"pace":"16:10","pace_raw":16.174,"hr":92,"kcal":65,"elevation":93.0,"points":0,"effort":4.534883720930233,"heart_eff":0.0112},{"date":"2026-07-28","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":3.23,"duration_min":67.2,"pace":"20:47","pace_raw":20.777,"hr":85,"kcal":278,"elevation":321.0,"points":0,"effort":4.138957816377171,"heart_eff":0.00944},{"date":"2026-07-29","name":"Bogotá, D.C. Carrera","type":"running","dist_km":4.33,"duration_min":35.0,"pace":"8:05","pace_raw":8.083,"hr":118,"kcal":312,"elevation":88.0,"points":0,"effort":8.910042836744408,"heart_eff":0.01747},{"date":"2026-07-31","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.93,"duration_min":15.1,"pace":"16:15","pace_raw":16.243,"hr":82,"kcal":67,"elevation":102.0,"points":0,"effort":4.441988950276243,"heart_eff":0.01251},{"date":"2026-08-01","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":4.61,"duration_min":24.4,"pace":"5:18","pace_raw":5.295,"hr":109,"kcal":149,"elevation":38.0,"points":0,"effort":6.098226466575716,"heart_eff":0.02887},{"date":"2026-08-01","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.71,"duration_min":10.8,"pace":"15:17","pace_raw":15.278,"hr":98,"kcal":67,"elevation":102.0,"points":0,"effort":6.203703703703703,"heart_eff":0.01112},{"date":"2026-08-01","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":2.35,"duration_min":47.8,"pace":"20:19","pace_raw":20.31,"hr":85,"kcal":185,"elevation":414.0,"points":0,"effort":3.8702928870292888,"heart_eff":0.00965},{"date":"2026-08-01","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":4.71,"duration_min":22.4,"pace":"4:46","pace_raw":4.766,"hr":109,"kcal":136,"elevation":25.0,"points":0,"effort":6.057906458797327,"heart_eff":0.03206},{"date":"2026-08-01","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":3.86,"duration_min":74.3,"pace":"19:17","pace_raw":19.277,"hr":92,"kcal":313,"elevation":308.0,"points":0,"effort":4.211706660686253,"heart_eff":0.0094},{"date":"2026-08-02","name":"Bogotá, D.C. Carrera","type":"running","dist_km":30.05,"duration_min":219.1,"pace":"7:17","pace_raw":7.29,"hr":146,"kcal":2142,"elevation":756.0,"points":0,"effort":9.776357827476039,"heart_eff":0.01566},{"date":"2026-08-03","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":2.39,"duration_min":14.9,"pace":"6:14","pace_raw":6.228,"hr":96,"kcal":71,"elevation":32.0,"points":0,"effort":4.7757847533632285,"heart_eff":0.02784},{"date":"2026-08-04","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.01,"duration_min":20.2,"pace":"19:56","pace_raw":19.938,"hr":96,"kcal":84,"elevation":115.0,"points":0,"effort":4.1549876339653755,"heart_eff":0.00871},{"date":"2026-08-05","name":"Bogotá, D.C. Carrera","type":"running","dist_km":8.3,"duration_min":57.4,"pace":"6:54","pace_raw":6.906,"hr":134,"kcal":600,"elevation":313.0,"points":0,"effort":10.46207497820401,"heart_eff":0.01801},{"date":"2026-08-05","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.5,"duration_min":23.7,"pace":"15:50","pace_raw":15.834,"hr":94,"kcal":105,"elevation":49.0,"points":0,"effort":4.433497536945813,"heart_eff":0.01119},{"date":"2026-08-05","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":2.14,"duration_min":34.2,"pace":"15:57","pace_raw":15.95,"hr":102,"kcal":163,"elevation":118.0,"points":0,"effort":4.770731707317074,"heart_eff":0.01024},{"date":"2026-08-05","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":1.46,"duration_min":10.1,"pace":"6:56","pace_raw":6.932,"hr":96,"kcal":48,"elevation":8.0,"points":0,"effort":4.736842105263158,"heart_eff":0.02501},{"date":"2026-08-06","name":"Bogotá, D.C. Carrera","type":"running","dist_km":7.07,"duration_min":52.5,"pace":"7:26","pace_raw":7.425,"hr":131,"kcal":518,"elevation":121.0,"points":0,"effort":9.860406091370558,"heart_eff":0.01713},{"date":"2026-08-07","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":4.36,"duration_min":34.1,"pace":"7:49","pace_raw":7.815,"hr":97,"kcal":157,"elevation":81.0,"points":0,"effort":4.606356968215159,"heart_eff":0.02198},{"date":"2026-08-07","name":"Bogotá, D.C. - Trabajo WA","type":"running","dist_km":9.36,"duration_min":65.9,"pace":"7:02","pace_raw":7.037,"hr":146,"kcal":704,"elevation":146.0,"points":0,"effort":10.688259109311742,"heart_eff":0.01622},{"date":"2026-08-08","name":"Bogotá, D.C. Carrera","type":"running","dist_km":2.44,"duration_min":55.6,"pace":"22:48","pace_raw":22.793,"hr":131,"kcal":504,"elevation":513.0,"points":0,"effort":9.056603773584905,"heart_eff":0.00558},{"date":"2026-08-08","name":"Bogotá, D.C. Carrera","type":"running","dist_km":2.45,"duration_min":48.5,"pace":"19:47","pace_raw":19.788,"hr":109,"kcal":239,"elevation":36.0,"points":0,"effort":4.932920536635707,"heart_eff":0.00772},{"date":"2026-08-09","name":"Bogotá, D.C. Carrera","type":"running","dist_km":1.71,"duration_min":11.7,"pace":"6:49","pace_raw":6.811,"hr":132,"kcal":128,"elevation":83.0,"points":0,"effort":10.971428571428572,"heart_eff":0.01851},{"date":"2026-08-09","name":"Bogotá, D.C. Carrera","type":"running","dist_km":31.36,"duration_min":245.4,"pace":"7:50","pace_raw":7.827,"hr":145,"kcal":2328,"elevation":587.0,"points":0,"effort":9.485908319185059,"heart_eff":0.01468},{"date":"2026-08-10","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":2.27,"duration_min":15.7,"pace":"6:54","pace_raw":6.892,"hr":103,"kcal":90,"elevation":50.0,"points":0,"effort":5.7507987220447285,"heart_eff":0.02348},{"date":"2026-08-11","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":0.9,"duration_min":16.1,"pace":"17:56","pace_raw":17.927,"hr":88,"kcal":73,"elevation":92.0,"points":0,"effort":4.534161490683229,"heart_eff":0.01056},{"date":"2026-08-11","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.94,"duration_min":31.6,"pace":"16:15","pace_raw":16.257,"hr":89,"kcal":139,"elevation":187.0,"points":0,"effort":4.405705229793978,"heart_eff":0.01152},{"date":"2026-08-11","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.0,"duration_min":22.9,"pace":"22:47","pace_raw":22.786,"hr":89,"kcal":96,"elevation":220.0,"points":0,"effort":4.195193008011653,"heart_eff":0.00821},{"date":"2026-08-12","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":5.27,"duration_min":91.1,"pace":"17:16","pace_raw":17.27,"hr":85,"kcal":344,"elevation":560.0,"points":0,"effort":3.7774524158125917,"heart_eff":0.01135},{"date":"2026-08-12","name":"Bogotá, D.C. Carrera","type":"running","dist_km":9.3,"duration_min":74.1,"pace":"7:58","pace_raw":7.963,"hr":123,"kcal":651,"elevation":185.0,"points":0,"effort":8.78740157480315,"heart_eff":0.01702},{"date":"2026-08-12","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":2.46,"duration_min":14.7,"pace":"6:00","pace_raw":5.997,"hr":101,"kcal":81,"elevation":21.0,"points":0,"effort":5.497737556561086,"heart_eff":0.02749},{"date":"2026-08-14","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":5.33,"duration_min":76.5,"pace":"14:20","pace_raw":14.337,"hr":89,"kcal":341,"elevation":663.0,"points":0,"effort":4.460431654676259,"heart_eff":0.01306},{"date":"2026-08-14","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.57,"duration_min":25.7,"pace":"16:20","pace_raw":16.338,"hr":88,"kcal":105,"elevation":69.0,"points":0,"effort":4.085603112840467,"heart_eff":0.01159},{"date":"2026-08-15","name":"Bogotá, D.C. - trabajo pista","type":"running","dist_km":8.03,"duration_min":54.8,"pace":"6:49","pace_raw":6.819,"hr":143,"kcal":594,"elevation":83.0,"points":0,"effort":10.846013390139989,"heart_eff":0.01709},{"date":"2026-08-15","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.02,"duration_min":15.2,"pace":"15:00","pace_raw":14.994,"hr":101,"kcal":97,"elevation":185.0,"points":0,"effort":6.367614879649891,"heart_eff":0.011},{"date":"2026-08-15","name":"Bogotá, D.C. Carrera","type":"running","dist_km":2.45,"duration_min":49.5,"pace":"20:13","pace_raw":20.216,"hr":135,"kcal":487,"elevation":513.0,"points":0,"effort":9.83838383838384,"heart_eff":0.0061},{"date":"2026-08-15","name":"Bogotá, D.C. Carrera","type":"running","dist_km":1.01,"duration_min":17.8,"pace":"17:34","pace_raw":17.567,"hr":130,"kcal":166,"elevation":75.0,"points":0,"effort":9.317118802619271,"heart_eff":0.00729},{"date":"2026-08-15","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.14,"duration_min":29.0,"pace":"25:27","pace_raw":25.455,"hr":92,"kcal":119,"elevation":71.0,"points":0,"effort":4.108170310701957,"heart_eff":0.00712},{"date":"2026-08-15","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":4.31,"duration_min":80.2,"pace":"18:35","pace_raw":18.591,"hr":88,"kcal":311,"elevation":342.02515,"points":0,"effort":3.880224578914535,"heart_eff":0.01018},{"date":"2026-08-16","name":"Bogotá, D.C. Carrera","type":"running","dist_km":34.02,"duration_min":254.8,"pace":"7:29","pace_raw":7.489,"hr":142,"kcal":2443,"elevation":521.0,"points":0,"effort":9.588539281742657,"heart_eff":0.01568},{"date":"2026-08-17","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":3.72,"duration_min":18.1,"pace":"4:52","pace_raw":4.867,"hr":112,"kcal":123,"elevation":35.0,"points":0,"effort":6.789328426862926,"heart_eff":0.03056},{"date":"2026-08-17","name":"Bogotá, D.C. Caminar","type":"walking","dist_km":1.19,"duration_min":23.3,"pace":"19:34","pace_raw":19.562,"hr":91,"kcal":99,"elevation":82.0,"points":0,"effort":4.24892703862661,"heart_eff":0.00936},{"date":"2026-08-17","name":"Bogotá, D.C. Ciclismo","type":"cycling","dist_km":5.33,"duration_min":24.8,"pace":"4:39","pace_raw":4.658,"hr":113,"kcal":164,"elevation":81.0,"points":0,"effort":6.604026845637584,"heart_eff":0.03166}],"weekly":[{"week":"2026-07-13/2026-07-19","total_km":46.31,"sessions":4,"avg_hr":139,"avg_pace":10.056,"total_kcal":5167,"running":{"km":46.31,"sessions":4,"avg_hr":139,"avg_pace":10.056},"cycling":{"km":27.5,"sessions":2},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":9},{"week":"2026-07-20/2026-07-26","total_km":29.14,"sessions":3,"avg_hr":140,"avg_pace":7.324,"total_kcal":4676,"running":{"km":29.14,"sessions":3,"avg_hr":140,"avg_pace":7.324},"cycling":{"km":47.47,"sessions":4},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":14},{"week":"2026-07-27/2026-08-02","total_km":34.38,"sessions":2,"avg_hr":132,"avg_pace":7.687,"total_kcal":3714,"running":{"km":34.38,"sessions":2,"avg_hr":132,"avg_pace":7.687},"cycling":{"km":9.32,"sessions":2},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":10},{"week":"2026-08-03/2026-08-09","total_km":62.69,"sessions":7,"avg_hr":133,"avg_pace":11.227,"total_kcal":5649,"running":{"km":62.69,"sessions":7,"avg_hr":133,"avg_pace":11.227},"cycling":{"km":8.21,"sessions":3},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":13},{"week":"2026-08-10/2026-08-16","total_km":54.81,"sessions":5,"avg_hr":135,"avg_pace":12.011,"total_kcal":6137,"running":{"km":54.81,"sessions":5,"avg_hr":135,"avg_pace":12.011},"cycling":{"km":4.73,"sessions":2},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":16},{"week":"2026-08-17/2026-08-23","total_km":0,"sessions":0,"avg_hr":0,"avg_pace":0.0,"total_kcal":386,"running":{"km":0,"sessions":0,"avg_hr":0,"avg_pace":0.0},"cycling":{"km":9.05,"sessions":2},"swimming":{"metros":0,"sessions":0},"strength":{"minutos":0,"sessions":0},"total_sessions":3}],"acwr":{"valor":1.22,"status":"optimal","confiable":true,"semana":"2026-08-10/2026-08-16","series":{"aerobic":[{"weekStart":"2026-06-01","weekEnd":"2026-06-07","valor":1.11,"status":"optimal"},{"weekStart":"2026-06-08","weekEnd":"2026-06-14","valor":1.33,"status":"elevated"},{"weekStart":"2026-06-15","weekEnd":"2026-06-21","valor":1.09,"status":"optimal"},{"weekStart":"2026-06-22","weekEnd":"2026-06-28","valor":1.08,"status":"optimal"},{"weekStart":"2026-06-29","weekEnd":"2026-07-05","valor":1.1,"status":"optimal"},{"weekStart":"2026-07-06","weekEnd":"2026-07-12","valor":0.84,"status":"optimal"},{"weekStart":"2026-07-13","weekEnd":"2026-07-19","valor":1.1,"status":"optimal"},{"weekStart":"2026-07-20","weekEnd":"2026-07-26","valor":0.9,"status":"optimal"},{"weekStart":"2026-07-27","weekEnd":"2026-08-02","valor":0.8,"status":"undertraining"},{"weekStart":"2026-08-03","weekEnd":"2026-08-09","valor":1.13,"status":"optimal"},{"weekStart":"2026-08-10","weekEnd":"2026-08-16","valor":1.22,"status":"optimal"}],"running":[{"weekStart":"2026-06-01","weekEnd":"2026-06-07","valor":1.79,"status":"high_risk"},{"weekStart":"2026-06-08","weekEnd":"2026-06-14","valor":1.24,"status":"optimal"},{"weekStart":"2026-06-15","weekEnd":"2026-06-21","valor":0.9,"status":"optimal"},{"weekStart":"2026-06-22","weekEnd":"2026-06-28","valor":1.13,"status":"optimal"},{"weekStart":"2026-06-29","weekEnd":"2026-07-05","valor":1.22,"status":"optimal"},{"weekStart":"2026-07-06","weekEnd":"2026-07-12","valor":0.93,"status":"optimal"},{"weekStart":"2026-07-13","weekEnd":"2026-07-19","valor":1.05,"status":"optimal"},{"weekStart":"2026-07-20","weekEnd":"2026-07-26","valor":0.68,"status":"undertraining"},{"weekStart":"2026-07-27","weekEnd":"2026-08-02","valor":0.87,"status":"optimal"},{"weekStart":"2026-08-03","weekEnd":"2026-08-09","valor":1.51,"status":"high_risk"},{"weekStart":"2026-08-10","weekEnd":"2026-08-16","valor":1.24,"status":"optimal"}],"cycling":[{"weekStart":"2026-06-01","weekEnd":"2026-06-07","valor":0.0,"status":"undertraining"},{"weekStart":"2026-06-08","weekEnd":"2026-06-14","valor":0.0,"status":"insufficient_data"},{"weekStart":"2026-06-15","weekEnd":"2026-06-21","valor":0.0,"status":"insufficient_data"},{"weekStart":"2026-07-06","weekEnd":"2026-07-12","valor":4.0,"status":"insufficient_data"},{"weekStart":"2026-07-13","weekEnd":"2026-07-19","valor":3.78,"status":"insufficient_data"},{"weekStart":"2026-07-20","weekEnd":"2026-07-26","valor":1.8,"status":"high_risk"},{"weekStart":"2026-07-27","weekEnd":"2026-08-02","valor":0.34,"status":"undertraining"},{"weekStart":"2026-08-03","weekEnd":"2026-08-09","valor":0.31,"status":"undertraining"},{"weekStart":"2026-08-10","weekEnd":"2026-08-16","valor":0.32,"status":"undertraining"}],"strength":[{"weekStart":"2026-06-01","weekEnd":"2026-06-07","valor":0.0,"status":"insufficient_data"},{"weekStart":"2026-06-08","weekEnd":"2026-06-14","valor":0.0,"status":"insufficient_data"}]}},"pulse":{"semana":"2026-08-10 / 2026-08-16","score":72,"headline":"Semana sólida con largo exigente al final","subheadline":"William, tu volumen se mantiene y el largo fue clave","readiness":68,"projectedTime":"4:58:00","projectedPace":"7:04","aiVerdict":"William, cerraste la semana con uno de tus rodajes más largos del ciclo: 34 km el domingo son una señal clara de que tu base aeróbica está respondiendo a medida que se acerca el gran día. Tu carga de running se mantiene en zona segura y el complemento con ciclismo ayuda a sostener el volumen total sin sobrecargar las piernas. El ritmo del largo estuvo controlado, lo que habla bien de tu disciplina de esfuerzo en distancias prolongadas. Con solo 19 días por delante, el foco ahora debe ser consolidar lo ganado, reducir el volumen progresivamente y llegar fresco al largador.","strengths":["Rodaje largo de 34 km ejecutado con ritmo controlado y FC manejable","Volumen semanal consistente dentro de una tendencia ascendente saludable","Uso del ciclismo como disciplina complementaria que cuida la recuperación muscular"],"warnings":["Con 19 días para la maratón, el cuerpo necesita entrar en fase de reducción: más km ahora pueden sumar fatiga, no forma","El largo del domingo deja las piernas con deuda muscular acumulada; prioriza recuperación activa esta semana"],"keyMetrics":[{"label":"Volumen semanal","value":"54.81 km","trend":"down","status":"green","note":"Leve descenso respecto a la semana pico, ideal para el momento del ciclo"},{"label":"Sesiones de running","value":"5 sesiones","trend":"stable","status":"green","note":"Frecuencia consistente y bien distribuida"},{"label":"FC promedio running","value":"135 bpm","trend":"stable","status":"green","note":"Zona aeróbica eficiente para el volumen manejado"},{"label":"Rodaje largo","value":"34.02 km","trend":"up","status":"green","note":"El más largo del ciclo reciente, ejecutado a ritmo conservador"},{"label":"Ciclismo complementario","value":"4.73 km","trend":"stable","status":"green","note":"Aporte de movilidad sin impacto, positivo en esta etapa"}],"weekPlan":[{"day":"Lun","type":"Recuperación activa","km":"—","notes":"Ciclismo suave 20-30 min o caminata. Nada de impacto; las piernas necesitan asimilar el largo del domingo."},{"day":"Mar","type":"Rodaje suave","km":"8 km","notes":"Ritmo conversacional, FC por debajo de 140 bpm. Confirma que las piernas respondieron bien al largo."},{"day":"Mié","type":"Descanso o movilidad","km":"—","notes":"Estiramientos, rodillo de espuma o natación muy suave si está disponible. Prioriza el sueño."},{"day":"Jue","type":"Rodaje con strides","km":"10 km","notes":"8 km suaves + 4-6 aceleraciones de 100 m al ritmo de carrera. Activa las piernas sin generar fatiga."},{"day":"Vie","type":"Descanso","km":"—","notes":"Descanso completo. Con 19 días para la maratón, cada día de recuperación cuenta tanto como un entrenamiento."},{"day":"Sáb","type":"Rodaje de confianza","km":"12 km","notes":"Incluye 4-5 km al ritmo objetivo de maratón. Confirma sensaciones y ajusta la estrategia de carrera."},{"day":"Dom","type":"Rodaje muy suave","km":"6 km","notes":"Trote ligero de cierre de semana. Sin presión de ritmo ni distancia. Escucha el cuerpo."}],"injuryRisk":{"level":"medium","score":48,"topRisk":"Tren inferior (cuádriceps y fascia plantar)","action":"Aplica hielo en cuádriceps y pantorrillas post-rodaje esta semana; evita superficies duras en los próximos días y no agregues volumen nuevo antes de la carrera."},"funFact":"William, el rodaje de 34 km que hiciste el domingo representa el 62% de la distancia total de una maratón, completado en una sola sesión. Tu cuerpo ya sabe lo que es el esfuerzo prolongado.","seoulTip":null},"semanaAnalizada":{"inicio":"2026-08-10","fin":"2026-08-16"},"taper":[],"retos":[]}
+{
+  "meta": {
+    "userId": "5225",
+    "nombre": "WILLIAM RICARDO ALBORNOZ",
+    "genero": "Male",
+    "edad": 42,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:47",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "25:33",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "53:45",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Maratón de Medellín",
+      "fecha": "2026-09-04",
+      "label": "42K MED",
+      "diasPrep": 18
+    },
+    "isPro": true,
+    "generadoEn": "2026-08-17T22:22:09.872487Z"
+  },
+  "activities": [
+    {
+      "date": "2026-07-14",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 3.22,
+      "duration_min": 72.2,
+      "pace": "22:26",
+      "pace_raw": 22.441,
+      "hr": 91,
+      "kcal": 276,
+      "elevation": 252.0,
+      "points": 0,
+      "effort": 3.8244803695150114,
+      "heart_eff": 0.00816
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 8.02,
+      "duration_min": 50.0,
+      "pace": "6:13",
+      "pace_raw": 6.224,
+      "hr": 145,
+      "kcal": 591,
+      "elevation": 142.0,
+      "points": 0,
+      "effort": 11.831831831831831,
+      "heart_eff": 0.01846
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Bogotá, D.C. - trabajo velocidad",
+      "type": "running",
+      "dist_km": 7.27,
+      "duration_min": 49.9,
+      "pace": "6:52",
+      "pace_raw": 6.87,
+      "hr": 142,
+      "kcal": 537,
+      "elevation": 95.0,
+      "points": 0,
+      "effort": 10.757929883138564,
+      "heart_eff": 0.01708
+    },
+    {
+      "date": "2026-07-17",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.94,
+      "duration_min": 14.2,
+      "pace": "15:12",
+      "pace_raw": 15.197,
+      "hr": 100,
+      "kcal": 72,
+      "elevation": 116.0,
+      "points": 0,
+      "effort": 5.058548009367682,
+      "heart_eff": 0.01096
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 3.0,
+      "duration_min": 57.9,
+      "pace": "19:16",
+      "pace_raw": 19.272,
+      "hr": 121,
+      "kcal": 403,
+      "elevation": 152.0,
+      "points": 0,
+      "effort": 6.966292134831461,
+      "heart_eff": 0.00715
+    },
+    {
+      "date": "2026-07-18",
+      "name": "La Calera Carrera",
+      "type": "running",
+      "dist_km": 28.02,
+      "duration_min": 220.2,
+      "pace": "7:51",
+      "pace_raw": 7.858,
+      "hr": 147,
+      "kcal": 2134,
+      "elevation": 660.0,
+      "points": 0,
+      "effort": 9.691923397169026,
+      "heart_eff": 0.01443
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 14.36,
+      "duration_min": 49.1,
+      "pace": "3:25",
+      "pace_raw": 3.417,
+      "hr": 141,
+      "kcal": 499,
+      "elevation": 94.0,
+      "points": 0,
+      "effort": 10.169836956521738,
+      "heart_eff": 0.03458
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 13.14,
+      "duration_min": 56.9,
+      "pace": "4:20",
+      "pace_raw": 4.332,
+      "hr": 125,
+      "kcal": 418,
+      "elevation": 134.0,
+      "points": 0,
+      "effort": 7.34407027818448,
+      "heart_eff": 0.03078
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 2.59,
+      "duration_min": 57.7,
+      "pace": "22:19",
+      "pace_raw": 22.308,
+      "hr": 94,
+      "kcal": 237,
+      "elevation": 206.0,
+      "points": 0,
+      "effort": 4.106266243141785,
+      "heart_eff": 0.00795
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 8.56,
+      "duration_min": 43.5,
+      "pace": "5:05",
+      "pace_raw": 5.079,
+      "hr": 112,
+      "kcal": 262,
+      "elevation": 134.0,
+      "points": 0,
+      "effort": 6.02760736196319,
+      "heart_eff": 0.02929
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 2.8,
+      "duration_min": 48.7,
+      "pace": "17:24",
+      "pace_raw": 17.399,
+      "hr": 99,
+      "kcal": 225,
+      "elevation": 141.0,
+      "points": 0,
+      "effort": 4.620123203285421,
+      "heart_eff": 0.00968
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 30.51,
+      "duration_min": 147.3,
+      "pace": "4:50",
+      "pace_raw": 4.828,
+      "hr": 122,
+      "kcal": 891,
+      "elevation": 279.0,
+      "points": 0,
+      "effort": 6.0481954972281935,
+      "heart_eff": 0.0283
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 2.94,
+      "duration_min": 62.3,
+      "pace": "21:12",
+      "pace_raw": 21.203,
+      "hr": 93,
+      "kcal": 262,
+      "elevation": 249.0,
+      "points": 0,
+      "effort": 4.206582820444207,
+      "heart_eff": 0.00845
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 4.32,
+      "duration_min": 19.4,
+      "pace": "4:30",
+      "pace_raw": 4.5,
+      "hr": 109,
+      "kcal": 121,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 6.23175965665236,
+      "heart_eff": 0.03395
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 4.08,
+      "duration_min": 20.3,
+      "pace": "4:58",
+      "pace_raw": 4.971,
+      "hr": 106,
+      "kcal": 117,
+      "elevation": 56.0,
+      "points": 0,
+      "effort": 5.763546798029556,
+      "heart_eff": 0.0316
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Bogotá, D.C. - velocidad Willy pre mmb",
+      "type": "running",
+      "dist_km": 2.71,
+      "duration_min": 25.2,
+      "pace": "9:19",
+      "pace_raw": 9.316,
+      "hr": 120,
+      "kcal": 205,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 8.118811881188119,
+      "heart_eff": 0.0149
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.89,
+      "duration_min": 16.2,
+      "pace": "18:14",
+      "pace_raw": 18.238,
+      "hr": 93,
+      "kcal": 72,
+      "elevation": 78.0,
+      "points": 0,
+      "effort": 4.45360824742268,
+      "heart_eff": 0.00982
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 3.55,
+      "duration_min": 44.2,
+      "pace": "12:27",
+      "pace_raw": 12.45,
+      "hr": 100,
+      "kcal": 221,
+      "elevation": 175.0,
+      "points": 0,
+      "effort": 4.996232102486812,
+      "heart_eff": 0.01339
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.39,
+      "duration_min": 21.0,
+      "pace": "15:09",
+      "pace_raw": 15.155,
+      "hr": 95,
+      "kcal": 124,
+      "elevation": 124.0,
+      "points": 0,
+      "effort": 5.904761904761905,
+      "heart_eff": 0.01157
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.72,
+      "duration_min": 21.2,
+      "pace": "12:20",
+      "pace_raw": 12.333,
+      "hr": 89,
+      "kcal": 109,
+      "elevation": 74.0,
+      "points": 0,
+      "effort": 5.133437990580847,
+      "heart_eff": 0.01518
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 5.01,
+      "duration_min": 35.8,
+      "pace": "7:09",
+      "pace_raw": 7.147,
+      "hr": 131,
+      "kcal": 360,
+      "elevation": 58.0,
+      "points": 0,
+      "effort": 10.05586592178771,
+      "heart_eff": 0.0178
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.16,
+      "duration_min": 16.9,
+      "pace": "14:36",
+      "pace_raw": 14.594,
+      "hr": 110,
+      "kcal": 94,
+      "elevation": 59.0,
+      "points": 0,
+      "effort": 5.545722713864307,
+      "heart_eff": 0.01038
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 21.42,
+      "duration_min": 118.0,
+      "pace": "5:31",
+      "pace_raw": 5.509,
+      "hr": 170,
+      "kcal": 1613,
+      "elevation": 629.0,
+      "points": 0,
+      "effort": 13.669491525423728,
+      "heart_eff": 0.01779
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.89,
+      "duration_min": 14.3,
+      "pace": "16:10",
+      "pace_raw": 16.174,
+      "hr": 92,
+      "kcal": 65,
+      "elevation": 93.0,
+      "points": 0,
+      "effort": 4.534883720930233,
+      "heart_eff": 0.0112
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 3.23,
+      "duration_min": 67.2,
+      "pace": "20:47",
+      "pace_raw": 20.777,
+      "hr": 85,
+      "kcal": 278,
+      "elevation": 321.0,
+      "points": 0,
+      "effort": 4.138957816377171,
+      "heart_eff": 0.00944
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 4.33,
+      "duration_min": 35.0,
+      "pace": "8:05",
+      "pace_raw": 8.083,
+      "hr": 118,
+      "kcal": 312,
+      "elevation": 88.0,
+      "points": 0,
+      "effort": 8.910042836744408,
+      "heart_eff": 0.01747
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.93,
+      "duration_min": 15.1,
+      "pace": "16:15",
+      "pace_raw": 16.243,
+      "hr": 82,
+      "kcal": 67,
+      "elevation": 102.0,
+      "points": 0,
+      "effort": 4.441988950276243,
+      "heart_eff": 0.01251
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 4.61,
+      "duration_min": 24.4,
+      "pace": "5:18",
+      "pace_raw": 5.295,
+      "hr": 109,
+      "kcal": 149,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 6.098226466575716,
+      "heart_eff": 0.02887
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.71,
+      "duration_min": 10.8,
+      "pace": "15:17",
+      "pace_raw": 15.278,
+      "hr": 98,
+      "kcal": 67,
+      "elevation": 102.0,
+      "points": 0,
+      "effort": 6.203703703703703,
+      "heart_eff": 0.01112
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 2.35,
+      "duration_min": 47.8,
+      "pace": "20:19",
+      "pace_raw": 20.31,
+      "hr": 85,
+      "kcal": 185,
+      "elevation": 414.0,
+      "points": 0,
+      "effort": 3.8702928870292888,
+      "heart_eff": 0.00965
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 4.71,
+      "duration_min": 22.4,
+      "pace": "4:46",
+      "pace_raw": 4.766,
+      "hr": 109,
+      "kcal": 136,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 6.057906458797327,
+      "heart_eff": 0.03206
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 3.86,
+      "duration_min": 74.3,
+      "pace": "19:17",
+      "pace_raw": 19.277,
+      "hr": 92,
+      "kcal": 313,
+      "elevation": 308.0,
+      "points": 0,
+      "effort": 4.211706660686253,
+      "heart_eff": 0.0094
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 30.05,
+      "duration_min": 219.1,
+      "pace": "7:17",
+      "pace_raw": 7.29,
+      "hr": 146,
+      "kcal": 2142,
+      "elevation": 756.0,
+      "points": 0,
+      "effort": 9.776357827476039,
+      "heart_eff": 0.01566
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 2.39,
+      "duration_min": 14.9,
+      "pace": "6:14",
+      "pace_raw": 6.228,
+      "hr": 96,
+      "kcal": 71,
+      "elevation": 32.0,
+      "points": 0,
+      "effort": 4.7757847533632285,
+      "heart_eff": 0.02784
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.01,
+      "duration_min": 20.2,
+      "pace": "19:56",
+      "pace_raw": 19.938,
+      "hr": 96,
+      "kcal": 84,
+      "elevation": 115.0,
+      "points": 0,
+      "effort": 4.1549876339653755,
+      "heart_eff": 0.00871
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 8.3,
+      "duration_min": 57.4,
+      "pace": "6:54",
+      "pace_raw": 6.906,
+      "hr": 134,
+      "kcal": 600,
+      "elevation": 313.0,
+      "points": 0,
+      "effort": 10.46207497820401,
+      "heart_eff": 0.01801
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.5,
+      "duration_min": 23.7,
+      "pace": "15:50",
+      "pace_raw": 15.834,
+      "hr": 94,
+      "kcal": 105,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 4.433497536945813,
+      "heart_eff": 0.01119
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 2.14,
+      "duration_min": 34.2,
+      "pace": "15:57",
+      "pace_raw": 15.95,
+      "hr": 102,
+      "kcal": 163,
+      "elevation": 118.0,
+      "points": 0,
+      "effort": 4.770731707317074,
+      "heart_eff": 0.01024
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 1.46,
+      "duration_min": 10.1,
+      "pace": "6:56",
+      "pace_raw": 6.932,
+      "hr": 96,
+      "kcal": 48,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 4.736842105263158,
+      "heart_eff": 0.02501
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 7.07,
+      "duration_min": 52.5,
+      "pace": "7:26",
+      "pace_raw": 7.425,
+      "hr": 131,
+      "kcal": 518,
+      "elevation": 121.0,
+      "points": 0,
+      "effort": 9.860406091370558,
+      "heart_eff": 0.01713
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 4.36,
+      "duration_min": 34.1,
+      "pace": "7:49",
+      "pace_raw": 7.815,
+      "hr": 97,
+      "kcal": 157,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 4.606356968215159,
+      "heart_eff": 0.02198
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Bogotá, D.C. - Trabajo WA",
+      "type": "running",
+      "dist_km": 9.36,
+      "duration_min": 65.9,
+      "pace": "7:02",
+      "pace_raw": 7.037,
+      "hr": 146,
+      "kcal": 704,
+      "elevation": 146.0,
+      "points": 0,
+      "effort": 10.688259109311742,
+      "heart_eff": 0.01622
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 2.44,
+      "duration_min": 55.6,
+      "pace": "22:48",
+      "pace_raw": 22.793,
+      "hr": 131,
+      "kcal": 504,
+      "elevation": 513.0,
+      "points": 0,
+      "effort": 9.056603773584905,
+      "heart_eff": 0.00558
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 2.45,
+      "duration_min": 48.5,
+      "pace": "19:47",
+      "pace_raw": 19.788,
+      "hr": 109,
+      "kcal": 239,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 4.932920536635707,
+      "heart_eff": 0.00772
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 1.71,
+      "duration_min": 11.7,
+      "pace": "6:49",
+      "pace_raw": 6.811,
+      "hr": 132,
+      "kcal": 128,
+      "elevation": 83.0,
+      "points": 0,
+      "effort": 10.971428571428572,
+      "heart_eff": 0.01851
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 31.36,
+      "duration_min": 245.4,
+      "pace": "7:50",
+      "pace_raw": 7.827,
+      "hr": 145,
+      "kcal": 2328,
+      "elevation": 587.0,
+      "points": 0,
+      "effort": 9.485908319185059,
+      "heart_eff": 0.01468
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 2.27,
+      "duration_min": 15.7,
+      "pace": "6:54",
+      "pace_raw": 6.892,
+      "hr": 103,
+      "kcal": 90,
+      "elevation": 50.0,
+      "points": 0,
+      "effort": 5.7507987220447285,
+      "heart_eff": 0.02348
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 0.9,
+      "duration_min": 16.1,
+      "pace": "17:56",
+      "pace_raw": 17.927,
+      "hr": 88,
+      "kcal": 73,
+      "elevation": 92.0,
+      "points": 0,
+      "effort": 4.534161490683229,
+      "heart_eff": 0.01056
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.94,
+      "duration_min": 31.6,
+      "pace": "16:15",
+      "pace_raw": 16.257,
+      "hr": 89,
+      "kcal": 139,
+      "elevation": 187.0,
+      "points": 0,
+      "effort": 4.405705229793978,
+      "heart_eff": 0.01152
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.0,
+      "duration_min": 22.9,
+      "pace": "22:47",
+      "pace_raw": 22.786,
+      "hr": 89,
+      "kcal": 96,
+      "elevation": 220.0,
+      "points": 0,
+      "effort": 4.195193008011653,
+      "heart_eff": 0.00821
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 5.27,
+      "duration_min": 91.1,
+      "pace": "17:16",
+      "pace_raw": 17.27,
+      "hr": 85,
+      "kcal": 344,
+      "elevation": 560.0,
+      "points": 0,
+      "effort": 3.7774524158125917,
+      "heart_eff": 0.01135
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 9.3,
+      "duration_min": 74.1,
+      "pace": "7:58",
+      "pace_raw": 7.963,
+      "hr": 123,
+      "kcal": 651,
+      "elevation": 185.0,
+      "points": 0,
+      "effort": 8.78740157480315,
+      "heart_eff": 0.01702
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 2.46,
+      "duration_min": 14.7,
+      "pace": "6:00",
+      "pace_raw": 5.997,
+      "hr": 101,
+      "kcal": 81,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 5.497737556561086,
+      "heart_eff": 0.02749
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 5.33,
+      "duration_min": 76.5,
+      "pace": "14:20",
+      "pace_raw": 14.337,
+      "hr": 89,
+      "kcal": 341,
+      "elevation": 663.0,
+      "points": 0,
+      "effort": 4.460431654676259,
+      "heart_eff": 0.01306
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.57,
+      "duration_min": 25.7,
+      "pace": "16:20",
+      "pace_raw": 16.338,
+      "hr": 88,
+      "kcal": 105,
+      "elevation": 69.0,
+      "points": 0,
+      "effort": 4.085603112840467,
+      "heart_eff": 0.01159
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. - trabajo pista",
+      "type": "running",
+      "dist_km": 8.03,
+      "duration_min": 54.8,
+      "pace": "6:49",
+      "pace_raw": 6.819,
+      "hr": 143,
+      "kcal": 594,
+      "elevation": 83.0,
+      "points": 0,
+      "effort": 10.846013390139989,
+      "heart_eff": 0.01709
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.02,
+      "duration_min": 15.2,
+      "pace": "15:00",
+      "pace_raw": 14.994,
+      "hr": 101,
+      "kcal": 97,
+      "elevation": 185.0,
+      "points": 0,
+      "effort": 6.367614879649891,
+      "heart_eff": 0.011
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 2.45,
+      "duration_min": 49.5,
+      "pace": "20:13",
+      "pace_raw": 20.216,
+      "hr": 135,
+      "kcal": 487,
+      "elevation": 513.0,
+      "points": 0,
+      "effort": 9.83838383838384,
+      "heart_eff": 0.0061
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 1.01,
+      "duration_min": 17.8,
+      "pace": "17:34",
+      "pace_raw": 17.567,
+      "hr": 130,
+      "kcal": 166,
+      "elevation": 75.0,
+      "points": 0,
+      "effort": 9.317118802619271,
+      "heart_eff": 0.00729
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.14,
+      "duration_min": 29.0,
+      "pace": "25:27",
+      "pace_raw": 25.455,
+      "hr": 92,
+      "kcal": 119,
+      "elevation": 71.0,
+      "points": 0,
+      "effort": 4.108170310701957,
+      "heart_eff": 0.00712
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 4.31,
+      "duration_min": 80.2,
+      "pace": "18:35",
+      "pace_raw": 18.591,
+      "hr": 88,
+      "kcal": 311,
+      "elevation": 342.02515,
+      "points": 0,
+      "effort": 3.880224578914535,
+      "heart_eff": 0.01018
+    },
+    {
+      "date": "2026-08-16",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 34.02,
+      "duration_min": 254.8,
+      "pace": "7:29",
+      "pace_raw": 7.489,
+      "hr": 142,
+      "kcal": 2443,
+      "elevation": 521.0,
+      "points": 0,
+      "effort": 9.588539281742657,
+      "heart_eff": 0.01568
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 3.72,
+      "duration_min": 18.1,
+      "pace": "4:52",
+      "pace_raw": 4.867,
+      "hr": 112,
+      "kcal": 123,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 6.789328426862926,
+      "heart_eff": 0.03056
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Bogotá, D.C. Caminar",
+      "type": "walking",
+      "dist_km": 1.19,
+      "duration_min": 23.3,
+      "pace": "19:34",
+      "pace_raw": 19.562,
+      "hr": 91,
+      "kcal": 99,
+      "elevation": 82.0,
+      "points": 0,
+      "effort": 4.24892703862661,
+      "heart_eff": 0.00936
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Bogotá, D.C. Ciclismo",
+      "type": "cycling",
+      "dist_km": 5.33,
+      "duration_min": 24.8,
+      "pace": "4:39",
+      "pace_raw": 4.658,
+      "hr": 113,
+      "kcal": 164,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 6.604026845637584,
+      "heart_eff": 0.03166
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 46.31,
+      "sessions": 4,
+      "avg_hr": 139,
+      "avg_pace": 10.056,
+      "total_kcal": 5167,
+      "running": {
+        "km": 46.31,
+        "sessions": 4,
+        "avg_hr": 139,
+        "avg_pace": 10.056
+      },
+      "cycling": {
+        "km": 27.5,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 29.14,
+      "sessions": 3,
+      "avg_hr": 140,
+      "avg_pace": 7.324,
+      "total_kcal": 4676,
+      "running": {
+        "km": 29.14,
+        "sessions": 3,
+        "avg_hr": 140,
+        "avg_pace": 7.324
+      },
+      "cycling": {
+        "km": 47.47,
+        "sessions": 4
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 14
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 34.38,
+      "sessions": 2,
+      "avg_hr": 132,
+      "avg_pace": 7.687,
+      "total_kcal": 3714,
+      "running": {
+        "km": 34.38,
+        "sessions": 2,
+        "avg_hr": 132,
+        "avg_pace": 7.687
+      },
+      "cycling": {
+        "km": 9.32,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 10
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 62.69,
+      "sessions": 7,
+      "avg_hr": 133,
+      "avg_pace": 11.227,
+      "total_kcal": 5649,
+      "running": {
+        "km": 62.69,
+        "sessions": 7,
+        "avg_hr": 133,
+        "avg_pace": 11.227
+      },
+      "cycling": {
+        "km": 8.21,
+        "sessions": 3
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 13
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 54.81,
+      "sessions": 5,
+      "avg_hr": 135,
+      "avg_pace": 12.011,
+      "total_kcal": 6137,
+      "running": {
+        "km": 54.81,
+        "sessions": 5,
+        "avg_hr": 135,
+        "avg_pace": 12.011
+      },
+      "cycling": {
+        "km": 4.73,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 16
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 0,
+      "sessions": 0,
+      "avg_hr": 0,
+      "avg_pace": 0.0,
+      "total_kcal": 386,
+      "running": {
+        "km": 0,
+        "sessions": 0,
+        "avg_hr": 0,
+        "avg_pace": 0.0
+      },
+      "cycling": {
+        "km": 9.05,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    }
+  ],
+  "acwr": {
+    "valor": 1.22,
+    "status": "optimal",
+    "confiable": true,
+    "semana": "2026-08-10/2026-08-16",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.11,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.33,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.09,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.08,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.1,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.1,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.8,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.13,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.22,
+          "status": "optimal"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.79,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.13,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.22,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.93,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.05,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.68,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.87,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.51,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.24,
+          "status": "optimal"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 3.78,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.8,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.34,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.31,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.32,
+          "status": "undertraining"
+        }
+      ],
+      "strength": [
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-08-10 / 2026-08-16",
+    "score": 72,
+    "headline": "Semana sólida con largo exigente al final",
+    "subheadline": "William, tu volumen se mantiene y el largo fue clave",
+    "readiness": 68,
+    "aiVerdict": "William, cerraste la semana con uno de tus rodajes más largos del ciclo: 34 km el domingo son una señal clara de que tu base aeróbica está respondiendo a medida que se acerca el gran día. Tu carga de running se mantiene en zona segura y el complemento con ciclismo ayuda a sostener el volumen total sin sobrecargar las piernas. El ritmo del largo estuvo controlado, lo que habla bien de tu disciplina de esfuerzo en distancias prolongadas. Con solo 19 días por delante, el foco ahora debe ser consolidar lo ganado, reducir el volumen progresivamente y llegar fresco al largador.",
+    "strengths": [
+      "Rodaje largo de 34 km ejecutado con ritmo controlado y FC manejable",
+      "Volumen semanal consistente dentro de una tendencia ascendente saludable",
+      "Uso del ciclismo como disciplina complementaria que cuida la recuperación muscular"
+    ],
+    "warnings": [
+      "Con 19 días para la maratón, el cuerpo necesita entrar en fase de reducción: más km ahora pueden sumar fatiga, no forma",
+      "El largo del domingo deja las piernas con deuda muscular acumulada; prioriza recuperación activa esta semana"
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen semanal",
+        "value": "54.81 km",
+        "trend": "down",
+        "status": "green",
+        "note": "Leve descenso respecto a la semana pico, ideal para el momento del ciclo"
+      },
+      {
+        "label": "Sesiones de running",
+        "value": "5 sesiones",
+        "trend": "stable",
+        "status": "green",
+        "note": "Frecuencia consistente y bien distribuida"
+      },
+      {
+        "label": "FC promedio running",
+        "value": "135 bpm",
+        "trend": "stable",
+        "status": "green",
+        "note": "Zona aeróbica eficiente para el volumen manejado"
+      },
+      {
+        "label": "Rodaje largo",
+        "value": "34.02 km",
+        "trend": "up",
+        "status": "green",
+        "note": "El más largo del ciclo reciente, ejecutado a ritmo conservador"
+      },
+      {
+        "label": "Ciclismo complementario",
+        "value": "4.73 km",
+        "trend": "stable",
+        "status": "green",
+        "note": "Aporte de movilidad sin impacto, positivo en esta etapa"
+      }
+    ],
+    "weekPlan": [
+      {
+        "day": "Lun",
+        "type": "Recuperación activa",
+        "km": "—",
+        "notes": "Ciclismo suave 20-30 min o caminata. Nada de impacto; las piernas necesitan asimilar el largo del domingo."
+      },
+      {
+        "day": "Mar",
+        "type": "Rodaje suave",
+        "km": "8 km",
+        "notes": "Ritmo conversacional, FC por debajo de 140 bpm. Confirma que las piernas respondieron bien al largo."
+      },
+      {
+        "day": "Mié",
+        "type": "Descanso o movilidad",
+        "km": "—",
+        "notes": "Estiramientos, rodillo de espuma o natación muy suave si está disponible. Prioriza el sueño."
+      },
+      {
+        "day": "Jue",
+        "type": "Rodaje con strides",
+        "km": "10 km",
+        "notes": "8 km suaves + 4-6 aceleraciones de 100 m al ritmo de carrera. Activa las piernas sin generar fatiga."
+      },
+      {
+        "day": "Vie",
+        "type": "Descanso",
+        "km": "—",
+        "notes": "Descanso completo. Con 19 días para la maratón, cada día de recuperación cuenta tanto como un entrenamiento."
+      },
+      {
+        "day": "Sáb",
+        "type": "Rodaje de confianza",
+        "km": "12 km",
+        "notes": "Incluye 4-5 km al ritmo objetivo de maratón. Confirma sensaciones y ajusta la estrategia de carrera."
+      },
+      {
+        "day": "Dom",
+        "type": "Rodaje muy suave",
+        "km": "6 km",
+        "notes": "Trote ligero de cierre de semana. Sin presión de ritmo ni distancia. Escucha el cuerpo."
+      }
+    ],
+    "injuryRisk": {
+      "level": "medium",
+      "score": 48,
+      "topRisk": "Tren inferior (cuádriceps y fascia plantar)",
+      "action": "Aplica hielo en cuádriceps y pantorrillas post-rodaje esta semana; evita superficies duras en los próximos días y no agregues volumen nuevo antes de la carrera."
+    },
+    "funFact": "William, el rodaje de 34 km que hiciste el domingo representa el 62% de la distancia total de una maratón, completado en una sola sesión. Tu cuerpo ya sabe lo que es el esfuerzo prolongado.",
+    "seoulTip": null,
+    "projection": {
+      "tiempo": "4:02:06",
+      "ritmo": "5:44",
+      "confianza": "media",
+      "contexto": "Basado en tu Media maratón del 26 de julio. Sin datos suficientes de FC para ajustar por preparación.",
+      "referencia": "Media maratón del 26 de julio de 2026 en 1:58:00 (FC 170 bpm)",
+      "notaAltitud": null
+    }
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-08-10",
+    "fin": "2026-08-16"
+  },
+  "taper": [],
+  "retos": []
+}
