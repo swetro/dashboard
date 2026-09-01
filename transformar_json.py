@@ -753,6 +753,58 @@ def disponibilidad_declarada(meta, profile):
     return str(valor) if valor else "No declarada; inferir del patrón histórico."
 
 
+def normalizar_plan_semanal(plan_crudo, lunes_plan, domingo_plan):
+    """Convierte la propuesta del modelo en un contrato estable para la UI.
+    Las fechas, el orden de los días y los totales se calculan aquí; el LLM
+    decide el propósito y contenido de las sesiones, no el calendario."""
+    plan_crudo = plan_crudo if isinstance(plan_crudo, dict) else {}
+    sesiones_crudas = plan_crudo.get("sessions") or []
+    por_dia = {
+        str(s.get("day", "")).strip().lower().replace("é", "e").replace("á", "a"): s
+        for s in sesiones_crudas if isinstance(s, dict)
+    }
+    claves = ("lun", "mar", "mie", "jue", "vie", "sab", "dom")
+    sesiones = []
+    total_km = 0.0
+    sesiones_running = 0
+    sesiones_fuerza = 0
+
+    for indice, (clave, etiqueta) in enumerate(zip(claves, DIAS_SEMANA_ES)):
+        sesion = dict(por_dia.get(clave) or {})
+        tipo = str(sesion.get("type") or "Descanso")
+        km_texto = str(sesion.get("km") or "—")
+        match_km = re.search(r"\d+(?:[\.,]\d+)?", km_texto)
+        km_valor = float(match_km.group(0).replace(",", ".")) if match_km else 0.0
+        tipo_normalizado = tipo.lower()
+        if km_valor > 0:
+            total_km += km_valor
+            sesiones_running += 1
+        if "fuerza" in tipo_normalizado:
+            sesiones_fuerza += 1
+        sesiones.append({
+            "date": (lunes_plan + timedelta(days=indice)).isoformat(),
+            "day": etiqueta,
+            "type": tipo,
+            "km": km_texto if km_valor > 0 else "—",
+            "notes": str(sesion.get("notes") or "Descanso o recuperación según sensaciones."),
+            "purpose": str(sesion.get("purpose") or "Recuperación"),
+        })
+
+    return {
+        "week": f"{lunes_plan.isoformat()}/{domingo_plan.isoformat()}",
+        "startDate": lunes_plan.isoformat(),
+        "endDate": domingo_plan.isoformat(),
+        "objective": str(plan_crudo.get("objective") or "Sostener la progresión de forma controlada"),
+        "rationale": str(plan_crudo.get("rationale") or "El plan traduce las señales de Pulse en sesiones concretas para esta semana."),
+        "summary": {
+            "totalKm": round(total_km, 1),
+            "runningSessions": sesiones_running,
+            "strengthSessions": sesiones_fuerza,
+        },
+        "sessions": sesiones,
+    }
+
+
 # ── Generar Pulse via Anthropic ───────────────────────────────
 
 def generar_pulse(activities, weekly, meta, profile, acwr_info):
@@ -863,6 +915,8 @@ No confundas tres conceptos distintos: (1) el ritmo objetivo declarado por el at
 Esta regla aplica a TODA métrica que se muestre como número en una caja de la interfaz: ACWR, Pulse score, ritmo promedio, FC promedio, días restantes, proyección de meta. El texto interpreta, las cajas muestran los números. Nunca dupliques una cifra que ya está visible.
 El weekPlan cubre EXACTAMENTE del lunes {lunes_semana_actual.isoformat()} al domingo {domingo_plan.isoformat()}, la semana inmediatamente posterior a la semana analizada. Incluye los siete días una sola vez y no saltes ninguna semana.
 La disponibilidad declarada por el atleta tiene prioridad absoluta. Si no existe, conserva por defecto su patrón de las últimas 8 semanas: ubica el fondo, la fuerza y los descansos en sus días habituales. Solo cambia un día habitual cuando exista una razón concreta de carga o recuperación; explica esa razón brevemente en notes. No optimices el calendario ignorando la rutina real del atleta.
+Pulse y el plan son partes de una misma recomendación: el análisis identifica las señales y el plan debe responder directamente a ellas. El objetivo y la justificación del plan deben explicar qué se mantiene, qué se ajusta y por qué, sin repetir todas las métricas del análisis.
+Cada sesión debe incluir purpose: la adaptación buscada en palabras simples (por ejemplo "Base aeróbica", "Umbral controlado", "Fuerza y estabilidad" o "Recuperación"). No prescribas ritmos más rápidos que los respaldados por los PRs y la proyección actual. El ritmo objetivo futuro no es automáticamente un ritmo apropiado para entrenar hoy.
 Responde ÚNICAMENTE con JSON válido, sin markdown, sin backticks."""
 
     user_prompt = f"""Genera análisis Pulse semanal.
@@ -895,7 +949,7 @@ Disponibilidad declarada: {disponibilidad}
 
 SEMANA QUE DEBES PLANIFICAR: {lunes_semana_actual.isoformat()}/{domingo_plan.isoformat()}
 
-Responde con JSON: {{"semana":"rango fechas","score":0-100,"headline":"máx 8 palabras","subheadline":"máx 12 palabras","readiness":0-100,"aiVerdict":"párrafo 3-4 oraciones análisis longitudinal en segunda persona","strengths":["s1","s2","s3"],"warnings":["w1","w2"],"keyMetrics":[{{"label":"nombre","value":"valor","trend":"up|down|stable","status":"green|yellow|red","note":"nota corta"}}],"weekPlan":[{{"day":"Lun|Mar|Mié|Jue|Vie|Sáb|Dom","type":"tipo sesión","km":"X km o —","notes":"instrucción concreta"}}],"injuryRisk":{{"level":"low|medium|high","score":0-100,"topRisk":"zona anatómica","action":"acción concreta"}},"funFact":"dato curioso sobre su entrenamiento o null","seoulTip":null}}"""
+Responde con JSON: {{"semana":"rango de la semana analizada","score":0-100,"headline":"máx 8 palabras","subheadline":"máx 12 palabras","readiness":0-100,"aiVerdict":"párrafo 3-4 oraciones análisis longitudinal en segunda persona","strengths":["s1","s2","s3"],"warnings":["w1","w2"],"keyMetrics":[{{"label":"nombre","value":"valor","trend":"up|down|stable","status":"green|yellow|red","note":"nota corta"}}],"weeklyPlan":{{"objective":"objetivo concreto de esta semana, máx 16 palabras","rationale":"1-2 oraciones que conectan el análisis Pulse con el plan","sessions":[{{"day":"Lun|Mar|Mié|Jue|Vie|Sáb|Dom","type":"tipo de sesión o Descanso","km":"X km o —","notes":"instrucción concreta con intensidad o ritmo cuando corresponda","purpose":"adaptación buscada"}}]}},"injuryRisk":{{"level":"low|medium|high","score":0-100,"topRisk":"zona anatómica","action":"acción concreta"}},"funFact":"dato curioso sobre su entrenamiento o null","seoulTip":null}}"""
 
     try:
         response = client.messages.create(
@@ -908,6 +962,12 @@ Responde con JSON: {{"semana":"rango fechas","score":0-100,"headline":"máx 8 pa
         text = response.content[0].text.strip()
         text = text.replace("```json", "").replace("```", "").strip()
         parsed = json.loads(text)
+        plan_crudo = parsed.get("weeklyPlan") or {"sessions": parsed.get("weekPlan", [])}
+        plan_semanal = normalizar_plan_semanal(plan_crudo, lunes_semana_actual, domingo_plan)
+        parsed["weeklyPlan"] = plan_semanal
+        # Compatibilidad temporal con el dashboard actual. La nueva vista
+        # consumirá weeklyPlan; este alias puede retirarse después.
+        parsed["weekPlan"] = plan_semanal["sessions"]
         # La proyección nunca viene del modelo — ver proyectar_tiempo_carrera().
         parsed["projection"] = proyeccion
         return parsed
