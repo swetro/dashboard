@@ -31,6 +31,15 @@ function fmtDate(d) {
   return parseInt(d.slice(8, 10)) + " " + MESES[parseInt(d.slice(5, 7)) - 1];
 }
 
+// 5.383333 (min/km decimal) -> "5:23"
+function fmtPace(v) {
+  if (v == null || !isFinite(v)) return "—";
+  let min = Math.floor(v);
+  let sec = Math.round((v - min) * 60);
+  if (sec === 60) { min += 1; sec = 0; }
+  return `${min}:${String(sec).padStart(2, "0")}`;
+}
+
 // "28 jul - 3 ago" — rango completo de una semana "YYYY-MM-DD/YYYY-MM-DD"
 function fmtRangoCorto(weekStr) {
   const [inicio, fin] = weekStr.split("/");
@@ -60,7 +69,7 @@ function getUserId() {
 }
 
 function getDataUrl(userId) {
-  return `${import.meta.env.BASE_URL}data/${userId}.json`;
+  return `${import.meta.env.BASE_URL}data/${userId}.json?t=${Date.now()}`;
 }
 
 
@@ -68,6 +77,76 @@ function daysUntil(dateStr, fromStr) {
   const target = new Date(dateStr);
   const from = fromStr ? new Date(fromStr) : new Date();
   return Math.ceil((target - from) / 86400000);
+}
+
+// ── PLAN SEMANAL (helpers) ──────────────────────────────────────
+const DIAS_ORDEN = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+
+// weeklyPlan es la fuente principal; weekPlan (formato viejo, sin fechas
+// ni objetivo ni summary) se normaliza al mismo shape para no ramificar la UI.
+function normalizePlan(pulse) {
+  const wp = pulse?.weeklyPlan;
+  if (wp?.sessions?.length) {
+    return {
+      objective: wp.objective || null,
+      rationale: wp.rationale || null,
+      startDate: wp.startDate || (wp.week || "").split("/")[0] || null,
+      endDate: wp.endDate || (wp.week || "").split("/")[1] || null,
+      summary: wp.summary || null,
+      sessions: wp.sessions,
+      legacy: false,
+    };
+  }
+  const legacy = pulse?.weekPlan;
+  if (legacy?.length) {
+    return {
+      objective: null, rationale: null, startDate: null, endDate: null,
+      summary: null,
+      sessions: [...legacy].sort((a, b) => DIAS_ORDEN.indexOf(a.day) - DIAS_ORDEN.indexOf(b.day)),
+      legacy: true,
+    };
+  }
+  return null;
+}
+
+// Categoría de la sesión. Se comunica con etiqueta de texto además de color
+// (requisito de accesibilidad: el color nunca es el único portador de estado).
+const PLAN_CATS = {
+  descanso:     { label: "Descanso",     color: S.dim,     bg: "rgba(255,255,255,.04)" },
+  recuperacion: { label: "Recuperación", color: S.cobalt,  bg: "rgba(61,126,255,.10)" },
+  fuerza:       { label: "Fuerza",       color: S.warning, bg: "rgba(255,184,0,.10)" },
+  entrenamiento:{ label: "Entrenamiento",color: S.neon,    bg: "rgba(202,255,0,.10)" },
+};
+
+function getPlanCat(s) {
+  const t = ((s.type || "") + " " + (s.purpose || "")).toLowerCase();
+  if (/descanso total|reposo|^descanso$|día libre|libre/.test(t) && !/activ/.test(t)) return "descanso";
+  if (/fuerza|gym|core|gimnasio/.test(t)) return "fuerza";
+  if (/recuperaci|regenerativ|suave|caminata|movilidad|descanso activo|estiramiento/.test(t)) return "recuperacion";
+  if (/descanso/.test(t)) return "descanso";
+  return "entrenamiento";
+}
+
+const hasKm = (s) => !!s.km && s.km !== "—" && s.km !== "-";
+
+// Hoy real en horario local, comparado como string ISO (las fechas del plan
+// son fechas civiles sin hora: construir Date las corre por timezone).
+function todayIso() {
+  const d = new Date();
+  const p = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+// La próxima sesión pendiente NO es sessions[0]: es la primera con fecha
+// posterior a hoy que efectivamente implique entrenar.
+function findPlanFocus(sessions) {
+  const hoy = todayIso();
+  const withIdx = sessions.map((s, i) => ({ s, i }));
+  const today = withIdx.find(({ s }) => s.date === hoy) || null;
+  const next = withIdx.find(({ s }) => s.date && s.date > hoy && getPlanCat(s.s || s) !== "descanso")
+    || withIdx.find(({ s }) => s.date && s.date > hoy)
+    || null;
+  return { todayIdx: today ? today.i : -1, nextIdx: next ? next.i : -1 };
 }
 
 // ── SUBCOMPONENTS ─────────────────────────────────────────────
@@ -119,6 +198,165 @@ function InfoTip({ text }) {
         </div>
       )}
     </span>
+  );
+}
+
+function PlanSemana({ pulse }) {
+  const plan = normalizePlan(pulse);
+  const [open, setOpen] = useState(null);
+
+  if (!plan) return null;
+
+  const { todayIdx, nextIdx } = findPlanFocus(plan.sessions);
+  const focus = plan.sessions[todayIdx] || plan.sessions[nextIdx] || null;
+  const focusEsHoy = todayIdx !== -1;
+  const focusCat = focus ? PLAN_CATS[getPlanCat(focus)] : null;
+  const upcoming = focusEsHoy && nextIdx !== -1 ? plan.sessions[nextIdx] : null;
+
+  const resumen = plan.summary ? [
+    { val: plan.summary.totalKm, unit: "km", label: "Volumen estimado" },
+    { val: plan.summary.runningSessions, unit: "", label: "Sesiones de running" },
+    { val: plan.summary.strengthSessions, unit: "", label: "Sesiones de fuerza" },
+  ] : null;
+
+  return (
+    <section className="card" style={{ marginBottom: 16 }} aria-labelledby="plan-titulo">
+      {/* Cabecera: objetivo + rango exacto de fechas */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline",
+        gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
+        <div style={{ fontSize: 13, color: S.neon, fontWeight: 700, letterSpacing: ".08em",
+          display: "flex", alignItems: "center" }}>
+          PLAN DE ESTA SEMANA
+          <InfoTip text="El plan traduce tu análisis Pulse en sesiones concretas para la semana en curso. Se regenera con cada análisis nuevo." />
+        </div>
+        {plan.startDate && (
+          <div style={{ fontSize: 13, color: S.dim }}>
+            {fmtRangoSemana(plan.startDate, plan.endDate)}
+          </div>
+        )}
+      </div>
+
+      {plan.objective && (
+        <h2 id="plan-titulo" style={{ fontFamily: FONT_NUM, fontSize: 32, fontWeight: 900,
+          color: S.text, lineHeight: 1.15, marginBottom: 14 }}>
+          {plan.objective}
+        </h2>
+      )}
+
+      {/* Justificación: el puente explícito con el análisis */}
+      {plan.rationale && (
+        <div style={{ borderLeft: `2px solid ${S.cobalt}`, paddingLeft: 16, marginBottom: 20 }}>
+          <div style={{ fontSize: 12, color: S.cobalt, fontWeight: 700, letterSpacing: ".08em",
+            marginBottom: 6 }}>POR QUÉ ESTE PLAN</div>
+          <p style={{ fontSize: 15, color: S.muted, lineHeight: 1.7 }}>{plan.rationale}</p>
+        </div>
+      )}
+
+      {/* Resumen de carga */}
+      {resumen && (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          gap: 12, marginBottom: 20 }}>
+          {resumen.map((r, i) => (
+            <div key={i} style={{ background: S.bg, border: `1px solid ${S.border}`,
+              borderRadius: 12, padding: "12px 14px" }}>
+              <div style={{ fontFamily: FONT_NUM, fontSize: 28, fontWeight: 900, color: S.text, lineHeight: 1 }}>
+                {r.val}{r.unit && <span style={{ fontSize: 14, color: S.muted, fontFamily: "Poppins", marginLeft: 3 }}>{r.unit}</span>}
+              </div>
+              <div style={{ fontSize: 13, color: S.dim, marginTop: 4 }}>{r.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Foco: hoy, o la próxima sesión si la semana del plan no es la actual */}
+      {focus && (
+        <div style={{ background: "linear-gradient(160deg,rgba(202,255,0,.10),rgba(61,126,255,.05) 70%)",
+          border: "1px solid rgba(202,255,0,.22)", borderRadius: 16, padding: "18px 20px", marginBottom: 20 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 8 }}>
+            <span style={{ fontSize: 13, color: S.neon, fontWeight: 700, letterSpacing: ".08em" }}>
+              {focusEsHoy ? "HOY" : "PRÓXIMA SESIÓN"} · {(focus.day || "").toUpperCase()}
+              {focus.date ? ` ${fmtDate(focus.date)}` : ""}
+            </span>
+            <span style={{ fontSize: 12, fontWeight: 700, color: focusCat.color, background: focusCat.bg,
+              border: `1px solid ${focusCat.color}44`, borderRadius: 20, padding: "3px 10px" }}>
+              {focusCat.label}
+            </span>
+          </div>
+          <div style={{ fontFamily: FONT_NUM, fontSize: 30, fontWeight: 900, color: S.text, lineHeight: 1.1 }}>
+            {focus.type}{hasKm(focus) && <span style={{ color: S.neon, marginLeft: 10 }}>{focus.km}</span>}
+          </div>
+          {focus.purpose && (
+            <div style={{ fontSize: 14, color: S.muted, marginTop: 6 }}>
+              Propósito: <strong style={{ color: S.text, fontWeight: 600 }}>{focus.purpose}</strong>
+            </div>
+          )}
+          {focus.notes && (
+            <p style={{ fontSize: 15, color: S.muted, lineHeight: 1.7, marginTop: 12 }}>{focus.notes}</p>
+          )}
+        </div>
+      )}
+
+      {upcoming && (
+        <div style={{ fontSize: 14, color: S.muted, marginBottom: 20 }}>
+          Después de hoy: <strong style={{ color: S.text, fontWeight: 600 }}>{upcoming.day} · {upcoming.type}</strong>
+          {hasKm(upcoming) ? ` · ${upcoming.km}` : ""}
+        </div>
+      )}
+
+      {/* Los siete días — acordeón: el detalle nunca se separa de su día */}
+      <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10 }}>
+        TU SEMANA COMPLETA
+      </div>
+      <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 6 }}>
+        {plan.sessions.map((s, i) => {
+          const cat = PLAN_CATS[getPlanCat(s)];
+          const esHoy = i === todayIdx;
+          const abierto = open === i;
+          return (
+            <li key={i}>
+              <button
+                type="button"
+                className="plan-row"
+                aria-expanded={abierto}
+                aria-controls={`plan-det-${i}`}
+                onClick={() => setOpen(abierto ? null : i)}
+                style={{ borderColor: esHoy ? "rgba(202,255,0,.35)" : S.border,
+                  background: esHoy ? "rgba(202,255,0,.05)" : S.bg }}
+              >
+                <span className="plan-row-bar" style={{ background: cat.color }} aria-hidden="true" />
+                <span className="plan-row-day">
+                  {s.day}
+                  {s.date && <span style={{ display: "block", fontSize: 12, color: S.dim, fontWeight: 400 }}>{fmtDate(s.date)}</span>}
+                </span>
+                <span className="plan-row-main">
+                  <span style={{ fontSize: 15, color: S.text, fontWeight: 600 }}>{s.type}</span>
+                  <span style={{ fontSize: 13, color: cat.color }}>{cat.label}</span>
+                </span>
+                {hasKm(s) && (
+                  <span style={{ fontFamily: FONT_NUM, fontSize: 18, fontWeight: 800, color: S.text, whiteSpace: "nowrap" }}>
+                    {s.km}
+                  </span>
+                )}
+                {esHoy && <span className="plan-row-hoy">HOY</span>}
+                <span aria-hidden="true" style={{ color: S.dim, fontSize: 13,
+                  transform: abierto ? "rotate(180deg)" : "none", transition: "transform .15s" }}>▾</span>
+              </button>
+              <div id={`plan-det-${i}`} hidden={!abierto}
+                style={{ padding: "12px 16px 4px 30px" }}>
+                {s.purpose && (
+                  <div style={{ fontSize: 13, color: S.dim, marginBottom: 6 }}>
+                    Propósito: <strong style={{ color: S.muted, fontWeight: 600 }}>{s.purpose}</strong>
+                  </div>
+                )}
+                <p style={{ fontSize: 15, color: S.muted, lineHeight: 1.7 }}>
+                  {s.notes || "Sin instrucciones adicionales."}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }
 
@@ -313,7 +551,7 @@ function computeCardiacEfficiency(activities) {
 }
 
 // Gráfica de tendencia con delta, área y rango
-function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals = 0 }) {
+function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals = 0, fmt: fmtProp }) {
   if (!data || data.length < 2) return null;
   const last = data[data.length - 1];
   const prev = data[data.length - 2];
@@ -322,7 +560,7 @@ function TrendChart({ data, labels, color, unit = "", goodWhen = "up", decimals 
   const good = goodWhen === "down" ? delta < 0 : delta > 0;
   const deltaColor = neutral ? S.muted : good ? S.neon : S.danger;
   const arrow = neutral ? "→" : delta > 0 ? "▲" : "▼";
-  const fmt = v => decimals > 0 ? v.toFixed(decimals) : String(Math.round(v));
+  const fmt = fmtProp || (v => decimals > 0 ? v.toFixed(decimals) : String(Math.round(v)));
 
   const min = Math.min(...data), max = Math.max(...data), range = max - min || 1;
   const W = 100, H = 40;
@@ -518,9 +756,6 @@ export default function App() {
 
   const recentSessions = [...activities].reverse().slice(0, 6).map(a => ({ ...a, tag: getTag(a) }));
 
-  const nextSession = pulse?.weekPlan?.[0] || null;
-  const restWeekPlan = pulse?.weekPlan?.slice(1) || [];
-
   const balanceMetric = pulse?.keyMetrics?.find(m => (m.label || "").toLowerCase().includes("fácil"));
 
   const { weeks: loadWeeks, acwrSeries } = computeLoadWeeks(activities, acwrData);
@@ -581,6 +816,18 @@ export default function App() {
     .session-date { width: 56px; flex-shrink: 0; font-size: 14px; color: ${S.muted};
       white-space: nowrap; font-weight: 500 }
 
+    .plan-row { width: 100%; display: flex; align-items: center; gap: 12px;
+      min-height: 56px; padding: 10px 14px; border: 1px solid ${S.border};
+      border-radius: 12px; background: ${S.bg}; text-align: left; transition: border-color .15s }
+    .plan-row:hover { border-color: ${S.muted} }
+    .plan-row:focus-visible { outline: 2px solid ${S.neon}; outline-offset: 2px }
+    .plan-row-bar { width: 3px; align-self: stretch; border-radius: 2px; flex-shrink: 0 }
+    .plan-row-day { width: 52px; flex-shrink: 0; font-size: 14px; font-weight: 700; color: ${S.text} }
+    .plan-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px }
+    .plan-row-hoy { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: ${S.neon};
+      background: rgba(202,255,0,.12); border: 1px solid rgba(202,255,0,.3);
+      border-radius: 20px; padding: 2px 8px; flex-shrink: 0 }
+
     @media (max-width: 820px) {
       .sidebar { flex-direction: row; align-items: center; width: 100%; height: auto;
         bottom: auto; padding: 10px 12px; gap: 4px; border-right: none;
@@ -596,6 +843,8 @@ export default function App() {
       .card { padding: 18px 16px; border-radius: 16px }
       .bar-lbl { font-size: 13px !important }
       .bar-val { font-size: 13px !important }
+      .plan-row { flex-wrap: wrap; padding: 12px 14px; row-gap: 6px }
+      .plan-row-main { flex-basis: calc(100% - 130px) }
     }
   `;
 
@@ -760,56 +1009,59 @@ export default function App() {
                 )}
               </div>
 
-              {/* Siguiente sesión — full width */}
-              {nextSession && (
-                <div className="card" style={{ marginBottom: 16 }}>
-                  <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 8 }}>
-                    SIGUIENTE SESIÓN · {nextSession.day?.toUpperCase()}
-                  </div>
-                  <div style={{ fontFamily: FONT_NUM, fontSize: 28, fontWeight: 900, color: S.text, marginBottom: 4 }}>
-                    {nextSession.type}
-                  </div>
-                  <div style={{ fontSize: 15, color: S.muted, marginBottom: 18, lineHeight: 1.6 }}>
-                    {nextSession.km && nextSession.km !== "—" ? `${nextSession.km} · ` : ""}{nextSession.notes}
-                  </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 8 }}>
-                    {restWeekPlan.map((p, i) => (
-                      <div key={i} style={{ background: S.bg, border: `1px solid ${S.border}`,
-                        borderRadius: 10, padding: "10px 12px", textAlign: "center" }}>
-                        <div style={{ fontSize: 13, color: S.cobalt, fontWeight: 700, marginBottom: 3 }}>{p.day}</div>
-                        <div style={{ fontSize: 13, color: S.muted, lineHeight: 1.4 }}>{p.type}</div>
-                        {p.km && p.km !== "—" && (
-                          <div style={{ fontFamily: FONT_NUM, fontSize: 14, fontWeight: 800, color: S.text, marginTop: 3 }}>{p.km}</div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+              <PlanSemana pulse={pulse} />
 
               {/* Proyección */}
-              {pulse.projectedTime && (
+              {pulse.projection && (
                 <div className="card" style={{ background: "rgba(61,126,255,.07)", borderColor: "rgba(61,126,255,.2)" }}>
                   <div style={{ fontSize: 13, color: S.dim, fontWeight: 600, letterSpacing: ".08em", marginBottom: 10, display: "flex", alignItems: "center" }}>
                     PROYECCIÓN {meta.metaCarrera.nombre.toUpperCase()}
-                    <InfoTip text="Tiempo estimado de meta según tu ritmo y volumen actuales de entrenamiento. Es una proyección, no una garantía — mejora si sigues el plan semanal." />
+                    <InfoTip text="Tiempo estimado de meta según tu mejor referencia real y tu eficiencia cardiaca actual al mismo ritmo. Es una proyección, no una garantía — mejora si sigues el plan semanal." />
+                    <span style={{
+                      marginLeft: "auto", fontSize: 11, fontWeight: 700, letterSpacing: ".04em",
+                      padding: "2px 8px", borderRadius: 10,
+                      color: { alta: S.neon, media: S.warning, baja: S.dim }[pulse.projection.confianza],
+                      background: { alta: "rgba(202,255,0,.12)", media: "rgba(255,184,0,.12)", baja: "rgba(255,255,255,.06)" }[pulse.projection.confianza],
+                    }}>
+                      CONFIANZA {pulse.projection.confianza?.toUpperCase()}
+                    </span>
                   </div>
-                  <div style={{ display: "flex", gap: 28, alignItems: "center", flexWrap: "wrap" }}>
+                  <div style={{ display: "flex", gap: 28, alignItems: "flex-start", flexWrap: "wrap" }}>
                     <div>
                       <div style={{ fontFamily: FONT_NUM, fontSize: 48, fontWeight: 900, color: S.cobalt, lineHeight: 1 }}>
-                        {pulse.projectedTime}
+                        {pulse.projection.tiempo}
                       </div>
                       <div style={{ fontSize: 15, color: S.muted, marginTop: 4 }}>
-                        Ritmo: <strong style={{ color: S.text }}>{pulse.projectedPace}/km</strong>
+                        Ritmo: <strong style={{ color: S.text }}>{pulse.projection.ritmo}/km</strong>
                       </div>
                     </div>
-                    {pulse.funFact && (
-                      <div style={{ flex: 1, minWidth: 200, fontSize: 15, color: S.muted, lineHeight: 1.7,
-                        borderLeft: `2px solid ${S.border}`, paddingLeft: 20 }}>
-                        🏃 {pulse.funFact}
-                      </div>
-                    )}
+                    <div style={{ flex: 1, minWidth: 220 }}>
+                      {pulse.projection.contexto && (
+                        <div style={{ fontSize: 15, color: S.muted, lineHeight: 1.7,
+                          borderLeft: `2px solid ${S.border}`, paddingLeft: 20 }}>
+                          {pulse.projection.contexto}
+                        </div>
+                      )}
+                      {pulse.funFact && (
+                        <div style={{ fontSize: 15, color: S.muted, lineHeight: 1.7,
+                          borderLeft: `2px solid ${S.border}`, paddingLeft: 20, marginTop: 10 }}>
+                          🏃 {pulse.funFact}
+                        </div>
+                      )}
+                    </div>
                   </div>
+                  {pulse.projection.notaAltitud && (
+                    <div style={{ fontSize: 13, color: S.dim, marginTop: 14, paddingTop: 14, borderTop: `1px solid ${S.border}` }}>
+                      ⛰️ {pulse.projection.notaAltitud}
+                    </div>
+                  )}
+                  {pulse.projection.referencia && (
+                    <div style={{ fontSize: 13, color: S.dim, marginTop: pulse.projection.notaAltitud ? 6 : 14,
+                      paddingTop: pulse.projection.notaAltitud ? 0 : 14,
+                      borderTop: pulse.projection.notaAltitud ? "none" : `1px solid ${S.border}` }}>
+                      Referencia: {pulse.projection.referencia}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -894,8 +1146,8 @@ export default function App() {
               {/* Métricas con tendencia */}
               <div className="grid3">
                 {[
-                  { label: "RITMO PROMEDIO (MIN/KM)", val: lastWeek.avg_pace.toFixed(2), noData: !hasRunDataLastWeek, color: S.cobalt,
-                    data: last8.map(w => w.avg_pace), goodWhen: "down", decimals: 2,
+                  { label: "RITMO PROMEDIO (MIN/KM)", val: fmtPace(lastWeek.avg_pace), noData: !hasRunDataLastWeek, color: S.cobalt,
+                    data: last8.map(w => w.avg_pace), goodWhen: "down", fmt: fmtPace,
                     tip: "Minutos por kilómetro promedio de tus sesiones de running esta semana, sin contar la carrera. Bajar el número es correr más rápido." },
                   { label: "FC PROMEDIO (BPM)", val: Math.round(lastWeek.avg_hr), noData: !hasRunDataLastWeek, color: S.warning,
                     data: last8.map(w => w.avg_hr), unit: "bpm", goodWhen: "down",
@@ -918,7 +1170,7 @@ export default function App() {
                       </div>
                     )}
                     <TrendChart data={m.data} labels={weekLabels} color={m.color}
-                      goodWhen={m.goodWhen} unit={m.unit || ""} decimals={m.decimals || 0} />
+                      goodWhen={m.goodWhen} unit={m.unit || ""} decimals={m.decimals || 0} fmt={m.fmt} />
                   </div>
                 ))}
               </div>
