@@ -34,10 +34,12 @@ Dos generaciones de regresiones:
 Uso: python scripts/test_pulse_v2_pilot.py
 """
 
+import json
 import sys
 import unittest
 from datetime import date, timedelta
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -1248,20 +1250,6 @@ class TestComparacionesMissingData(unittest.TestCase):
         self.assertEqual(c["load"]["discipline_statuses"], {})
 
 
-class TestComparacionesNoIntegracion(unittest.TestCase):
-    """Guardrail de alcance: esta iteración NO debe integrar el motor al
-    prompt ni cambiar generar_pulse_v2()."""
-
-    def test_calcular_comparaciones_pulse_no_se_llama_desde_construir_prompts_v2(self):
-        import inspect
-        fuente = inspect.getsource(v2.construir_prompts_v2)
-        self.assertNotIn("calcular_comparaciones_pulse", fuente)
-
-    def test_calcular_comparaciones_pulse_no_se_llama_desde_generar_pulse_v2(self):
-        import inspect
-        fuente = inspect.getsource(v2.generar_pulse_v2)
-        self.assertNotIn("calcular_comparaciones_pulse", fuente)
-
 
 # ═══════════════════════════════════════════════════════════════════════
 # Robustez de running.pace — filtrado de outliers (auditoría real:
@@ -1435,6 +1423,225 @@ class TestComparacionesPaceRobusto(unittest.TestCase):
         self.assertGreater(pace["samples_excluded"]["avg4"], 0)
         self.assertLess(abs(pace["delta_sec_per_km"]), 60.0,
                          f"delta antes del fix era -97.8 seg/km; debe reducirse drásticamente, quedó {pace['delta_sec_per_km']}")
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# E2E de generar_pulse_v2() con Anthropic MOCKEADO (nunca la API real) —
+# confirma que integrar comparisons al prompt no rompió el resto del
+# pipeline, y que Goal Readiness no se implementó por accidente.
+# ═══════════════════════════════════════════════════════════════════════
+
+class _FakeAnthropicMessage:
+    def __init__(self, text):
+        self.content = [MagicMock(text=text)]
+
+
+def _mock_client_secuencia(respuestas):
+    """respuestas: lista de dicts (uno por intento del modelo, en orden:
+    primero, luego reparo si aplica). client.messages.create devuelve la
+    siguiente respuesta de la secuencia en cada llamada."""
+    client = MagicMock()
+    client.messages.create.side_effect = [
+        _FakeAnthropicMessage(json.dumps(r, ensure_ascii=False)) for r in respuestas
+    ]
+    return client
+
+
+def _pulse_v2_respuesta_valida(**overrides):
+    base = {
+        "semana": "2026-08-24/2026-08-30", "score": 75, "headline": "Semana estable",
+        "subheadline": "Sin cambios relevantes", "readiness": 70,
+        "aiVerdict": ("Atleta E2E, esta semana mantuviste un patrón estable de entrenamiento. "
+                      "Eso encaja con tu fase actual de preparación. La próxima semana sostiene "
+                      "el mismo enfoque sin cambios grandes."),
+        "strengths": ["Consistencia"], "warnings": [],
+        "keyMetrics": [{"label": "Volumen", "value": "14 km", "trend": "stable", "status": "green", "note": "estable"}],
+        "weeklyPlan": {
+            "objective": "Mantener el ritmo actual",
+            "rationale": "La semana se mantuvo estable, se sostiene el enfoque.",
+            "sessions": [
+                {"day": d, "type": "Descanso", "km": "—", "notes": "Descanso.", "purpose": "Recuperación"}
+                for d in v2.DIAS_ORDEN
+            ],
+        },
+        "injuryRisk": {"level": "low", "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+                       "area": None, "action": "Mantener rutina de sueño"},
+    }
+    base.update(overrides)
+    return base
+
+
+class TestGenerarPulseV2E2E(unittest.TestCase):
+    FECHA_GENERACION = date(2026, 9, 1)          # martes
+    LUNES_SEMANA_ACTUAL = date(2026, 8, 31)       # lunes de la semana ABIERTA
+
+    def _fixture(self):
+        activities = []
+        for k in (1, 2, 3, 4):
+            lunes = LUNES_ANALIZADO - timedelta(days=7 * k)
+            activities += [
+                _act(lunes.isoformat(), dist_km=6.0, duration_min=35.0, pace_raw=5.5, hr=145),
+                _act((lunes + timedelta(days=2)).isoformat(), dist_km=6.0, duration_min=35.0, pace_raw=5.5, hr=145),
+            ]
+        activities += [
+            _act(LUNES_ANALIZADO.isoformat(), dist_km=8.0, duration_min=45.0, pace_raw=5.5, hr=150),
+            _act((LUNES_ANALIZADO + timedelta(days=2)).isoformat(), dist_km=8.0, duration_min=45.0, pace_raw=5.5, hr=150),
+        ]
+        # Referencia de proyección: un 21K real dentro de los últimos 365 días.
+        activities.append(_act((DOMINGO_ANALIZADO - timedelta(days=30)).isoformat(),
+                                dist_km=20.0, duration_min=110.0, pace_raw=5.5, hr=150))
+        # Actividad de la semana ABIERTA (lunes 2026-08-31, ya transcurrido
+        # respecto a FECHA_GENERACION=martes 2026-09-01) -- plausible (no
+        # absurda: un valor extremo aquí, aunque correctamente excluido de
+        # comparisons/planning_constraints, SÍ debe reconciliarse como
+        # completado esta semana y entonces rompería los límites de
+        # volumen de esa semana, que es comportamiento correcto, no un
+        # bug -- se verifica "no contaminó comparisons" comparando contra
+        # un cálculo independiente, no por magnitud.
+        activities.append(_act(self.LUNES_SEMANA_ACTUAL.isoformat(), dist_km=10.0, duration_min=60.0,
+                                pace_raw=6.0, hr=150))
+
+        weekly = tj.calcular_weekly_multidisciplina(activities)
+        meta = {"nombre": "ATLETA E2E",
+                "metaCarrera": {"nombre": "Maratón E2E", "fecha": "2027-01-15", "label": "42K E2E"},
+                "prs": []}
+        profile = {"personal_records": [], "full_name": "Atleta E2E"}
+        acwr_info = {"status": "optimal", "series": {}}
+        return activities, weekly, meta, profile, acwr_info
+
+    def _activities_cerradas(self, activities):
+        return [a for a in activities if a["date"] < self.LUNES_SEMANA_ACTUAL.isoformat()]
+
+    @patch("anthropic.Anthropic")
+    def test_comparisons_llega_al_prompt_y_a_input_context(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        self.assertEqual(gen["status"], "valid")
+        self.assertIn("comparisons", gen["input_context"])
+        self.assertIn("COMPARACIONES SEMANALES", gen["input_context"]["user_prompt"])
+        # el bloque debe reflejar valores reales de comparisons, no texto genérico
+        km_current = gen["input_context"]["comparisons"]["running"]["km"]["current"]
+        self.assertIn(f"Running: {km_current}km", gen["input_context"]["user_prompt"])
+
+    @patch("anthropic.Anthropic")
+    def test_metadata_de_auditoria_de_pace_no_llega_al_prompt(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        # Estas SÍ deben estar ausentes de literal (metadata de auditoría,
+        # nunca contenido). "outlier" no se incluye acá: aparece en el
+        # system_prompt como parte de la INSTRUCCIÓN que le prohíbe a
+        # Claude usar esa palabra -- eso es correcto, no una fuga.
+        for termino in ("samples_total", "samples_used", "samples_excluded"):
+            self.assertNotIn(termino, gen["input_context"]["user_prompt"])
+            self.assertNotIn(termino, gen["input_context"]["system_prompt"])
+
+    @patch("anthropic.Anthropic")
+    def test_semana_abierta_no_contamina_comparisons_pero_si_reconciliacion(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+
+        # Verificación EXACTA (no por magnitud): comparisons calculado de
+        # forma independiente sobre activities_cerradas (sin la semana
+        # abierta) debe coincidir byte a byte con lo que generar_pulse_v2()
+        # metió en input_context. Si la semana abierta se hubiera filtrado,
+        # esta igualdad fallaría.
+        activities_cerradas = self._activities_cerradas(activities)
+        weekly_cerrado_esperado = [w for w in tj.calcular_weekly_multidisciplina(activities)
+                                    if w["week"].split("/")[0] < self.LUNES_SEMANA_ACTUAL.isoformat()]
+        comp_esperado = v2.calcular_comparaciones_pulse(activities_cerradas, weekly_cerrado_esperado,
+                                                          LUNES_ANALIZADO, DOMINGO_ANALIZADO, acwr_info=acwr_info)
+        self.assertEqual(gen["input_context"]["comparisons"], comp_esperado)
+
+        # Pero calcular_semana_en_curso (reconciliación) SÍ debe ver la
+        # actividad de la semana abierta -- lee `activities` completo a
+        # propósito, no activities_cerradas.
+        semana_en_curso = gen["input_context"]["semana_en_curso"]
+        self.assertEqual(semana_en_curso["dias"][self.LUNES_SEMANA_ACTUAL.isoformat()]["estado"], "completado")
+        self.assertAlmostEqual(semana_en_curso["dias"][self.LUNES_SEMANA_ACTUAL.isoformat()]["running_km"], 10.0, places=1)
+        # y el plan final debe reflejar ese día real como "Completado".
+        lunes_session = gen["pulse"]["weeklyPlan"]["sessions"][0]
+        self.assertEqual(lunes_session["type"], "Completado")
+        self.assertIn("10.0", lunes_session["km"])
+
+    @patch("anthropic.Anthropic")
+    def test_projection_sigue_correcta(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        activities_cerradas = self._activities_cerradas(activities)
+        esperado = tj.proyectar_tiempo_carrera([], 42.195, activities_cerradas, "Maratón E2E", DOMINGO_ANALIZADO)
+        self.assertIsNotNone(esperado, "precondición del test: debe existir una referencia de proyección")
+        self.assertEqual(gen["pulse"]["projection"], esperado)
+
+    @patch("anthropic.Anthropic")
+    def test_planning_constraints_sigue_presente(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        constraints = gen["input_context"]["planning_constraints"]
+        self.assertIn("goal_phase", constraints)
+        self.assertIn("running_km_range", constraints)
+        self.assertIn("multisport_load", constraints)  # confirma que guardrails-v4 sigue intacto
+
+    @patch("anthropic.Anthropic")
+    def test_parsing_y_validation_normal_funcionan(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        self.assertEqual(gen["attempts"], 1)
+        self.assertEqual(gen["status"], "valid")
+        self.assertTrue(gen["validation"]["ok"])
+
+    @patch("anthropic.Anthropic")
+    def test_repair_attempt_sigue_funcionando(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        # injuryRisk.level="low" sin frase de hedge -- _limpiar_schema() NO
+        # toca `signal`, así que este fallo SÍ llega a validar_pulse_v2()
+        # (a diferencia de funFact, que _limpiar_schema() ya limpia antes
+        # de validar, por lo que nunca dispara un reparo).
+        invalida = _pulse_v2_respuesta_valida(
+            injuryRisk={"level": "low", "signal": "Todo bien, sin problemas.", "area": None, "action": "Nada"})
+        mock_cls.return_value = _mock_client_secuencia([invalida, _pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        self.assertEqual(gen["attempts"], 2)
+        self.assertEqual(gen["status"], "valid_after_repair")
+
+    @patch("anthropic.Anthropic")
+    def test_output_schema_sigue_compatible(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        for key in v2.REQUIRED_TOP_LEVEL_KEYS:
+            self.assertIn(key, gen["pulse"])
+        self.assertNotIn("funFact", gen["pulse"])
+        self.assertNotIn("weekPlan", gen["pulse"])
+        self.assertNotIn("score", gen["pulse"]["injuryRisk"])
+
+    @patch("anthropic.Anthropic")
+    def test_goal_readiness_no_implementado_accidentalmente(self, mock_cls):
+        # Estático: ninguna función nueva de Goal Readiness debe existir.
+        for nombre in ("calcular_goal_readiness", "calcular_goal_readiness_v1", "goal_readiness"):
+            self.assertFalse(hasattr(v2, nombre), f"{nombre} no debe existir todavía")
+        # E2E: el output no gana ningún campo nuevo de goal readiness; readiness
+        # sigue siendo el mismo campo libre de siempre, sin componentes.
+        activities, weekly, meta, profile, acwr_info = self._fixture()
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+        self.assertNotIn("goalReadiness", gen["pulse"])
+        self.assertNotIn("goal_readiness", gen["pulse"])
+        self.assertIsInstance(gen["pulse"]["readiness"], (int, float))
 
 
 if __name__ == "__main__":

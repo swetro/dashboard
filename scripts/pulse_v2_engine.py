@@ -21,7 +21,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 CONSTRAINTS_VERSION = "pilot-v2.1-guardrails-v4"
-PROMPT_VERSION = "pilot-v2.1-prompt-v3"
+PROMPT_VERSION = "pilot-v2.1-prompt-v4"
 
 # Fix v3 (segunda revisión manual, sobre un candidato que SÍ pasó la
 # validación v2 automática): neutralizar_dias_pasados() borraba la carga
@@ -60,6 +60,40 @@ CHANGELOG_V2_1_FIXES = """
 8. validation_report.json ahora enumera TODOS los checks (pass y fail) con
    nombre, estado, evidencia y mensaje — no solo la lista de violaciones.
 9. keyMetrics limitado a 3 elementos, exigido en prompt y validador.
+"""
+
+CHANGELOG_PROMPT_V4_COMPARISONS = """
+Integración del Weekly Comparison Engine (calcular_comparaciones_pulse) al
+prompt v2.1 -- experimento aislado, NO cambia Goal Readiness, Planning
+Constraints, robust pace filtering, reconciliación de semana en curso,
+residual constraints, PR filtering, race projection, Pulse Score, ni el
+schema de salida.
+
+1. generar_pulse_v2() calcula comparisons = calcular_comparaciones_pulse(
+   activities_cerradas, weekly_cerrado, ...) -- solo semanas cerradas,
+   igual criterio que el resto de la función -- y lo agrega a
+   input_context["comparisons"] para auditoría completa.
+2. construir_prompts_v2() recibe comparisons y lo serializa en texto
+   compacto (_fmt_comparisons) dentro de COMPARACIONES SEMANALES en el
+   user_prompt. Nunca expone samples_total/samples_used/samples_excluded
+   (metadata de auditoría, no contenido para el atleta).
+3. system_prompt: nueva regla central "Python calcula qué cambió, Claude
+   interpreta qué significa" + reglas explícitas de multideporte (no
+   convertir disciplinas a running-equivalente; running bajando con carga
+   total estable/al alza no es "caída general de entrenamiento"), pace/HR
+   (nunca "mejoró fitness"/"mejor eficiencia" solo por dirección de
+   pace/HR), historial preliminar (evitar lenguaje de "patrón habitual").
+   Estructura de insight dominante para aiVerdict (una sola idea, 3
+   oraciones: qué cambió / qué significa / cómo conecta con la próxima
+   semana) -- "semana estable" es una conclusión válida, no forzar insight.
+4. Reducción de redundancia (sección 9 del pedido): se retiró el bloque
+   "SEMANA ANALIZADA" (km/sesiones/FC por disciplina de la semana actual,
+   ahora cubierto por comparisons con MÁS información -- dirección/
+   tendencia) y la lista cruda "Últimas 8 semanas (km running)" (misma
+   pregunta que comparisons ya responde con dirección calculada). No se
+   tocó el texto de Planning Constraints (RESTRICCIONES DE LA SEMANA
+   COMPLETA / RESTANTES) -- esa posible redundancia se identificó pero se
+   dejó intacta deliberadamente, fuera del alcance de esta iteración.
 """
 
 CHANGELOG_GUARDRAILS_V4_FIXES = """
@@ -1154,10 +1188,78 @@ def _fmt_range(r, unit="km"):
     return f"{r[0]}–{r[1]} {unit}"
 
 
+def _fmt_comparisons(comparisons):
+    """
+    Representación compacta (texto, no JSON) de calcular_comparaciones_pulse()
+    para el prompt. Nunca incluye samples_total/samples_used/samples_excluded
+    (metadata de auditoría interna, no debe llegar al atleta -- ver
+    input_context['comparisons'] para la versión completa auditable).
+    Omite pace/HR cuando su direction es "unknown" (sin base confiable) en
+    vez de mandar un número dudoso; omite disciplinas sin ninguna actividad
+    reciente ni histórica para no ensuciar el prompt con puros ceros.
+    """
+    running = comparisons["running"]
+    total = comparisons["total_training"]
+    disciplines = comparisons["disciplines"]
+    load = comparisons["load"]
+    hist = comparisons["history_quality"]
+
+    km = running["km"]
+    km_pct = f"{km['vs_avg4_pct']:+.0f}%" if km["vs_avg4_pct"] is not None else "sin % (referencia insuficiente)"
+    sess = running["sessions"]
+    running_line = (f"Running: {km['current']}km ({km['direction']} vs. promedio 4 sem., {km_pct}) | "
+                     f"sesiones {sess['current']} (promedio {sess['avg4']}, {sess['direction']})")
+
+    pace = running["pace"]
+    if pace["direction"] != "unknown" and pace["weeks_with_data"] >= 2:
+        pace_line = (f"Ritmo: {pace['direction']} ({pace['delta_sec_per_km']:+.0f} seg/km vs. promedio), "
+                      f"cobertura {pace['weeks_with_data']}/4 semanas.")
+    else:
+        pace_line = "Ritmo: sin comparación confiable esta semana (cobertura insuficiente) -- no la menciones."
+
+    hr = running["heart_rate"]
+    if hr["direction"] != "unknown":
+        hr_line = f"FC: {hr['direction']} ({hr['delta_bpm']:+.0f} bpm vs. promedio)."
+    else:
+        hr_line = "FC: sin comparación confiable esta semana -- no la menciones."
+
+    minutos = total["minutes"]
+    min_pct = f"{minutos['vs_avg4_pct']:+.0f}%" if minutos["vs_avg4_pct"] is not None else "sin % (referencia insuficiente)"
+    total_line = (f"Carga total (TODAS las disciplinas): {minutos['current']} min ({minutos['direction']} vs. "
+                   f"promedio, {min_pct}) | días activos {total['active_days']['current']} "
+                   f"(promedio {total['active_days']['avg4']}) | sesiones totales {total['sessions']['current']} "
+                   f"(promedio {total['sessions']['avg4']})")
+
+    disc_partes = []
+    for disc, campo_vol, unidad in (("cycling", "km", "km"), ("swimming", "metros", "m")):
+        vol = disciplines[disc][campo_vol]
+        if not (vol["direction"] == "stable" and vol["current"] == 0 and vol["avg4"] == 0):
+            nombre_es = {"cycling": "Ciclismo", "swimming": "Natación"}[disc]
+            disc_partes.append(f"{nombre_es} {vol['direction']} ({vol['current']}{unidad})")
+    fuerza_min = disciplines["strength"]["minutes"]
+    if not (fuerza_min["direction"] == "stable" and fuerza_min["current"] == 0 and fuerza_min["avg4"] == 0):
+        disc_partes.append(f"Fuerza {fuerza_min['direction']} ({fuerza_min['current']} min)")
+    disc_line = "Disciplinas: " + (", ".join(disc_partes) if disc_partes else "sin cambios relevantes fuera de running")
+
+    señales = comparisons.get("signals") or []
+    señales_line = "Señales detectadas: " + (", ".join(s["id"] for s in señales) if señales else "ninguna señal relevante esta semana")
+
+    hist_line = f"Historial: {hist['weeks_available']} semanas cerradas disponibles"
+    if hist["is_preliminary"]:
+        hist_line += (" (PRELIMINAR -- evita \"tu patrón habitual\"/\"normalmente\"/\"tu tendencia histórica\", "
+                       "usa \"con el historial disponible hasta ahora\")")
+
+    return "\n".join([
+        running_line, pace_line, hr_line, total_line,
+        f"Multideporte: dirección de carga total = {load['multisport_direction']}",
+        disc_line, señales_line, hist_line,
+    ])
+
+
 def construir_prompts_v2(tj, activities_cerradas, weekly_cerrado, meta, profile,
                           acwr_info, lunes_analizado, domingo_analizado,
                           lunes_semana_actual, domingo_plan, fecha_generacion, constraints,
-                          semana_en_curso, restantes):
+                          semana_en_curso, restantes, comparisons):
     """Adapta generar_pulse() v1 (transformar_json.py) agregando las reglas
     de esquema v2.1 y las restricciones de planning_constraints como límites
     duros. Reusa los helpers de contexto de tj (resumen, patrón semanal,
@@ -1189,10 +1291,13 @@ def construir_prompts_v2(tj, activities_cerradas, weekly_cerrado, meta, profile,
         carrera.get("tiempoObjetivo") or carrera.get("targetTime") or carrera.get("tiempo_objetivo")
     )
 
-    ultimas_run_km = [w.get("running", {}).get("km", w.get("total_km", 0)) for w in weekly_cerrado[-8:]]
     rango_semana_es = tj.fmt_rango_semana_es(lunes_analizado, domingo_analizado)
 
-    last_week = next((w for w in weekly_cerrado if w["week"] == f"{lunes_analizado.isoformat()}/{domingo_analizado.isoformat()}"), {})
+    # Nota (integración de comparisons): "última semana" en bruto (km/
+    # sesiones/FC por disciplina) y la lista cruda de últimas 8 semanas ya
+    # NO se arman acá -- comparisons (calcular_comparaciones_pulse) cubre
+    # exactamente esa pregunta con dirección/tendencia ya calculada, así
+    # que mandar ambas cosas era redundante (ver entregable, sección C).
     run_acts = [a for a in activities_cerradas if a.get("type") == "running"]
     recent_run = run_acts[-1] if run_acts else (activities_cerradas[-1] if activities_cerradas else {})
 
@@ -1221,6 +1326,8 @@ def construir_prompts_v2(tj, activities_cerradas, weekly_cerrado, meta, profile,
 Hoy, al momento de generar este análisis, es {fecha_generacion.isoformat()}.
 Analizas la semana del {rango_semana_es}. Las actividades posteriores al domingo {tj.fmt_fecha_es(domingo_analizado, False)} no existen para este análisis, aunque estén en los datos. Nunca menciones actividades de la semana en curso.
 Español latinoamericano. SIEMPRE en segunda persona dirigiéndote al atleta por su nombre — escribe "Juan, cerraste..." nunca "Juan cerró...".
+COMPARACIONES SEMANALES — regla central: Python ya calculó qué cambió esta semana respecto al patrón reciente (dirección, magnitud, cobertura de datos). Tu trabajo es interpretar qué significa, nunca recalcular. No contradigas ninguna "direction" que te llega en COMPARACIONES SEMANALES. No inventes porcentajes que no vengan en esos datos. No conviertas ciclismo, natación o fuerza a "kilómetros de running equivalentes" bajo ninguna circunstancia -- no existe esa fórmula. Si el running bajó pero la carga total (todas las disciplinas) está estable o subió, NO describas la semana como una caída general de entrenamiento: distingue explícitamente "bajó el running" de "bajó el entrenamiento total"; si una disciplina concreta explica la redistribución, podés nombrarla, sin convertirla a unidades equivalentes. Un ritmo más rápido NUNCA implica automáticamente mejor condición física o fitness -- solo describe el cambio de ritmo ("ritmo medio más rápido" es válido, "mejoraste tu condición física" no lo es solo con esa señal). Una FC menor NUNCA implica automáticamente mejor eficiencia cardiovascular -- solo reporta que la FC media fue menor/mayor/estable. Usa pace o FC en tu interpretación SOLO si su comparación no quedó marcada como no confiable; si no hay comparación confiable, no la menciones. Nunca menciones al atleta las palabras "outlier", "muestra excluida", "filtrado", ni ninguna cifra de cobertura/muestras -- son metadata de auditoría interna. Si el historial está marcado PRELIMINAR, nunca digas "tu patrón habitual", "normalmente" ni "tu tendencia histórica" -- usa "con el historial disponible hasta ahora".
+INSIGHT DOMINANTE — aiVerdict debe girar alrededor de UNA sola idea: ¿cuál fue el cambio más importante de esta semana respecto al patrón reciente? No es un inventario de métricas. Ejemplos de ideas dominantes válidas: aumento real de carga, caída general de entrenamiento, descarga/afinamiento coherente con la fase, redistribución hacia otra disciplina, volumen estable con cambio de ritmo o FC, consolidación sin cambios relevantes. Si no ocurrió nada importante, "semana estable" es una conclusión válida -- no fuerces un insight que las comparaciones no respaldan. Estructura en máximo 3 oraciones: (1) qué cambió, (2) qué significa en el contexto de este atleta (objetivo, fase, ACWR, historial), (3) cómo conecta con la dirección del plan de la próxima semana. No repitas cifras que ya aparecen en las cajas de la interfaz.
 aiVerdict: máximo 3 oraciones, aproximadamente 80-120 palabras, sin bullets, sin emojis, sin guiones largos ni medios (usa coma o punto en su lugar), nunca la palabra "oficial" para un tiempo del reloj.
 El valor exacto de ACWR ya se muestra en la interfaz. NUNCA lo menciones con cifra (nada de "0.95x") en el texto. Si necesitas referirte a la carga, usa lenguaje cualitativo ("tu carga está en zona segura"), sin número.
 El tiempo restante hasta la carrera y la proyección de meta (con su ritmo) ya vienen calculados y se muestran en la interfaz — no los recalcules ni los menciones con una cifra propia. Si mencionás días restantes, usá EXACTAMENTE {dias_restantes if dias_restantes is not None else "N/A"} (no otro número).
@@ -1271,11 +1378,10 @@ ATLETA: {nombre}
 {f"Tiempo objetivo declarado por el atleta: {tiempo_objetivo}." if tiempo_objetivo else "Tiempo objetivo declarado por el atleta: no disponible — no existe un ritmo objetivo, solo el proyectado."}
 {prs_str}
 
-SEMANA ANALIZADA: {last_week.get('week', 'N/A')}
-Running esta semana: {last_week.get('running', {}).get('km', last_week.get('total_km', 0))} km | {last_week.get('running', {}).get('sessions', last_week.get('sessions', 0))} sesiones | FC promedio running: {last_week.get('running', {}).get('avg_hr', last_week.get('avg_hr', 0))} bpm
-Ciclismo esta semana: {last_week.get('cycling', {}).get('km', 0)} km | {last_week.get('cycling', {}).get('sessions', 0)} sesiones
-Natación esta semana: {last_week.get('swimming', {}).get('metros', 0)} metros | {last_week.get('swimming', {}).get('sessions', 0)} sesiones
-Fuerza esta semana: {last_week.get('strength', {}).get('minutos', 0)} min | {last_week.get('strength', {}).get('sessions', 0)} sesiones
+SEMANA ANALIZADA: {lunes_analizado.isoformat()}/{domingo_analizado.isoformat()}
+
+COMPARACIONES SEMANALES (calculadas por Python -- respeta estas direcciones, no las recalcules):
+{_fmt_comparisons(comparisons)}
 
 ÚLTIMA SESIÓN DE RUNNING: {recent_run.get('name', 'N/A')} ({recent_run.get('date', 'N/A')})
 {recent_run.get('dist_km', 0)}km | {recent_run.get('pace', 'N/A')}/km | {recent_run.get('hr', 0)}bpm
@@ -1283,7 +1389,6 @@ Fuerza esta semana: {last_week.get('strength', {}).get('minutos', 0)} min | {las
 CONTEXTO HISTÓRICO ({len(activities_cerradas)} actividades totales):
 {resumen}
 Estado de tu carga (ACWR): {estado_carga}
-Últimas 8 semanas (km running): {ultimas_run_km}
 
 PATRÓN HABITUAL DE LAS ÚLTIMAS 8 SEMANAS:
 {patron_semanal}
@@ -1756,10 +1861,19 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
     semana_en_curso = calcular_semana_en_curso(activities, lunes_semana_actual, domingo_plan, fecha_generacion)
     restantes = calcular_restricciones_residuales(constraints, semana_en_curso)
 
+    # Weekly Comparison Engine: exclusivamente semanas cerradas (activities_
+    # cerradas/weekly_cerrado, nunca `activities`/`weekly` completos) -- la
+    # semana en curso nunca contamina comparisons, igual que ya pasa con el
+    # resto de generar_pulse_v2(). No se modifica calcular_comparaciones_
+    # pulse() en esta iteración, solo se integra su resultado al prompt.
+    comparisons = calcular_comparaciones_pulse(
+        activities_cerradas, weekly_cerrado, lunes_analizado, domingo_analizado, acwr_info=acwr_info,
+    )
+
     system_prompt, user_prompt, proyeccion, _, prs_descartados = construir_prompts_v2(
         tj, activities_cerradas, weekly_cerrado, meta, profile, acwr_info,
         lunes_analizado, domingo_analizado, lunes_semana_actual, domingo_plan, fecha_generacion, constraints,
-        semana_en_curso, restantes,
+        semana_en_curso, restantes, comparisons,
     )
 
     input_context = {
@@ -1775,6 +1889,7 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
         "restricciones_residuales": restantes,
         "prs_descartados_por_atipicos": prs_descartados,
         "acwr_status": (acwr_info or {}).get("status"),
+        "comparisons": comparisons,
         "system_prompt": system_prompt,
         "user_prompt": user_prompt,
     }
