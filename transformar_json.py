@@ -807,8 +807,16 @@ def normalizar_plan_semanal(plan_crudo, lunes_plan, domingo_plan):
 
 # ── Generar Pulse via Anthropic ───────────────────────────────
 
-def generar_pulse(activities, weekly, meta, profile, acwr_info):
-    """Llama a Anthropic para generar el análisis Pulse."""
+def generar_pulse_v1(activities, weekly, meta, profile, acwr_info):
+    """Llama a Anthropic para generar el análisis Pulse.
+
+    Congelada como baseline v1 (ver PULSE_contexto_maestro.md, sección 46:
+    "Congelar PULSE actual como v1"). Prompt, modelo, temperature, max_tokens,
+    schema de salida y comportamiento observable NO se tocan acá. Cualquier
+    evolución (comparaciones, Goal Readiness, planning constraints, etc.) va
+    en un motor v2 aparte que reutilice esta función — nunca modificándola
+    en el sitio — para poder comparar v1 vs v2 sobre el mismo atleta/semana.
+    """
     try:
         import anthropic
     except ImportError:
@@ -970,10 +978,26 @@ Responde con JSON: {{"semana":"rango de la semana analizada","score":0-100,"head
         parsed["weekPlan"] = plan_semanal["sessions"]
         # La proyección nunca viene del modelo — ver proyectar_tiempo_carrera().
         parsed["projection"] = proyeccion
+        # Metadata interna para distinguir v1 de futuras versiones (ver
+        # PULSE_contexto_maestro.md, sección 6). Campo aditivo: no reemplaza
+        # ni renombra nada del contrato existente, así que un frontend que
+        # todavía no lo lee simplemente lo ignora.
+        parsed["pulse_version"] = "v1"
         return parsed
     except Exception as e:
         print(f"  ✗ Error generando Pulse: {e}")
         return None
+
+
+def generar_pulse(activities, weekly, meta, profile, acwr_info):
+    """Alias de compatibilidad hacia atrás: cualquier código existente que
+    siga llamando generar_pulse() (transformar() en este mismo archivo, o
+    cualquier script externo) sigue obteniendo exactamente el comportamiento
+    de v1. Toda la lógica real vive en generar_pulse_v1() — no agregar nada
+    acá; si en algún punto generar_pulse() debe apuntar a una versión más
+    nueva, ese es un cambio de producto deliberado, no un lugar para lógica
+    nueva."""
+    return generar_pulse_v1(activities, weekly, meta, profile, acwr_info)
 
 
 # ── Construir JSON final ──────────────────────────────────────
