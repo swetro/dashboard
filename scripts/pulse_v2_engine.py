@@ -142,6 +142,34 @@ MULTISPORT_FLOOR_MIN_SEMANA = 30.0
 MULTISPORT_RATIO_ALTA = 1.3
 MULTISPORT_RATIO_BAJA = 0.5
 
+# ── Race status: detección de finalización de carrera (auditoría race_status) ──
+#
+# post_race NO puede inferirse solo de que la fecha de la meta ya pasó (caso
+# real: Álvaro, Maratón de Sydney 2026-08-30, seis días sin ninguna actividad
+# alrededor de esa fecha -- el motor lo marcaba post_race sin evidencia).
+# calcular_race_status() exige evidencia determinística: sport running,
+# categoría de distancia soportada, actividad dentro de una ventana de fecha
+# acotada. Bandas de distancia = mismo precedente que transformar_json.py usa
+# para elegir referencia de Riegel (RANGO_21K_KM=(19,30), MINIMO_42K_KM=39;
+# _candidatos_referencia()) -- no se importa tj acá (mismo aislamiento que el
+# resto de este archivo: "no toca transformar_json.py"), se replican los
+# mismos números. Techo de 42K (46km, nuevo): auditado contra los 11 atletas
+# piloto reales -- el registro más largo de todo el dataset es 42.62km
+# (Álvaro, 2026-04-26, "Greenwich Carrera"); 46km da margen a un GPS largo
+# real sin aceptar un ultra cercano a la fecha como si fuera la maratón meta.
+# Solo 21K/42K tienen evidencia real en el dataset piloto -- cualquier otra
+# categoría de distancia degrada a "no soportada" (nunca confirma
+# finalización) en vez de inventar una banda ±10% genérica en esta iteración.
+RACE_DISTANCE_BANDS_KM = {
+    "21K": (19.0, 30.0),
+    "42K": (39.0, 46.0),
+}
+# race_date - 1 .. race_date + 2: cubre fecha_iso_a_date() truncando UTC sin
+# corrección de huso horario (verificado en transformar_json.py) más margen
+# de sincronización tardía del dispositivo/plataforma tras la carrera.
+RACE_EVIDENCE_DIAS_ANTES = 1
+RACE_EVIDENCE_DIAS_DESPUES = 2
+
 # Campos retirados del schema v1 (PULSE_actualizacion_contexto_maestro.md #6, #12)
 FORBIDDEN_TOP_LEVEL_KEYS = ("funFact", "seoulTip", "weekPlan")
 FORBIDDEN_INJURY_KEYS = ("score", "topRisk")
@@ -352,8 +380,133 @@ def _calcular_multisport_load(activities_cerradas, domingo_cierre, acwr_info):
     }
 
 
+def _categoria_distancia_meta(label):
+    """
+    "42K SYD" -> "42K"; "21K MIA" -> "21K"; cualquier otra distancia (sin
+    evidencia real en el dataset piloto) -> None, "categoría no soportada".
+    Decisión de producto explícita: nada de banda ±10% genérica para
+    distancias arbitrarias en esta iteración -- ver RACE_DISTANCE_BANDS_KM.
+    """
+    m = re.match(r"(\d+)K", label or "")
+    if not m:
+        return None
+    categoria = f"{m.group(1)}K"
+    return categoria if categoria in RACE_DISTANCE_BANDS_KM else None
+
+
+def calcular_race_status(activities, carrera, tiene_meta, fecha_generacion,
+                          lunes_semana_actual, domingo_plan):
+    """
+    Determina si hay evidencia defendible de que la carrera meta ocurrió,
+    sin inferir finalización solo porque la fecha ya pasó (ver auditoría:
+    Álvaro tenía goal_phase="post_race" con seis días sin ninguna actividad
+    alrededor de la fecha de su maratón). Determinístico y conservador:
+    sport running, categoría de distancia soportada (RACE_DISTANCE_BANDS_KM),
+    ventana de fecha acotada (RACE_EVIDENCE_DIAS_ANTES/DESPUES). El NOMBRE de
+    la actividad NUNCA es evidencia (rótulo libre del atleta/dispositivo --
+    ver el comentario sobre HARD_SESSION_KEYWORDS más arriba: "carrera" en el
+    nombre no prueba que la sesión fue una carrera competitiva real).
+
+    `activities` es el export COMPLETO (no activities_cerradas): la ventana
+    de evidencia de una carrera es un concepto de la META, no de la semana
+    analizada -- puede caer dentro de la semana en curso o incluso dentro de
+    la semana a planificar (ver race_falls_in_planning_week, caso William).
+
+    state ∈ {"no_goal", "scheduled", "confirmed_completed", "unconfirmed_after_date"}.
+    goal_phase (calcular_planning_constraints) es un concepto separado: la
+    fase de entrenamiento. race_status solo responde "¿qué evidencia hay de
+    que la carrera meta ocurrió?".
+    """
+    fecha_carrera = None
+    if tiene_meta and carrera.get("fecha"):
+        try:
+            fecha_carrera = date.fromisoformat(carrera["fecha"][:10])
+        except ValueError:
+            fecha_carrera = None
+
+    if not tiene_meta or fecha_carrera is None:
+        return {
+            "state": "no_goal", "race_date": None, "dias_restantes": None,
+            "race_falls_in_planning_week": False, "race_planning_day": None,
+            "evidence": {"checked": False, "window": None, "distance_band_km": None,
+                         "matched_activity": None, "reason": "sin_meta_activa"},
+        }
+
+    dias_restantes = (fecha_carrera - fecha_generacion).days
+    race_falls_in_planning_week = lunes_semana_actual <= fecha_carrera <= domingo_plan
+    race_planning_day = (DIAS_ORDEN[(fecha_carrera - lunes_semana_actual).days]
+                          if race_falls_in_planning_week else None)
+
+    if fecha_carrera >= fecha_generacion:
+        return {
+            "state": "scheduled", "race_date": fecha_carrera.isoformat(),
+            "dias_restantes": dias_restantes,
+            "race_falls_in_planning_week": race_falls_in_planning_week,
+            "race_planning_day": race_planning_day,
+            "evidence": {"checked": False, "window": None, "distance_band_km": None,
+                         "matched_activity": None, "reason": "fecha_no_ha_ocurrido"},
+        }
+
+    # Fecha ya pasó: buscar evidencia. Categoría soportada primero -- sin
+    # ella nunca se puede confirmar finalización (degrada a unconfirmed,
+    # nunca a confirmed_completed "por defecto").
+    categoria = _categoria_distancia_meta(carrera.get("label", ""))
+    ventana_inicio = fecha_carrera - timedelta(days=RACE_EVIDENCE_DIAS_ANTES)
+    ventana_fin = fecha_carrera + timedelta(days=RACE_EVIDENCE_DIAS_DESPUES)
+    evidence = {
+        "checked": True,
+        "window": [ventana_inicio.isoformat(), ventana_fin.isoformat()],
+        "distance_band_km": list(RACE_DISTANCE_BANDS_KM[categoria]) if categoria else None,
+        "matched_activity": None,
+    }
+
+    if categoria is None:
+        evidence["reason"] = "categoria_de_distancia_no_soportada"
+        return {
+            "state": "unconfirmed_after_date", "race_date": fecha_carrera.isoformat(),
+            "dias_restantes": dias_restantes,
+            "race_falls_in_planning_week": race_falls_in_planning_week,
+            "race_planning_day": race_planning_day,
+            "evidence": evidence,
+        }
+
+    lo, hi = RACE_DISTANCE_BANDS_KM[categoria]
+    candidatos = []
+    for a in activities or []:
+        if a.get("type") != "running" or not a.get("date"):
+            continue
+        try:
+            fecha_act = date.fromisoformat(a["date"])
+        except ValueError:
+            continue
+        if not (ventana_inicio <= fecha_act <= ventana_fin):
+            continue
+        if lo <= (a.get("dist_km") or 0) <= hi:
+            candidatos.append(a)
+
+    if candidatos:
+        mejor = max(candidatos, key=lambda a: a.get("dist_km", 0))
+        evidence["matched_activity"] = {
+            "date": mejor.get("date"), "name": mejor.get("name"),
+            "dist_km": mejor.get("dist_km"), "type": mejor.get("type"),
+        }
+        evidence["reason"] = "actividad_dentro_de_ventana_y_banda"
+        state = "confirmed_completed"
+    else:
+        evidence["reason"] = "sin_actividad_en_ventana_y_banda"
+        state = "unconfirmed_after_date"
+
+    return {
+        "state": state, "race_date": fecha_carrera.isoformat(),
+        "dias_restantes": dias_restantes,
+        "race_falls_in_planning_week": race_falls_in_planning_week,
+        "race_planning_day": race_planning_day,
+        "evidence": evidence,
+    }
+
+
 def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info,
-                                   meta_carrera, tiene_meta, fecha_generacion):
+                                   meta_carrera, tiene_meta, fecha_generacion, race_status=None):
     """
     Guardrails conservadores (PULSE_contexto_maestro.md #20-21 y
     PULSE_actualizacion_contexto_maestro.md #5; guardrails-v4 corrige los
@@ -423,7 +576,16 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         # carrera, una meta ya vencida deja de gobernar la fase — se trata
         # igual que "sin objetivo activo" en vez de seguir forzando reglas
         # de recuperación semanas o meses después.
-        goal_phase = "post_race" if weeks_restantes >= -POST_RACE_RECOVERY_WEEKS else None
+        # race_status (auditoría race_status): post_race ya NO se infiere
+        # solo de que la fecha pasó -- requiere evidencia confirmada de
+        # calcular_race_status(). Sin confirmación, "race_unconfirmed"
+        # (nunca asume que la carrera ocurrió; ver decisión de producto #2).
+        if weeks_restantes < -POST_RACE_RECOVERY_WEEKS:
+            goal_phase = None
+        elif (race_status or {}).get("state") == "confirmed_completed":
+            goal_phase = "post_race"
+        else:
+            goal_phase = "race_unconfirmed"
     elif weeks_restantes <= 1:
         goal_phase = "race_week"
     elif weeks_restantes < 8:
@@ -448,6 +610,14 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         # de una carrera, lo que antes disparaba "increase").
         running_km_range = [round(avg4_km * 0.30, 1), round(avg4_km * 0.50, 1)]
         volume_cap_reason = "post_race_recovery"
+    elif goal_phase == "race_unconfirmed":
+        # Decisión de producto #3: conservador, pero SIN piso agresivo -- no
+        # sabemos si la carrera ocurrió, así que el plan debe poder
+        # recomendar cero running adicional si corresponde (piso 0, a
+        # diferencia de post_race que sí asume fatiga real de haber
+        # corrido). Techo igual de conservador que post_race.
+        running_km_range = [0.0, round(avg4_km * 0.50, 1)]
+        volume_cap_reason = "race_unconfirmed_conservative"
     elif goal_phase == "taper":
         running_km_range = [round(avg4_km * 0.55, 1), round(avg4_km * 0.75, 1)]
         volume_cap_reason = "taper_phase"
@@ -481,6 +651,11 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         # misma) no infle el permiso.
         long_run_range = [0.0, round(min(longest_long_run * 0.3, 10.0), 1)]
         long_run_cap_reason = "post_race_recovery"
+    elif goal_phase == "race_unconfirmed":
+        # Mismo piso 0 / mismo techo absoluto que post_race: si la carrera sí
+        # ocurrió sin confirmarse, seguimos protegiendo contra fatiga real.
+        long_run_range = [0.0, round(min(longest_long_run * 0.3, 10.0), 1)]
+        long_run_cap_reason = "race_unconfirmed_conservative"
     elif goal_phase == "taper":
         long_run_range = [round(longest_long_run * 0.4, 1), round(longest_long_run * 0.65, 1)]
         long_run_cap_reason = "taper_phase"
@@ -494,7 +669,7 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         long_run_cap_reason = "recent_eight_week_history"
 
     # ── dirección de carga (actualizacion #5: elevated/high_risk nunca "increase") ──
-    if goal_phase in ("taper", "race_week", "post_race"):
+    if goal_phase in ("taper", "race_week", "post_race", "race_unconfirmed"):
         load_direction = "reduce"
     elif status == "high_risk":
         load_direction = "reduce"
@@ -512,7 +687,7 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         load_direction = "maintain"
 
     # ── sesiones duras / consecutivos / descanso mínimo ──
-    if goal_phase in ("race_week", "post_race"):
+    if goal_phase in ("race_week", "post_race", "race_unconfirmed"):
         hard_sessions_max, recovery_days_min, max_consecutive_running_days = 0, 3, 1
     elif goal_phase == "taper":
         hard_sessions_max, recovery_days_min, max_consecutive_running_days = 1, 2, 2
@@ -523,9 +698,9 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
 
     # running_sessions_max es un TECHO (fix #1 de guardrails-v3): nunca un
     # número exacto que el modelo deba calzar sí o sí. min(3, ...) porque
-    # en taper/race_week/post_race no tiene sentido pedir más de 3 salidas
-    # de running en la semana.
-    if goal_phase in ("taper", "race_week", "post_race"):
+    # en taper/race_week/post_race/race_unconfirmed no tiene sentido pedir
+    # más de 3 salidas de running en la semana.
+    if goal_phase in ("taper", "race_week", "post_race", "race_unconfirmed"):
         running_sessions_max = min(3, avg4_sessions) if avg4_sessions else 2
     elif is_preliminary:
         # Fix #2: sin ninguna sesión observada, el fallback conservador es
@@ -541,6 +716,7 @@ def calcular_planning_constraints(activities_cerradas, weekly_cerrado, acwr_info
         "base":       ["easy", "easy", "strength", "long_run"],
         None:         ["easy", "easy", "long_run"],
         "post_race":  ["easy", "rest"],
+        "race_unconfirmed": ["easy", "rest"],
     }
 
     return {
@@ -1259,7 +1435,7 @@ def _fmt_comparisons(comparisons):
 def construir_prompts_v2(tj, activities_cerradas, weekly_cerrado, meta, profile,
                           acwr_info, lunes_analizado, domingo_analizado,
                           lunes_semana_actual, domingo_plan, fecha_generacion, constraints,
-                          semana_en_curso, restantes, comparisons):
+                          semana_en_curso, restantes, comparisons, race_status):
     """Adapta generar_pulse() v1 (transformar_json.py) agregando las reglas
     de esquema v2.1 y las restricciones de planning_constraints como límites
     duros. Reusa los helpers de contexto de tj (resumen, patrón semanal,
@@ -1322,6 +1498,45 @@ def construir_prompts_v2(tj, activities_cerradas, weekly_cerrado, meta, profile,
         else:
             dias_restantes_semana.append(f"{etiqueta} {fecha_str}")
 
+    # race_status (auditoría race_status, decisión de producto #6): reglas
+    # mínimas, solo cuando aplican -- no se toca ninguna otra sección del
+    # prompt. unconfirmed_after_date da la regla de "no asumir finalización"
+    # sin imponerle al modelo una frase textual fija. race_falls_in_planning_week
+    # exige la sesión de carrera como evento obligatorio, fuera del
+    # presupuesto normal de entrenamiento (decisión #5).
+    race_status = race_status or {}
+    race_prompt_lines = []
+    if race_status.get("state") == "unconfirmed_after_date":
+        race_prompt_lines.append(
+            f'CARRERA META SIN CONFIRMAR: {carrera.get("nombre","")} estaba programada para el '
+            f'{race_status.get("race_date")}, esa fecha ya pasó, pero no se encontró ninguna actividad de '
+            f'running que coincida con la distancia de esa carrera en la ventana esperada. NO asumas ni '
+            f'dés por hecho que la carrera se corrió; si es relevante para tu análisis, explicá que estaba '
+            f'programada pero no hay evidencia de que haya ocurrido, sin inventar una razón.'
+        )
+    if race_status.get("race_falls_in_planning_week"):
+        race_prompt_lines.append(
+            f'CARRERA DENTRO DE LA SEMANA A PLANIFICAR: {carrera.get("nombre","")} cae el '
+            f'{race_status.get("race_planning_day")} {race_status.get("race_date")}, dentro de la semana que '
+            f'estás planificando, distancia {km_meta}km. Ese día del weeklyPlan DEBE ser la carrera -- nunca '
+            f'un día de descanso ni una sesión de entrenamiento normal, y nunca la omitas. La distancia de esa '
+            f'carrera es un evento, no volumen de entrenamiento: NO cuenta contra ningún rango ni techo de '
+            f'esta semana (volumen total, fondo largo, máximo de sesiones) aunque los supere ampliamente.'
+        )
+    race_prompt_block = ("\n".join(race_prompt_lines) + "\n") if race_prompt_lines else ""
+
+    race_status_linea = ""
+    if race_status.get("state") == "unconfirmed_after_date":
+        race_status_linea = (
+            f"Estado de la carrera meta: programada para el {race_status.get('race_date')}, fecha ya pasada, "
+            f"sin actividad de running que coincida con la distancia esperada en la ventana evaluada -- no confirmada."
+        )
+    elif race_status.get("race_falls_in_planning_week"):
+        race_status_linea = (
+            f"Estado de la carrera meta: cae el {race_status.get('race_planning_day')} {race_status.get('race_date')} "
+            f"de la semana a planificar, distancia {km_meta}km -- sesión obligatoria ese día, fuera del presupuesto normal de entrenamiento."
+        )
+
     system_prompt = f"""Eres Pulse, el motor de análisis semanal de Swetro (contrato de schema v2.1).
 Hoy, al momento de generar este análisis, es {fecha_generacion.isoformat()}.
 Analizas la semana del {rango_semana_es}. Las actividades posteriores al domingo {tj.fmt_fecha_es(domingo_analizado, False)} no existen para este análisis, aunque estén en los datos. Nunca menciones actividades de la semana en curso.
@@ -1362,7 +1577,7 @@ Si la fase es "taper" o "race_week", el plan DEBE reducir volumen respecto a sem
 Cada sesión debe incluir purpose: la adaptación buscada en palabras simples. No prescribas ritmos más rápidos que los respaldados por los PRs verificados y la proyección actual.
 El plan y el análisis son una misma recomendación: el objetivo y la justificación del plan deben explicar qué se mantiene, qué se ajusta y por qué.
 Disponibilidad declarada tiene prioridad absoluta; si no existe, conserva el patrón habitual de las últimas 8 semanas salvo que las restricciones de arriba obliguen a cambiarlo — en ese caso explica el motivo brevemente en notes.
-SCHEMA: responde ÚNICAMENTE con JSON válido, sin markdown, sin backticks, y SOLO con estas llaves de nivel superior: semana, score, headline, subheadline, readiness, aiVerdict, strengths, warnings, keyMetrics, weeklyPlan, injuryRisk. NO incluyas funFact, seoulTip, ni weekPlan (weeklyPlan es la única fuente del plan). injuryRisk es {{"level":"low|medium|high|unknown","signal":"señal breve de sobrecarga o recuperación, no una cifra","area":null,"action":"acción concreta"}} — nunca agregues "score" ni "topRisk"."""
+{race_prompt_block}SCHEMA: responde ÚNICAMENTE con JSON válido, sin markdown, sin backticks, y SOLO con estas llaves de nivel superior: semana, score, headline, subheadline, readiness, aiVerdict, strengths, warnings, keyMetrics, weeklyPlan, injuryRisk. NO incluyas funFact, seoulTip, ni weekPlan (weeklyPlan es la única fuente del plan). injuryRisk es {{"level":"low|medium|high|unknown","signal":"señal breve de sobrecarga o recuperación, no una cifra","area":null,"action":"acción concreta"}} — nunca agregues "score" ni "topRisk"."""
 
     meta_linea = (
         f"Meta: {carrera.get('nombre', '')} el {carrera.get('fecha', 'TBD')} (label {carrera.get('label', '')})"
@@ -1377,6 +1592,7 @@ ATLETA: {nombre}
 {f"Tu proyección para {carrera.get('nombre', '')} ({km_meta}km) ya calculada: {proyeccion['tiempo']} a {proyeccion['ritmo']}/km (ritmo PROYECTADO, no objetivo declarado). {proyeccion['contexto']}" if proyeccion else ""}
 {f"Tiempo objetivo declarado por el atleta: {tiempo_objetivo}." if tiempo_objetivo else "Tiempo objetivo declarado por el atleta: no disponible — no existe un ritmo objetivo, solo el proyectado."}
 {prs_str}
+{race_status_linea}
 
 SEMANA ANALIZADA: {lunes_analizado.isoformat()}/{domingo_analizado.isoformat()}
 
@@ -1522,14 +1738,26 @@ def llamar_anthropic(system_prompt, messages, api_key):
 
 # ── 4. Validación individual (12 checks, enumeración completa) ────────
 
-def _contar_dias_consecutivos_running(sessions):
+def _contar_dias_consecutivos_running(sessions, race_date=None):
     """La racha cuenta días con km real, sean COMPLETADOS (de verdad
     corridos) o prescritos — un lunes+martes ya corridos seguidos de un
-    miércoles prescrito con km es una racha de 3, no de 1 (punto 6)."""
+    miércoles prescrito con km es una racha de 3, no de 1 (punto 6).
+
+    race_date (opcional): el día de la carrera meta, cuando cae dentro de
+    la semana a planificar -- es un EVENTO, no entrenamiento (decisión de
+    producto), así que nunca cuenta como día de running para esta racha.
+    Se fuerza corre=False para esa fecha en vez de quitarla de la lista,
+    para que siga cortando la adyacencia calendario entre el día anterior
+    y el día siguiente (un shakeout el jueves y una carrera el viernes no
+    deben sumar racha; una carrera el viernes y un trote de recuperación
+    el sábado tampoco)."""
     max_racha = racha = 0
     for s in sessions:
-        corre = (s.get("type") != "Día transcurrido sin actividad registrada"
-                  and s.get("km") not in (None, "", "—", "-"))
+        if race_date and s.get("date") == race_date:
+            corre = False
+        else:
+            corre = (s.get("type") != "Día transcurrido sin actividad registrada"
+                      and s.get("km") not in (None, "", "—", "-"))
         racha = racha + 1 if corre else 0
         max_racha = max(max_racha, racha)
     return max_racha
@@ -1542,7 +1770,7 @@ def _es_sesion_dura_prescrita(s):
 
 def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, dias_restantes,
                       meta_diasprep=None, fecha_generacion=None,
-                      semana_en_curso=None, restantes=None, weekly_totals=None):
+                      semana_en_curso=None, restantes=None, weekly_totals=None, race_status=None):
     """
     Devuelve (ok, checks). checks es la lista COMPLETA (pass y fail), no
     solo las violaciones — cada item es {"check", "status", "evidence",
@@ -1568,6 +1796,20 @@ def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, di
     sesiones = wp.get("sessions") or []
     injury = parsed.get("injuryRisk") or {}
     verdict = parsed.get("aiVerdict") or ""
+
+    # race_status (decisión de producto #5): si la carrera meta cae dentro de
+    # la semana a planificar, su sesión es un EVENTO, no volumen de
+    # entrenamiento -- se excluye de los checks de presupuesto de abajo
+    # (volumen semana completa, fondo largo, techo de sesiones, restantes) y
+    # se valida por separado (día correcto, distancia compatible).
+    race_status = race_status or {}
+    race_date_semana = race_status.get("race_date") if race_status.get("race_falls_in_planning_week") else None
+    sesion_carrera = next((s for s in sesiones if race_date_semana and s.get("date") == race_date_semana), None)
+    km_carrera_prescrita = 0.0
+    if sesion_carrera is not None:
+        m_carrera = re.search(r"\d+(?:[.,]\d+)?", sesion_carrera.get("km") or "")
+        if m_carrera:
+            km_carrera_prescrita = float(m_carrera.group(0).replace(",", "."))
 
     # 1-2. meta: usuario/fecha/tipo/nombre exactos
     if carrera:
@@ -1603,14 +1845,22 @@ def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, di
            "weekPlan no debe coexistir con weeklyPlan", evidence="weekPlan" in parsed)
 
     # 6-9. límites de carga / consecutivos / descanso / fase (semana COMPLETA: completado + prescrito)
+    # La carrera meta (si cae esta semana) se descuenta de totalKm antes de
+    # comparar contra el presupuesto de ENTRENAMIENTO -- ver nota race_status arriba.
     summary = wp.get("summary") or {}
     total_km = summary.get("totalKm")
-    if constraints.get("running_km_range") and total_km is not None:
+    total_km_sin_carrera = (round(total_km - km_carrera_prescrita, 2)
+                             if total_km is not None else None)
+    if constraints.get("running_km_range") and total_km_sin_carrera is not None:
         lo, hi = constraints["running_km_range"]
-        ok = total_km <= hi * 1.05
+        ok = total_km_sin_carrera <= hi * 1.05
         record("limite_volumen_semana_completa", ok,
-               f"totalKm proyectado (completado+prescrito)={total_km} vs. rango de la semana completa {constraints['running_km_range']}",
-               evidence={"total_km": total_km, "range": constraints["running_km_range"]})
+               f"totalKm proyectado sin la carrera meta (completado+prescrito)={total_km_sin_carrera} "
+               f"vs. rango de la semana completa {constraints['running_km_range']}"
+               + (f" (se excluyeron {km_carrera_prescrita}km de la carrera meta del {race_date_semana})"
+                  if km_carrera_prescrita else ""),
+               evidence={"total_km": total_km, "total_km_sin_carrera": total_km_sin_carrera,
+                         "range": constraints["running_km_range"]})
     else:
         record("limite_volumen_semana_completa", True, "sin rango calculable, no se penaliza", evidence=None)
 
@@ -1618,6 +1868,8 @@ def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, di
     for s in sesiones:
         if s.get("type") == "Día transcurrido sin actividad registrada":
             continue
+        if race_date_semana and s.get("date") == race_date_semana:
+            continue  # evento, no cuenta contra el fondo largo de entrenamiento
         m = re.search(r"\d+(?:[.,]\d+)?", s.get("km") or "")
         if m:
             kms_sesion.append(float(m.group(0).replace(",", ".")))
@@ -1626,25 +1878,54 @@ def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, di
         lo, hi = constraints["long_run_range"]
         ok = fondo_max <= hi * 1.05
         record("limite_fondo_largo", ok,
-               f"sesión más larga (completada o prescrita)={fondo_max}km vs. rango permitido {constraints['long_run_range']}",
+               f"sesión más larga (completada o prescrita, sin contar la carrera meta)={fondo_max}km "
+               f"vs. rango permitido {constraints['long_run_range']}",
                evidence={"fondo_max": fondo_max, "range": constraints["long_run_range"]})
     else:
         record("limite_fondo_largo", True, "sin rango calculable, no se penaliza", evidence=None)
 
     # Fix #1 (se mantiene): running_sessions_max es un TECHO sobre la semana
-    # COMPLETA (completado + prescrito), nunca un valor exacto.
+    # COMPLETA (completado + prescrito), nunca un valor exacto. La sesión de
+    # la carrera meta (si aplica) no cuenta -- es un evento, no una salida más.
     n_sesiones_running = sum(1 for s in sesiones if s.get("type") != "Día transcurrido sin actividad registrada"
-                              and s.get("km") not in (None, "", "—", "-"))
+                              and s.get("km") not in (None, "", "—", "-")
+                              and not (race_date_semana and s.get("date") == race_date_semana))
     max_sesiones = constraints.get("running_sessions_max")
     ok_sesiones = max_sesiones is None or n_sesiones_running <= max_sesiones
     record("limite_sesiones_running_semana_completa", ok_sesiones,
-           f"{n_sesiones_running} sesiones (completadas+prescritas) vs. techo semanal {max_sesiones} (regla: <=, no ==)",
+           f"{n_sesiones_running} sesiones de entrenamiento (completadas+prescritas, sin contar la carrera meta) "
+           f"vs. techo semanal {max_sesiones} (regla: <=, no ==)",
            evidence={"n_sesiones": n_sesiones_running, "max": max_sesiones})
 
-    racha = _contar_dias_consecutivos_running(sesiones)
+    # Decisión de producto #5: si la carrera meta cae esta semana, el modelo
+    # NO puede omitirla solo porque su distancia excede el presupuesto normal
+    # -- se valida por separado (día correcto, distancia compatible con la
+    # categoría de la meta cuando esa categoría está soportada).
+    if race_status.get("race_falls_in_planning_week"):
+        tiene_sesion_carrera = bool(
+            sesion_carrera and km_carrera_prescrita > 0
+            and sesion_carrera.get("type") not in ("Descanso", "Día transcurrido sin actividad registrada")
+        )
+        record("carrera_meta_presente_en_semana", tiene_sesion_carrera,
+               f"la semana a planificar incluye la carrera meta el {race_date_semana} -- weeklyPlan DEBE "
+               f"tener una sesión ese día con distancia real, nunca descanso ni omitirla por exceder el "
+               f"presupuesto normal de entrenamiento",
+               evidence={"race_date": race_date_semana, "sesion_encontrada": sesion_carrera})
+
+        categoria_carrera = _categoria_distancia_meta(carrera.get("label", "")) if carrera else None
+        if categoria_carrera and tiene_sesion_carrera:
+            lo_r, hi_r = RACE_DISTANCE_BANDS_KM[categoria_carrera]
+            ok_dist_carrera = lo_r <= km_carrera_prescrita <= hi_r
+            record("carrera_meta_distancia_coherente", ok_dist_carrera,
+                   f"distancia prescrita para la carrera meta ({km_carrera_prescrita}km) vs. banda esperada "
+                   f"para {categoria_carrera} ({lo_r}-{hi_r}km)",
+                   evidence={"km_carrera": km_carrera_prescrita, "banda": [lo_r, hi_r]})
+
+    racha = _contar_dias_consecutivos_running(sesiones, race_date=race_date_semana)
     ok_racha = racha <= constraints.get("max_consecutive_running_days", 3)
     record("dias_consecutivos", ok_racha,
-           f"{racha} días consecutivos corriendo (incluye completados y prescritos) vs. máximo {constraints.get('max_consecutive_running_days')}",
+           f"{racha} días consecutivos corriendo (incluye completados y prescritos, sin contar la carrera meta como día "
+           f"de entrenamiento) vs. máximo {constraints.get('max_consecutive_running_days')}",
            evidence=racha)
 
     dias_descanso = sum(1 for s in sesiones if s.get("type") == "Día transcurrido sin actividad registrada"
@@ -1655,17 +1936,19 @@ def validar_pulse_v2(parsed, meta_esperada, constraints, proyeccion_esperada, di
            evidence=dias_descanso)
 
     # Fix v3, punto 6: la PRESCRIPCIÓN (sin contar lo ya completado) no
-    # puede exceder lo que efectivamente queda disponible.
+    # puede exceder lo que efectivamente queda disponible. La carrera meta
+    # (si aplica) tampoco cuenta acá -- mismo criterio que arriba.
     if restantes is not None and weekly_totals is not None:
-        prescribed_km, prescribed_sessions = weekly_totals["prescribedKm"], weekly_totals["prescribedSessions"]
+        prescribed_km = round(weekly_totals["prescribedKm"] - km_carrera_prescrita, 2)
+        prescribed_sessions = weekly_totals["prescribedSessions"] - (1 if sesion_carrera and km_carrera_prescrita > 0 else 0)
         if restantes.get("remaining_km_range") is not None:
             ok_km_restante = prescribed_km <= restantes["remaining_km_range"][1] * 1.05
             record("prescripcion_dentro_de_lo_restante_km", ok_km_restante,
-                   f"prescribedKm={prescribed_km} vs. remaining_km_range={restantes['remaining_km_range']}",
+                   f"prescribedKm sin la carrera meta={prescribed_km} vs. remaining_km_range={restantes['remaining_km_range']}",
                    evidence={"prescribed_km": prescribed_km, "remaining_km_range": restantes["remaining_km_range"]})
         ok_sesiones_restante = prescribed_sessions <= restantes.get("remaining_sessions_max", 99)
         record("prescripcion_dentro_de_lo_restante_sesiones", ok_sesiones_restante,
-               f"prescribedSessions={prescribed_sessions} vs. remaining_sessions_max={restantes.get('remaining_sessions_max')}",
+               f"prescribedSessions sin la carrera meta={prescribed_sessions} vs. remaining_sessions_max={restantes.get('remaining_sessions_max')}",
                evidence={"prescribed_sessions": prescribed_sessions, "remaining_sessions_max": restantes.get("remaining_sessions_max")})
 
         sesiones_duras_prescritas = sum(1 for s in sesiones
@@ -1850,8 +2133,19 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
     carrera = meta.get("metaCarrera", {})
     tiene_meta = bool(carrera.get("nombre") and carrera.get("nombre") != "¿Cuál es tu próxima carrera?")
 
+    # race_status (auditoría race_status): evidencia de finalización de la
+    # carrera meta, calculada ANTES de planning_constraints -- goal_phase
+    # ("post_race" vs. "race_unconfirmed") depende de este resultado. Usa
+    # `activities` completo (no activities_cerradas): la ventana de evidencia
+    # de una carrera es de la META, no de la semana analizada (puede caer
+    # dentro de la semana a planificar, ver race_falls_in_planning_week).
+    race_status = calcular_race_status(
+        activities, carrera, tiene_meta, fecha_generacion, lunes_semana_actual, domingo_plan,
+    )
+
     constraints = calcular_planning_constraints(
         activities_cerradas, weekly_cerrado, acwr_info, carrera, tiene_meta, fecha_generacion,
+        race_status=race_status,
     )
     dias_restantes = constraints["dias_restantes"]
 
@@ -1873,7 +2167,7 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
     system_prompt, user_prompt, proyeccion, _, prs_descartados = construir_prompts_v2(
         tj, activities_cerradas, weekly_cerrado, meta, profile, acwr_info,
         lunes_analizado, domingo_analizado, lunes_semana_actual, domingo_plan, fecha_generacion, constraints,
-        semana_en_curso, restantes, comparisons,
+        semana_en_curso, restantes, comparisons, race_status,
     )
 
     input_context = {
@@ -1890,6 +2184,7 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
         "prs_descartados_por_atipicos": prs_descartados,
         "acwr_status": (acwr_info or {}).get("status"),
         "comparisons": comparisons,
+        "race_status": race_status,
         "system_prompt": system_prompt,
         "user_prompt": user_prompt,
     }
@@ -1915,7 +2210,8 @@ def generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, api_key, 
                                                  fecha_generacion, dias_restantes, semana_en_curso)
         ok, checks = validar_pulse_v2(parsed, meta, constraints, proyeccion, dias_restantes,
                                        meta_diasprep=dias_restantes, fecha_generacion=fecha_generacion,
-                                       semana_en_curso=semana_en_curso, restantes=restantes, weekly_totals=weekly_totals)
+                                       semana_en_curso=semana_en_curso, restantes=restantes, weekly_totals=weekly_totals,
+                                       race_status=race_status)
         return parsed, weekly_totals, (ok, checks)
 
     def validation_view(ok, checks, weekly_totals):

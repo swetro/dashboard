@@ -722,6 +722,14 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
     las reglas genéricas de base/build, y está acotada a
     POST_RACE_RECOVERY_WEEKS -- una meta ya vencida no debe gobernar la
     fase indefinidamente.
+
+    race_status (auditoría race_status, decisión de producto #2): post_race
+    ahora requiere evidencia CONFIRMADA -- estos tests pasan explícitamente
+    un race_status con state="confirmed_completed" para seguir probando el
+    cálculo de post_race en sí (volumen/sesiones/dirección de carga), no la
+    detección de evidencia (eso lo cubre TestRaceStatusDetection). Sin ese
+    race_status explícito, calcular_planning_constraints ya NO asume
+    post_race solo porque la fecha pasó -- ver TestPlanningConstraintsRaceUnconfirmed.
     """
 
     FECHA_GENERACION = date(2026, 9, 1)
@@ -735,10 +743,18 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
         return {"nombre": "Maratón X", "fecha": (self.FECHA_GENERACION - timedelta(days=dias_atras)).isoformat(),
                 "label": "42K X"}
 
+    def _race_status_confirmado(self, dias_atras):
+        return {"state": "confirmed_completed",
+                "race_date": (self.FECHA_GENERACION - timedelta(days=dias_atras)).isoformat(),
+                "dias_restantes": -dias_atras, "race_falls_in_planning_week": False,
+                "race_planning_day": None,
+                "evidence": {"checked": True, "matched_activity": {"date": "x", "dist_km": 42.3}}}
+
     def test_alto_volumen_post_race_nunca_load_direction_increase(self):
         weekly, activities = self._fixture_alto_volumen()
         c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
-                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(3))
         self.assertEqual(c["goal_phase"], "post_race")
         self.assertEqual(c["load_direction"], "reduce",
                           "un ACWR 'undertraining' justo después de una carrera antes disparaba 'increase'")
@@ -746,7 +762,8 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
     def test_post_race_sin_sesiones_duras_y_reduce_volumen_mas_que_taper(self):
         weekly, activities = self._fixture_alto_volumen()
         c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
-                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(3))
         self.assertEqual(c["hard_sessions_max"], 0)
         self.assertIsNotNone(c["running_km_range"])
         lo, hi = c["running_km_range"]
@@ -756,7 +773,8 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
     def test_post_race_fondo_largo_no_obligatorio(self):
         weekly, activities = self._fixture_alto_volumen()
         c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
-                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(3))
         self.assertIsNotNone(c["long_run_range"])
         self.assertEqual(c["long_run_range"][0], 0.0)
         self.assertLessEqual(c["long_run_range"][1], 10.0)
@@ -764,9 +782,10 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
     def test_ventana_de_recuperacion_vencida_cae_a_sin_objetivo_activo(self):
         weekly, activities = self._fixture_alto_volumen()
         # Carrera hace 40 días (~5.7 semanas): ya pasó la ventana de
-        # recuperación de 3 semanas.
+        # recuperación de 3 semanas -- incluso con finalización confirmada.
         c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
-                                              self._meta_carrera(40), True, self.FECHA_GENERACION)
+                                              self._meta_carrera(40), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(40))
         self.assertIsNone(c["goal_phase"], "una meta vencida hace >3 semanas no debe seguir en post_race")
         self.assertEqual(c["load_direction"], "increase",
                           "sin fase activa, vuelve al tratamiento normal por ACWR (undertraining -> increase)")
@@ -775,8 +794,509 @@ class TestPlanningConstraintsPostRace(unittest.TestCase, PlanningConstraintsFixt
         weekly, activities = self._fixture_alto_volumen()
         # Exactamente en el borde de 3 semanas (21 días) -- inclusive.
         c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
-                                              self._meta_carrera(21), True, self.FECHA_GENERACION)
+                                              self._meta_carrera(21), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(21))
         self.assertEqual(c["goal_phase"], "post_race")
+
+    def test_confirmado_mas_alla_de_la_ventana_no_reactiva_post_race(self):
+        # Matriz de tests, sección 7: "confirmed race beyond
+        # POST_RACE_RECOVERY_WEEKS keeps race_status audit evidence but does
+        # not reactivate post_race" -- race_status.state puede seguir siendo
+        # confirmed_completed (es un hecho auditable), pero goal_phase ya no
+        # debe gobernarse por esa carrera pasada la ventana.
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(40), True, self.FECHA_GENERACION,
+                                              race_status=self._race_status_confirmado(40))
+        self.assertIsNone(c["goal_phase"])
+
+
+class TestPlanningConstraintsRaceUnconfirmed(unittest.TestCase, PlanningConstraintsFixtureMixin):
+    """
+    Decisión de producto #2/#3: fecha de carrera pasada SIN confirmación ->
+    goal_phase="race_unconfirmed" (nunca "post_race", nunca "taper").
+    Conservador pero sin piso agresivo de volumen -- el plan debe poder
+    recomendar cero running adicional si corresponde.
+    """
+
+    FECHA_GENERACION = date(2026, 9, 1)
+
+    def _fixture_alto_volumen(self):
+        weekly = self._weekly_fixture(8, km_por_semana=60.0, sessions_por_semana=5, hoy=self.FECHA_GENERACION)
+        activities = self._activities_fixture(weekly, dist_por_sesion=12.0)
+        return weekly, activities
+
+    def _meta_carrera(self, dias_atras):
+        return {"nombre": "Maratón X", "fecha": (self.FECHA_GENERACION - timedelta(days=dias_atras)).isoformat(),
+                "label": "42K X"}
+
+    def test_fecha_pasada_sin_race_status_nunca_es_post_race(self):
+        # Caso real Álvaro: sin evidencia (o sin race_status calculado en
+        # absoluto -- default None), la fecha pasada NUNCA basta para
+        # post_race.
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertEqual(c["goal_phase"], "race_unconfirmed")
+        self.assertNotEqual(c["goal_phase"], "post_race")
+
+    def test_unconfirmed_explicito_da_el_mismo_resultado(self):
+        weekly, activities = self._fixture_alto_volumen()
+        race_status = {"state": "unconfirmed_after_date", "race_falls_in_planning_week": False}
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION,
+                                              race_status=race_status)
+        self.assertEqual(c["goal_phase"], "race_unconfirmed")
+
+    def test_load_direction_nunca_increase(self):
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertEqual(c["load_direction"], "reduce")
+        self.assertNotEqual(c["load_direction"], "increase")
+
+    def test_hard_sessions_max_es_cero(self):
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertEqual(c["hard_sessions_max"], 0)
+
+    def test_recovery_days_min_prioriza_recuperacion(self):
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertGreaterEqual(c["recovery_days_min"], 3)
+
+    def test_estimulos_sugeridos_son_easy_o_rest(self):
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertTrue(all(e in ("easy", "rest") for e in c["recommended_stimuli"]))
+
+    def test_running_km_range_permite_cero_sin_piso_agresivo(self):
+        # Núcleo de la decisión de producto #3: el piso debe ser 0.0, no un
+        # mínimo agresivo como en post_race (30% del promedio) -- el plan
+        # debe poder recomendar cero running adicional si corresponde.
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertIsNotNone(c["running_km_range"])
+        lo, hi = c["running_km_range"]
+        self.assertEqual(lo, 0.0, "race_unconfirmed no debe imponer un piso de volumen agresivo")
+        self.assertLess(hi, 60.0 * 0.55, "sigue siendo tan conservador como post_race, nunca más permisivo")
+
+    def test_no_reusa_el_nombre_taper(self):
+        weekly, activities = self._fixture_alto_volumen()
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              self._meta_carrera(3), True, self.FECHA_GENERACION)
+        self.assertNotEqual(c["goal_phase"], "taper")
+
+
+class TestRaceStatusDetection(unittest.TestCase):
+    """
+    calcular_race_status(): detección determinística y conservadora de
+    finalización de carrera (auditoría race_status, decisión de producto #4).
+    Sport running, categoría de distancia soportada (21K/42K), ventana de
+    fecha acotada. El NOMBRE de la actividad nunca es evidencia.
+    """
+
+    def _semana_actual(self, fecha_generacion):
+        lunes_analizado, _ = tj.ultima_semana_completa(hoy=fecha_generacion)
+        lunes_semana_actual = lunes_analizado + timedelta(days=7)
+        domingo_plan = lunes_semana_actual + timedelta(days=6)
+        return lunes_semana_actual, domingo_plan
+
+    def test_sin_meta_es_no_goal(self):
+        fecha_generacion = date(2026, 9, 2)
+        rs = v2.calcular_race_status([], {}, False, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "no_goal")
+        self.assertIsNone(rs["race_date"])
+        self.assertFalse(rs["race_falls_in_planning_week"])
+
+    def test_sentinel_2027_01_01_es_no_goal(self):
+        # tiene_meta=False es el resultado, en el caller, de comparar el
+        # nombre contra "¿Cuál es tu próxima carrera?" -- acá se prueba
+        # directamente con ese tiene_meta ya resuelto en False.
+        carrera = {"nombre": "¿Cuál es tu próxima carrera?", "fecha": "2027-01-01", "label": ""}
+        fecha_generacion = date(2026, 9, 2)
+        rs = v2.calcular_race_status([], carrera, False, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "no_goal")
+
+    def test_fecha_futura_es_scheduled_sin_evidencia_evaluada(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-11-29", "label": "42K X"}
+        rs = v2.calcular_race_status([], carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "scheduled")
+        self.assertFalse(rs["evidence"]["checked"])
+
+    def test_maraton_completada_exacta_confirma(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=42.3)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+        self.assertEqual(rs["evidence"]["matched_activity"]["dist_km"], 42.3)
+
+    def test_maraton_gps_corta_39km_confirma(self):
+        # Piso existente (transformar_json.MINIMO_42K_KM=39), preservado.
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=39.0)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+
+    def test_maraton_gps_larga_pero_plausible_confirma(self):
+        # Dentro del techo nuevo (46km) -- GPS largo real, no un ultra.
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=45.8)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+
+    def test_ultra_mas_alla_del_techo_no_confirma_maraton(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=52.0)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+
+    def test_25_a_30km_cerca_de_la_fecha_no_confirma_maraton(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=27.0)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+
+    def test_fecha_pasada_sin_actividad_no_confirma(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        rs = v2.calcular_race_status([], carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+        self.assertIsNone(rs["evidence"]["matched_activity"])
+
+    def test_carrera_dentro_de_la_semana_a_planificar(self):
+        fecha_generacion = date(2026, 9, 2)  # miércoles
+        carrera = {"nombre": "Maratón X", "fecha": "2026-09-04", "label": "42K X"}  # viernes de esa semana
+        rs = v2.calcular_race_status([], carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertTrue(rs["race_falls_in_planning_week"])
+        self.assertEqual(rs["race_planning_day"], "Vie")
+        # Decisión de producto #1: NO existe un state "race_week" separado.
+        self.assertEqual(rs["state"], "scheduled")
+
+    def test_categoria_no_soportada_nunca_confirma(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "10K X", "fecha": "2026-08-30", "label": "10K X"}
+        activities = [_act("2026-08-30", dist_km=10.1)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+        self.assertEqual(rs["evidence"]["reason"], "categoria_de_distancia_no_soportada")
+
+    def test_ventana_de_fecha_borde_un_dia_antes(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-29", dist_km=42.0)]  # un día antes (truncación UTC sin huso horario)
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+
+    def test_ventana_de_fecha_borde_dos_dias_despues(self):
+        fecha_generacion = date(2026, 9, 3)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-09-01", dist_km=42.0)]  # dos días después (sync tardío del dispositivo)
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+
+    def test_fuera_de_la_ventana_de_fecha_no_confirma(self):
+        fecha_generacion = date(2026, 9, 5)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-09-02", dist_km=42.0)]  # 3 días después, fuera de la ventana (+2)
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+
+    def test_nombre_de_actividad_nunca_es_evidencia(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        act = _act("2026-08-30", dist_km=10.0)
+        act["name"] = "Mi Maratón personal"
+        rs = v2.calcular_race_status([act], carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date",
+                          "un nombre que dice 'Maratón' con distancia fuera de banda no debe confirmar nada")
+
+    def test_otra_disciplina_no_confirma_carrera_de_running(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", tipo="cycling", dist_km=42.0)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+
+    def test_confirmada_mucho_despues_sigue_confirmed_completed(self):
+        # race_status en sí NO aplica POST_RACE_RECOVERY_WEEKS -- ese
+        # acotamiento es responsabilidad de goal_phase (calcular_planning_
+        # constraints), no de la detección de evidencia (matriz de tests,
+        # sección 7 del pedido).
+        fecha_generacion = date(2026, 10, 15)
+        carrera = {"nombre": "Maratón X", "fecha": "2026-08-30", "label": "42K X"}
+        activities = [_act("2026-08-30", dist_km=42.3)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion, *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "confirmed_completed")
+
+
+class TestValidarPulseV2RaceInWeek(unittest.TestCase):
+    """
+    Decisión de producto #5: si la carrera meta cae dentro de la semana a
+    planificar, su distancia es un EVENTO, nunca volumen de entrenamiento --
+    se excluye de running_km_range/long_run_range/running_sessions_max/
+    remaining_*, y el modelo NO puede omitirla. Usa los números reales de
+    William (Maratón de Medellín, race_week real: running_km_range=[7.5,
+    14.9], long_run_range=[0.0,6.8]) para que el test doble como la
+    regresión real pedida.
+    """
+
+    LUNES_SEMANA_ACTUAL = date(2026, 8, 31)
+    RACE_DATE = date(2026, 9, 4)  # viernes
+
+    def _constraints(self):
+        return {
+            "goal_phase": "race_week", "load_direction": "reduce",
+            "running_km_range": [7.5, 14.9], "long_run_range": [0.0, 6.8],
+            "running_sessions_max": 3, "hard_sessions_max": 0, "recovery_days_min": 3,
+            "max_consecutive_running_days": 1, "dias_restantes": 2,
+        }
+
+    def _restantes(self):
+        return {
+            "completed_km": 0.0, "completed_running_sessions": 0, "completed_hard_sessions": 0,
+            "remaining_km_range": [7.5, 14.9], "remaining_sessions_max": 3, "remaining_hard_sessions_max": 0,
+        }
+
+    def _race_status(self):
+        return {"state": "scheduled", "race_date": self.RACE_DATE.isoformat(),
+                "dias_restantes": 2, "race_falls_in_planning_week": True,
+                "race_planning_day": "Vie",
+                "evidence": {"checked": False, "reason": "fecha_no_ha_ocurrido"}}
+
+    def _meta(self):
+        return {"metaCarrera": {"nombre": "Maratón de Medellín", "fecha": "2026-09-04", "label": "42K MED"}}
+
+    def _sesiones(self, km_carrera="42.2 km", tipo_carrera="Carrera"):
+        # Lun rest, Mar 4km fácil, Mié-Jue rest, Vie carrera, Sáb-Dom rest --
+        # sin días de running adyacentes entre sí (max_consecutive_running_days=1 de race_week).
+        dias = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+        kms = ["—", "4 km", "—", "—", km_carrera, "—", "—"]
+        tipos = ["Descanso", "Rodaje suave", "Descanso", "Descanso", tipo_carrera, "Descanso", "Descanso"]
+        return [
+            {"date": (self.LUNES_SEMANA_ACTUAL + timedelta(days=i)).isoformat(), "day": d, "type": t, "km": k,
+             "notes": "n", "purpose": "p"}
+            for i, (d, k, t) in enumerate(zip(dias, kms, tipos))
+        ]
+
+    def _sesiones_dias(self, especificacion):
+        """especificacion: {dia_es: (km_str, tipo)}; días no listados = Descanso.
+        Para probar adyacencia calendario alrededor del día de la carrera
+        (jueves/viernes, viernes/sábado), a diferencia de _sesiones() que
+        deliberadamente no pone entrenamiento adyacente al día de carrera."""
+        dias = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
+        sesiones = []
+        for i, d in enumerate(dias):
+            km, tipo = especificacion.get(d, ("—", "Descanso"))
+            sesiones.append({"date": (self.LUNES_SEMANA_ACTUAL + timedelta(days=i)).isoformat(),
+                              "day": d, "type": tipo, "km": km, "notes": "n", "purpose": "p"})
+        return sesiones
+
+    def _pulse(self, sesiones, total_km):
+        return {"weeklyPlan": {"summary": {"totalKm": total_km, "runningSessions": 2, "strengthSessions": 0},
+                                "sessions": sesiones}}
+
+    def _validar(self, sesiones, total_km, prescribed_km, prescribed_sessions, race_status="default"):
+        return v2.validar_pulse_v2(
+            self._pulse(sesiones, total_km), self._meta(), self._constraints(), None, dias_restantes=2,
+            restantes=self._restantes(),
+            weekly_totals={"completedKm": 0.0, "prescribedKm": prescribed_km,
+                           "completedSessions": 0, "prescribedSessions": prescribed_sessions},
+            race_status=self._race_status() if race_status == "default" else race_status,
+        )
+
+    def test_maraton_mas_entrenamiento_normal_no_viola_presupuesto(self):
+        # 4km entrenamiento + 42.2km carrera = 46.2km totales, muy por
+        # encima de running_km_range=[7.5,14.9] -- pero la carrera se
+        # excluye, así que NINGUNO de los checks de presupuesto debe fallar.
+        ok, checks = self._validar(self._sesiones(), total_km=46.2, prescribed_km=46.2, prescribed_sessions=2)
+        fails = checks_por_estado(checks, "fail")
+        for nombre in ("limite_volumen_semana_completa", "limite_fondo_largo",
+                       "limite_sesiones_running_semana_completa",
+                       "prescripcion_dentro_de_lo_restante_km", "prescripcion_dentro_de_lo_restante_sesiones"):
+            self.assertNotIn(nombre, fails, f"{nombre} no debe fallar por la distancia de la carrera meta")
+
+    def test_carrera_presente_y_distancia_coherente_pasan(self):
+        ok, checks = self._validar(self._sesiones(), total_km=46.2, prescribed_km=46.2, prescribed_sessions=2)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["carrera_meta_presente_en_semana"]["status"], "pass")
+        self.assertEqual(por_nombre["carrera_meta_distancia_coherente"]["status"], "pass")
+
+    def test_carrera_omitida_como_descanso_falla(self):
+        sesiones = self._sesiones(km_carrera="—", tipo_carrera="Descanso")
+        ok, checks = self._validar(sesiones, total_km=4.0, prescribed_km=4.0, prescribed_sessions=1)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["carrera_meta_presente_en_semana"]["status"], "fail",
+                          "el modelo NO puede omitir la carrera por exceder el presupuesto normal")
+
+    def test_carrera_con_distancia_incoherente_falla(self):
+        # 15km el día de la carrera meta -- no es plausible como maratón.
+        sesiones = self._sesiones(km_carrera="15 km", tipo_carrera="Carrera")
+        ok, checks = self._validar(sesiones, total_km=19.0, prescribed_km=19.0, prescribed_sessions=2)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["carrera_meta_presente_en_semana"]["status"], "pass")
+        self.assertEqual(por_nombre["carrera_meta_distancia_coherente"]["status"], "fail")
+
+    def test_sin_race_status_comportamiento_original_intacto(self):
+        # race_status=None (default de la firma): ningún check nuevo debe
+        # activarse -- compatibilidad hacia atrás explícita.
+        sesiones = self._sesiones(km_carrera="10 km", tipo_carrera="Rodaje")
+        ok, checks = self._validar(sesiones, total_km=14.0, prescribed_km=14.0, prescribed_sessions=2,
+                                    race_status=None)
+        nombres = {c["check"] for c in checks}
+        self.assertNotIn("carrera_meta_presente_en_semana", nombres)
+        self.assertNotIn("carrera_meta_distancia_coherente", nombres)
+
+    # ── fix scoped: la carrera meta tampoco cuenta para dias_consecutivos ──
+
+    def test_A_shakeout_jueves_mas_carrera_viernes_no_viola_consecutivos(self):
+        sesiones = self._sesiones_dias({"Jue": ("4 km", "Shakeout"), "Vie": ("42.2 km", "Carrera")})
+        ok, checks = self._validar(sesiones, total_km=46.2, prescribed_km=46.2, prescribed_sessions=2)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["dias_consecutivos"]["status"], "pass",
+                          "shakeout del jueves + carrera del viernes no deben sumar racha de entrenamiento")
+
+    def test_B_carrera_viernes_mas_recuperacion_sabado_no_viola_consecutivos(self):
+        sesiones = self._sesiones_dias({"Vie": ("42.2 km", "Carrera"), "Sáb": ("5 km", "Recuperación")})
+        ok, checks = self._validar(sesiones, total_km=47.2, prescribed_km=47.2, prescribed_sessions=2)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["dias_consecutivos"]["status"], "pass",
+                          "la carrera del viernes no debe hacer que el trote de recuperación del sábado "
+                          "cuente como día 2 de una racha de entrenamiento")
+
+    def test_C_normal_jueves_viernes_facil_sigue_fallando_igual_que_antes(self):
+        # Sin carrera de por medio (race_status=None): dos días de
+        # entrenamiento consecutivos deben seguir violando el máximo
+        # exactamente como antes de este fix.
+        sesiones = self._sesiones_dias({"Jue": ("5 km", "Rodaje"), "Vie": ("5 km", "Rodaje")})
+        ok, checks = self._validar(sesiones, total_km=10.0, prescribed_km=10.0, prescribed_sessions=2,
+                                    race_status=None)
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["dias_consecutivos"]["status"], "fail",
+                          "sin carrera de por medio, dos días de entrenamiento consecutivos siguen "
+                          "violando max_consecutive_running_days")
+
+
+class TestContarDiasConsecutivosRunningRaceDay(unittest.TestCase):
+    """
+    Unidad, directo sobre _contar_dias_consecutivos_running(): el día de la
+    carrera meta (race_date) nunca cuenta como día de running para la
+    racha, pero SÍ sigue cortando la adyacencia calendario entre el día
+    anterior y el siguiente -- no se elimina de la lista, se fuerza
+    corre=False para esa fecha puntual.
+    """
+
+    def _sesion(self, fecha, km, tipo="Rodaje"):
+        return {"date": fecha, "day": "x", "type": tipo, "km": km}
+
+    def test_shakeout_mas_carrera_no_suma_racha(self):
+        sesiones = [self._sesion("2026-09-03", "4 km"), self._sesion("2026-09-04", "42.2 km", "Carrera")]
+        self.assertEqual(v2._contar_dias_consecutivos_running(sesiones, race_date="2026-09-04"), 1)
+
+    def test_carrera_mas_recuperacion_no_suma_racha(self):
+        sesiones = [self._sesion("2026-09-04", "42.2 km", "Carrera"), self._sesion("2026-09-05", "5 km")]
+        self.assertEqual(v2._contar_dias_consecutivos_running(sesiones, race_date="2026-09-04"), 1)
+
+    def test_sin_race_date_dos_dias_de_running_siguen_sumando(self):
+        sesiones = [self._sesion("2026-09-03", "5 km"), self._sesion("2026-09-04", "5 km")]
+        self.assertEqual(v2._contar_dias_consecutivos_running(sesiones), 2)
+
+    def test_race_date_que_no_coincide_con_ningun_dia_no_afecta_nada(self):
+        sesiones = [self._sesion("2026-09-03", "5 km"), self._sesion("2026-09-04", "5 km")]
+        self.assertEqual(v2._contar_dias_consecutivos_running(sesiones, race_date="2026-09-20"), 2)
+
+
+class TestRaceStatusRealAthletes(unittest.TestCase, PlanningConstraintsFixtureMixin):
+    """
+    Regresiones reales (auditoría race_status, matriz de tests sección 7).
+    Actividades y metas tomadas del export real de cada atleta
+    (swetro-export/output/, corrida 2026-09-01 23:14) -- hardcodeadas acá
+    para que el test sea autocontenido y no dependa de un path externo al repo.
+    """
+
+    def _semana_actual(self, fecha_generacion):
+        lunes_analizado, _ = tj.ultima_semana_completa(hoy=fecha_generacion)
+        lunes_semana_actual = lunes_analizado + timedelta(days=7)
+        domingo_plan = lunes_semana_actual + timedelta(days=6)
+        return lunes_semana_actual, domingo_plan
+
+    def test_alvaro_maraton_sydney_sin_evidencia_nunca_post_race(self):
+        # Maratón de Sydney, 2026-08-30. Export real: actividades más
+        # cercanas son 12.02km (25-ago) y 8.02km (01-sep) -- seis días sin
+        # NINGUNA actividad alrededor de la fecha de la carrera.
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón de Sydney", "fecha": "2026-08-30", "label": "42K SYD"}
+        activities = [
+            _act("2026-08-16", dist_km=23.87), _act("2026-08-17", dist_km=8.22),
+            _act("2026-08-18", dist_km=12.58), _act("2026-08-19", dist_km=17.02),
+            _act("2026-08-22", dist_km=3.02), _act("2026-08-23", dist_km=15.52),
+            _act("2026-08-25", dist_km=12.02), _act("2026-09-01", dist_km=8.02),
+        ]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion,
+                                      *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+        self.assertIsNone(rs["evidence"]["matched_activity"])
+
+        weekly = tj.calcular_weekly_multidisciplina(activities)
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              carrera, True, fecha_generacion, race_status=rs)
+        self.assertEqual(c["goal_phase"], "race_unconfirmed")
+        self.assertNotEqual(c["goal_phase"], "post_race")
+        self.assertNotEqual(c["load_direction"], "increase")
+        self.assertEqual(c["hard_sessions_max"], 0)
+        lo, _ = c["running_km_range"]
+        self.assertEqual(lo, 0.0, "el plan debe poder recomendar cero running adicional")
+
+    def test_william_maraton_medellin_cae_dentro_de_la_semana_a_planificar(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón de Medellín", "fecha": "2026-09-04", "label": "42K MED"}
+        lunes_semana_actual, domingo_plan = self._semana_actual(fecha_generacion)
+        rs = v2.calcular_race_status([], carrera, True, fecha_generacion, lunes_semana_actual, domingo_plan)
+        self.assertTrue(rs["race_falls_in_planning_week"])
+        self.assertEqual(rs["race_planning_day"], "Vie")
+        self.assertEqual(rs["state"], "scheduled")
+
+    def test_william_negative_control_21k_no_confirma_maraton(self):
+        # 21.02km el 2026-08-30, cinco días antes de la meta de 42K -- long
+        # run de ajuste real de William, NUNCA debe confundirse con la
+        # maratón completada.
+        fecha_generacion = date(2026, 9, 6)  # posterior a la fecha de la carrera
+        carrera = {"nombre": "Maratón de Medellín", "fecha": "2026-09-04", "label": "42K MED"}
+        activities = [_act("2026-08-30", dist_km=21.02)]
+        rs = v2.calcular_race_status(activities, carrera, True, fecha_generacion,
+                                      *self._semana_actual(fecha_generacion))
+        self.assertEqual(rs["state"], "unconfirmed_after_date")
+        self.assertIsNone(rs["evidence"]["matched_activity"])
+
+    def test_fabiana_maraton_buenos_aires_futura_taper_sin_cambios(self):
+        fecha_generacion = date(2026, 9, 2)
+        carrera = {"nombre": "Maratón de Buenos Aires", "fecha": "2026-09-20", "label": "42K BUE"}
+        lunes_semana_actual, domingo_plan = self._semana_actual(fecha_generacion)
+        rs = v2.calcular_race_status([], carrera, True, fecha_generacion, lunes_semana_actual, domingo_plan)
+        self.assertEqual(rs["state"], "scheduled")
+        self.assertFalse(rs["race_falls_in_planning_week"])
+
+        # avg4_km real de Fabiana (~45.2km/semana): goal_phase y rango deben
+        # seguir siendo exactamente el comportamiento de taper preexistente,
+        # sin ningún efecto de race_status (fecha futura).
+        weekly = self._weekly_fixture(8, km_por_semana=45.2, sessions_por_semana=5, hoy=fecha_generacion)
+        activities = self._activities_fixture(weekly, dist_por_sesion=9.0)
+        c = v2.calcular_planning_constraints(activities, weekly, {"status": "undertraining"},
+                                              carrera, True, fecha_generacion, race_status=rs)
+        self.assertEqual(c["goal_phase"], "taper")
+        lo, hi = c["running_km_range"]
+        self.assertAlmostEqual(lo, round(45.2 * 0.55, 1), places=1)
+        self.assertAlmostEqual(hi, round(45.2 * 0.75, 1), places=1)
 
 
 class TestPlanningConstraintsHistorialPreliminar(unittest.TestCase, PlanningConstraintsFixtureMixin):
@@ -1642,6 +2162,92 @@ class TestGenerarPulseV2E2E(unittest.TestCase):
         self.assertNotIn("goalReadiness", gen["pulse"])
         self.assertNotIn("goal_readiness", gen["pulse"])
         self.assertIsInstance(gen["pulse"]["readiness"], (int, float))
+
+
+class TestGenerarPulseV2RaceStatusE2E(unittest.TestCase):
+    """
+    E2E completo (generar_pulse_v2, Anthropic mockeado -- CERO llamadas
+    reales) para los dos regímenes reales de race_status pedidos en la
+    matriz de tests: William (carrera dentro de la semana a planificar) y
+    Álvaro (fecha pasada sin evidencia, nunca post_race).
+    """
+
+    FECHA_GENERACION = date(2026, 9, 2)  # miércoles
+
+    def _fixture_base(self, meta_carrera):
+        activities = []
+        for k in (1, 2, 3, 4):
+            lunes = LUNES_ANALIZADO - timedelta(days=7 * k)
+            activities += [
+                _act(lunes.isoformat(), dist_km=5.0, duration_min=30.0, pace_raw=5.5, hr=145),
+                _act((lunes + timedelta(days=2)).isoformat(), dist_km=5.0, duration_min=30.0, pace_raw=5.5, hr=145),
+            ]
+        activities += [
+            _act(LUNES_ANALIZADO.isoformat(), dist_km=6.0, duration_min=35.0, pace_raw=5.5, hr=145),
+            _act((LUNES_ANALIZADO + timedelta(days=2)).isoformat(), dist_km=6.0, duration_min=35.0, pace_raw=5.5, hr=145),
+        ]
+        weekly = tj.calcular_weekly_multidisciplina(activities)
+        meta = {"nombre": "ATLETA E2E", "metaCarrera": meta_carrera, "prs": []}
+        profile = {"personal_records": [], "full_name": "Atleta E2E"}
+        acwr_info = {"status": "undertraining", "series": {}}
+        return activities, weekly, meta, profile, acwr_info
+
+    def _weekly_plan_con_carrera(self):
+        kms = ["—", "1 km", "—", "—", "42.2 km", "—", "—"]
+        tipos = ["Descanso", "Rodaje suave", "Descanso", "Descanso", "Carrera", "Descanso", "Descanso"]
+        sessions = [{"day": d, "type": t, "km": k, "notes": "n", "purpose": "p"}
+                    for d, k, t in zip(v2.DIAS_ORDEN, kms, tipos)]
+        return {"objective": "Llegar frescos a la maratón", "rationale": "Semana de carrera.", "sessions": sessions}
+
+    @patch("anthropic.Anthropic")
+    def test_william_maraton_en_semana_pasa_validacion_sin_violar_presupuesto(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture_base(
+            {"nombre": "Maratón de Medellín", "fecha": "2026-09-04", "label": "42K MED"})
+        respuesta = _pulse_v2_respuesta_valida(weeklyPlan=self._weekly_plan_con_carrera())
+        mock_cls.return_value = _mock_client_secuencia([respuesta])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+
+        race_status = gen["input_context"]["race_status"]
+        self.assertTrue(race_status["race_falls_in_planning_week"])
+        self.assertEqual(race_status["race_planning_day"], "Vie")
+        self.assertIn("CARRERA DENTRO DE LA SEMANA A PLANIFICAR", gen["input_context"]["system_prompt"])
+
+        checks = gen["validation"]["checks"]
+        fails = checks_por_estado(checks, "fail")
+        for nombre in ("limite_volumen_semana_completa", "limite_fondo_largo",
+                       "limite_sesiones_running_semana_completa",
+                       "prescripcion_dentro_de_lo_restante_km", "prescripcion_dentro_de_lo_restante_sesiones"):
+            self.assertNotIn(nombre, fails, f"{nombre} no debe fallar por la distancia de la carrera meta")
+        por_nombre = {c["check"]: c for c in checks}
+        self.assertEqual(por_nombre["carrera_meta_presente_en_semana"]["status"], "pass")
+        self.assertEqual(por_nombre["carrera_meta_distancia_coherente"]["status"], "pass")
+        self.assertEqual(gen["status"], "valid")
+
+        # El día de la carrera debe sobrevivir en el plan final tal cual.
+        viernes = next(s for s in gen["pulse"]["weeklyPlan"]["sessions"] if s["day"] == "Vie")
+        self.assertIn("42.2", viernes["km"])
+
+    @patch("anthropic.Anthropic")
+    def test_alvaro_fecha_pasada_sin_evidencia_no_asume_completado(self, mock_cls):
+        activities, weekly, meta, profile, acwr_info = self._fixture_base(
+            {"nombre": "Maratón de Sydney", "fecha": "2026-08-30", "label": "42K SYD"})
+        # Sin ninguna actividad de distancia de maratón cerca del 30-ago
+        # (la fixture base no tiene nada ahí) -- replica el caso real de
+        # Álvaro: seis días sin actividad alrededor de la fecha de la carrera.
+        mock_cls.return_value = _mock_client_secuencia([_pulse_v2_respuesta_valida()])
+        gen = v2.generar_pulse_v2(tj, activities, weekly, meta, profile, acwr_info, "fake-key",
+                                   fecha_generacion=self.FECHA_GENERACION)
+
+        self.assertEqual(gen["input_context"]["race_status"]["state"], "unconfirmed_after_date")
+        self.assertIsNone(gen["input_context"]["race_status"]["evidence"]["matched_activity"])
+        constraints = gen["input_context"]["planning_constraints"]
+        self.assertEqual(constraints["goal_phase"], "race_unconfirmed")
+        self.assertNotEqual(constraints["goal_phase"], "post_race")
+        self.assertNotIn("post_race", gen["input_context"]["system_prompt"],
+                          "goal_phase ya no puede imprimirse como post_race sin confirmación")
+        self.assertIn("CARRERA META SIN CONFIRMAR", gen["input_context"]["system_prompt"])
+        self.assertIn("no confirmada", gen["input_context"]["user_prompt"])
 
 
 if __name__ == "__main__":
