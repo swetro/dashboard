@@ -27,12 +27,568 @@
       "nombre": "Maratón de Bogotá",
       "fecha": "2026-11-29",
       "label": "42K BOG",
-      "diasPrep": 104
+      "diasPrep": 76
     },
+    "planPreferences": {},
     "isPro": true,
-    "generadoEn": "2026-08-17T22:24:06.057809Z"
+    "generadoEn": "2026-09-14T23:02:28.884418Z"
   },
   "activities": [
+    {
+      "date": "2026-03-16",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 21.2,
+      "duration_min": 121.8,
+      "pace": "5:45",
+      "pace_raw": 5.746,
+      "hr": 153,
+      "kcal": 1584,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 13.003146805308525,
+      "heart_eff": 0.01895
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.0,
+      "duration_min": 27.2,
+      "pace": "5:26",
+      "pace_raw": 5.437,
+      "hr": 157,
+      "kcal": 376,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 13.823529411764707,
+      "heart_eff": 0.01952
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 52.4,
+      "pace": "5:49",
+      "pace_raw": 5.81,
+      "hr": 148,
+      "kcal": 656,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 12.527052832590707,
+      "heart_eff": 0.01938
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 8.0,
+      "duration_min": 48.8,
+      "pace": "6:06",
+      "pace_raw": 6.102,
+      "hr": 147,
+      "kcal": 592,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 12.122866894197951,
+      "heart_eff": 0.01858
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.84,
+      "duration_min": 52.4,
+      "pace": "6:41",
+      "pace_raw": 6.687,
+      "hr": 150,
+      "kcal": 634,
+      "elevation": 228.0,
+      "points": 0,
+      "effort": 12.091544818817546,
+      "heart_eff": 0.01661
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.65,
+      "duration_min": 46.1,
+      "pace": "6:01",
+      "pace_raw": 6.025,
+      "hr": 143,
+      "kcal": 570,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 12.373371924746744,
+      "heart_eff": 0.01934
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 8.5,
+      "duration_min": 44.6,
+      "pace": "5:15",
+      "pace_raw": 5.253,
+      "hr": 155,
+      "kcal": 601,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 13.460246360582307,
+      "heart_eff": 0.02046
+    },
+    {
+      "date": "2026-03-28",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 10.91,
+      "duration_min": 205.5,
+      "pace": "18:51",
+      "pace_raw": 18.842,
+      "hr": 94,
+      "kcal": 1129,
+      "elevation": 331.0,
+      "points": 0,
+      "effort": 5.493471737896359,
+      "heart_eff": 0.0094
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.49,
+      "duration_min": 30.0,
+      "pace": "5:28",
+      "pace_raw": 5.472,
+      "hr": 156,
+      "kcal": 408,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 13.592448639644642,
+      "heart_eff": 0.01952
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.54,
+      "duration_min": 30.1,
+      "pace": "5:26",
+      "pace_raw": 5.431,
+      "hr": 156,
+      "kcal": 415,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 13.802660753880266,
+      "heart_eff": 0.01967
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 3.34,
+      "duration_min": 18.2,
+      "pace": "5:28",
+      "pace_raw": 5.46,
+      "hr": 151,
+      "kcal": 247,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 13.534246575342467,
+      "heart_eff": 0.0202
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.04,
+      "duration_min": 33.0,
+      "pace": "6:33",
+      "pace_raw": 6.551,
+      "hr": 149,
+      "kcal": 387,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 11.715438950554995,
+      "heart_eff": 0.01707
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.3,
+      "duration_min": 32.4,
+      "pace": "6:07",
+      "pace_raw": 6.111,
+      "hr": 145,
+      "kcal": 399,
+      "elevation": 56.0,
+      "points": 0,
+      "effort": 12.327497425334707,
+      "heart_eff": 0.01881
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.02,
+      "duration_min": 45.1,
+      "pace": "6:25",
+      "pace_raw": 6.425,
+      "hr": 152,
+      "kcal": 545,
+      "elevation": 72.0,
+      "points": 0,
+      "effort": 12.084257206208425,
+      "heart_eff": 0.01706
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 1.76,
+      "duration_min": 18.6,
+      "pace": "10:36",
+      "pace_raw": 10.6,
+      "hr": 121,
+      "kcal": 150,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 8.057296329453894,
+      "heart_eff": 0.01299
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.71,
+      "duration_min": 41.9,
+      "pace": "6:14",
+      "pace_raw": 6.238,
+      "hr": 142,
+      "kcal": 489,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 11.675288499801034,
+      "heart_eff": 0.01882
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.33,
+      "duration_min": 43.5,
+      "pace": "5:56",
+      "pace_raw": 5.93,
+      "hr": 142,
+      "kcal": 509,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 11.705634342660023,
+      "heart_eff": 0.01979
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 9.85,
+      "duration_min": 45.4,
+      "pace": "4:37",
+      "pace_raw": 4.609,
+      "hr": 172,
+      "kcal": 722,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 15.908923980903415,
+      "heart_eff": 0.02102
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.0,
+      "duration_min": 36.2,
+      "pace": "5:10",
+      "pace_raw": 5.171,
+      "hr": 162,
+      "kcal": 528,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 14.578923147722042,
+      "heart_eff": 0.01989
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.0,
+      "duration_min": 34.8,
+      "pace": "5:48",
+      "pace_raw": 5.798,
+      "hr": 145,
+      "kcal": 425,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 12.224352828379674,
+      "heart_eff": 0.01981
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.0,
+      "duration_min": 36.5,
+      "pace": "5:13",
+      "pace_raw": 5.209,
+      "hr": 158,
+      "kcal": 505,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 13.848263254113345,
+      "heart_eff": 0.02025
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 39.2,
+      "pace": "5:35",
+      "pace_raw": 5.59,
+      "hr": 148,
+      "kcal": 488,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 12.459574468085107,
+      "heart_eff": 0.02014
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.25,
+      "duration_min": 39.4,
+      "pace": "6:19",
+      "pace_raw": 6.309,
+      "hr": 145,
+      "kcal": 455,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 11.548223350253808,
+      "heart_eff": 0.01821
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 10.0,
+      "duration_min": 52.2,
+      "pace": "5:13",
+      "pace_raw": 5.224,
+      "hr": 146,
+      "kcal": 721,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 13.799043062200957,
+      "heart_eff": 0.02185
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.0,
+      "duration_min": 36.6,
+      "pace": "5:14",
+      "pace_raw": 5.229,
+      "hr": 163,
+      "kcal": 519,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 14.173873463814292,
+      "heart_eff": 0.01955
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 50.2,
+      "pace": "5:35",
+      "pace_raw": 5.576,
+      "hr": 148,
+      "kcal": 652,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 12.983737139064056,
+      "heart_eff": 0.02019
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 17.76,
+      "duration_min": 93.2,
+      "pace": "5:15",
+      "pace_raw": 5.246,
+      "hr": 155,
+      "kcal": 1291,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 13.8593666129898,
+      "heart_eff": 0.0205
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 0.66,
+      "duration_min": 3.8,
+      "pace": "5:45",
+      "pace_raw": 5.75,
+      "hr": 136,
+      "kcal": 47,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 12.314410480349345,
+      "heart_eff": 0.0213
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.09,
+      "duration_min": 38.6,
+      "pace": "6:20",
+      "pace_raw": 6.331,
+      "hr": 139,
+      "kcal": 428,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 11.097666378565254,
+      "heart_eff": 0.01894
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 0.59,
+      "duration_min": 2.8,
+      "pace": "4:38",
+      "pace_raw": 4.638,
+      "hr": 121,
+      "kcal": 39,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 14.181818181818182,
+      "heart_eff": 0.02967
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 10.0,
+      "duration_min": 49.4,
+      "pace": "4:56",
+      "pace_raw": 4.939,
+      "hr": 155,
+      "kcal": 730,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 14.772344013490725,
+      "heart_eff": 0.02177
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 10.0,
+      "duration_min": 51.7,
+      "pace": "5:10",
+      "pace_raw": 5.168,
+      "hr": 163,
+      "kcal": 754,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 14.584139264990329,
+      "heart_eff": 0.01979
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.5,
+      "duration_min": 38.2,
+      "pace": "5:53",
+      "pace_raw": 5.876,
+      "hr": 147,
+      "kcal": 483,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 12.643979057591622,
+      "heart_eff": 0.01929
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 21.1,
+      "duration_min": 113.1,
+      "pace": "5:22",
+      "pace_raw": 5.359,
+      "hr": 158,
+      "kcal": 1562,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 13.810786914235191,
+      "heart_eff": 0.01968
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.66,
+      "duration_min": 51.4,
+      "pace": "6:43",
+      "pace_raw": 6.713,
+      "hr": 149,
+      "kcal": 620,
+      "elevation": 226.0,
+      "points": 0,
+      "effort": 12.062256809338521,
+      "heart_eff": 0.01666
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 56.8,
+      "pace": "5:41",
+      "pace_raw": 5.678,
+      "hr": 153,
+      "kcal": 746,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 13.12995013200352,
+      "heart_eff": 0.01918
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 36.0,
+      "duration_min": 209.6,
+      "pace": "5:49",
+      "pace_raw": 5.821,
+      "hr": 154,
+      "kcal": 2728,
+      "elevation": 85.0,
+      "points": 0,
+      "effort": 13.017337362812153,
+      "heart_eff": 0.01859
+    },
     {
       "date": "2026-05-20",
       "name": "Outdoor Run",
@@ -1022,9 +1578,387 @@
       "points": 0,
       "effort": 14.084424180026476,
       "heart_eff": 0.01904
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 69.5,
+      "pace": "5:47",
+      "pace_raw": 5.785,
+      "hr": 152,
+      "kcal": 922,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 13.275737940964722,
+      "heart_eff": 0.01895
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 6.66,
+      "duration_min": 39.3,
+      "pace": "5:54",
+      "pace_raw": 5.901,
+      "hr": 155,
+      "kcal": 508,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 12.926208651399492,
+      "heart_eff": 0.01822
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.63,
+      "duration_min": 49.6,
+      "pace": "6:30",
+      "pace_raw": 6.503,
+      "hr": 156,
+      "kcal": 625,
+      "elevation": 227.0,
+      "points": 0,
+      "effort": 12.596573731944911,
+      "heart_eff": 0.01643
+    },
+    {
+      "date": "2026-08-28",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.0,
+      "duration_min": 40.8,
+      "pace": "5:49",
+      "pace_raw": 5.817,
+      "hr": 155,
+      "kcal": 554,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 13.595092024539877,
+      "heart_eff": 0.01848
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.3,
+      "duration_min": 41.2,
+      "pace": "5:39",
+      "pace_raw": 5.649,
+      "hr": 154,
+      "kcal": 571,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 13.848019401778496,
+      "heart_eff": 0.01915
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.36,
+      "duration_min": 44.0,
+      "pace": "5:59",
+      "pace_raw": 5.981,
+      "hr": 152,
+      "kcal": 560,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 12.722453616054525,
+      "heart_eff": 0.01833
+    },
+    {
+      "date": "2026-09-05",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.0,
+      "duration_min": 32.8,
+      "pace": "6:33",
+      "pace_raw": 6.555,
+      "hr": 137,
+      "kcal": 363,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 11.067073170731708,
+      "heart_eff": 0.01855
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 5.01,
+      "duration_min": 31.6,
+      "pace": "6:18",
+      "pace_raw": 6.297,
+      "hr": 141,
+      "kcal": 353,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 11.188589540412044,
+      "heart_eff": 0.01877
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Outdoor Run",
+      "type": "running",
+      "dist_km": 7.7,
+      "duration_min": 44.4,
+      "pace": "5:46",
+      "pace_raw": 5.767,
+      "hr": 155,
+      "kcal": 589,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 13.265765765765765,
+      "heart_eff": 0.01864
     }
   ],
   "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 43.21,
+      "sessions": 4,
+      "avg_hr": 151,
+      "avg_pace": 5.774,
+      "total_kcal": 3208,
+      "running": {
+        "km": 43.21,
+        "sessions": 4,
+        "avg_hr": 151,
+        "avg_pace": 5.774
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 45.93,
+      "sessions": 6,
+      "avg_hr": 142,
+      "avg_pace": 7.952,
+      "total_kcal": 3757,
+      "running": {
+        "km": 45.93,
+        "sessions": 6,
+        "avg_hr": 142,
+        "avg_pace": 7.952
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 22.46,
+      "sessions": 5,
+      "avg_hr": 144,
+      "avg_pace": 7.029,
+      "total_kcal": 1728,
+      "running": {
+        "km": 22.46,
+        "sessions": 5,
+        "avg_hr": 144,
+        "avg_pace": 7.029
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 23.89,
+      "sessions": 3,
+      "avg_hr": 152,
+      "avg_pace": 5.592,
+      "total_kcal": 1720,
+      "running": {
+        "km": 23.89,
+        "sessions": 3,
+        "avg_hr": 152,
+        "avg_pace": 5.592
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 7.0,
+      "sessions": 1,
+      "avg_hr": 162,
+      "avg_pace": 5.171,
+      "total_kcal": 528,
+      "running": {
+        "km": 7.0,
+        "sessions": 1,
+        "avg_hr": 162,
+        "avg_pace": 5.171
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 20.01,
+      "sessions": 3,
+      "avg_hr": 150,
+      "avg_pace": 5.532,
+      "total_kcal": 1418,
+      "running": {
+        "km": 20.01,
+        "sessions": 3,
+        "avg_hr": 150,
+        "avg_pace": 5.532
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 50.02,
+      "sessions": 5,
+      "avg_hr": 151,
+      "avg_pace": 5.517,
+      "total_kcal": 3638,
+      "running": {
+        "km": 50.02,
+        "sessions": 5,
+        "avg_hr": 151,
+        "avg_pace": 5.517
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 54.94,
+      "sessions": 7,
+      "avg_hr": 146,
+      "avg_pace": 5.437,
+      "total_kcal": 4043,
+      "running": {
+        "km": 54.94,
+        "sessions": 7,
+        "avg_hr": 146,
+        "avg_pace": 5.437
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 53.67,
+      "sessions": 3,
+      "avg_hr": 152,
+      "avg_pace": 6.071,
+      "total_kcal": 4094,
+      "running": {
+        "km": 53.67,
+        "sessions": 3,
+        "avg_hr": 152,
+        "avg_pace": 6.071
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
     {
       "week": "2026-05-18/2026-05-24",
       "total_km": 13.96,
@@ -1375,15 +2309,141 @@
         "sessions": 0
       },
       "total_sessions": 5
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 18.67,
+      "sessions": 2,
+      "avg_hr": 154,
+      "avg_pace": 5.843,
+      "total_kcal": 1430,
+      "running": {
+        "km": 18.67,
+        "sessions": 2,
+        "avg_hr": 154,
+        "avg_pace": 5.843
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 14.63,
+      "sessions": 2,
+      "avg_hr": 156,
+      "avg_pace": 6.16,
+      "total_kcal": 1179,
+      "running": {
+        "km": 14.63,
+        "sessions": 2,
+        "avg_hr": 156,
+        "avg_pace": 6.16
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 24.67,
+      "sessions": 4,
+      "avg_hr": 146,
+      "avg_pace": 6.12,
+      "total_kcal": 1847,
+      "running": {
+        "km": 24.67,
+        "sessions": 4,
+        "avg_hr": 146,
+        "avg_pace": 6.12
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 7.7,
+      "sessions": 1,
+      "avg_hr": 155,
+      "avg_pace": 5.767,
+      "total_kcal": 589,
+      "running": {
+        "km": 7.7,
+        "sessions": 1,
+        "avg_hr": 155,
+        "avg_pace": 5.767
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
     }
   ],
   "acwr": {
-    "valor": 1.1,
-    "status": "optimal",
+    "valor": 0.5,
+    "status": "undertraining",
     "confiable": true,
-    "semana": "2026-08-10/2026-08-16",
+    "semana": "2026-09-07/2026-09-13",
     "series": {
       "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.33,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.82,
+          "status": "optimal"
+        },
         {
           "weekStart": "2026-06-01",
           "weekEnd": "2026-06-07",
@@ -1449,10 +2509,52 @@
           "weekEnd": "2026-08-16",
           "valor": 1.1,
           "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.42,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.45,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.5,
+          "status": "undertraining"
         }
       ],
       "running": [
         {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.33,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
           "weekStart": "2026-06-01",
           "weekEnd": "2026-06-07",
           "valor": 1.52,
@@ -1517,6 +2619,30 @@
           "weekEnd": "2026-08-16",
           "valor": 1.1,
           "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.42,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.45,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.5,
+          "status": "undertraining"
         }
       ],
       "cycling": [],
@@ -1524,123 +2650,69 @@
     }
   },
   "pulse": {
-    "semana": "10–16 ago 2026",
-    "score": 82,
-    "headline": "Tu semana más cargada en dos meses",
-    "subheadline": "55 km con medio maratón de cierre: señal de forma real",
-    "readiness": 76,
-    "aiVerdict": "Miguel Ángel, cerraste la semana con tu mayor volumen de running en los últimos dos meses, igualando prácticamente el pico de la semana previa y rematando con un medio maratón completo el domingo. Eso habla de una base aeróbica que está respondiendo bien a la carga progresiva que has construido desde el bache de 31 km hace cinco semanas. Tu carga está en zona segura, lo que indica que el cuerpo está absorbiendo el estímulo sin señales de alarma aguda, aunque acumular dos semanas consecutivas de alto volumen exige que la próxima semana incluya una descarga deliberada. Con 105 días para Bogotá, estás en el momento justo para consolidar esta base antes de entrar a trabajo de calidad específico de maratón.",
-    "strengths": [
-      "Volumen semanal en máximo histórico reciente con carga en zona segura",
-      "Medio maratón de cierre a ritmo controlado demuestra resistencia aeróbica sólida",
-      "Tendencia ascendente sostenida desde el valle de 31 km hace cinco semanas"
-    ],
-    "warnings": [
-      "Dos semanas consecutivas de alto volumen elevan el riesgo de fatiga acumulada si no se programa descarga esta semana",
-      "FC promedio de 163 bpm en el medio maratón sugiere esfuerzo elevado; monitorea recuperación muscular en los próximos días"
-    ],
+    "semana": "2026-09-07/2026-09-13",
+    "score": 47,
+    "headline": "Resumen semanal; plan pendiente de revisión",
+    "subheadline": "El plan no está incluido en esta entrega",
+    "readiness": 62,
+    "aiVerdict": "Miguel Ángel, el export de esta semana contiene una sola sesión de running. Ese registro no permite confirmar si refleja todo tu entrenamiento; necesitamos revisar su completitud antes de presentar un plan.",
+    "strengths": [],
+    "warnings": [],
     "keyMetrics": [
       {
-        "label": "Volumen semanal",
-        "value": "55.2 km",
-        "trend": "up",
-        "status": "green",
-        "note": "Máximo de las últimas 8 semanas"
+        "label": "Volumen running semanal",
+        "value": "7.7 km",
+        "trend": "down",
+        "status": "red",
+        "note": "Muy por debajo del promedio reciente"
       },
       {
-        "label": "Sesiones de running",
-        "value": "5",
-        "trend": "stable",
-        "status": "green",
-        "note": "Frecuencia consistente"
+        "label": "Sesiones running",
+        "value": "1 sesiones",
+        "trend": "down",
+        "status": "red",
+        "note": "Frecuencia mínima de entrenamiento"
       },
       {
-        "label": "FC promedio semanal",
-        "value": "149 bpm",
+        "label": "Ritmo medio running",
+        "value": "5:46/km",
         "trend": "up",
         "status": "yellow",
-        "note": "Refleja semana de alta carga"
-      },
-      {
-        "label": "Ritmo medio maratón",
-        "value": "5:22/km",
-        "trend": "stable",
-        "status": "green",
-        "note": "Controlado para la distancia"
-      },
-      {
-        "label": "Estado de carga",
-        "value": "Zona segura",
-        "trend": "stable",
-        "status": "green",
-        "note": "Sin señal de sobreentrenamiento"
+        "note": "Más rápido, pero con mayor FC"
       }
     ],
-    "weekPlan": [
-      {
-        "day": "Lun",
-        "type": "Recuperación activa",
-        "km": "—",
-        "notes": "Caminata suave 30 min o movilidad articular. Nada de impacto tras el medio maratón del domingo."
-      },
-      {
-        "day": "Mar",
-        "type": "Rodaje suave",
-        "km": "8 km",
-        "notes": "Ritmo conversacional, FC por debajo de 140 bpm. Evalúa cómo responden piernas antes de comprometerte con más."
-      },
-      {
-        "day": "Mié",
-        "type": "Descanso o fuerza",
-        "km": "—",
-        "notes": "Si incorporas fuerza, enfócate en core y glúteos. Semana de descarga: no fuerces volumen."
-      },
-      {
-        "day": "Jue",
-        "type": "Rodaje moderado",
-        "km": "10 km",
-        "notes": "Ritmo aeróbico cómodo. Puedes incluir 4 x 1 km a ritmo de 10K si las piernas responden bien."
-      },
-      {
-        "day": "Vie",
-        "type": "Descanso",
-        "km": "—",
-        "notes": "Descanso completo. Prioriza sueño y nutrición de recuperación."
-      },
-      {
-        "day": "Sáb",
-        "type": "Rodaje largo suave",
-        "km": "14 km",
-        "notes": "Ritmo 5:50–6:10/km. Semana de descarga: no superes este volumen aunque te sientas bien."
-      },
-      {
-        "day": "Dom",
-        "type": "Descanso",
-        "km": "—",
-        "notes": "Cierra la semana con descanso. El objetivo es llegar a la siguiente semana con piernas frescas."
-      }
-    ],
+    "weeklyPlan": null,
     "injuryRisk": {
-      "level": "medium",
-      "score": 42,
-      "topRisk": "Rodillas y fascia plantar",
-      "action": "Aplica hielo en rodillas post-rodaje esta semana y realiza estiramiento de cadena posterior diariamente. Si aparece molestia en planta del pie, reduce volumen de inmediato."
+      "level": "low",
+      "signal": "No hay datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Retomar progresivamente la carga y monitorear sensaciones"
     },
-    "funFact": "Con 55.2 km esta semana, Miguel Ángel, corriste la distancia equivalente a ir desde el centro de Bogotá hasta el municipio de Zipaquirá y de regreso, con kilómetros de sobra.",
-    "seoulTip": null,
     "projection": {
       "tiempo": "3:28:16",
       "ritmo": "4:56",
       "confianza": "media",
-      "contexto": "Basado en tu Media maratón del 26 de julio. Sin datos suficientes de FC para ajustar por preparación.",
+      "contexto": "Estimación basada en tu resultado anterior, sin ajuste por frecuencia cardíaca.",
       "referencia": "Media maratón del 26 de julio de 2026 en 1:39:54 (FC 167 bpm)",
       "notaAltitud": null
     }
   },
   "semanaAnalizada": {
-    "inicio": "2026-08-10",
-    "fin": "2026-08-16"
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
   },
   "taper": [],
-  "retos": []
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "partial",
+    "plan": {
+      "title": "Antes de completar tu plan",
+      "description": "Tu análisis refleja la sesión de running registrada del 7 al 13 de septiembre. El plan está pendiente de revisión hasta confirmar si ese registro incluye todo tu entrenamiento."
+    },
+    "followUp": {
+      "question": "Solo vemos una sesión de running esta semana. ¿Refleja todo tu entrenamiento o faltan actividades por sincronizar?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta se revisará antes de completar el plan pendiente."
+    }
+  }
 }

@@ -1,0 +1,2538 @@
+{
+  "meta": {
+    "userId": "15173",
+    "nombre": "JULIAN FORERO",
+    "genero": "Male",
+    "edad": 42,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:12",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "21:58",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "44:34",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Maratón de Medellín 2027",
+      "fecha": "2027-09-05",
+      "label": "42K MED",
+      "diasPrep": 356
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-15T02:58:50.570962Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-17",
+      "name": "Carrera 1",
+      "type": "running",
+      "dist_km": 0.63,
+      "duration_min": 2.3,
+      "pace": "3:37",
+      "pace_raw": 3.622,
+      "hr": 147,
+      "kcal": 29,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.794117647058824,
+      "heart_eff": 0.03129
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Medellín - Intervalos de Sp",
+      "type": "running",
+      "dist_km": 7.71,
+      "duration_min": 45.0,
+      "pace": "5:51",
+      "pace_raw": 5.844,
+      "hr": 140,
+      "kcal": 524,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.635825314581792,
+      "heart_eff": 0.02036
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Armenia - Trote suave",
+      "type": "running",
+      "dist_km": 7.31,
+      "duration_min": 41.3,
+      "pace": "5:39",
+      "pace_raw": 5.651,
+      "hr": 146,
+      "kcal": 528,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.779346510689793,
+      "heart_eff": 0.0202
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Armenia Carrera",
+      "type": "running",
+      "dist_km": 9.95,
+      "duration_min": 50.0,
+      "pace": "5:02",
+      "pace_raw": 5.026,
+      "hr": 158,
+      "kcal": 700,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.995334888370543,
+      "heart_eff": 0.02098
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 15.07,
+      "duration_min": 80.1,
+      "pace": "5:19",
+      "pace_raw": 5.315,
+      "hr": 157,
+      "kcal": 1099,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.717495319325984,
+      "heart_eff": 0.01997
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 8.54,
+      "duration_min": 43.0,
+      "pace": "5:02",
+      "pace_raw": 5.034,
+      "hr": 143,
+      "kcal": 528,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.288595810705973,
+      "heart_eff": 0.02315
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Medellín Multideporte",
+      "type": "other",
+      "dist_km": 1.17,
+      "duration_min": 7.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 128,
+      "kcal": 83,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.873362445414847,
+      "heart_eff": 0.01988
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Carrera 1",
+      "type": "running",
+      "dist_km": 1.17,
+      "duration_min": 7.6,
+      "pace": "6:33",
+      "pace_raw": 6.546,
+      "hr": 128,
+      "kcal": 83,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.873362445414847,
+      "heart_eff": 0.01988
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 3.57,
+      "duration_min": 20.2,
+      "pace": "5:40",
+      "pace_raw": 5.661,
+      "hr": 138,
+      "kcal": 219,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.841584158415841,
+      "heart_eff": 0.02133
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 16.0,
+      "duration_min": 85.0,
+      "pace": "5:19",
+      "pace_raw": 5.313,
+      "hr": 159,
+      "kcal": 1196,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.067829837286807,
+      "heart_eff": 0.01973
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 6.12,
+      "duration_min": 35.5,
+      "pace": "5:48",
+      "pace_raw": 5.797,
+      "hr": 137,
+      "kcal": 416,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.723813997181775,
+      "heart_eff": 0.02099
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Entrenamiento en",
+      "type": "running",
+      "dist_km": 5.56,
+      "duration_min": 28.6,
+      "pace": "5:08",
+      "pace_raw": 5.138,
+      "hr": 151,
+      "kcal": 378,
+      "elevation": null,
+      "points": 0,
+      "effort": 13.23220536756126,
+      "heart_eff": 0.02148
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 5.82,
+      "duration_min": 31.1,
+      "pace": "5:21",
+      "pace_raw": 5.342,
+      "hr": 149,
+      "kcal": 401,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.900804289544237,
+      "heart_eff": 0.02093
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Medellín - Trote suave",
+      "type": "running",
+      "dist_km": 8.48,
+      "duration_min": 43.4,
+      "pace": "5:07",
+      "pace_raw": 5.115,
+      "hr": 153,
+      "kcal": 584,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.46139070303496,
+      "heart_eff": 0.02129
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Activaciones Pre",
+      "type": "running",
+      "dist_km": 6.84,
+      "duration_min": 33.5,
+      "pace": "4:54",
+      "pace_raw": 4.893,
+      "hr": 149,
+      "kcal": 431,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.88490284005979,
+      "heart_eff": 0.02286
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Medellín - corre mi tierra",
+      "type": "running",
+      "dist_km": 21.09,
+      "duration_min": 97.4,
+      "pace": "4:37",
+      "pace_raw": 4.619,
+      "hr": 153,
+      "kcal": 1273,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.067579127459366,
+      "heart_eff": 0.02358
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 4.76,
+      "duration_min": 47.7,
+      "pace": "10:01",
+      "pace_raw": 10.019,
+      "hr": 118,
+      "kcal": 367,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.696609577070955,
+      "heart_eff": 0.01409
+    },
+    {
+      "date": "2026-04-25",
+      "name": "San Andrés - Easy Run",
+      "type": "running",
+      "dist_km": 7.7,
+      "duration_min": 37.8,
+      "pace": "4:54",
+      "pace_raw": 4.906,
+      "hr": 161,
+      "kcal": 549,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 14.530216144684607,
+      "heart_eff": 0.0211
+    },
+    {
+      "date": "2026-04-26",
+      "name": "San Andrés Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 52.6,
+      "pace": "5:16",
+      "pace_raw": 5.261,
+      "hr": 149,
+      "kcal": 692,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.143399810066477,
+      "heart_eff": 0.02126
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Easy Run",
+      "type": "running",
+      "dist_km": 7.9,
+      "duration_min": 40.1,
+      "pace": "5:05",
+      "pace_raw": 5.079,
+      "hr": 138,
+      "kcal": 470,
+      "elevation": null,
+      "points": 0,
+      "effort": 11.710963455149502,
+      "heart_eff": 0.02378
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 16.07,
+      "duration_min": 86.4,
+      "pace": "5:23",
+      "pace_raw": 5.376,
+      "hr": 158,
+      "kcal": 1204,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.935185185185185,
+      "heart_eff": 0.01962
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Medellín - Entrenamiento en",
+      "type": "running",
+      "dist_km": 6.64,
+      "duration_min": 34.0,
+      "pace": "5:07",
+      "pace_raw": 5.118,
+      "hr": 153,
+      "kcal": 451,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.264705882352942,
+      "heart_eff": 0.02127
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 6.08,
+      "duration_min": 35.6,
+      "pace": "5:51",
+      "pace_raw": 5.854,
+      "hr": 145,
+      "kcal": 443,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.455482661668228,
+      "heart_eff": 0.01963
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 58.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 89,
+      "kcal": 231,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.9464692482915718,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 4.21,
+      "duration_min": 26.3,
+      "pace": "6:15",
+      "pace_raw": 6.257,
+      "hr": 140,
+      "kcal": 309,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.734177215189874,
+      "heart_eff": 0.01902
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Medellín - Entrenamiento 5*",
+      "type": "running",
+      "dist_km": 7.79,
+      "duration_min": 40.0,
+      "pace": "5:08",
+      "pace_raw": 5.14,
+      "hr": 150,
+      "kcal": 519,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.958801498127341,
+      "heart_eff": 0.02161
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 0.68,
+      "duration_min": 4.3,
+      "pace": "6:19",
+      "pace_raw": 6.318,
+      "hr": 152,
+      "kcal": 56,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.972972972972974,
+      "heart_eff": 0.01733
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 7.89,
+      "duration_min": 40.1,
+      "pace": "5:05",
+      "pace_raw": 5.076,
+      "hr": 158,
+      "kcal": 554,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.826955074875206,
+      "heart_eff": 0.02078
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 38.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 77,
+      "kcal": 114,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.9356223175965663,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Medellín - Entrenamiento 4*",
+      "type": "running",
+      "dist_km": 9.95,
+      "duration_min": 50.0,
+      "pace": "5:02",
+      "pace_raw": 5.026,
+      "hr": 153,
+      "kcal": 663,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.251165889407062,
+      "heart_eff": 0.02167
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 0.63,
+      "duration_min": 3.7,
+      "pace": "5:54",
+      "pace_raw": 5.898,
+      "hr": 161,
+      "kcal": 52,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.054054054054053,
+      "heart_eff": 0.01752
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 4.34,
+      "duration_min": 34.2,
+      "pace": "7:53",
+      "pace_raw": 7.878,
+      "hr": 125,
+      "kcal": 308,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.001461276181198,
+      "heart_eff": 0.01692
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Roldanillo - Running Zona 2",
+      "type": "running",
+      "dist_km": 16.71,
+      "duration_min": 90.0,
+      "pace": "5:23",
+      "pace_raw": 5.387,
+      "hr": 152,
+      "kcal": 1178,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.086465469357526,
+      "heart_eff": 0.02036
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Entrenamiento en",
+      "type": "running",
+      "dist_km": 8.02,
+      "duration_min": 45.9,
+      "pace": "5:43",
+      "pace_raw": 5.718,
+      "hr": 150,
+      "kcal": 595,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.977099236641221,
+      "heart_eff": 0.01943
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Easy Run",
+      "type": "running",
+      "dist_km": 11.95,
+      "duration_min": 65.7,
+      "pace": "5:30",
+      "pace_raw": 5.497,
+      "hr": 145,
+      "kcal": 828,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.602739726027396,
+      "heart_eff": 0.0209
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Carrera en interiores",
+      "type": "running",
+      "dist_km": 15.09,
+      "duration_min": 89.3,
+      "pace": "5:55",
+      "pace_raw": 5.923,
+      "hr": 164,
+      "kcal": 1298,
+      "elevation": null,
+      "points": 0,
+      "effort": 14.527140458869615,
+      "heart_eff": 0.01716
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 7.44,
+      "duration_min": 40.1,
+      "pace": "5:24",
+      "pace_raw": 5.394,
+      "hr": 157,
+      "kcal": 543,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.52428393524284,
+      "heart_eff": 0.01968
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 36.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 97,
+      "kcal": 169,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.6028143440762594,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Entrenamiento en",
+      "type": "running",
+      "dist_km": 8.34,
+      "duration_min": 45.5,
+      "pace": "5:27",
+      "pace_raw": 5.455,
+      "hr": 158,
+      "kcal": 597,
+      "elevation": null,
+      "points": 0,
+      "effort": 13.116074697912852,
+      "heart_eff": 0.01933
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Roldanillo - Running Zona 2",
+      "type": "running",
+      "dist_km": 15.73,
+      "duration_min": 80.0,
+      "pace": "5:05",
+      "pace_raw": 5.089,
+      "hr": 152,
+      "kcal": 1001,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.50728862973761,
+      "heart_eff": 0.02154
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Medellín - Activaciones Spr",
+      "type": "running",
+      "dist_km": 7.87,
+      "duration_min": 40.5,
+      "pace": "5:09",
+      "pace_raw": 5.147,
+      "hr": 149,
+      "kcal": 502,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.400164676821737,
+      "heart_eff": 0.02173
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 0.75,
+      "duration_min": 4.2,
+      "pace": "5:39",
+      "pace_raw": 5.642,
+      "hr": 152,
+      "kcal": 55,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.941176470588236,
+      "heart_eff": 0.01937
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Medellín - Entrenamiento en",
+      "type": "running",
+      "dist_km": 8.43,
+      "duration_min": 42.9,
+      "pace": "5:05",
+      "pace_raw": 5.086,
+      "hr": 160,
+      "kcal": 580,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.525068013991449,
+      "heart_eff": 0.02048
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 10.68,
+      "duration_min": 59.2,
+      "pace": "5:32",
+      "pace_raw": 5.538,
+      "hr": 155,
+      "kcal": 780,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.183098591549296,
+      "heart_eff": 0.01941
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 0.91,
+      "duration_min": 40.3,
+      "pace": "—",
+      "pace_raw": 44.451,
+      "hr": 141,
+      "kcal": 478,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.870860927152318,
+      "heart_eff": 0.00266
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 15.02,
+      "duration_min": 91.3,
+      "pace": "6:05",
+      "pace_raw": 6.084,
+      "hr": 144,
+      "kcal": 1028,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.253420908593323,
+      "heart_eff": 0.01902
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 6.34,
+      "duration_min": 61.9,
+      "pace": "9:46",
+      "pace_raw": 9.76,
+      "hr": 126,
+      "kcal": 542,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.75605815831987,
+      "heart_eff": 0.01356
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 62.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 80,
+      "kcal": 203,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.225635593220339,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Entrenamiento en",
+      "type": "running",
+      "dist_km": 7.82,
+      "duration_min": 40.1,
+      "pace": "5:08",
+      "pace_raw": 5.133,
+      "hr": 153,
+      "kcal": 518,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.90161892901619,
+      "heart_eff": 0.02122
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 5.37,
+      "duration_min": 35.6,
+      "pace": "6:38",
+      "pace_raw": 6.626,
+      "hr": 144,
+      "kcal": 436,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.252927400468383,
+      "heart_eff": 0.01746
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Intervalos de Sp",
+      "type": "running",
+      "dist_km": 9.59,
+      "duration_min": 50.1,
+      "pace": "5:13",
+      "pace_raw": 5.219,
+      "hr": 156,
+      "kcal": 649,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.96271637816245,
+      "heart_eff": 0.02047
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 56.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 272,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.824120603015076,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 7.91,
+      "duration_min": 40.0,
+      "pace": "5:04",
+      "pace_raw": 5.059,
+      "hr": 160,
+      "kcal": 551,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.76353039134055,
+      "heart_eff": 0.02059
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Entrenamiento en",
+      "type": "running",
+      "dist_km": 7.05,
+      "duration_min": 38.7,
+      "pace": "5:30",
+      "pace_raw": 5.496,
+      "hr": 147,
+      "kcal": 468,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.082616179001722,
+      "heart_eff": 0.02063
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 18.99,
+      "duration_min": 100.2,
+      "pace": "5:16",
+      "pace_raw": 5.275,
+      "hr": 163,
+      "kcal": 1365,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.629555666500249,
+      "heart_eff": 0.01939
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 51.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 237,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.633431085043989,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Medellín - 4 x 1000 m",
+      "type": "running",
+      "dist_km": 9.52,
+      "duration_min": 64.7,
+      "pace": "6:47",
+      "pace_raw": 6.788,
+      "hr": 133,
+      "kcal": 597,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.234338747099768,
+      "heart_eff": 0.01846
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Easy run",
+      "type": "running",
+      "dist_km": 8.26,
+      "duration_min": 46.7,
+      "pace": "5:40",
+      "pace_raw": 5.661,
+      "hr": 142,
+      "kcal": 550,
+      "elevation": null,
+      "points": 0,
+      "effort": 11.768901569186875,
+      "heart_eff": 0.02073
+    },
+    {
+      "date": "2026-07-10",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 63.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 89,
+      "kcal": 269,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.250724255991573,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-11",
+      "name": "Medellín - activaciones",
+      "type": "running",
+      "dist_km": 7.41,
+      "duration_min": 39.6,
+      "pace": "5:21",
+      "pace_raw": 5.346,
+      "hr": 149,
+      "kcal": 493,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.44949494949495,
+      "heart_eff": 0.02092
+    },
+    {
+      "date": "2026-07-12",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 15.44,
+      "duration_min": 69.8,
+      "pace": "4:31",
+      "pace_raw": 4.524,
+      "hr": 162,
+      "kcal": 968,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.861575178997615,
+      "heart_eff": 0.02274
+    },
+    {
+      "date": "2026-07-15",
+      "name": "Progresivo",
+      "type": "running",
+      "dist_km": 7.5,
+      "duration_min": 41.9,
+      "pace": "5:35",
+      "pace_raw": 5.591,
+      "hr": 146,
+      "kcal": 526,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.543720190779016,
+      "heart_eff": 0.02041
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Santa Rosa de Osos - Plan de carrera",
+      "type": "running",
+      "dist_km": 15.12,
+      "duration_min": 98.2,
+      "pace": "6:29",
+      "pace_raw": 6.491,
+      "hr": 145,
+      "kcal": 1080,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.001697792869269,
+      "heart_eff": 0.0177
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 0.89,
+      "duration_min": 40.4,
+      "pace": "—",
+      "pace_raw": 45.555,
+      "hr": 156,
+      "kcal": 547,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.528441879637263,
+      "heart_eff": 0.00235
+    },
+    {
+      "date": "2026-07-22",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 44.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 81,
+      "kcal": 130,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.899628252788104,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 14.22,
+      "duration_min": 73.6,
+      "pace": "5:11",
+      "pace_raw": 5.176,
+      "hr": 156,
+      "kcal": 981,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.328804347826088,
+      "heart_eff": 0.02063
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 4.8,
+      "duration_min": 29.7,
+      "pace": "6:11",
+      "pace_raw": 6.187,
+      "hr": 140,
+      "kcal": 357,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.02020202020202,
+      "heart_eff": 0.01924
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Medellín - Fondo 25K",
+      "type": "running",
+      "dist_km": 23.03,
+      "duration_min": 146.7,
+      "pace": "6:22",
+      "pace_raw": 6.37,
+      "hr": 139,
+      "kcal": 1607,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.951840072694232,
+      "heart_eff": 0.01882
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Running Zona 2 +",
+      "type": "running",
+      "dist_km": 6.9,
+      "duration_min": 36.5,
+      "pace": "5:18",
+      "pace_raw": 5.295,
+      "hr": 150,
+      "kcal": 466,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.755474452554745,
+      "heart_eff": 0.02098
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Tempos Zona 3",
+      "type": "running",
+      "dist_km": 9.5,
+      "duration_min": 46.7,
+      "pace": "4:55",
+      "pace_raw": 4.919,
+      "hr": 159,
+      "kcal": 640,
+      "elevation": null,
+      "points": 0,
+      "effort": 13.69472182596291,
+      "heart_eff": 0.0213
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Medellín - Fondo 28k",
+      "type": "running",
+      "dist_km": 26.02,
+      "duration_min": 144.7,
+      "pace": "5:34",
+      "pace_raw": 5.561,
+      "hr": 151,
+      "kcal": 1788,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.355176782218127,
+      "heart_eff": 0.01985
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 3.01,
+      "duration_min": 17.8,
+      "pace": "5:54",
+      "pace_raw": 5.899,
+      "hr": 153,
+      "kcal": 232,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.058161350844278,
+      "heart_eff": 0.01845
+    },
+    {
+      "date": "2026-08-09",
+      "name": "ZONA 2",
+      "type": "running",
+      "dist_km": 6.06,
+      "duration_min": 30.2,
+      "pace": "4:59",
+      "pace_raw": 4.978,
+      "hr": 0,
+      "kcal": 440,
+      "elevation": null,
+      "points": 0,
+      "effort": 14.585635359116022,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 9.96,
+      "duration_min": 51.9,
+      "pace": "5:13",
+      "pace_raw": 5.21,
+      "hr": 152,
+      "kcal": 670,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.905296950240771,
+      "heart_eff": 0.02104
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Carrera",
+      "type": "running",
+      "dist_km": 6.84,
+      "duration_min": 40.4,
+      "pace": "5:54",
+      "pace_raw": 5.906,
+      "hr": 154,
+      "kcal": 537,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.28659793814433,
+      "heart_eff": 0.01832
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Tempos Zona 3 al",
+      "type": "running",
+      "dist_km": 9.34,
+      "duration_min": 45.0,
+      "pace": "4:49",
+      "pace_raw": 4.816,
+      "hr": 161,
+      "kcal": 630,
+      "elevation": null,
+      "points": 0,
+      "effort": 14.00518710633568,
+      "heart_eff": 0.02148
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Easy Run",
+      "type": "running",
+      "dist_km": 8.72,
+      "duration_min": 45.5,
+      "pace": "5:13",
+      "pace_raw": 5.214,
+      "hr": 156,
+      "kcal": 613,
+      "elevation": null,
+      "points": 0,
+      "effort": 13.482404692082111,
+      "heart_eff": 0.02049
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Medellín - Fondo 32K",
+      "type": "running",
+      "dist_km": 11.73,
+      "duration_min": 68.3,
+      "pace": "5:50",
+      "pace_raw": 5.826,
+      "hr": 141,
+      "kcal": 825,
+      "elevation": 87.0,
+      "points": 0,
+      "effort": 12.076116125884363,
+      "heart_eff": 0.02029
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 21.11,
+      "duration_min": 115.4,
+      "pace": "5:28",
+      "pace_raw": 5.467,
+      "hr": 152,
+      "kcal": 1483,
+      "elevation": 134.0,
+      "points": 0,
+      "effort": 12.850953206239167,
+      "heart_eff": 0.02005
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Medellín - 8*700",
+      "type": "running",
+      "dist_km": 10.32,
+      "duration_min": 49.9,
+      "pace": "4:50",
+      "pace_raw": 4.834,
+      "hr": 153,
+      "kcal": 676,
+      "elevation": 37.0,
+      "points": 0,
+      "effort": 13.547094188376754,
+      "heart_eff": 0.02254
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 0.54,
+      "duration_min": 3.4,
+      "pace": "6:13",
+      "pace_raw": 6.22,
+      "hr": 134,
+      "kcal": 40,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.881188118811881,
+      "heart_eff": 0.01997
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 54.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 93,
+      "kcal": 272,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.987775061124695,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Medellín Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 5.19,
+      "duration_min": 26.2,
+      "pace": "5:03",
+      "pace_raw": 5.042,
+      "hr": 148,
+      "kcal": 345,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.184713375796179,
+      "heart_eff": 0.02232
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Medellín - Running Zona 2",
+      "type": "running",
+      "dist_km": 13.23,
+      "duration_min": 66.3,
+      "pace": "5:01",
+      "pace_raw": 5.014,
+      "hr": 156,
+      "kcal": 939,
+      "elevation": 62.0,
+      "points": 0,
+      "effort": 14.152223059532782,
+      "heart_eff": 0.02131
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 39.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 110,
+      "kcal": 292,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.389287220582033,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Medellín - Ritmos",
+      "type": "running",
+      "dist_km": 6.77,
+      "duration_min": 33.2,
+      "pace": "4:55",
+      "pace_raw": 4.911,
+      "hr": 155,
+      "kcal": 456,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 13.714285714285714,
+      "heart_eff": 0.02189
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Zona 2 + Zona 3",
+      "type": "running",
+      "dist_km": 8.0,
+      "duration_min": 40.0,
+      "pace": "5:00",
+      "pace_raw": 4.994,
+      "hr": 156,
+      "kcal": 550,
+      "elevation": null,
+      "points": 0,
+      "effort": 13.767209011264079,
+      "heart_eff": 0.02138
+    },
+    {
+      "date": "2026-09-05",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 6.88,
+      "duration_min": 40.0,
+      "pace": "5:49",
+      "pace_raw": 5.82,
+      "hr": 135,
+      "kcal": 479,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 11.970012494793837,
+      "heart_eff": 0.02121
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Medellín - Estrategia Maratón",
+      "type": "running",
+      "dist_km": 42.45,
+      "duration_min": 217.1,
+      "pace": "5:07",
+      "pace_raw": 5.114,
+      "hr": 160,
+      "kcal": 2974,
+      "elevation": 238.0,
+      "points": 0,
+      "effort": 13.697704767022337,
+      "heart_eff": 0.02037
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 5.26,
+      "duration_min": 30.1,
+      "pace": "5:44",
+      "pace_raw": 5.726,
+      "hr": 143,
+      "kcal": 374,
+      "elevation": null,
+      "points": 0,
+      "effort": 12.418372993912563,
+      "heart_eff": 0.02036
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Medellín - Easy Run",
+      "type": "running",
+      "dist_km": 7.07,
+      "duration_min": 41.7,
+      "pace": "5:54",
+      "pace_raw": 5.898,
+      "hr": 125,
+      "kcal": 463,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 11.103117505995202,
+      "heart_eff": 0.0226
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 47.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 102,
+      "kcal": 291,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.178343949044586,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Salento - Base",
+      "type": "running",
+      "dist_km": 9.77,
+      "duration_min": 61.0,
+      "pace": "6:15",
+      "pace_raw": 6.248,
+      "hr": 144,
+      "kcal": 764,
+      "elevation": 263.0,
+      "points": 0,
+      "effort": 12.517749863462589,
+      "heart_eff": 0.01852
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 25.6,
+      "sessions": 4,
+      "avg_hr": 148,
+      "avg_pace": 5.036,
+      "total_kcal": 1781,
+      "running": {
+        "km": 25.6,
+        "sessions": 4,
+        "avg_hr": 148,
+        "avg_pace": 5.036
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 15.07,
+      "sessions": 1,
+      "avg_hr": 157,
+      "avg_pace": 5.315,
+      "total_kcal": 1099,
+      "running": {
+        "km": 15.07,
+        "sessions": 1,
+        "avg_hr": 157,
+        "avg_pace": 5.315
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 29.28,
+      "sessions": 4,
+      "avg_hr": 142,
+      "avg_pace": 5.638,
+      "total_kcal": 2109,
+      "running": {
+        "km": 29.28,
+        "sessions": 4,
+        "avg_hr": 142,
+        "avg_pace": 5.638
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 17.5,
+      "sessions": 3,
+      "avg_hr": 146,
+      "avg_pace": 5.426,
+      "total_kcal": 1195,
+      "running": {
+        "km": 17.5,
+        "sessions": 3,
+        "avg_hr": 146,
+        "avg_pace": 5.426
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 36.41,
+      "sessions": 3,
+      "avg_hr": 152,
+      "avg_pace": 4.876,
+      "total_kcal": 2288,
+      "running": {
+        "km": 36.41,
+        "sessions": 3,
+        "avg_hr": 152,
+        "avg_pace": 4.876
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 22.47,
+      "sessions": 3,
+      "avg_hr": 143,
+      "avg_pace": 6.729,
+      "total_kcal": 1608,
+      "running": {
+        "km": 22.47,
+        "sessions": 3,
+        "avg_hr": 143,
+        "avg_pace": 6.729
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 23.97,
+      "sessions": 2,
+      "avg_hr": 148,
+      "avg_pace": 5.228,
+      "total_kcal": 1674,
+      "running": {
+        "km": 23.97,
+        "sessions": 2,
+        "avg_hr": 148,
+        "avg_pace": 5.228
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 25.4,
+      "sessions": 5,
+      "avg_hr": 148,
+      "avg_pace": 5.737,
+      "total_kcal": 2009,
+      "running": {
+        "km": 25.4,
+        "sessions": 5,
+        "avg_hr": 148,
+        "avg_pace": 5.737
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 58,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 22.81,
+      "sessions": 4,
+      "avg_hr": 149,
+      "avg_pace": 5.97,
+      "total_kcal": 1691,
+      "running": {
+        "km": 22.81,
+        "sessions": 4,
+        "avg_hr": 149,
+        "avg_pace": 5.97
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 39,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 51.77,
+      "sessions": 4,
+      "avg_hr": 153,
+      "avg_pace": 5.631,
+      "total_kcal": 3899,
+      "running": {
+        "km": 51.77,
+        "sessions": 4,
+        "avg_hr": 153,
+        "avg_pace": 5.631
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 31.51,
+      "sessions": 3,
+      "avg_hr": 156,
+      "avg_pace": 5.313,
+      "total_kcal": 2310,
+      "running": {
+        "km": 31.51,
+        "sessions": 3,
+        "avg_hr": 156,
+        "avg_pace": 5.313
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 37,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 27.73,
+      "sessions": 4,
+      "avg_hr": 154,
+      "avg_pace": 5.353,
+      "total_kcal": 1917,
+      "running": {
+        "km": 27.73,
+        "sessions": 4,
+        "avg_hr": 154,
+        "avg_pace": 5.353
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 15.93,
+      "sessions": 2,
+      "avg_hr": 142,
+      "avg_pace": 25.267,
+      "total_kcal": 1506,
+      "running": {
+        "km": 15.93,
+        "sessions": 2,
+        "avg_hr": 142,
+        "avg_pace": 25.267
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 14.16,
+      "sessions": 2,
+      "avg_hr": 140,
+      "avg_pace": 7.447,
+      "total_kcal": 1263,
+      "running": {
+        "km": 14.16,
+        "sessions": 2,
+        "avg_hr": 140,
+        "avg_pace": 7.447
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 63,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 14.96,
+      "sessions": 2,
+      "avg_hr": 150,
+      "avg_pace": 5.923,
+      "total_kcal": 1357,
+      "running": {
+        "km": 14.96,
+        "sessions": 2,
+        "avg_hr": 150,
+        "avg_pace": 5.923
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 56,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 33.95,
+      "sessions": 3,
+      "avg_hr": 157,
+      "avg_pace": 5.277,
+      "total_kcal": 2384,
+      "running": {
+        "km": 33.95,
+        "sessions": 3,
+        "avg_hr": 157,
+        "avg_pace": 5.277
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 40.63,
+      "sessions": 4,
+      "avg_hr": 146,
+      "avg_pace": 5.58,
+      "total_kcal": 3114,
+      "running": {
+        "km": 40.63,
+        "sessions": 4,
+        "avg_hr": 146,
+        "avg_pace": 5.58
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 114,
+        "sessions": 2
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 22.62,
+      "sessions": 2,
+      "avg_hr": 146,
+      "avg_pace": 6.041,
+      "total_kcal": 1606,
+      "running": {
+        "km": 22.62,
+        "sessions": 2,
+        "avg_hr": 146,
+        "avg_pace": 6.041
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 15.11,
+      "sessions": 2,
+      "avg_hr": 156,
+      "avg_pace": 25.366,
+      "total_kcal": 1658,
+      "running": {
+        "km": 15.11,
+        "sessions": 2,
+        "avg_hr": 156,
+        "avg_pace": 25.366
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 45,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 27.83,
+      "sessions": 2,
+      "avg_hr": 140,
+      "avg_pace": 6.279,
+      "total_kcal": 1964,
+      "running": {
+        "km": 27.83,
+        "sessions": 2,
+        "avg_hr": 140,
+        "avg_pace": 6.279
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 51.49,
+      "sessions": 5,
+      "avg_hr": 123,
+      "avg_pace": 5.33,
+      "total_kcal": 3566,
+      "running": {
+        "km": 51.49,
+        "sessions": 5,
+        "avg_hr": 123,
+        "avg_pace": 5.33
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 9.96,
+      "sessions": 1,
+      "avg_hr": 152,
+      "avg_pace": 5.21,
+      "total_kcal": 670,
+      "running": {
+        "km": 9.96,
+        "sessions": 1,
+        "avg_hr": 152,
+        "avg_pace": 5.21
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 57.74,
+      "sessions": 5,
+      "avg_hr": 153,
+      "avg_pace": 5.446,
+      "total_kcal": 4088,
+      "running": {
+        "km": 57.74,
+        "sessions": 5,
+        "avg_hr": 153,
+        "avg_pace": 5.446
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 29.28,
+      "sessions": 4,
+      "avg_hr": 148,
+      "avg_pace": 5.277,
+      "total_kcal": 2272,
+      "running": {
+        "km": 29.28,
+        "sessions": 4,
+        "avg_hr": 148,
+        "avg_pace": 5.277
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 54,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 64.1,
+      "sessions": 4,
+      "avg_hr": 152,
+      "avg_pace": 5.21,
+      "total_kcal": 4751,
+      "running": {
+        "km": 64.1,
+        "sessions": 4,
+        "avg_hr": 152,
+        "avg_pace": 5.21
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 40,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 22.1,
+      "sessions": 3,
+      "avg_hr": 137,
+      "avg_pace": 5.957,
+      "total_kcal": 1892,
+      "running": {
+        "km": 22.1,
+        "sessions": 3,
+        "avg_hr": 137,
+        "avg_pace": 5.957
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 47,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    }
+  ],
+  "acwr": {
+    "valor": 0.53,
+    "status": "undertraining",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.95,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.75,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.91,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.81,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.64,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.64,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.78,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.58,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.46,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.75,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.65,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.35,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.59,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.59,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.53,
+          "status": "undertraining"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.95,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.75,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.91,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.81,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.64,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.64,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.78,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.58,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.46,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.75,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.65,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.35,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.59,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.59,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.53,
+          "status": "undertraining"
+        }
+      ],
+      "cycling": [],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.6,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.1,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 2.53,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.89,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.96,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.13,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.68,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.33,
+          "status": "elevated"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 54,
+    "headline": "Resumen semanal; plan pendiente de revisión",
+    "subheadline": "El plan no está incluido en esta entrega",
+    "readiness": 62,
+    "aiVerdict": "Julián, registraste menos running y carga de fuerza elevada. Tus datos también incluyen un maratón del 6 de septiembre, que debe tenerse en cuenta al revisar la planificación de esta semana.",
+    "strengths": [],
+    "warnings": [
+      "Carga de fuerza elevada."
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "22.1 km",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Volumen bajo frente a tu promedio"
+      },
+      {
+        "label": "Ritmo medio running",
+        "value": "5:57/km",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Ritmo más lento esta semana"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "179.9 min",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Carga general reducida"
+      }
+    ],
+    "weeklyPlan": null,
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Monitorea sensaciones al retomar el volumen"
+    },
+    "projection": {
+      "tiempo": "3:35:43",
+      "ritmo": "5:07",
+      "confianza": "media",
+      "contexto": "Estimación basada en tu resultado anterior, sin ajuste por frecuencia cardíaca.",
+      "referencia": "Maratón del 6 de septiembre de 2026 en 3:37:06 (FC 160 bpm)",
+      "notaAltitud": null
+    }
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "partial",
+    "plan": {
+      "title": "Antes de completar tu plan",
+      "description": "Tu PULSE incluye tus sesiones recientes. El plan está pendiente de revisión por la maratón del 6 de septiembre y la carga de fuerza registrada. Tu objetivo de 2027 se mantiene separado de esa carrera reciente."
+    },
+    "followUp": {
+      "question": "¿Ya retomaste tu entrenamiento habitual o sigues recuperándote de la maratón?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta nos ayudará a completar el contexto de tu próxima entrega."
+    }
+  }
+}

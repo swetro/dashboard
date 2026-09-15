@@ -1,0 +1,3271 @@
+{
+  "meta": {
+    "userId": "4778",
+    "nombre": "FABIANA HAEDO",
+    "genero": "Female",
+    "edad": 46,
+    "pais": "ARG",
+    "avatar": "🇦🇷",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "2:53",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "30:04",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "1:01:03",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Maratón de Buenos Aires",
+      "fecha": "2026-09-20",
+      "label": "42K BUE",
+      "diasPrep": 6
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-14T22:49:24.256557Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-18",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 12.04,
+      "duration_min": 85.8,
+      "pace": "7:08",
+      "pace_raw": 7.125,
+      "hr": 140,
+      "kcal": 703,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 8.196657598134474,
+      "heart_eff": 0.01671
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 0.8,
+      "duration_min": 10.2,
+      "pace": "12:48",
+      "pace_raw": 12.796,
+      "hr": 95,
+      "kcal": 39,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 3.8172920065252853,
+      "heart_eff": 0.01371
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 12.29,
+      "duration_min": 96.6,
+      "pace": "7:52",
+      "pace_raw": 7.859,
+      "hr": 131,
+      "kcal": 724,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 7.494824016563148,
+      "heart_eff": 0.01619
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 8.26,
+      "duration_min": 64.8,
+      "pace": "7:51",
+      "pace_raw": 7.856,
+      "hr": 130,
+      "kcal": 490,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 7.555898226676947,
+      "heart_eff": 0.01632
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Lanús - Carrera larga",
+      "type": "running",
+      "dist_km": 11.33,
+      "duration_min": 99.4,
+      "pace": "8:47",
+      "pace_raw": 8.777,
+      "hr": 123,
+      "kcal": 667,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 6.7080120683875295,
+      "heart_eff": 0.01544
+    },
+    {
+      "date": "2026-03-24",
+      "name": "Lanús - Tempo",
+      "type": "running",
+      "dist_km": 13.52,
+      "duration_min": 112.8,
+      "pace": "8:20",
+      "pace_raw": 8.338,
+      "hr": 137,
+      "kcal": 862,
+      "elevation": 74.0,
+      "points": 0,
+      "effort": 7.6452328159645235,
+      "heart_eff": 0.01459
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 1.74,
+      "duration_min": 20.6,
+      "pace": "11:48",
+      "pace_raw": 11.8,
+      "hr": 142,
+      "kcal": 171,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.314424635332253,
+      "heart_eff": 0.00994
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 6.8,
+      "duration_min": 60.4,
+      "pace": "8:52",
+      "pace_raw": 8.875,
+      "hr": 125,
+      "kcal": 420,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 6.95748205411375,
+      "heart_eff": 0.01502
+    },
+    {
+      "date": "2026-03-28",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 10.22,
+      "duration_min": 97.7,
+      "pace": "9:33",
+      "pace_raw": 9.556,
+      "hr": 132,
+      "kcal": 563,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.762538382804504,
+      "heart_eff": 0.01321
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 2.62,
+      "duration_min": 53.9,
+      "pace": "20:34",
+      "pace_raw": 20.561,
+      "hr": 113,
+      "kcal": 235,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.358578052550232,
+      "heart_eff": 0.00717
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 3.9,
+      "duration_min": 30.9,
+      "pace": "7:56",
+      "pace_raw": 7.936,
+      "hr": 146,
+      "kcal": 251,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.118598382749326,
+      "heart_eff": 0.01438
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Lanús - Tempo",
+      "type": "running",
+      "dist_km": 11.9,
+      "duration_min": 128.9,
+      "pace": "10:50",
+      "pace_raw": 10.829,
+      "hr": 116,
+      "kcal": 680,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 5.276089486615803,
+      "heart_eff": 0.01327
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 19.04,
+      "duration_min": 152.1,
+      "pace": "7:59",
+      "pace_raw": 7.991,
+      "hr": 138,
+      "kcal": 1161,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 7.631463628396144,
+      "heart_eff": 0.01511
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.02,
+      "duration_min": 11.5,
+      "pace": "11:16",
+      "pace_raw": 11.264,
+      "hr": 110,
+      "kcal": 50,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 4.341534008683068,
+      "heart_eff": 0.01344
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 7.0,
+      "duration_min": 73.7,
+      "pace": "10:31",
+      "pace_raw": 10.514,
+      "hr": 133,
+      "kcal": 506,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.870332654446707,
+      "heart_eff": 0.01192
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 12.62,
+      "duration_min": 123.5,
+      "pace": "9:47",
+      "pace_raw": 9.783,
+      "hr": 116,
+      "kcal": 723,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 5.855041166149278,
+      "heart_eff": 0.01468
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Lanús - Umbral",
+      "type": "running",
+      "dist_km": 10.06,
+      "duration_min": 68.1,
+      "pace": "6:46",
+      "pace_raw": 6.773,
+      "hr": 153,
+      "kcal": 638,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 9.363992172211349,
+      "heart_eff": 0.01608
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Lanús - Umbral",
+      "type": "running",
+      "dist_km": 7.09,
+      "duration_min": 60.2,
+      "pace": "8:29",
+      "pace_raw": 8.483,
+      "hr": 158,
+      "kcal": 540,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 8.972583771808363,
+      "heart_eff": 0.01243
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 2.0,
+      "duration_min": 33.6,
+      "pace": "16:48",
+      "pace_raw": 16.795,
+      "hr": 87,
+      "kcal": 126,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 3.7444279346210996,
+      "heart_eff": 0.0114
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 6.02,
+      "duration_min": 50.5,
+      "pace": "8:23",
+      "pace_raw": 8.388,
+      "hr": 142,
+      "kcal": 378,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.485148514851486,
+      "heart_eff": 0.01399
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Umbral",
+      "type": "running",
+      "dist_km": 1.07,
+      "duration_min": 10.0,
+      "pace": "9:20",
+      "pace_raw": 9.334,
+      "hr": 144,
+      "kcal": 84,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.414023372287145,
+      "heart_eff": 0.01239
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Ciudad de Buenos Aires - Umbral",
+      "type": "running",
+      "dist_km": 21.3,
+      "duration_min": 134.8,
+      "pace": "6:20",
+      "pace_raw": 6.329,
+      "hr": 162,
+      "kcal": 1308,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 9.70326409495549,
+      "heart_eff": 0.01625
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 6.65,
+      "duration_min": 63.0,
+      "pace": "9:28",
+      "pace_raw": 9.47,
+      "hr": 121,
+      "kcal": 347,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.51231135822081,
+      "heart_eff": 0.01455
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 12.55,
+      "duration_min": 139.6,
+      "pace": "11:07",
+      "pace_raw": 11.121,
+      "hr": 111,
+      "kcal": 753,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 5.39527107714354,
+      "heart_eff": 0.0135
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Ciudad de Buenos Aires - Base",
+      "type": "running",
+      "dist_km": 15.05,
+      "duration_min": 92.0,
+      "pace": "6:07",
+      "pace_raw": 6.111,
+      "hr": 162,
+      "kcal": 913,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 9.927509967379486,
+      "heart_eff": 0.01683
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 8.41,
+      "duration_min": 82.5,
+      "pace": "9:49",
+      "pace_raw": 9.812,
+      "hr": 112,
+      "kcal": 481,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 5.8279483037156705,
+      "heart_eff": 0.01517
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 2.99,
+      "duration_min": 27.0,
+      "pace": "9:03",
+      "pace_raw": 9.043,
+      "hr": 139,
+      "kcal": 214,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.916152897657213,
+      "heart_eff": 0.01325
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Avellaneda Carrera",
+      "type": "running",
+      "dist_km": 1.74,
+      "duration_min": 13.8,
+      "pace": "7:56",
+      "pace_raw": 7.928,
+      "hr": 152,
+      "kcal": 125,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 9.036144578313253,
+      "heart_eff": 0.01383
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Avellaneda Carrera",
+      "type": "running",
+      "dist_km": 4.43,
+      "duration_min": 38.3,
+      "pace": "8:39",
+      "pace_raw": 8.656,
+      "hr": 141,
+      "kcal": 296,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 7.721739130434782,
+      "heart_eff": 0.01365
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 5.97,
+      "duration_min": 52.3,
+      "pace": "8:46",
+      "pace_raw": 8.759,
+      "hr": 140,
+      "kcal": 375,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 7.170172084130019,
+      "heart_eff": 0.01359
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 14.07,
+      "duration_min": 117.1,
+      "pace": "8:19",
+      "pace_raw": 8.324,
+      "hr": 144,
+      "kcal": 952,
+      "elevation": 83.0,
+      "points": 0,
+      "effort": 8.128646648640958,
+      "heart_eff": 0.0139
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 10.74,
+      "duration_min": 87.8,
+      "pace": "8:10",
+      "pace_raw": 8.173,
+      "hr": 134,
+      "kcal": 672,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 7.65375854214123,
+      "heart_eff": 0.01522
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 83.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 100,
+      "kcal": 296,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.547034152186938,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Lanús - Recuperación",
+      "type": "running",
+      "dist_km": 8.65,
+      "duration_min": 77.2,
+      "pace": "8:55",
+      "pace_raw": 8.923,
+      "hr": 127,
+      "kcal": 509,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 6.5918411396503345,
+      "heart_eff": 0.01471
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Avellaneda Carrera",
+      "type": "running",
+      "dist_km": 2.89,
+      "duration_min": 26.6,
+      "pace": "9:13",
+      "pace_raw": 9.212,
+      "hr": 119,
+      "kcal": 171,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 6.424546023794615,
+      "heart_eff": 0.0152
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 5.06,
+      "duration_min": 36.3,
+      "pace": "7:10",
+      "pace_raw": 7.171,
+      "hr": 152,
+      "kcal": 324,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.929719797887001,
+      "heart_eff": 0.01529
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 44.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 105,
+      "kcal": 187,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.164810690423162,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 65.2,
+      "pace": "7:14",
+      "pace_raw": 7.231,
+      "hr": 154,
+      "kcal": 598,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 9.178818112049116,
+      "heart_eff": 0.01497
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 3.15,
+      "duration_min": 35.3,
+      "pace": "11:14",
+      "pace_raw": 11.234,
+      "hr": 109,
+      "kcal": 170,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 4.811320754716981,
+      "heart_eff": 0.01361
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 17.03,
+      "duration_min": 131.2,
+      "pace": "7:42",
+      "pace_raw": 7.702,
+      "hr": 144,
+      "kcal": 1107,
+      "elevation": 67.0,
+      "points": 0,
+      "effort": 8.440716736561189,
+      "heart_eff": 0.01503
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 10.26,
+      "duration_min": 84.6,
+      "pace": "8:15",
+      "pace_raw": 8.246,
+      "hr": 135,
+      "kcal": 644,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 7.6107937758518815,
+      "heart_eff": 0.01497
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.11,
+      "duration_min": 14.0,
+      "pace": "12:34",
+      "pace_raw": 12.563,
+      "hr": 122,
+      "kcal": 76,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 5.428571428571429,
+      "heart_eff": 0.01086
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Ciudad de Buenos Aires - Base",
+      "type": "running",
+      "dist_km": 25.27,
+      "duration_min": 158.2,
+      "pace": "6:16",
+      "pace_raw": 6.262,
+      "hr": 163,
+      "kcal": 1569,
+      "elevation": 31.0,
+      "points": 0,
+      "effort": 9.914691943127963,
+      "heart_eff": 0.01633
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 14.31,
+      "duration_min": 121.6,
+      "pace": "8:30",
+      "pace_raw": 8.498,
+      "hr": 131,
+      "kcal": 880,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 7.238826432684398,
+      "heart_eff": 0.01497
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 8.37,
+      "duration_min": 69.9,
+      "pace": "8:21",
+      "pace_raw": 8.356,
+      "hr": 125,
+      "kcal": 502,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 7.178265014299332,
+      "heart_eff": 0.01595
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Ciudad de Buenos Aires - Carrera larga",
+      "type": "running",
+      "dist_km": 10.12,
+      "duration_min": 65.0,
+      "pace": "6:25",
+      "pace_raw": 6.419,
+      "hr": 158,
+      "kcal": 637,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 9.807544264819091,
+      "heart_eff": 0.01643
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 13.47,
+      "duration_min": 110.8,
+      "pace": "8:13",
+      "pace_raw": 8.223,
+      "hr": 140,
+      "kcal": 879,
+      "elevation": 77.0,
+      "points": 0,
+      "effort": 7.936794582392777,
+      "heart_eff": 0.01448
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.01,
+      "duration_min": 12.4,
+      "pace": "12:13",
+      "pace_raw": 12.211,
+      "hr": 113,
+      "kcal": 63,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 5.09433962264151,
+      "heart_eff": 0.01208
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 15.06,
+      "duration_min": 113.2,
+      "pace": "7:31",
+      "pace_raw": 7.517,
+      "hr": 144,
+      "kcal": 965,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 8.523480052995732,
+      "heart_eff": 0.0154
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 2.56,
+      "duration_min": 16.2,
+      "pace": "6:19",
+      "pace_raw": 6.309,
+      "hr": 156,
+      "kcal": 160,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.896907216494844,
+      "heart_eff": 0.01693
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Carrera larga",
+      "type": "running",
+      "dist_km": 1.65,
+      "duration_min": 13.4,
+      "pace": "8:09",
+      "pace_raw": 8.158,
+      "hr": 138,
+      "kcal": 109,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.104089219330856,
+      "heart_eff": 0.01479
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Lanús - Carrera a intervalos",
+      "type": "running",
+      "dist_km": 12.97,
+      "duration_min": 99.2,
+      "pace": "7:39",
+      "pace_raw": 7.653,
+      "hr": 135,
+      "kcal": 807,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 8.132348001343635,
+      "heart_eff": 0.01613
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 2.31,
+      "duration_min": 25.1,
+      "pace": "10:52",
+      "pace_raw": 10.87,
+      "hr": 122,
+      "kcal": 161,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.418604651162791,
+      "heart_eff": 0.01257
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 75.3,
+      "pace": "8:22",
+      "pace_raw": 8.361,
+      "hr": 126,
+      "kcal": 552,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 7.330677290836654,
+      "heart_eff": 0.01582
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 7.04,
+      "duration_min": 92.9,
+      "pace": "13:12",
+      "pace_raw": 13.197,
+      "hr": 84,
+      "kcal": 349,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 3.756053811659193,
+      "heart_eff": 0.01504
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Ciudad de Buenos Aires - Sprint",
+      "type": "running",
+      "dist_km": 15.97,
+      "duration_min": 120.4,
+      "pace": "7:32",
+      "pace_raw": 7.539,
+      "hr": 153,
+      "kcal": 1037,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 8.611764705882353,
+      "heart_eff": 0.01445
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 1.03,
+      "duration_min": 21.5,
+      "pace": "20:56",
+      "pace_raw": 20.939,
+      "hr": 87,
+      "kcal": 65,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.0279503105590067,
+      "heart_eff": 0.00915
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 12.02,
+      "duration_min": 94.0,
+      "pace": "7:49",
+      "pace_raw": 7.824,
+      "hr": 140,
+      "kcal": 756,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 8.041127459670271,
+      "heart_eff": 0.01521
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 3.6,
+      "duration_min": 21.0,
+      "pace": "5:50",
+      "pace_raw": 5.833,
+      "hr": 152,
+      "kcal": 201,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.571428571428571,
+      "heart_eff": 0.01879
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 15.02,
+      "duration_min": 107.9,
+      "pace": "7:11",
+      "pace_raw": 7.187,
+      "hr": 156,
+      "kcal": 993,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 9.201544401544401,
+      "heart_eff": 0.01487
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 0.66,
+      "duration_min": 6.8,
+      "pace": "10:24",
+      "pace_raw": 10.393,
+      "hr": 133,
+      "kcal": 49,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.153284671532847,
+      "heart_eff": 0.01205
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Carrera a intervalos",
+      "type": "running",
+      "dist_km": 6.91,
+      "duration_min": 40.5,
+      "pace": "5:51",
+      "pace_raw": 5.856,
+      "hr": 155,
+      "kcal": 389,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.608892548373817,
+      "heart_eff": 0.01835
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 7.45,
+      "duration_min": 50.1,
+      "pace": "6:44",
+      "pace_raw": 6.736,
+      "hr": 148,
+      "kcal": 468,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 9.332003988035893,
+      "heart_eff": 0.01672
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 2.06,
+      "duration_min": 14.4,
+      "pace": "6:59",
+      "pace_raw": 6.981,
+      "hr": 145,
+      "kcal": 143,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.942062572421785,
+      "heart_eff": 0.01646
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Lanús - Umbral",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 102.4,
+      "pace": "7:19",
+      "pace_raw": 7.313,
+      "hr": 141,
+      "kcal": 924,
+      "elevation": 50.0,
+      "points": 0,
+      "effort": 9.020501138952163,
+      "heart_eff": 0.01616
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 6.17,
+      "duration_min": 40.0,
+      "pace": "6:29",
+      "pace_raw": 6.483,
+      "hr": 139,
+      "kcal": 368,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.2,
+      "heart_eff": 0.01849
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 3.15,
+      "duration_min": 18.5,
+      "pace": "5:52",
+      "pace_raw": 5.86,
+      "hr": 141,
+      "kcal": 179,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.693140794223828,
+      "heart_eff": 0.02017
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 102.3,
+      "pace": "7:18",
+      "pace_raw": 7.298,
+      "hr": 140,
+      "kcal": 904,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 8.838194557601435,
+      "heart_eff": 0.01631
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Carrera a intervalos",
+      "type": "running",
+      "dist_km": 0.96,
+      "duration_min": 29.7,
+      "pace": "—",
+      "pace_raw": 31.085,
+      "hr": 100,
+      "kcal": 139,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.68013468013468,
+      "heart_eff": 0.00536
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 4.15,
+      "duration_min": 34.0,
+      "pace": "8:12",
+      "pace_raw": 8.193,
+      "hr": 138,
+      "kcal": 286,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.420019627085377,
+      "heart_eff": 0.01473
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Fartlek",
+      "type": "running",
+      "dist_km": 7.27,
+      "duration_min": 50.1,
+      "pace": "6:53",
+      "pace_raw": 6.886,
+      "hr": 155,
+      "kcal": 525,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.482529118136439,
+      "heart_eff": 0.01561
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 18.03,
+      "duration_min": 140.3,
+      "pace": "7:47",
+      "pace_raw": 7.781,
+      "hr": 141,
+      "kcal": 1166,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 8.310762651461154,
+      "heart_eff": 0.01519
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Carrera a intervalos",
+      "type": "running",
+      "dist_km": 5.02,
+      "duration_min": 41.4,
+      "pace": "8:15",
+      "pace_raw": 8.252,
+      "hr": 138,
+      "kcal": 347,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.381642512077295,
+      "heart_eff": 0.01464
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 11.48,
+      "duration_min": 87.3,
+      "pace": "7:36",
+      "pace_raw": 7.607,
+      "hr": 138,
+      "kcal": 742,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 8.49942726231386,
+      "heart_eff": 0.01588
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 6.86,
+      "duration_min": 73.2,
+      "pace": "10:40",
+      "pace_raw": 10.67,
+      "hr": 81,
+      "kcal": 211,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 2.8805460750853245,
+      "heart_eff": 0.01928
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Larga distancia",
+      "type": "running",
+      "dist_km": 2.2,
+      "duration_min": 18.4,
+      "pace": "8:21",
+      "pace_raw": 8.353,
+      "hr": 132,
+      "kcal": 154,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.369565217391305,
+      "heart_eff": 0.01511
+    },
+    {
+      "date": "2026-07-06",
+      "name": "Lanús - Carrera a intervalos",
+      "type": "running",
+      "dist_km": 10.57,
+      "duration_min": 76.1,
+      "pace": "7:12",
+      "pace_raw": 7.2,
+      "hr": 145,
+      "kcal": 699,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 9.181260945709282,
+      "heart_eff": 0.01597
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Lanús - Carrera larga",
+      "type": "running",
+      "dist_km": 17.03,
+      "duration_min": 132.5,
+      "pace": "7:47",
+      "pace_raw": 7.782,
+      "hr": 136,
+      "kcal": 1092,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 8.240472896491006,
+      "heart_eff": 0.01574
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 0.77,
+      "duration_min": 6.6,
+      "pace": "8:32",
+      "pace_raw": 8.532,
+      "hr": 104,
+      "kcal": 31,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 4.696969696969697,
+      "heart_eff": 0.01878
+    },
+    {
+      "date": "2026-07-08",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 6.08,
+      "duration_min": 41.7,
+      "pace": "6:51",
+      "pace_raw": 6.857,
+      "hr": 142,
+      "kcal": 385,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 9.24,
+      "heart_eff": 0.01712
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 9.83,
+      "duration_min": 60.1,
+      "pace": "6:07",
+      "pace_raw": 6.113,
+      "hr": 158,
+      "kcal": 626,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 10.41886269070735,
+      "heart_eff": 0.01725
+    },
+    {
+      "date": "2026-07-11",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 12.04,
+      "duration_min": 71.5,
+      "pace": "5:56",
+      "pace_raw": 5.936,
+      "hr": 158,
+      "kcal": 744,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.41044776119403,
+      "heart_eff": 0.01777
+    },
+    {
+      "date": "2026-07-13",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 12.45,
+      "duration_min": 103.2,
+      "pace": "8:18",
+      "pace_raw": 8.292,
+      "hr": 134,
+      "kcal": 778,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 7.538759689922481,
+      "heart_eff": 0.015
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 13.03,
+      "duration_min": 122.5,
+      "pace": "9:24",
+      "pace_raw": 9.399,
+      "hr": 105,
+      "kcal": 630,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 5.144957125357289,
+      "heart_eff": 0.01689
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 8.58,
+      "duration_min": 68.9,
+      "pace": "8:02",
+      "pace_raw": 8.029,
+      "hr": 137,
+      "kcal": 554,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 8.040638606676342,
+      "heart_eff": 0.01515
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 30.14,
+      "duration_min": 194.8,
+      "pace": "6:28",
+      "pace_raw": 6.464,
+      "hr": 157,
+      "kcal": 1900,
+      "elevation": 57.0,
+      "points": 0,
+      "effort": 9.752759004191976,
+      "heart_eff": 0.01642
+    },
+    {
+      "date": "2026-07-22",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 7.02,
+      "duration_min": 55.8,
+      "pace": "7:57",
+      "pace_raw": 7.948,
+      "hr": 141,
+      "kcal": 450,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 8.069336521219366,
+      "heart_eff": 0.01487
+    },
+    {
+      "date": "2026-07-22",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 3.01,
+      "duration_min": 56.2,
+      "pace": "18:42",
+      "pace_raw": 18.705,
+      "hr": 94,
+      "kcal": 206,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 3.664393714793952,
+      "heart_eff": 0.00948
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 43.5,
+      "pace": "6:12",
+      "pace_raw": 6.2,
+      "hr": 155,
+      "kcal": 433,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.95783825220391,
+      "heart_eff": 0.01734
+    },
+    {
+      "date": "2026-07-27",
+      "name": "Lanús - Fartlek",
+      "type": "running",
+      "dist_km": 10.02,
+      "duration_min": 71.9,
+      "pace": "7:11",
+      "pace_raw": 7.182,
+      "hr": 145,
+      "kcal": 631,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 8.772011121408712,
+      "heart_eff": 0.016
+    },
+    {
+      "date": "2026-07-27",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 2.02,
+      "duration_min": 26.1,
+      "pace": "12:57",
+      "pace_raw": 12.952,
+      "hr": 102,
+      "kcal": 115,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 4.406130268199234,
+      "heart_eff": 0.01261
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Lanús - Tempo",
+      "type": "running",
+      "dist_km": 12.46,
+      "duration_min": 94.9,
+      "pace": "7:37",
+      "pace_raw": 7.618,
+      "hr": 138,
+      "kcal": 812,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 8.556375131717598,
+      "heart_eff": 0.01585
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.1,
+      "duration_min": 14.1,
+      "pace": "12:48",
+      "pace_raw": 12.806,
+      "hr": 119,
+      "kcal": 77,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 5.44811320754717,
+      "heart_eff": 0.01092
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 8.05,
+      "duration_min": 64.3,
+      "pace": "7:59",
+      "pace_raw": 7.992,
+      "hr": 128,
+      "kcal": 483,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 7.5077720207253895,
+      "heart_eff": 0.01629
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 2.44,
+      "duration_min": 27.8,
+      "pace": "11:23",
+      "pace_raw": 11.39,
+      "hr": 111,
+      "kcal": 136,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 4.892086330935252,
+      "heart_eff": 0.01318
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Lanús - Carrera a intervalos",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 47.7,
+      "pace": "6:49",
+      "pace_raw": 6.809,
+      "hr": 144,
+      "kcal": 434,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 9.095354523227384,
+      "heart_eff": 0.01699
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 2.0,
+      "duration_min": 29.0,
+      "pace": "14:31",
+      "pace_raw": 14.516,
+      "hr": 96,
+      "kcal": 114,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 3.9265212399540754,
+      "heart_eff": 0.01196
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 60.9,
+      "pace": "6:45",
+      "pace_raw": 6.751,
+      "hr": 150,
+      "kcal": 571,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 9.383730484798685,
+      "heart_eff": 0.01645
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 3.02,
+      "duration_min": 37.2,
+      "pace": "12:21",
+      "pace_raw": 12.344,
+      "hr": 100,
+      "kcal": 156,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 4.189794091316025,
+      "heart_eff": 0.0135
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Ciudad de Buenos Aires Caminar",
+      "type": "walking",
+      "dist_km": 2.25,
+      "duration_min": 25.5,
+      "pace": "11:20",
+      "pace_raw": 11.334,
+      "hr": 96,
+      "kcal": 116,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 4.551994767822106,
+      "heart_eff": 0.01531
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Lanús - Larga distancia",
+      "type": "running",
+      "dist_km": 8.32,
+      "duration_min": 63.9,
+      "pace": "7:41",
+      "pace_raw": 7.683,
+      "hr": 138,
+      "kcal": 518,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 8.102189781021899,
+      "heart_eff": 0.01572
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 1.61,
+      "duration_min": 21.6,
+      "pace": "13:24",
+      "pace_raw": 13.404,
+      "hr": 90,
+      "kcal": 89,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 4.129930394431554,
+      "heart_eff": 0.01381
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 11.06,
+      "duration_min": 80.8,
+      "pace": "7:19",
+      "pace_raw": 7.31,
+      "hr": 141,
+      "kcal": 694,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 8.587337595380491,
+      "heart_eff": 0.01617
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.68,
+      "duration_min": 27.5,
+      "pace": "16:21",
+      "pace_raw": 16.353,
+      "hr": 107,
+      "kcal": 129,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 4.693753790175864,
+      "heart_eff": 0.00952
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Fartlek",
+      "type": "running",
+      "dist_km": 8.06,
+      "duration_min": 49.9,
+      "pace": "6:12",
+      "pace_raw": 6.196,
+      "hr": 159,
+      "kcal": 504,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.093457943925234,
+      "heart_eff": 0.01691
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Tempo run",
+      "type": "running",
+      "dist_km": 10.46,
+      "duration_min": 60.2,
+      "pace": "5:45",
+      "pace_raw": 5.755,
+      "hr": 151,
+      "kcal": 572,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.504292439767378,
+      "heart_eff": 0.01918
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Lanús - Larga distancia",
+      "type": "running",
+      "dist_km": 14.04,
+      "duration_min": 106.9,
+      "pace": "7:37",
+      "pace_raw": 7.616,
+      "hr": 139,
+      "kcal": 877,
+      "elevation": 78.0,
+      "points": 0,
+      "effort": 8.20265003897116,
+      "heart_eff": 0.01574
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.41,
+      "duration_min": 15.4,
+      "pace": "10:54",
+      "pace_raw": 10.907,
+      "hr": 109,
+      "kcal": 79,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 5.135427952329361,
+      "heart_eff": 0.01402
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 10.63,
+      "duration_min": 89.7,
+      "pace": "8:26",
+      "pace_raw": 8.437,
+      "hr": 140,
+      "kcal": 683,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 7.618516452872281,
+      "heart_eff": 0.01411
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Lanús - Larga distancia",
+      "type": "running",
+      "dist_km": 11.02,
+      "duration_min": 83.8,
+      "pace": "7:36",
+      "pace_raw": 7.607,
+      "hr": 138,
+      "kcal": 676,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 8.066825775656325,
+      "heart_eff": 0.01588
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Carrera a intervalos",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 58.0,
+      "pace": "5:48",
+      "pace_raw": 5.798,
+      "hr": 152,
+      "kcal": 560,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.646856158484066,
+      "heart_eff": 0.01891
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Tempo run",
+      "type": "running",
+      "dist_km": 2.14,
+      "duration_min": 13.5,
+      "pace": "6:19",
+      "pace_raw": 6.309,
+      "hr": 136,
+      "kcal": 118,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.719211822660098,
+      "heart_eff": 0.01942
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Lanús - Carrera larga",
+      "type": "running",
+      "dist_km": 11.02,
+      "duration_min": 83.1,
+      "pace": "7:32",
+      "pace_raw": 7.541,
+      "hr": 137,
+      "kcal": 682,
+      "elevation": 20.0,
+      "points": 0,
+      "effort": 8.210272873194222,
+      "heart_eff": 0.01613
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 2.84,
+      "duration_min": 32.4,
+      "pace": "11:24",
+      "pace_raw": 11.403,
+      "hr": 94,
+      "kcal": 146,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 4.513137557959815,
+      "heart_eff": 0.01554
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Tempo run",
+      "type": "running",
+      "dist_km": 10.09,
+      "duration_min": 66.8,
+      "pace": "6:37",
+      "pace_raw": 6.617,
+      "hr": 149,
+      "kcal": 589,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.817365269461078,
+      "heart_eff": 0.0169
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 5.88,
+      "duration_min": 49.1,
+      "pace": "8:21",
+      "pace_raw": 8.35,
+      "hr": 142,
+      "kcal": 394,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 8.024439918533604,
+      "heart_eff": 0.01406
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Lanús - Sesión de entrenamiento de carr",
+      "type": "running",
+      "dist_km": 20.01,
+      "duration_min": 146.1,
+      "pace": "7:18",
+      "pace_raw": 7.302,
+      "hr": 140,
+      "kcal": 1242,
+      "elevation": 53.0,
+      "points": 0,
+      "effort": 8.501996577296064,
+      "heart_eff": 0.0163
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 4.51,
+      "duration_min": 30.0,
+      "pace": "6:39",
+      "pace_raw": 6.655,
+      "hr": 144,
+      "kcal": 268,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.938299055030573,
+      "heart_eff": 0.01739
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 21.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 112,
+      "kcal": 114,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.432883240667196,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Avellaneda - Sesión de entrenamiento de carr",
+      "type": "running",
+      "dist_km": 1.59,
+      "duration_min": 13.5,
+      "pace": "8:31",
+      "pace_raw": 8.519,
+      "hr": 126,
+      "kcal": 101,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 7.463054187192118,
+      "heart_eff": 0.01552
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Avellaneda Carrera",
+      "type": "running",
+      "dist_km": 1.55,
+      "duration_min": 17.8,
+      "pace": "11:29",
+      "pace_raw": 11.488,
+      "hr": 124,
+      "kcal": 96,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 5.403377110694184,
+      "heart_eff": 0.01169
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 21.31,
+      "duration_min": 131.6,
+      "pace": "6:10",
+      "pace_raw": 6.174,
+      "hr": 164,
+      "kcal": 1356,
+      "elevation": 66.0,
+      "points": 0,
+      "effort": 10.307867730900798,
+      "heart_eff": 0.01646
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Lanús - Trote suave",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 100.4,
+      "pace": "8:22",
+      "pace_raw": 8.362,
+      "hr": 133,
+      "kcal": 740,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 7.370517928286852,
+      "heart_eff": 0.01498
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Avellaneda Caminar",
+      "type": "walking",
+      "dist_km": 1.85,
+      "duration_min": 20.7,
+      "pace": "11:11",
+      "pace_raw": 11.191,
+      "hr": 107,
+      "kcal": 99,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 4.77491961414791,
+      "heart_eff": 0.01391
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Lanús - Carrera a intervalos",
+      "type": "running",
+      "dist_km": 7.12,
+      "duration_min": 59.2,
+      "pace": "8:19",
+      "pace_raw": 8.31,
+      "hr": 132,
+      "kcal": 452,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 7.63943661971831,
+      "heart_eff": 0.01519
+    },
+    {
+      "date": "2026-08-31",
+      "name": "Lanús - Interval Run",
+      "type": "running",
+      "dist_km": 7.02,
+      "duration_min": 61.7,
+      "pace": "8:47",
+      "pace_raw": 8.784,
+      "hr": 129,
+      "kcal": 444,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 7.19611021069692,
+      "heart_eff": 0.01471
+    },
+    {
+      "date": "2026-08-31",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.54,
+      "duration_min": 18.7,
+      "pace": "12:08",
+      "pace_raw": 12.136,
+      "hr": 110,
+      "kcal": 93,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 4.9644128113879,
+      "heart_eff": 0.01248
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 6.48,
+      "duration_min": 54.8,
+      "pace": "8:27",
+      "pace_raw": 8.445,
+      "hr": 142,
+      "kcal": 429,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 7.835616438356165,
+      "heart_eff": 0.0139
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 11.04,
+      "duration_min": 96.1,
+      "pace": "8:42",
+      "pace_raw": 8.7,
+      "hr": 132,
+      "kcal": 693,
+      "elevation": 31.0,
+      "points": 0,
+      "effort": 7.213740458015267,
+      "heart_eff": 0.01452
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 0.78,
+      "duration_min": 6.8,
+      "pace": "8:39",
+      "pace_raw": 8.646,
+      "hr": 136,
+      "kcal": 56,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.296296296296296,
+      "heart_eff": 0.01416
+    },
+    {
+      "date": "2026-09-05",
+      "name": "Lanús - Base",
+      "type": "running",
+      "dist_km": 6.31,
+      "duration_min": 57.1,
+      "pace": "9:03",
+      "pace_raw": 9.056,
+      "hr": 133,
+      "kcal": 420,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 7.355516637478108,
+      "heart_eff": 0.01383
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 12.03,
+      "duration_min": 113.1,
+      "pace": "9:24",
+      "pace_raw": 9.402,
+      "hr": 108,
+      "kcal": 640,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 5.657041838538597,
+      "heart_eff": 0.01641
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 3.21,
+      "duration_min": 20.0,
+      "pace": "6:14",
+      "pace_raw": 6.227,
+      "hr": 144,
+      "kcal": 181,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.05,
+      "heart_eff": 0.01858
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Lanús - Tempo run",
+      "type": "running",
+      "dist_km": 14.55,
+      "duration_min": 115.2,
+      "pace": "7:55",
+      "pace_raw": 7.918,
+      "hr": 144,
+      "kcal": 943,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 8.18576388888889,
+      "heart_eff": 0.01462
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Lanús Caminar",
+      "type": "walking",
+      "dist_km": 1.53,
+      "duration_min": 24.9,
+      "pace": "16:14",
+      "pace_raw": 16.231,
+      "hr": 97,
+      "kcal": 101,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 4.061662198391421,
+      "heart_eff": 0.01059
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Lanús - Sesión tempo",
+      "type": "running",
+      "dist_km": 19.01,
+      "duration_min": 157.2,
+      "pace": "8:16",
+      "pace_raw": 8.273,
+      "hr": 134,
+      "kcal": 1154,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 7.339410642357431,
+      "heart_eff": 0.01503
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Umbral",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 58.2,
+      "pace": "5:49",
+      "pace_raw": 5.813,
+      "hr": 157,
+      "kcal": 581,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.97995991983968,
+      "heart_eff": 0.01826
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Lanús Carrera",
+      "type": "running",
+      "dist_km": 11.27,
+      "duration_min": 109.5,
+      "pace": "9:43",
+      "pace_raw": 9.713,
+      "hr": 111,
+      "kcal": 649,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 5.928745432399513,
+      "heart_eff": 0.01546
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 43.92,
+      "sessions": 4,
+      "avg_hr": 131,
+      "avg_pace": 7.904,
+      "total_kcal": 2623,
+      "running": {
+        "km": 43.92,
+        "sessions": 4,
+        "avg_hr": 131,
+        "avg_pace": 7.904
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 32.28,
+      "sessions": 4,
+      "avg_hr": 134,
+      "avg_pace": 9.642,
+      "total_kcal": 2016,
+      "running": {
+        "km": 32.28,
+        "sessions": 4,
+        "avg_hr": 134,
+        "avg_pace": 9.642
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 37.46,
+      "sessions": 4,
+      "avg_hr": 128,
+      "avg_pace": 11.829,
+      "total_kcal": 2377,
+      "running": {
+        "km": 37.46,
+        "sessions": 4,
+        "avg_hr": 128,
+        "avg_pace": 11.829
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 29.68,
+      "sessions": 3,
+      "avg_hr": 134,
+      "avg_pace": 9.023,
+      "total_kcal": 1867,
+      "running": {
+        "km": 29.68,
+        "sessions": 3,
+        "avg_hr": 134,
+        "avg_pace": 9.023
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 35.48,
+      "sessions": 4,
+      "avg_hr": 152,
+      "avg_pace": 8.133,
+      "total_kcal": 2436,
+      "running": {
+        "km": 35.48,
+        "sessions": 4,
+        "avg_hr": 152,
+        "avg_pace": 8.133
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 34.25,
+      "sessions": 3,
+      "avg_hr": 131,
+      "avg_pace": 8.901,
+      "total_kcal": 2013,
+      "running": {
+        "km": 34.25,
+        "sessions": 3,
+        "avg_hr": 131,
+        "avg_pace": 8.901
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 37.61,
+      "sessions": 6,
+      "avg_hr": 138,
+      "avg_pace": 8.754,
+      "total_kcal": 2443,
+      "running": {
+        "km": 37.61,
+        "sessions": 6,
+        "avg_hr": 138,
+        "avg_pace": 8.754
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 36.35,
+      "sessions": 5,
+      "avg_hr": 137,
+      "avg_pace": 8.142,
+      "total_kcal": 2927,
+      "running": {
+        "km": 36.35,
+        "sessions": 5,
+        "avg_hr": 137,
+        "avg_pace": 8.142
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 128,
+        "sessions": 2
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 52.56,
+      "sessions": 3,
+      "avg_hr": 147,
+      "avg_pace": 7.403,
+      "total_kcal": 3396,
+      "running": {
+        "km": 52.56,
+        "sessions": 3,
+        "avg_hr": 147,
+        "avg_pace": 7.403
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 22.68,
+      "sessions": 2,
+      "avg_hr": 128,
+      "avg_pace": 8.427,
+      "total_kcal": 1382,
+      "running": {
+        "km": 22.68,
+        "sessions": 2,
+        "avg_hr": 128,
+        "avg_pace": 8.427
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 41.21,
+      "sessions": 4,
+      "avg_hr": 150,
+      "avg_pace": 7.117,
+      "total_kcal": 2704,
+      "running": {
+        "km": 41.21,
+        "sessions": 4,
+        "avg_hr": 150,
+        "avg_pace": 7.117
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 41.91,
+      "sessions": 5,
+      "avg_hr": 135,
+      "avg_pace": 8.516,
+      "total_kcal": 3015,
+      "running": {
+        "km": 41.91,
+        "sessions": 5,
+        "avg_hr": 135,
+        "avg_pace": 8.516
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 13.05,
+      "sessions": 2,
+      "avg_hr": 114,
+      "avg_pace": 14.381,
+      "total_kcal": 821,
+      "running": {
+        "km": 13.05,
+        "sessions": 2,
+        "avg_hr": 114,
+        "avg_pace": 14.381
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 49.05,
+      "sessions": 6,
+      "avg_hr": 150,
+      "avg_pace": 6.651,
+      "total_kcal": 3167,
+      "running": {
+        "km": 49.05,
+        "sessions": 6,
+        "avg_hr": 150,
+        "avg_pace": 6.651
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 28.44,
+      "sessions": 5,
+      "avg_hr": 132,
+      "avg_pace": 11.784,
+      "total_kcal": 1876,
+      "running": {
+        "km": 28.44,
+        "sessions": 5,
+        "avg_hr": 132,
+        "avg_pace": 11.784
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 44.0,
+      "sessions": 5,
+      "avg_hr": 141,
+      "avg_pace": 7.776,
+      "total_kcal": 3145,
+      "running": {
+        "km": 44.0,
+        "sessions": 5,
+        "avg_hr": 141,
+        "avg_pace": 7.776
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 55.55,
+      "sessions": 5,
+      "avg_hr": 148,
+      "avg_pace": 6.778,
+      "total_kcal": 3577,
+      "running": {
+        "km": 55.55,
+        "sessions": 5,
+        "avg_hr": 148,
+        "avg_pace": 6.778
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 64.2,
+      "sessions": 4,
+      "avg_hr": 133,
+      "avg_pace": 8.046,
+      "total_kcal": 3862,
+      "running": {
+        "km": 64.2,
+        "sessions": 4,
+        "avg_hr": 133,
+        "avg_pace": 8.046
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 14.03,
+      "sessions": 2,
+      "avg_hr": 148,
+      "avg_pace": 7.074,
+      "total_kcal": 1089,
+      "running": {
+        "km": 14.03,
+        "sessions": 2,
+        "avg_hr": 148,
+        "avg_pace": 7.074
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 46.55,
+      "sessions": 5,
+      "avg_hr": 141,
+      "avg_pace": 7.27,
+      "total_kcal": 3645,
+      "running": {
+        "km": 46.55,
+        "sessions": 5,
+        "avg_hr": 141,
+        "avg_pace": 7.27
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 11
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 62.57,
+      "sessions": 6,
+      "avg_hr": 145,
+      "avg_pace": 7.166,
+      "total_kcal": 4145,
+      "running": {
+        "km": 62.57,
+        "sessions": 6,
+        "avg_hr": 145,
+        "avg_pace": 7.166
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 50.16,
+      "sessions": 6,
+      "avg_hr": 142,
+      "avg_pace": 7.037,
+      "total_kcal": 3165,
+      "running": {
+        "km": 50.16,
+        "sessions": 6,
+        "avg_hr": 142,
+        "avg_pace": 7.037
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 48.97,
+      "sessions": 5,
+      "avg_hr": 140,
+      "avg_pace": 8.028,
+      "total_kcal": 3177,
+      "running": {
+        "km": 48.97,
+        "sessions": 5,
+        "avg_hr": 140,
+        "avg_pace": 8.028
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 21,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 19.13,
+      "sessions": 2,
+      "avg_hr": 132,
+      "avg_pace": 8.336,
+      "total_kcal": 1291,
+      "running": {
+        "km": 19.13,
+        "sessions": 2,
+        "avg_hr": 132,
+        "avg_pace": 8.336
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 43.66,
+      "sessions": 6,
+      "avg_hr": 130,
+      "avg_pace": 8.839,
+      "total_kcal": 2775,
+      "running": {
+        "km": 43.66,
+        "sessions": 6,
+        "avg_hr": 130,
+        "avg_pace": 8.839
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 58.05,
+      "sessions": 5,
+      "avg_hr": 138,
+      "avg_pace": 7.589,
+      "total_kcal": 3609,
+      "running": {
+        "km": 58.05,
+        "sessions": 5,
+        "avg_hr": 138,
+        "avg_pace": 7.589
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    }
+  ],
+  "acwr": {
+    "valor": 1.31,
+    "status": "elevated",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.3,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.7,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.05,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.11,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.4,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.31,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.85,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.4,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.22,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.38,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.19,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.3,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.05,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.91,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.46,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.05,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.31,
+          "status": "elevated"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.32,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.61,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.09,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.06,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.43,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.35,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.88,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.34,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.26,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.32,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.33,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.13,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.95,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.43,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.08,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.34,
+          "status": "elevated"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.08,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 83,
+    "headline": "Semana de mayor carga antes de la maratón",
+    "subheadline": "Aumento marcado de volumen y ritmo más rápido",
+    "readiness": 82,
+    "aiVerdict": "Fabiana, esta semana aumentaste el volumen de running y el tiempo total de entrenamiento respecto al promedio reciente, con un ritmo medio más rápido. La carga de running está elevada y merece atención en estos días previos al Maratón de Buenos Aires. El plan reduce el volumen de entrenamiento y prioriza el descanso, con el objetivo de favorecer la recuperación antes de la carrera.",
+    "strengths": [
+      "Ritmo medio más rápido que el promedio reciente"
+    ],
+    "warnings": [
+      "Carga aguda de running elevada, atención a señales de fatiga"
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "58.05 km",
+        "trend": "up",
+        "status": "yellow",
+        "note": "Aumento considerable respecto a tu promedio"
+      },
+      {
+        "label": "Ritmo medio running",
+        "value": "7:35/km",
+        "trend": "up",
+        "status": "green",
+        "note": "Más rápido que semanas previas"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "485 min",
+        "trend": "up",
+        "status": "yellow",
+        "note": "Carga global elevada"
+      }
+    ],
+    "weeklyPlan": {
+      "week": "2026-09-14/2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "objective": "Reducir volumen y favorecer la recuperación pre-maratón",
+      "rationale": "Vienes de una semana con carga alta y ritmo más rápido, por lo que ahora es clave bajar el volumen y priorizar el descanso para llegar fresca a la carrera. El plan limita las sesiones y la intensidad, enfocándose en mantener la movilidad y la confianza sin sumar fatiga.",
+      "summary": {
+        "totalKm": 50.2,
+        "runningSessions": 3,
+        "strengthSessions": 0
+      },
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Lun",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prioriza hidratación y sueño.",
+          "purpose": "Recuperación tras una semana de carga elevada"
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Mar",
+          "type": "Easy run",
+          "km": "4.5 km",
+          "notes": "Ritmo cómodo, no más rápido que 7:00/km, solo para soltar las piernas.",
+          "purpose": "Mantener movilidad y sensaciones positivas"
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Mié",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Sin running, puedes hacer movilidad suave si lo sientes necesario.",
+          "purpose": "Promover recuperación y frescura"
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Jue",
+          "type": "Easy run",
+          "km": "3.5 km",
+          "notes": "Ritmo relajado, igual o más lento que 7:00/km.",
+          "purpose": "Activar sin acumular fatiga"
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Vie",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prepárate mentalmente para la carrera.",
+          "purpose": "Maximizar descanso previo al evento"
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sáb",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Solo movilidad ligera si lo necesitas, evita esfuerzos.",
+          "purpose": "Llegar con energía al día de la carrera"
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Dom",
+          "type": "Carrera: Maratón de Buenos Aires",
+          "km": "42.195 km",
+          "notes": "Disfruta la carrera, hidrátate bien y regula el esfuerzo según sensaciones.",
+          "purpose": "Competir en tu objetivo principal del ciclo"
+        }
+      ]
+    },
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Reduce la carga esta semana y prioriza el descanso antes de la carrera"
+    },
+    "projection": {
+      "tiempo": "4:31:29",
+      "ritmo": "6:26",
+      "confianza": "media",
+      "contexto": "Estimación basada en tu resultado anterior, sin ajuste por frecuencia cardíaca.",
+      "referencia": "Media maratón del 23 de agosto de 2026 en 2:11:36 (FC 164 bpm)",
+      "notaAltitud": null
+    }
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "complete"
+  }
+}

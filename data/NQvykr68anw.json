@@ -1,0 +1,2790 @@
+{
+  "meta": {
+    "userId": "26786",
+    "nombre": "JOSÉ LUIS PEREZ",
+    "genero": "Male",
+    "edad": 52,
+    "pais": "ARG",
+    "avatar": "🇦🇷",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:09",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "23:03",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "46:57",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Mejorar tiempo en media maratón",
+      "fecha": "2027-08-23",
+      "label": "21K",
+      "diasPrep": 343
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-15T02:43:40.584449Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-16",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 3.84,
+      "duration_min": 20.0,
+      "pace": "5:13",
+      "pace_raw": 5.215,
+      "hr": 120,
+      "kcal": 242,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 12.1,
+      "heart_eff": 0.02662
+    },
+    {
+      "date": "2026-03-17",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 40.3,
+      "pace": "5:02",
+      "pace_raw": 5.029,
+      "hr": 122,
+      "kcal": 500,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 12.412081092263136,
+      "heart_eff": 0.02716
+    },
+    {
+      "date": "2026-03-18",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 8.39,
+      "duration_min": 45.0,
+      "pace": "5:22",
+      "pace_raw": 5.361,
+      "hr": 137,
+      "kcal": 611,
+      "elevation": 109.0,
+      "points": 0,
+      "effort": 13.577777777777778,
+      "heart_eff": 0.02269
+    },
+    {
+      "date": "2026-03-22",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 40.4,
+      "pace": "5:03",
+      "pace_raw": 5.046,
+      "hr": 116,
+      "kcal": 473,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 11.698268755152515,
+      "heart_eff": 0.02847
+    },
+    {
+      "date": "2026-03-24",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 50.8,
+      "pace": "5:05",
+      "pace_raw": 5.079,
+      "hr": 135,
+      "kcal": 678,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 13.337704918032786,
+      "heart_eff": 0.0243
+    },
+    {
+      "date": "2026-03-25",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.74,
+      "duration_min": 43.3,
+      "pace": "9:09",
+      "pace_raw": 9.143,
+      "hr": 93,
+      "kcal": 321,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 7.410542516352443,
+      "heart_eff": 0.01959
+    },
+    {
+      "date": "2026-03-29",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 51.7,
+      "pace": "5:10",
+      "pace_raw": 5.163,
+      "hr": 113,
+      "kcal": 651,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 12.600000000000001,
+      "heart_eff": 0.02856
+    },
+    {
+      "date": "2026-04-03",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 11.01,
+      "duration_min": 55.6,
+      "pace": "5:03",
+      "pace_raw": 5.052,
+      "hr": 136,
+      "kcal": 756,
+      "elevation": 43.0,
+      "points": 0,
+      "effort": 13.593047647587653,
+      "heart_eff": 0.02425
+    },
+    {
+      "date": "2026-04-06",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.31,
+      "duration_min": 18.1,
+      "pace": "4:11",
+      "pace_raw": 4.191,
+      "hr": 129,
+      "kcal": 241,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.339483394833948,
+      "heart_eff": 0.03082
+    },
+    {
+      "date": "2026-04-12",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 51.2,
+      "pace": "5:07",
+      "pace_raw": 5.114,
+      "hr": 143,
+      "kcal": 714,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 13.949853467925758,
+      "heart_eff": 0.02279
+    },
+    {
+      "date": "2026-04-13",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.18,
+      "duration_min": 17.4,
+      "pace": "4:10",
+      "pace_raw": 4.159,
+      "hr": 116,
+      "kcal": 197,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 11.332694151486098,
+      "heart_eff": 0.03452
+    },
+    {
+      "date": "2026-04-15",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 12.0,
+      "duration_min": 62.4,
+      "pace": "5:12",
+      "pace_raw": 5.194,
+      "hr": 143,
+      "kcal": 861,
+      "elevation": 39.0,
+      "points": 0,
+      "effort": 13.809141940657577,
+      "heart_eff": 0.02244
+    },
+    {
+      "date": "2026-04-16",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.82,
+      "duration_min": 40.0,
+      "pace": "5:52",
+      "pace_raw": 5.865,
+      "hr": 122,
+      "kcal": 490,
+      "elevation": 143.0,
+      "points": 0,
+      "effort": 12.25,
+      "heart_eff": 0.02329
+    },
+    {
+      "date": "2026-04-19",
+      "name": "San Javier - 5' ec + 8 x 400 mts + 5' vc",
+      "type": "running",
+      "dist_km": 5.51,
+      "duration_min": 29.6,
+      "pace": "5:22",
+      "pace_raw": 5.359,
+      "hr": 142,
+      "kcal": 406,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 13.739424703891709,
+      "heart_eff": 0.02189
+    },
+    {
+      "date": "2026-04-19",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 18.01,
+      "duration_min": 93.9,
+      "pace": "5:13",
+      "pace_raw": 5.216,
+      "hr": 116,
+      "kcal": 1181,
+      "elevation": 59.0,
+      "points": 0,
+      "effort": 12.572746628814762,
+      "heart_eff": 0.02754
+    },
+    {
+      "date": "2026-04-20",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 7.73,
+      "duration_min": 45.4,
+      "pace": "5:52",
+      "pace_raw": 5.868,
+      "hr": 113,
+      "kcal": 495,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 10.911094783247611,
+      "heart_eff": 0.02513
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 76.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 85,
+      "kcal": 380,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.9684027021137505,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 83.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 507,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.059760956175299,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-25",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 61.2,
+      "pace": "5:06",
+      "pace_raw": 5.097,
+      "hr": 122,
+      "kcal": 765,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 12.5,
+      "heart_eff": 0.0268
+    },
+    {
+      "date": "2026-04-26",
+      "name": "San Javier - Pasadas 5' ec + 10 x 400 mts x 1",
+      "type": "running",
+      "dist_km": 6.7,
+      "duration_min": 36.2,
+      "pace": "5:25",
+      "pace_raw": 5.409,
+      "hr": 132,
+      "kcal": 460,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 12.695492180312787,
+      "heart_eff": 0.02333
+    },
+    {
+      "date": "2026-04-27",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.2,
+      "duration_min": 30.1,
+      "pace": "5:47",
+      "pace_raw": 5.776,
+      "hr": 118,
+      "kcal": 333,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 11.08153078202995,
+      "heart_eff": 0.02446
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 79.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 93,
+      "kcal": 443,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.596967782691093,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 80.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 97,
+      "kcal": 501,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.244287494806813,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-30",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.69,
+      "duration_min": 25.0,
+      "pace": "5:20",
+      "pace_raw": 5.329,
+      "hr": 117,
+      "kcal": 295,
+      "elevation": 72.0,
+      "points": 0,
+      "effort": 11.8,
+      "heart_eff": 0.02673
+    },
+    {
+      "date": "2026-04-30",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 62.7,
+      "pace": "5:13",
+      "pace_raw": 5.22,
+      "hr": 113,
+      "kcal": 744,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 11.869183727731986,
+      "heart_eff": 0.02825
+    },
+    {
+      "date": "2026-05-01",
+      "name": "San Javier - Pasadas 10' ec + 12 x (0,400 mts",
+      "type": "running",
+      "dist_km": 8.39,
+      "duration_min": 46.9,
+      "pace": "5:35",
+      "pace_raw": 5.584,
+      "hr": 126,
+      "kcal": 565,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 12.055476529160739,
+      "heart_eff": 0.02368
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Santa María Carrera",
+      "type": "running",
+      "dist_km": 20.01,
+      "duration_min": 108.3,
+      "pace": "5:25",
+      "pace_raw": 5.411,
+      "hr": 129,
+      "kcal": 1348,
+      "elevation": 183.0,
+      "points": 0,
+      "effort": 12.450738916256158,
+      "heart_eff": 0.02388
+    },
+    {
+      "date": "2026-05-04",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.61,
+      "duration_min": 25.0,
+      "pace": "5:25",
+      "pace_raw": 5.421,
+      "hr": 115,
+      "kcal": 280,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 11.2,
+      "heart_eff": 0.02672
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 67.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 94,
+      "kcal": 391,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.789733464955578,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 76.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 83,
+      "kcal": 333,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.346312812703938,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-09",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 50.9,
+      "pace": "5:05",
+      "pace_raw": 5.088,
+      "hr": 134,
+      "kcal": 678,
+      "elevation": 32.0,
+      "points": 0,
+      "effort": 13.31151832460733,
+      "heart_eff": 0.02444
+    },
+    {
+      "date": "2026-05-10",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 22.01,
+      "duration_min": 114.4,
+      "pace": "5:12",
+      "pace_raw": 5.2,
+      "hr": 129,
+      "kcal": 1451,
+      "elevation": 69.0,
+      "points": 0,
+      "effort": 12.679871832216719,
+      "heart_eff": 0.02484
+    },
+    {
+      "date": "2026-05-11",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.78,
+      "duration_min": 25.1,
+      "pace": "5:15",
+      "pace_raw": 5.252,
+      "hr": 115,
+      "kcal": 282,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 11.242524916943522,
+      "heart_eff": 0.02759
+    },
+    {
+      "date": "2026-05-12",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 49.8,
+      "pace": "4:59",
+      "pace_raw": 4.978,
+      "hr": 119,
+      "kcal": 610,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 12.240802675585284,
+      "heart_eff": 0.02813
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 79.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 465,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.850283078213462,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-13",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.73,
+      "duration_min": 30.0,
+      "pace": "5:14",
+      "pace_raw": 5.242,
+      "hr": 123,
+      "kcal": 385,
+      "elevation": 112.0,
+      "points": 0,
+      "effort": 12.826207662409773,
+      "heart_eff": 0.02585
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 78.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 101,
+      "kcal": 517,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.598596043395023,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-16",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.54,
+      "duration_min": 50.5,
+      "pace": "4:48",
+      "pace_raw": 4.794,
+      "hr": 127,
+      "kcal": 707,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 13.986152324431258,
+      "heart_eff": 0.02737
+    },
+    {
+      "date": "2026-05-17",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 3.01,
+      "duration_min": 12.9,
+      "pace": "4:16",
+      "pace_raw": 4.272,
+      "hr": 121,
+      "kcal": 167,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 12.979274611398964,
+      "heart_eff": 0.03221
+    },
+    {
+      "date": "2026-05-18",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.03,
+      "duration_min": 35.1,
+      "pace": "5:49",
+      "pace_raw": 5.814,
+      "hr": 107,
+      "kcal": 380,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 10.836501901140684,
+      "heart_eff": 0.02679
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 74.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 87,
+      "kcal": 411,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.4897595725734645,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 80.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 82,
+      "kcal": 369,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.6019538557472455,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-23",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 76.0,
+      "pace": "5:26",
+      "pace_raw": 5.427,
+      "hr": 127,
+      "kcal": 962,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 12.655119491339619,
+      "heart_eff": 0.02418
+    },
+    {
+      "date": "2026-05-24",
+      "name": "San Javier - 15' ec + 4 x 1000 mts x 2' recup",
+      "type": "running",
+      "dist_km": 12.7,
+      "duration_min": 69.7,
+      "pace": "5:29",
+      "pace_raw": 5.489,
+      "hr": 123,
+      "kcal": 842,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 12.074569789674952,
+      "heart_eff": 0.02468
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 79.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 93,
+      "kcal": 466,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.8875552747946935,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 77.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 107,
+      "kcal": 600,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.730298475413357,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-28",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 15.08,
+      "duration_min": 81.5,
+      "pace": "5:24",
+      "pace_raw": 5.405,
+      "hr": 122,
+      "kcal": 1014,
+      "elevation": 50.0,
+      "points": 0,
+      "effort": 12.436631234668848,
+      "heart_eff": 0.02528
+    },
+    {
+      "date": "2026-05-30",
+      "name": "San Javier - 15' ec + 4 x 1000 mts x 2' recup",
+      "type": "running",
+      "dist_km": 13.89,
+      "duration_min": 76.2,
+      "pace": "5:29",
+      "pace_raw": 5.483,
+      "hr": 124,
+      "kcal": 920,
+      "elevation": 43.0,
+      "points": 0,
+      "effort": 12.07613213738788,
+      "heart_eff": 0.02451
+    },
+    {
+      "date": "2026-06-01",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 3.18,
+      "duration_min": 14.0,
+      "pace": "4:25",
+      "pace_raw": 4.409,
+      "hr": 114,
+      "kcal": 154,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 11.0,
+      "heart_eff": 0.03315
+    },
+    {
+      "date": "2026-06-14",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 76.0,
+      "pace": "5:26",
+      "pace_raw": 5.427,
+      "hr": 112,
+      "kcal": 899,
+      "elevation": 51.0,
+      "points": 0,
+      "effort": 11.826353869765402,
+      "heart_eff": 0.02741
+    },
+    {
+      "date": "2026-06-17",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.19,
+      "duration_min": 25.0,
+      "pace": "5:58",
+      "pace_raw": 5.969,
+      "hr": 111,
+      "kcal": 274,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 10.96,
+      "heart_eff": 0.02514
+    },
+    {
+      "date": "2026-06-21",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 65.8,
+      "pace": "5:29",
+      "pace_raw": 5.479,
+      "hr": 113,
+      "kcal": 748,
+      "elevation": 42.0,
+      "points": 0,
+      "effort": 11.367781155015198,
+      "heart_eff": 0.02691
+    },
+    {
+      "date": "2026-06-22",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.72,
+      "duration_min": 30.0,
+      "pace": "5:15",
+      "pace_raw": 5.251,
+      "hr": 126,
+      "kcal": 376,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 12.526374236535258,
+      "heart_eff": 0.02519
+    },
+    {
+      "date": "2026-06-24",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 7.59,
+      "duration_min": 40.0,
+      "pace": "5:16",
+      "pace_raw": 5.27,
+      "hr": 122,
+      "kcal": 487,
+      "elevation": 77.0,
+      "points": 0,
+      "effort": 12.175,
+      "heart_eff": 0.02592
+    },
+    {
+      "date": "2026-06-27",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 53.0,
+      "pace": "5:17",
+      "pace_raw": 5.29,
+      "hr": 143,
+      "kcal": 727,
+      "elevation": 30.0,
+      "points": 0,
+      "effort": 13.729933899905571,
+      "heart_eff": 0.02203
+    },
+    {
+      "date": "2026-06-29",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.0,
+      "duration_min": 30.1,
+      "pace": "5:01",
+      "pace_raw": 5.015,
+      "hr": 131,
+      "kcal": 383,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 12.724252491694351,
+      "heart_eff": 0.02536
+    },
+    {
+      "date": "2026-07-01",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 7.38,
+      "duration_min": 40.0,
+      "pace": "5:25",
+      "pace_raw": 5.421,
+      "hr": 120,
+      "kcal": 467,
+      "elevation": 75.0,
+      "points": 0,
+      "effort": 11.670137442732194,
+      "heart_eff": 0.02562
+    },
+    {
+      "date": "2026-07-05",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 76.9,
+      "pace": "5:30",
+      "pace_raw": 5.492,
+      "hr": 131,
+      "kcal": 960,
+      "elevation": 46.0,
+      "points": 0,
+      "effort": 12.478336221837088,
+      "heart_eff": 0.02316
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 67.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 109,
+      "kcal": 517,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.625368731563422,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-09",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 9.71,
+      "duration_min": 50.0,
+      "pace": "5:09",
+      "pace_raw": 5.151,
+      "hr": 122,
+      "kcal": 607,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 12.131912058627583,
+      "heart_eff": 0.02652
+    },
+    {
+      "date": "2026-07-09",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 7.1,
+      "duration_min": 35.0,
+      "pace": "4:56",
+      "pace_raw": 4.927,
+      "hr": 123,
+      "kcal": 430,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 12.285714285714286,
+      "heart_eff": 0.0275
+    },
+    {
+      "date": "2026-07-10",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 88.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 538,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.112478697216436,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-12",
+      "name": "San Javier - 15' entrada en calor + 4 x 1000",
+      "type": "running",
+      "dist_km": 12.64,
+      "duration_min": 70.2,
+      "pace": "5:33",
+      "pace_raw": 5.552,
+      "hr": 120,
+      "kcal": 862,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 12.287954383464005,
+      "heart_eff": 0.02501
+    },
+    {
+      "date": "2026-07-13",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.23,
+      "duration_min": 35.0,
+      "pace": "5:37",
+      "pace_raw": 5.618,
+      "hr": 106,
+      "kcal": 374,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 10.685714285714285,
+      "heart_eff": 0.02798
+    },
+    {
+      "date": "2026-07-14",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 77.1,
+      "pace": "5:30",
+      "pace_raw": 5.504,
+      "hr": 134,
+      "kcal": 985,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 12.770095073465859,
+      "heart_eff": 0.0226
+    },
+    {
+      "date": "2026-07-15",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 71.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 104,
+      "kcal": 521,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.25458343003017,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-17",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 64.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 422,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.5561885033661325,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-18",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 72.3,
+      "pace": "5:09",
+      "pace_raw": 5.158,
+      "hr": 124,
+      "kcal": 886,
+      "elevation": 48.0,
+      "points": 0,
+      "effort": 12.260147601476016,
+      "heart_eff": 0.02606
+    },
+    {
+      "date": "2026-07-19",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 17.01,
+      "duration_min": 94.8,
+      "pace": "5:34",
+      "pace_raw": 5.571,
+      "hr": 128,
+      "kcal": 1176,
+      "elevation": 52.0,
+      "points": 0,
+      "effort": 12.411609498680738,
+      "heart_eff": 0.02338
+    },
+    {
+      "date": "2026-07-20",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.23,
+      "duration_min": 20.1,
+      "pace": "4:45",
+      "pace_raw": 4.749,
+      "hr": 120,
+      "kcal": 228,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 11.352697095435685,
+      "heart_eff": 0.02923
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 64.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 104,
+      "kcal": 451,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.04504035407446,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-22",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.1,
+      "duration_min": 30.0,
+      "pace": "5:53",
+      "pace_raw": 5.884,
+      "hr": 124,
+      "kcal": 371,
+      "elevation": 89.0,
+      "points": 0,
+      "effort": 12.366666666666667,
+      "heart_eff": 0.02284
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 77.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 92,
+      "kcal": 425,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.521870939800779,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-26",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 17.01,
+      "duration_min": 96.5,
+      "pace": "5:40",
+      "pace_raw": 5.674,
+      "hr": 124,
+      "kcal": 1184,
+      "elevation": 50.0,
+      "points": 0,
+      "effort": 12.26943005181347,
+      "heart_eff": 0.02369
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 78.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 83,
+      "kcal": 340,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.3580431531723995,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-29",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.15,
+      "duration_min": 30.0,
+      "pace": "5:50",
+      "pace_raw": 5.826,
+      "hr": 120,
+      "kcal": 356,
+      "elevation": 91.0,
+      "points": 0,
+      "effort": 11.866666666666667,
+      "heart_eff": 0.02383
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 73.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 99,
+      "kcal": 474,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.450442277160354,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-01",
+      "name": "San Javier - 15' entrada en calor + 5 x 1000",
+      "type": "running",
+      "dist_km": 13.84,
+      "duration_min": 76.4,
+      "pace": "5:31",
+      "pace_raw": 5.519,
+      "hr": 126,
+      "kcal": 907,
+      "elevation": 46.0,
+      "points": 0,
+      "effort": 11.871727748691098,
+      "heart_eff": 0.02396
+    },
+    {
+      "date": "2026-08-02",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 83.4,
+      "pace": "5:33",
+      "pace_raw": 5.555,
+      "hr": 134,
+      "kcal": 1044,
+      "elevation": 48.0,
+      "points": 0,
+      "effort": 12.520487707375574,
+      "heart_eff": 0.02239
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 91.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 101,
+      "kcal": 560,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.142595978062157,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-05",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.0,
+      "duration_min": 30.2,
+      "pace": "5:02",
+      "pace_raw": 5.035,
+      "hr": 125,
+      "kcal": 384,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 12.701212789415656,
+      "heart_eff": 0.02647
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 86.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 94,
+      "kcal": 492,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.717606042998257,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-08",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 79.1,
+      "pace": "5:16",
+      "pace_raw": 5.271,
+      "hr": 117,
+      "kcal": 968,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 12.235095850010534,
+      "heart_eff": 0.02702
+    },
+    {
+      "date": "2026-08-09",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 49.7,
+      "pace": "4:58",
+      "pace_raw": 4.966,
+      "hr": 133,
+      "kcal": 656,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 13.199195171026156,
+      "heart_eff": 0.02523
+    },
+    {
+      "date": "2026-08-10",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.49,
+      "duration_min": 30.0,
+      "pace": "5:28",
+      "pace_raw": 5.469,
+      "hr": 106,
+      "kcal": 316,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 10.533333333333333,
+      "heart_eff": 0.02874
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 76.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 97,
+      "kcal": 476,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.203301476976542,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-12",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.38,
+      "duration_min": 35.4,
+      "pace": "5:33",
+      "pace_raw": 5.542,
+      "hr": 127,
+      "kcal": 445,
+      "elevation": 82.0,
+      "points": 0,
+      "effort": 12.588401697312587,
+      "heart_eff": 0.02368
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 81.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 88,
+      "kcal": 397,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.90426189005559,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-16",
+      "name": "San Alberto Trail running",
+      "type": "running",
+      "dist_km": 10.9,
+      "duration_min": 73.7,
+      "pace": "6:46",
+      "pace_raw": 6.761,
+      "hr": 103,
+      "kcal": 692,
+      "elevation": 263.0,
+      "points": 0,
+      "effort": 9.39154037548066,
+      "heart_eff": 0.02393
+    },
+    {
+      "date": "2026-08-18",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 41.1,
+      "pace": "5:08",
+      "pace_raw": 5.134,
+      "hr": 132,
+      "kcal": 543,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 13.206323469801378,
+      "heart_eff": 0.02458
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 73.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 95,
+      "kcal": 437,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.979475484606614,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-19",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.04,
+      "duration_min": 35.1,
+      "pace": "5:49",
+      "pace_raw": 5.816,
+      "hr": 120,
+      "kcal": 406,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 11.55049786628734,
+      "heart_eff": 0.02387
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 72.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 90,
+      "kcal": 382,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.270177052195907,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 21.26,
+      "duration_min": 106.3,
+      "pace": "5:00",
+      "pace_raw": 5.003,
+      "hr": 151,
+      "kcal": 1545,
+      "elevation": 67.0,
+      "points": 0,
+      "effort": 14.52750352609309,
+      "heart_eff": 0.02206
+    },
+    {
+      "date": "2026-08-26",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 5.46,
+      "duration_min": 30.0,
+      "pace": "5:30",
+      "pace_raw": 5.499,
+      "hr": 127,
+      "kcal": 374,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 12.466666666666667,
+      "heart_eff": 0.02386
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 75.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 452,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.00265604249668,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-31",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 4.8,
+      "duration_min": 24.0,
+      "pace": "5:00",
+      "pace_raw": 4.996,
+      "hr": 126,
+      "kcal": 295,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 12.291666666666666,
+      "heart_eff": 0.02647
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 71.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 99,
+      "kcal": 451,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.294487090020935,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-02",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.44,
+      "duration_min": 35.0,
+      "pace": "5:26",
+      "pace_raw": 5.431,
+      "hr": 121,
+      "kcal": 413,
+      "elevation": 94.0,
+      "points": 0,
+      "effort": 11.8,
+      "heart_eff": 0.02536
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 79.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 101,
+      "kcal": 566,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.158516020236088,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-05",
+      "name": "San Alberto Carrera",
+      "type": "running",
+      "dist_km": 10.04,
+      "duration_min": 47.2,
+      "pace": "4:42",
+      "pace_raw": 4.697,
+      "hr": 148,
+      "kcal": 682,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 14.454256446485342,
+      "heart_eff": 0.02397
+    },
+    {
+      "date": "2026-09-06",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 11.01,
+      "duration_min": 58.2,
+      "pace": "5:17",
+      "pace_raw": 5.291,
+      "hr": 139,
+      "kcal": 774,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 13.291356611333715,
+      "heart_eff": 0.02265
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 60.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 102,
+      "kcal": 427,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.114690363787837,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-10",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 6.38,
+      "duration_min": 35.0,
+      "pace": "5:29",
+      "pace_raw": 5.488,
+      "hr": 125,
+      "kcal": 425,
+      "elevation": 96.0,
+      "points": 0,
+      "effort": 12.142857142857142,
+      "heart_eff": 0.02429
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 82.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 91,
+      "kcal": 442,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.359741309620048,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-13",
+      "name": "San Javier Carrera",
+      "type": "running",
+      "dist_km": 13.01,
+      "duration_min": 69.6,
+      "pace": "5:21",
+      "pace_raw": 5.35,
+      "hr": 115,
+      "kcal": 830,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 11.92528735632184,
+      "heart_eff": 0.02708
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 28.25,
+      "sessions": 4,
+      "avg_hr": 124,
+      "avg_pace": 5.163,
+      "total_kcal": 1826,
+      "running": {
+        "km": 28.25,
+        "sessions": 4,
+        "avg_hr": 124,
+        "avg_pace": 5.163
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 24.76,
+      "sessions": 3,
+      "avg_hr": 114,
+      "avg_pace": 6.462,
+      "total_kcal": 1650,
+      "running": {
+        "km": 24.76,
+        "sessions": 3,
+        "avg_hr": 114,
+        "avg_pace": 6.462
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 11.01,
+      "sessions": 1,
+      "avg_hr": 136,
+      "avg_pace": 5.052,
+      "total_kcal": 756,
+      "running": {
+        "km": 11.01,
+        "sessions": 1,
+        "avg_hr": 136,
+        "avg_pace": 5.052
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 14.32,
+      "sessions": 2,
+      "avg_hr": 136,
+      "avg_pace": 4.652,
+      "total_kcal": 955,
+      "running": {
+        "km": 14.32,
+        "sessions": 2,
+        "avg_hr": 136,
+        "avg_pace": 4.652
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 46.52,
+      "sessions": 5,
+      "avg_hr": 128,
+      "avg_pace": 5.159,
+      "total_kcal": 3135,
+      "running": {
+        "km": 46.52,
+        "sessions": 5,
+        "avg_hr": 128,
+        "avg_pace": 5.159
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 26.44,
+      "sessions": 3,
+      "avg_hr": 122,
+      "avg_pace": 5.458,
+      "total_kcal": 2607,
+      "running": {
+        "km": 26.44,
+        "sessions": 3,
+        "avg_hr": 122,
+        "avg_pace": 5.458
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 160,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 50.3,
+      "sessions": 5,
+      "avg_hr": 121,
+      "avg_pace": 5.464,
+      "total_kcal": 4229,
+      "running": {
+        "km": 50.3,
+        "sessions": 5,
+        "avg_hr": 121,
+        "avg_pace": 5.464
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 159,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 36.63,
+      "sessions": 3,
+      "avg_hr": 126,
+      "avg_pace": 5.236,
+      "total_kcal": 3133,
+      "running": {
+        "km": 36.63,
+        "sessions": 3,
+        "avg_hr": 126,
+        "avg_pace": 5.236
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 144,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 34.07,
+      "sessions": 5,
+      "avg_hr": 121,
+      "avg_pace": 4.908,
+      "total_kcal": 3133,
+      "running": {
+        "km": 34.07,
+        "sessions": 5,
+        "avg_hr": 121,
+        "avg_pace": 4.908
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 158,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 32.74,
+      "sessions": 3,
+      "avg_hr": 119,
+      "avg_pace": 5.577,
+      "total_kcal": 2964,
+      "running": {
+        "km": 32.74,
+        "sessions": 3,
+        "avg_hr": 119,
+        "avg_pace": 5.577
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 155,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 28.97,
+      "sessions": 2,
+      "avg_hr": 123,
+      "avg_pace": 5.444,
+      "total_kcal": 3000,
+      "running": {
+        "km": 28.97,
+        "sessions": 2,
+        "avg_hr": 123,
+        "avg_pace": 5.444
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 157,
+        "sessions": 2
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 3.18,
+      "sessions": 1,
+      "avg_hr": 114,
+      "avg_pace": 4.409,
+      "total_kcal": 154,
+      "running": {
+        "km": 3.18,
+        "sessions": 1,
+        "avg_hr": 114,
+        "avg_pace": 4.409
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 14.01,
+      "sessions": 1,
+      "avg_hr": 112,
+      "avg_pace": 5.427,
+      "total_kcal": 899,
+      "running": {
+        "km": 14.01,
+        "sessions": 1,
+        "avg_hr": 112,
+        "avg_pace": 5.427
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 16.2,
+      "sessions": 2,
+      "avg_hr": 112,
+      "avg_pace": 5.724,
+      "total_kcal": 1022,
+      "running": {
+        "km": 16.2,
+        "sessions": 2,
+        "avg_hr": 112,
+        "avg_pace": 5.724
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 23.32,
+      "sessions": 3,
+      "avg_hr": 130,
+      "avg_pace": 5.27,
+      "total_kcal": 1590,
+      "running": {
+        "km": 23.32,
+        "sessions": 3,
+        "avg_hr": 130,
+        "avg_pace": 5.27
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 27.39,
+      "sessions": 3,
+      "avg_hr": 127,
+      "avg_pace": 5.309,
+      "total_kcal": 1810,
+      "running": {
+        "km": 27.39,
+        "sessions": 3,
+        "avg_hr": 127,
+        "avg_pace": 5.309
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 29.45,
+      "sessions": 3,
+      "avg_hr": 122,
+      "avg_pace": 5.21,
+      "total_kcal": 2954,
+      "running": {
+        "km": 29.45,
+        "sessions": 3,
+        "avg_hr": 122,
+        "avg_pace": 5.21
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 156,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 51.26,
+      "sessions": 4,
+      "avg_hr": 123,
+      "avg_pace": 5.463,
+      "total_kcal": 4364,
+      "running": {
+        "km": 51.26,
+        "sessions": 4,
+        "avg_hr": 123,
+        "avg_pace": 5.463
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 136,
+        "sessions": 2
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 26.34,
+      "sessions": 3,
+      "avg_hr": 123,
+      "avg_pace": 5.436,
+      "total_kcal": 2659,
+      "running": {
+        "km": 26.34,
+        "sessions": 3,
+        "avg_hr": 123,
+        "avg_pace": 5.436
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 141,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 34.0,
+      "sessions": 3,
+      "avg_hr": 127,
+      "avg_pace": 5.633,
+      "total_kcal": 3121,
+      "running": {
+        "km": 34.0,
+        "sessions": 3,
+        "avg_hr": 127,
+        "avg_pace": 5.633
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 152,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 31.02,
+      "sessions": 3,
+      "avg_hr": 125,
+      "avg_pace": 5.091,
+      "total_kcal": 3060,
+      "running": {
+        "km": 31.02,
+        "sessions": 3,
+        "avg_hr": 125,
+        "avg_pace": 5.091
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 177,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 22.77,
+      "sessions": 3,
+      "avg_hr": 112,
+      "avg_pace": 5.924,
+      "total_kcal": 2326,
+      "running": {
+        "km": 22.77,
+        "sessions": 3,
+        "avg_hr": 112,
+        "avg_pace": 5.924
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 158,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 35.31,
+      "sessions": 3,
+      "avg_hr": 134,
+      "avg_pace": 5.318,
+      "total_kcal": 3313,
+      "running": {
+        "km": 35.31,
+        "sessions": 3,
+        "avg_hr": 134,
+        "avg_pace": 5.318
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 146,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 5.46,
+      "sessions": 1,
+      "avg_hr": 127,
+      "avg_pace": 5.499,
+      "total_kcal": 826,
+      "running": {
+        "km": 5.46,
+        "sessions": 1,
+        "avg_hr": 127,
+        "avg_pace": 5.499
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 75,
+        "sessions": 1
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 32.29,
+      "sessions": 4,
+      "avg_hr": 134,
+      "avg_pace": 5.104,
+      "total_kcal": 3181,
+      "running": {
+        "km": 32.29,
+        "sessions": 4,
+        "avg_hr": 134,
+        "avg_pace": 5.104
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 151,
+        "sessions": 2
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 19.39,
+      "sessions": 2,
+      "avg_hr": 120,
+      "avg_pace": 5.419,
+      "total_kcal": 2124,
+      "running": {
+        "km": 19.39,
+        "sessions": 2,
+        "avg_hr": 120,
+        "avg_pace": 5.419
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 142,
+        "sessions": 2
+      },
+      "total_sessions": 4
+    }
+  ],
+  "acwr": {
+    "valor": 0.8,
+    "status": "undertraining",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.87,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.89,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.1,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.7,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.74,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.36,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.2,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.57,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.8,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.98,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.21,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.24,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.33,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.8,
+          "status": "undertraining"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.87,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.89,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.1,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.7,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.74,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.36,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.2,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.57,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.8,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 0.98,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.21,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.24,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.33,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.8,
+          "status": "undertraining"
+        }
+      ],
+      "cycling": [],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.01,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.87,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.3,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.17,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.01,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.54,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.14,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.11,
+          "status": "optimal"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 67,
+    "headline": "Menor volumen de running esta semana",
+    "subheadline": "Carga total estable, menos días activos",
+    "readiness": 72,
+    "aiVerdict": "José Luis, esta semana bajaste el volumen de running respecto a tu promedio reciente, aunque tu carga total entre todas las disciplinas se mantuvo estable. Esto refleja una redistribución del esfuerzo, con menos días activos y una menor frecuencia de sesiones de running, lo que puede ser útil para recuperar frescura pero mantiene tu carga de running en zona baja. Para la próxima semana, el plan buscará retomar volumen y frecuencia en running para volver a una carga más alineada con tu objetivo de media maratón.",
+    "strengths": [
+      "Carga total semanal estable",
+      "Frecuencia de fuerza sostenida"
+    ],
+    "warnings": [
+      "Volumen de running por debajo de tu promedio",
+      "Menos días activos que tu patrón reciente"
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "19.39 km",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Por debajo del promedio de 4 semanas"
+      },
+      {
+        "label": "Sesiones running",
+        "value": "2 sesiones",
+        "trend": "stable",
+        "status": "yellow",
+        "note": "Menos frecuencia que tu patrón reciente"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "247.1 min",
+        "trend": "stable",
+        "status": "green",
+        "note": "Carga global mantenida"
+      }
+    ],
+    "weeklyPlan": {
+      "week": "2026-09-14/2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "objective": "Retomar volumen y frecuencia en running",
+      "rationale": "El análisis muestra que tu volumen de running bajó, aunque la carga total se mantuvo estable. Esta semana el foco es volver a sumar kilómetros y frecuencia para salir de la zona de carga baja y fortalecer tu base para la media maratón.",
+      "summary": {
+        "totalKm": 24.5,
+        "runningSessions": 2,
+        "strengthSessions": 1
+      },
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Lun",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Descanso o recuperación según sensaciones.",
+          "purpose": "Recuperación"
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Mar",
+          "type": "Running easy",
+          "km": "7.5 km",
+          "notes": "Corre a ritmo cómodo, entre 5:30 y 5:45/km, sin buscar intensidad.",
+          "purpose": "Acumular kilómetros de base y recuperar sensaciones"
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Mié",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Descanso o recuperación según sensaciones.",
+          "purpose": "Recuperación"
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Jue",
+          "type": "Fuerza",
+          "km": "—",
+          "notes": "Sesión completa de fuerza general, priorizando técnica y control.",
+          "purpose": "Mantener fuerza funcional y prevenir lesiones"
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Vie",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Descanso o recuperación según sensaciones.",
+          "purpose": "Recuperación"
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sáb",
+          "type": "Running long_run",
+          "km": "17.0 km",
+          "notes": "Fondo largo a ritmo controlado, entre 5:30 y 5:45/km, hidratación adecuada.",
+          "purpose": "Construir resistencia aeróbica y base para el ciclo"
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Dom",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Recuperación total, movilidad suave si lo sientes necesario.",
+          "purpose": "Facilitar recuperación y adaptación"
+        }
+      ]
+    },
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Mantener atención a sensaciones y ajustar si aparece fatiga"
+    },
+    "projection": null
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "partial",
+    "projection": {
+      "title": "Tu referencia anterior",
+      "reference": "Media maratón del 23 de agosto de 2026 en 1:46:18 (FC 151 bpm)",
+      "description": "Esta es una marca histórica, no un pronóstico para tu próxima carrera. La proyección está pendiente de revisión."
+    }
+  }
+}

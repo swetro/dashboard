@@ -1,0 +1,1453 @@
+{
+  "meta": {
+    "userId": "19678",
+    "nombre": "ANA LEECH",
+    "genero": "Female",
+    "edad": 53,
+    "pais": "ARG",
+    "avatar": "🇦🇷",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "5:13",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "29:04",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "1:00:07",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "¿Cuál es tu próxima carrera?",
+      "fecha": "2027-01-01",
+      "label": "META",
+      "diasPrep": 109
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-14T23:02:07.615607Z"
+  },
+  "activities": [
+    {
+      "date": "2026-04-03",
+      "name": "Tigre Caminar",
+      "type": "walking",
+      "dist_km": 0.89,
+      "duration_min": 14.0,
+      "pace": "15:39",
+      "pace_raw": 15.643,
+      "hr": 87,
+      "kcal": 48,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 3.432657926102503,
+      "heart_eff": 0.01224
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Tigre Caminar",
+      "type": "walking",
+      "dist_km": 4.07,
+      "duration_min": 60.8,
+      "pace": "14:57",
+      "pace_raw": 14.947,
+      "hr": 80,
+      "kcal": 176,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 2.8955305730737595,
+      "heart_eff": 0.01394
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Tigre Caminar",
+      "type": "walking",
+      "dist_km": 2.08,
+      "duration_min": 30.6,
+      "pace": "14:40",
+      "pace_raw": 14.672,
+      "hr": 87,
+      "kcal": 101,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 3.306055646481178,
+      "heart_eff": 0.01305
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 2.01,
+      "duration_min": 13.3,
+      "pace": "6:36",
+      "pace_raw": 6.606,
+      "hr": 149,
+      "kcal": 124,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 9.346733668341708,
+      "heart_eff": 0.01693
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 7.75,
+      "duration_min": 52.5,
+      "pace": "6:47",
+      "pace_raw": 6.778,
+      "hr": 153,
+      "kcal": 473,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 9.000951474785918,
+      "heart_eff": 0.01607
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 4.87,
+      "duration_min": 30.9,
+      "pace": "6:21",
+      "pace_raw": 6.352,
+      "hr": 149,
+      "kcal": 287,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 9.27801724137931,
+      "heart_eff": 0.01761
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Tigre Caminar",
+      "type": "walking",
+      "dist_km": 3.88,
+      "duration_min": 55.0,
+      "pace": "14:09",
+      "pace_raw": 14.156,
+      "hr": 92,
+      "kcal": 218,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 3.967242948134668,
+      "heart_eff": 0.01279
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 10.02,
+      "duration_min": 59.4,
+      "pace": "5:56",
+      "pace_raw": 5.933,
+      "hr": 157,
+      "kcal": 604,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 10.162647223780146,
+      "heart_eff": 0.01789
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Tigre - 2 km + 4x100 + 2 x ( 500+200+500",
+      "type": "running",
+      "dist_km": 4.98,
+      "duration_min": 42.4,
+      "pace": "8:30",
+      "pace_raw": 8.507,
+      "hr": 149,
+      "kcal": 355,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 8.375933936295715,
+      "heart_eff": 0.01315
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Tigre - 2km + 4x100 + 2x  (1000+500+250)",
+      "type": "running",
+      "dist_km": 8.83,
+      "duration_min": 71.0,
+      "pace": "8:02",
+      "pace_raw": 8.039,
+      "hr": 145,
+      "kcal": 534,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 7.522892697816388,
+      "heart_eff": 0.0143
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Mossel Bay Carrera",
+      "type": "running",
+      "dist_km": 2.01,
+      "duration_min": 15.2,
+      "pace": "7:36",
+      "pace_raw": 7.592,
+      "hr": 137,
+      "kcal": 124,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 8.131147540983607,
+      "heart_eff": 0.01602
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Cape Town Carrera",
+      "type": "running",
+      "dist_km": 2.48,
+      "duration_min": 16.6,
+      "pace": "6:42",
+      "pace_raw": 6.7,
+      "hr": 149,
+      "kcal": 149,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 8.957915831663327,
+      "heart_eff": 0.01669
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Cape Town Carrera",
+      "type": "running",
+      "dist_km": 10.17,
+      "duration_min": 62.0,
+      "pace": "6:06",
+      "pace_raw": 6.092,
+      "hr": 154,
+      "kcal": 629,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 10.150618612157073,
+      "heart_eff": 0.01777
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 10.0,
+      "duration_min": 84.5,
+      "pace": "8:27",
+      "pace_raw": 8.451,
+      "hr": 159,
+      "kcal": 663,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 7.841513897102306,
+      "heart_eff": 0.0124
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 49.5,
+      "pace": "6:11",
+      "pace_raw": 6.181,
+      "hr": 141,
+      "kcal": 475,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 9.595959595959595,
+      "heart_eff": 0.01912
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 4.36,
+      "duration_min": 32.8,
+      "pace": "7:32",
+      "pace_raw": 7.529,
+      "hr": 159,
+      "kcal": 292,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 8.902439024390244,
+      "heart_eff": 0.01392
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Tigre - 3 Km + 4x100 + 4x 1500 + 1km",
+      "type": "running",
+      "dist_km": 8.13,
+      "duration_min": 65.5,
+      "pace": "8:03",
+      "pace_raw": 8.052,
+      "hr": 153,
+      "kcal": 553,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 8.447046843177189,
+      "heart_eff": 0.01353
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 7.52,
+      "duration_min": 51.6,
+      "pace": "6:52",
+      "pace_raw": 6.86,
+      "hr": 161,
+      "kcal": 490,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 9.493057797868905,
+      "heart_eff": 0.01509
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Tigre - 3km+ 10x100+ 6x400+ 2x1000 +2km",
+      "type": "running",
+      "dist_km": 8.64,
+      "duration_min": 75.3,
+      "pace": "8:43",
+      "pace_raw": 8.719,
+      "hr": 144,
+      "kcal": 560,
+      "elevation": 39.0,
+      "points": 0,
+      "effort": 7.431984074319841,
+      "heart_eff": 0.01327
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Tigre - 3km + 6x100 + 10x200 + 1000 + 2k",
+      "type": "running",
+      "dist_km": 8.12,
+      "duration_min": 63.7,
+      "pace": "7:50",
+      "pace_raw": 7.84,
+      "hr": 151,
+      "kcal": 545,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 8.555729984301413,
+      "heart_eff": 0.01407
+    },
+    {
+      "date": "2026-07-25",
+      "name": "La Costa Carrera",
+      "type": "running",
+      "dist_km": 3.36,
+      "duration_min": 25.6,
+      "pace": "7:38",
+      "pace_raw": 7.63,
+      "hr": 134,
+      "kcal": 195,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 7.607282184655396,
+      "heart_eff": 0.01629
+    },
+    {
+      "date": "2026-07-29",
+      "name": "La Costa Carrera",
+      "type": "running",
+      "dist_km": 5.01,
+      "duration_min": 32.4,
+      "pace": "6:28",
+      "pace_raw": 6.469,
+      "hr": 150,
+      "kcal": 298,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 9.192802056555271,
+      "heart_eff": 0.01717
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 11.84,
+      "duration_min": 73.9,
+      "pace": "6:15",
+      "pace_raw": 6.242,
+      "hr": 166,
+      "kcal": 713,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 9.645997745208568,
+      "heart_eff": 0.01608
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 48.2,
+      "pace": "6:01",
+      "pace_raw": 6.024,
+      "hr": 162,
+      "kcal": 468,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 9.699481865284975,
+      "heart_eff": 0.01708
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 11.01,
+      "duration_min": 68.3,
+      "pace": "6:12",
+      "pace_raw": 6.202,
+      "hr": 163,
+      "kcal": 657,
+      "elevation": 54.0,
+      "points": 0,
+      "effort": 9.621674395899438,
+      "heart_eff": 0.01648
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 49.1,
+      "pace": "6:08",
+      "pace_raw": 6.129,
+      "hr": 157,
+      "kcal": 465,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 9.473684210526315,
+      "heart_eff": 0.01732
+    },
+    {
+      "date": "2026-08-16",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 9.95,
+      "duration_min": 62.6,
+      "pace": "6:17",
+      "pace_raw": 6.289,
+      "hr": 166,
+      "kcal": 604,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 9.653702717101758,
+      "heart_eff": 0.01596
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Tigre - 3km +10x100+6x400+1km+1km",
+      "type": "running",
+      "dist_km": 9.38,
+      "duration_min": 70.2,
+      "pace": "7:29",
+      "pace_raw": 7.49,
+      "hr": 153,
+      "kcal": 570,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 8.115804461319412,
+      "heart_eff": 0.01454
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Ciudad de Buenos Aires Carrera",
+      "type": "running",
+      "dist_km": 21.47,
+      "duration_min": 134.5,
+      "pace": "6:16",
+      "pace_raw": 6.264,
+      "hr": 158,
+      "kcal": 1235,
+      "elevation": 85.0,
+      "points": 0,
+      "effort": 9.183294088486802,
+      "heart_eff": 0.01684
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Tigre - 3km +10x100+6x400+1km+1km",
+      "type": "running",
+      "dist_km": 8.0,
+      "duration_min": 73.0,
+      "pace": "9:08",
+      "pace_raw": 9.126,
+      "hr": 137,
+      "kcal": 527,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 7.214236824093088,
+      "heart_eff": 0.01333
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Tigre - 3km + 3x  (1000+500+250) +2km",
+      "type": "running",
+      "dist_km": 8.73,
+      "duration_min": 69.6,
+      "pace": "7:58",
+      "pace_raw": 7.965,
+      "hr": 149,
+      "kcal": 556,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 7.992333493052229,
+      "heart_eff": 0.01404
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 94.3,
+      "pace": "6:17",
+      "pace_raw": 6.281,
+      "hr": 158,
+      "kcal": 882,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 9.353128313891835,
+      "heart_eff": 0.01679
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Tigre - Cambios de Ritmo",
+      "type": "running",
+      "dist_km": 8.03,
+      "duration_min": 51.6,
+      "pace": "6:25",
+      "pace_raw": 6.423,
+      "hr": 157,
+      "kcal": 478,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 9.266558966074314,
+      "heart_eff": 0.01653
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Tigre - 2 km + 6x1000 + 2 km",
+      "type": "running",
+      "dist_km": 10.1,
+      "duration_min": 70.2,
+      "pace": "6:57",
+      "pace_raw": 6.95,
+      "hr": 148,
+      "kcal": 583,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 8.304843304843304,
+      "heart_eff": 0.0162
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Tigre Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 74.2,
+      "pace": "6:11",
+      "pace_raw": 6.175,
+      "hr": 153,
+      "kcal": 684,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 9.224544841537423,
+      "heart_eff": 0.01764
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Tigre - 2 km + 1x3000 + 1x2000 +1x1000 +",
+      "type": "running",
+      "dist_km": 9.24,
+      "duration_min": 59.4,
+      "pace": "6:26",
+      "pace_raw": 6.434,
+      "hr": 156,
+      "kcal": 546,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 9.186763881099271,
+      "heart_eff": 0.0166
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Tigre - 2 km + 8x100 + 8x200 + 3x400 + 2",
+      "type": "running",
+      "dist_km": 8.59,
+      "duration_min": 64.8,
+      "pace": "7:33",
+      "pace_raw": 7.551,
+      "hr": 148,
+      "kcal": 526,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 8.111025443330764,
+      "heart_eff": 0.01491
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Madrid Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 53.0,
+      "pace": "6:37",
+      "pace_raw": 6.616,
+      "hr": 150,
+      "kcal": 475,
+      "elevation": 79.0,
+      "points": 0,
+      "effort": 8.959446714869538,
+      "heart_eff": 0.01679
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 0,
+      "sessions": 0,
+      "avg_hr": 0,
+      "avg_pace": 0.0,
+      "total_kcal": 325,
+      "running": {
+        "km": 0,
+        "sessions": 0,
+        "avg_hr": 0,
+        "avg_pace": 0.0
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 9.76,
+      "sessions": 2,
+      "avg_hr": 151,
+      "avg_pace": 6.692,
+      "total_kcal": 597,
+      "running": {
+        "km": 9.76,
+        "sessions": 2,
+        "avg_hr": 151,
+        "avg_pace": 6.692
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 14.89,
+      "sessions": 2,
+      "avg_hr": 153,
+      "avg_pace": 6.143,
+      "total_kcal": 1109,
+      "running": {
+        "km": 14.89,
+        "sessions": 2,
+        "avg_hr": 153,
+        "avg_pace": 6.143
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 13.81,
+      "sessions": 2,
+      "avg_hr": 147,
+      "avg_pace": 8.273,
+      "total_kcal": 889,
+      "running": {
+        "km": 13.81,
+        "sessions": 2,
+        "avg_hr": 147,
+        "avg_pace": 8.273
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 14.66,
+      "sessions": 3,
+      "avg_hr": 147,
+      "avg_pace": 6.795,
+      "total_kcal": 902,
+      "running": {
+        "km": 14.66,
+        "sessions": 3,
+        "avg_hr": 147,
+        "avg_pace": 6.795
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 18.01,
+      "sessions": 2,
+      "avg_hr": 150,
+      "avg_pace": 7.316,
+      "total_kcal": 1138,
+      "running": {
+        "km": 18.01,
+        "sessions": 2,
+        "avg_hr": 150,
+        "avg_pace": 7.316
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 20.01,
+      "sessions": 3,
+      "avg_hr": 158,
+      "avg_pace": 7.48,
+      "total_kcal": 1335,
+      "running": {
+        "km": 20.01,
+        "sessions": 3,
+        "avg_hr": 158,
+        "avg_pace": 7.48
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 8.64,
+      "sessions": 1,
+      "avg_hr": 144,
+      "avg_pace": 8.719,
+      "total_kcal": 560,
+      "running": {
+        "km": 8.64,
+        "sessions": 1,
+        "avg_hr": 144,
+        "avg_pace": 8.719
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 8.12,
+      "sessions": 1,
+      "avg_hr": 151,
+      "avg_pace": 7.84,
+      "total_kcal": 545,
+      "running": {
+        "km": 8.12,
+        "sessions": 1,
+        "avg_hr": 151,
+        "avg_pace": 7.84
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 3.36,
+      "sessions": 1,
+      "avg_hr": 134,
+      "avg_pace": 7.63,
+      "total_kcal": 195,
+      "running": {
+        "km": 3.36,
+        "sessions": 1,
+        "avg_hr": 134,
+        "avg_pace": 7.63
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 16.85,
+      "sessions": 2,
+      "avg_hr": 158,
+      "avg_pace": 6.356,
+      "total_kcal": 1011,
+      "running": {
+        "km": 16.85,
+        "sessions": 2,
+        "avg_hr": 158,
+        "avg_pace": 6.356
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 8.01,
+      "sessions": 1,
+      "avg_hr": 162,
+      "avg_pace": 6.024,
+      "total_kcal": 468,
+      "running": {
+        "km": 8.01,
+        "sessions": 1,
+        "avg_hr": 162,
+        "avg_pace": 6.024
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 28.97,
+      "sessions": 3,
+      "avg_hr": 162,
+      "avg_pace": 6.207,
+      "total_kcal": 1726,
+      "running": {
+        "km": 28.97,
+        "sessions": 3,
+        "avg_hr": 162,
+        "avg_pace": 6.207
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 30.85,
+      "sessions": 2,
+      "avg_hr": 156,
+      "avg_pace": 6.877,
+      "total_kcal": 1805,
+      "running": {
+        "km": 30.85,
+        "sessions": 2,
+        "avg_hr": 156,
+        "avg_pace": 6.877
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 31.74,
+      "sessions": 3,
+      "avg_hr": 148,
+      "avg_pace": 7.791,
+      "total_kcal": 1965,
+      "running": {
+        "km": 31.74,
+        "sessions": 3,
+        "avg_hr": 148,
+        "avg_pace": 7.791
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 30.14,
+      "sessions": 3,
+      "avg_hr": 153,
+      "avg_pace": 6.516,
+      "total_kcal": 1745,
+      "running": {
+        "km": 30.14,
+        "sessions": 3,
+        "avg_hr": 153,
+        "avg_pace": 6.516
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 17.83,
+      "sessions": 2,
+      "avg_hr": 152,
+      "avg_pace": 6.992,
+      "total_kcal": 1072,
+      "running": {
+        "km": 17.83,
+        "sessions": 2,
+        "avg_hr": 152,
+        "avg_pace": 6.992
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-09-14/2026-09-20",
+      "total_km": 8.01,
+      "sessions": 1,
+      "avg_hr": 150,
+      "avg_pace": 6.616,
+      "total_kcal": 475,
+      "running": {
+        "km": 8.01,
+        "sessions": 1,
+        "avg_hr": 150,
+        "avg_pace": 6.616
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    }
+  ],
+  "acwr": {
+    "valor": 0.65,
+    "status": "undertraining",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 2.23,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.02,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.24,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 3.76,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.14,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.89,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.3,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.75,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 2.03,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.44,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.32,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.96,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.65,
+          "status": "undertraining"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 2.23,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.18,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.89,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.3,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.75,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 2.03,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.44,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.32,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.96,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.65,
+          "status": "undertraining"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 3.43,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ],
+      "strength": []
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 54,
+    "headline": "Baja notable en tu volumen y carga total",
+    "subheadline": "Menos kilómetros y sesiones esta semana",
+    "readiness": 62,
+    "aiVerdict": "Ana, esta semana redujiste significativamente tu volumen de running y la carga total de entrenamiento, con una caída marcada tanto frente al promedio reciente como a la semana anterior. Este descenso te deja en una zona de baja carga, lo que puede ser útil si buscabas recuperación, pero si tu objetivo es mantener o mejorar tu forma, será importante retomar progresivamente el volumen habitual. El plan para la próxima semana apunta a reconstruir esa base de kilómetros de manera controlada, priorizando la consistencia y evitando saltos bruscos.",
+    "strengths": [
+      "Frecuencia de running estable frente a semanas previas",
+      "Ritmo medio y frecuencia cardíaca sin cambios adversos"
+    ],
+    "warnings": [
+      "Volumen de running y carga total en descenso",
+      "Estado de carga actual indica bajo estímulo"
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "17.83 km",
+        "trend": "down",
+        "status": "red",
+        "note": "Muy por debajo de tu promedio reciente"
+      },
+      {
+        "label": "Sesiones running",
+        "value": "2 sesiones",
+        "trend": "stable",
+        "status": "yellow",
+        "note": "Frecuencia menor a tu patrón habitual"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "124.2 min",
+        "trend": "down",
+        "status": "red",
+        "note": "Menos tiempo activo esta semana"
+      }
+    ],
+    "weeklyPlan": {
+      "week": "2026-09-14/2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "objective": "Recuperar volumen y consistencia en el running",
+      "rationale": "Dado el descenso reciente en tu carga y volumen, el plan busca retomar progresivamente tu kilometraje habitual sin exceder los límites permitidos. Se priorizan dos sesiones, una de fondo largo y otra fácil, para reconstruir tu base y mantener la adaptación.",
+      "summary": {
+        "totalKm": 23.5,
+        "runningSessions": 2,
+        "strengthSessions": 0
+      },
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Lun",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prioriza descanso y movilidad suave.",
+          "purpose": "Facilitar recuperación y evitar sobrecarga"
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Mar",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, aprovecha para estiramientos o caminata ligera si lo deseas.",
+          "purpose": "Recuperación activa opcional"
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Mié",
+          "type": "Easy Run",
+          "km": "6.5 km",
+          "notes": "Corre a un ritmo cómodo, más lento que 7:00/km, enfocándote en mantener una zancada relajada.",
+          "purpose": "Reactivar la base aeróbica y recuperar sensaciones"
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Jue",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Sin running, puedes incluir movilidad o yoga suave.",
+          "purpose": "Prevenir fatiga acumulada"
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Vie",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prioriza descanso.",
+          "purpose": "Recuperación general"
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sáb",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Sin running, puedes realizar actividad ligera si lo sientes necesario.",
+          "purpose": "Preparar el cuerpo para el fondo largo"
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Dom",
+          "type": "Long Run",
+          "km": "17 km",
+          "notes": "Mantén un ritmo parejo y sostenible, sin buscar velocidad, idealmente más lento que tu ritmo medio reciente.",
+          "purpose": "Recuperar fondo y resistencia progresivamente"
+        }
+      ]
+    },
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Retomar el volumen de forma gradual y monitorear sensaciones"
+    },
+    "projection": null
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "complete"
+  }
+}

@@ -27,12 +27,1123 @@
       "nombre": "Maratón de Sydney",
       "fecha": "2026-08-30",
       "label": "42K SYD",
-      "diasPrep": 13
+      "diasPrep": -15
     },
+    "planPreferences": {},
     "isPro": true,
-    "generadoEn": "2026-08-17T22:23:36.843102Z"
+    "generadoEn": "2026-09-15T02:43:23.842998Z"
   },
   "activities": [
+    {
+      "date": "2026-03-17",
+      "name": "Tuluá Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 18.45,
+      "duration_min": 97.4,
+      "pace": "5:17",
+      "pace_raw": 5.277,
+      "hr": 142,
+      "kcal": 1222,
+      "elevation": 65.0,
+      "points": 0,
+      "effort": 12.550496405340638,
+      "heart_eff": 0.02224
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 23.02,
+      "duration_min": 102.7,
+      "pace": "4:28",
+      "pace_raw": 4.46,
+      "hr": 147,
+      "kcal": 1462,
+      "elevation": 68.0,
+      "points": 0,
+      "effort": 14.24025974025974,
+      "heart_eff": 0.02542
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 0.51,
+      "duration_min": 4.0,
+      "pace": "7:52",
+      "pace_raw": 7.869,
+      "hr": 138,
+      "kcal": 47,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 11.75,
+      "heart_eff": 0.01532
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 2.55,
+      "duration_min": 20.1,
+      "pace": "7:52",
+      "pace_raw": 7.868,
+      "hr": 110,
+      "kcal": 184,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 9.17705735660848,
+      "heart_eff": 0.01925
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 1.96,
+      "duration_min": 12.6,
+      "pace": "6:26",
+      "pace_raw": 6.426,
+      "hr": 113,
+      "kcal": 118,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.37748344370861,
+      "heart_eff": 0.02295
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Tuluá Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 17.16,
+      "duration_min": 113.5,
+      "pace": "6:37",
+      "pace_raw": 6.616,
+      "hr": 130,
+      "kcal": 1165,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 10.26130358191427,
+      "heart_eff": 0.01938
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 6.01,
+      "duration_min": 29.6,
+      "pace": "4:55",
+      "pace_raw": 4.917,
+      "hr": 144,
+      "kcal": 418,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 14.145516074450084,
+      "heart_eff": 0.02353
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Soacha - Carrera larga",
+      "type": "running",
+      "dist_km": 38.01,
+      "duration_min": 183.6,
+      "pace": "4:50",
+      "pace_raw": 4.829,
+      "hr": 145,
+      "kcal": 2443,
+      "elevation": 119.0,
+      "points": 0,
+      "effort": 13.308516433629926,
+      "heart_eff": 0.0238
+    },
+    {
+      "date": "2026-03-24",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 10.31,
+      "duration_min": 54.5,
+      "pace": "5:17",
+      "pace_raw": 5.281,
+      "hr": 138,
+      "kcal": 697,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 12.800734618916437,
+      "heart_eff": 0.02287
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 10.05,
+      "duration_min": 48.5,
+      "pace": "4:50",
+      "pace_raw": 4.828,
+      "hr": 143,
+      "kcal": 657,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 13.541738234283752,
+      "heart_eff": 0.02414
+    },
+    {
+      "date": "2026-03-27",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 11.01,
+      "duration_min": 58.0,
+      "pace": "5:16",
+      "pace_raw": 5.268,
+      "hr": 140,
+      "kcal": 750,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 12.934751365334867,
+      "heart_eff": 0.0226
+    },
+    {
+      "date": "2026-03-28",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 47.5,
+      "pace": "5:17",
+      "pace_raw": 5.276,
+      "hr": 137,
+      "kcal": 603,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 12.681388012618298,
+      "heart_eff": 0.02306
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Soacha - Carrera larga",
+      "type": "running",
+      "dist_km": 14.02,
+      "duration_min": 71.3,
+      "pace": "5:05",
+      "pace_raw": 5.09,
+      "hr": 142,
+      "kcal": 925,
+      "elevation": 62.0,
+      "points": 0,
+      "effort": 12.964260686755432,
+      "heart_eff": 0.02306
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 17.5,
+      "duration_min": 92.7,
+      "pace": "5:18",
+      "pace_raw": 5.297,
+      "hr": 149,
+      "kcal": 1186,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 12.79395900755124,
+      "heart_eff": 0.02111
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 0.67,
+      "duration_min": 5.0,
+      "pace": "7:31",
+      "pace_raw": 7.514,
+      "hr": 112,
+      "kcal": 42,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.372093023255815,
+      "heart_eff": 0.01978
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 25.01,
+      "duration_min": 114.2,
+      "pace": "4:34",
+      "pace_raw": 4.567,
+      "hr": 151,
+      "kcal": 1553,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 13.592997811816193,
+      "heart_eff": 0.02417
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 1.47,
+      "duration_min": 25.1,
+      "pace": "17:05",
+      "pace_raw": 17.086,
+      "hr": 107,
+      "kcal": 187,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 7.45514950166113,
+      "heart_eff": 0.00911
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 2.01,
+      "duration_min": 12.0,
+      "pace": "5:59",
+      "pace_raw": 5.978,
+      "hr": 120,
+      "kcal": 121,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.069348127600554,
+      "heart_eff": 0.0232
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Sibaté Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 13.66,
+      "duration_min": 79.8,
+      "pace": "5:51",
+      "pace_raw": 5.842,
+      "hr": 133,
+      "kcal": 819,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.263157894736842,
+      "heart_eff": 0.02145
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 33.8,
+      "pace": "4:49",
+      "pace_raw": 4.821,
+      "hr": 141,
+      "kcal": 453,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 13.402366863905327,
+      "heart_eff": 0.02451
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 34.09,
+      "duration_min": 165.8,
+      "pace": "4:52",
+      "pace_raw": 4.862,
+      "hr": 147,
+      "kcal": 2227,
+      "elevation": 206.0,
+      "points": 0,
+      "effort": 13.435897435897436,
+      "heart_eff": 0.02332
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Tuluá Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 16.24,
+      "duration_min": 91.0,
+      "pace": "5:36",
+      "pace_raw": 5.6,
+      "hr": 139,
+      "kcal": 1102,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 12.11654755360088,
+      "heart_eff": 0.02141
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 19.03,
+      "duration_min": 84.2,
+      "pace": "4:26",
+      "pace_raw": 4.426,
+      "hr": 146,
+      "kcal": 1204,
+      "elevation": 62.0,
+      "points": 0,
+      "effort": 14.293628808864266,
+      "heart_eff": 0.02579
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Soacha - Recuperación",
+      "type": "running",
+      "dist_km": 1.14,
+      "duration_min": 8.6,
+      "pace": "7:31",
+      "pace_raw": 7.525,
+      "hr": 110,
+      "kcal": 77,
+      "elevation": 2.0,
+      "points": 0,
+      "effort": 8.988326848249027,
+      "heart_eff": 0.02012
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 1.31,
+      "duration_min": 9.6,
+      "pace": "7:22",
+      "pace_raw": 7.364,
+      "hr": 109,
+      "kcal": 83,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.630849220103986,
+      "heart_eff": 0.02075
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 1.21,
+      "duration_min": 7.7,
+      "pace": "6:20",
+      "pace_raw": 6.327,
+      "hr": 132,
+      "kcal": 89,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 11.633986928104575,
+      "heart_eff": 0.01994
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 13.03,
+      "duration_min": 86.8,
+      "pace": "6:40",
+      "pace_raw": 6.663,
+      "hr": 126,
+      "kcal": 825,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 9.504608294930875,
+      "heart_eff": 0.01986
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 7.03,
+      "duration_min": 35.3,
+      "pace": "5:02",
+      "pace_raw": 5.026,
+      "hr": 140,
+      "kcal": 464,
+      "elevation": 20.0,
+      "points": 0,
+      "effort": 13.13827277017461,
+      "heart_eff": 0.02368
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 28.02,
+      "duration_min": 129.5,
+      "pace": "4:37",
+      "pace_raw": 4.621,
+      "hr": 150,
+      "kcal": 1806,
+      "elevation": 116.0,
+      "points": 0,
+      "effort": 13.949536560247168,
+      "heart_eff": 0.02404
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Tuluá Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 12.87,
+      "duration_min": 76.7,
+      "pace": "5:57",
+      "pace_raw": 5.958,
+      "hr": 130,
+      "kcal": 846,
+      "elevation": 71.0,
+      "points": 0,
+      "effort": 11.032384264290371,
+      "heart_eff": 0.02152
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Tuluá - Base",
+      "type": "running",
+      "dist_km": 16.02,
+      "duration_min": 70.1,
+      "pace": "4:22",
+      "pace_raw": 4.374,
+      "hr": 150,
+      "kcal": 1050,
+      "elevation": 54.0,
+      "points": 0,
+      "effort": 14.985727878211229,
+      "heart_eff": 0.0254
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Tuluá - Recuperación",
+      "type": "running",
+      "dist_km": 2.04,
+      "duration_min": 13.0,
+      "pace": "6:24",
+      "pace_raw": 6.402,
+      "hr": 116,
+      "kcal": 133,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 10.20460358056266,
+      "heart_eff": 0.02244
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 1.32,
+      "duration_min": 7.1,
+      "pace": "5:24",
+      "pace_raw": 5.406,
+      "hr": 115,
+      "kcal": 70,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.836065573770492,
+      "heart_eff": 0.02676
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 1.52,
+      "duration_min": 10.3,
+      "pace": "6:47",
+      "pace_raw": 6.779,
+      "hr": 114,
+      "kcal": 103,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 10.016207455429498,
+      "heart_eff": 0.02155
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Tuluá Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 12.6,
+      "duration_min": 80.1,
+      "pace": "6:22",
+      "pace_raw": 6.36,
+      "hr": 126,
+      "kcal": 782,
+      "elevation": 54.0,
+      "points": 0,
+      "effort": 9.75873544093178,
+      "heart_eff": 0.02079
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 6.01,
+      "duration_min": 28.5,
+      "pace": "4:44",
+      "pace_raw": 4.735,
+      "hr": 147,
+      "kcal": 404,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 14.192037470725996,
+      "heart_eff": 0.02394
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 20.02,
+      "duration_min": 96.8,
+      "pace": "4:50",
+      "pace_raw": 4.837,
+      "hr": 149,
+      "kcal": 1334,
+      "elevation": 111.0,
+      "points": 0,
+      "effort": 13.778619383714926,
+      "heart_eff": 0.02312
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 12.02,
+      "duration_min": 58.4,
+      "pace": "4:52",
+      "pace_raw": 4.862,
+      "hr": 139,
+      "kcal": 765,
+      "elevation": 30.0,
+      "points": 0,
+      "effort": 13.095577746077034,
+      "heart_eff": 0.02466
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 14.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 70,
+      "kcal": 14,
+      "elevation": null,
+      "points": 0,
+      "effort": 0.997624703087886,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 9.67,
+      "duration_min": 60.1,
+      "pace": "6:13",
+      "pace_raw": 6.217,
+      "hr": 127,
+      "kcal": 655,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 10.895481009148877,
+      "heart_eff": 0.0211
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Hackney - Base",
+      "type": "running",
+      "dist_km": 11.02,
+      "duration_min": 64.6,
+      "pace": "5:52",
+      "pace_raw": 5.86,
+      "hr": 115,
+      "kcal": 685,
+      "elevation": 44.0,
+      "points": 0,
+      "effort": 10.609189468249872,
+      "heart_eff": 0.02473
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Hackney - Base",
+      "type": "running",
+      "dist_km": 7.96,
+      "duration_min": 43.7,
+      "pace": "5:29",
+      "pace_raw": 5.489,
+      "hr": 120,
+      "kcal": 488,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 11.167048054919908,
+      "heart_eff": 0.0253
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Hackney - Sprint",
+      "type": "running",
+      "dist_km": 6.48,
+      "duration_min": 34.7,
+      "pace": "5:21",
+      "pace_raw": 5.351,
+      "hr": 120,
+      "kcal": 406,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 11.700288184438039,
+      "heart_eff": 0.02594
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Greenwich Carrera",
+      "type": "running",
+      "dist_km": 42.62,
+      "duration_min": 169.7,
+      "pace": "3:59",
+      "pace_raw": 3.982,
+      "hr": 155,
+      "kcal": 2641,
+      "elevation": 137.0,
+      "points": 0,
+      "effort": 15.561229500147304,
+      "heart_eff": 0.027
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 8.21,
+      "duration_min": 42.7,
+      "pace": "5:12",
+      "pace_raw": 5.202,
+      "hr": 131,
+      "kcal": 525,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 12.290284822473662,
+      "heart_eff": 0.02445
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 11.01,
+      "duration_min": 61.5,
+      "pace": "5:35",
+      "pace_raw": 5.581,
+      "hr": 134,
+      "kcal": 757,
+      "elevation": 134.0,
+      "points": 0,
+      "effort": 12.315618221258134,
+      "heart_eff": 0.02228
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 38.3,
+      "pace": "5:28",
+      "pace_raw": 5.469,
+      "hr": 127,
+      "kcal": 455,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 11.869565217391303,
+      "heart_eff": 0.02399
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 13.01,
+      "duration_min": 67.3,
+      "pace": "5:10",
+      "pace_raw": 5.173,
+      "hr": 145,
+      "kcal": 902,
+      "elevation": 68.0,
+      "points": 0,
+      "effort": 13.399356276306017,
+      "heart_eff": 0.02222
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 10.52,
+      "duration_min": 54.8,
+      "pace": "5:13",
+      "pace_raw": 5.213,
+      "hr": 134,
+      "kcal": 673,
+      "elevation": 65.0,
+      "points": 0,
+      "effort": 12.273556231003038,
+      "heart_eff": 0.02386
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Tuluá - Base",
+      "type": "running",
+      "dist_km": 11.04,
+      "duration_min": 56.9,
+      "pace": "5:09",
+      "pace_raw": 5.149,
+      "hr": 129,
+      "kcal": 689,
+      "elevation": 55.0,
+      "points": 0,
+      "effort": 12.116060961313012,
+      "heart_eff": 0.02509
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Tuluá - Base",
+      "type": "running",
+      "dist_km": 5.01,
+      "duration_min": 29.1,
+      "pace": "5:48",
+      "pace_raw": 5.807,
+      "hr": 122,
+      "kcal": 328,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 11.265025758443045,
+      "heart_eff": 0.02352
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 24.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 106,
+      "kcal": 187,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.759336099585062,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 1.13,
+      "duration_min": 10.4,
+      "pace": "9:16",
+      "pace_raw": 9.274,
+      "hr": 122,
+      "kcal": 112,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 10.717703349282298,
+      "heart_eff": 0.01473
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Tuluá - Base",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 51.8,
+      "pace": "5:10",
+      "pace_raw": 5.169,
+      "hr": 132,
+      "kcal": 650,
+      "elevation": 44.0,
+      "points": 0,
+      "effort": 12.560386473429952,
+      "heart_eff": 0.02442
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 44.1,
+      "pace": "5:31",
+      "pace_raw": 5.51,
+      "hr": 123,
+      "kcal": 509,
+      "elevation": 51.0,
+      "points": 0,
+      "effort": 11.537589724216094,
+      "heart_eff": 0.02459
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 12.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 94,
+      "kcal": 7,
+      "elevation": null,
+      "points": 0,
+      "effort": 0.5825242718446602,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Tuluá - Carrera larga",
+      "type": "running",
+      "dist_km": 15.41,
+      "duration_min": 82.8,
+      "pace": "5:23",
+      "pace_raw": 5.376,
+      "hr": 135,
+      "kcal": 1021,
+      "elevation": 279.0,
+      "points": 0,
+      "effort": 12.323476161738082,
+      "heart_eff": 0.02296
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 10.04,
+      "duration_min": 54.0,
+      "pace": "5:23",
+      "pace_raw": 5.384,
+      "hr": 129,
+      "kcal": 645,
+      "elevation": 69.0,
+      "points": 0,
+      "effort": 11.937075879086985,
+      "heart_eff": 0.02399
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Tuluá Carrera",
+      "type": "running",
+      "dist_km": 4.41,
+      "duration_min": 21.2,
+      "pace": "4:49",
+      "pace_raw": 4.816,
+      "hr": 141,
+      "kcal": 288,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 13.574234092694423,
+      "heart_eff": 0.02453
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 10.06,
+      "duration_min": 51.6,
+      "pace": "5:08",
+      "pace_raw": 5.125,
+      "hr": 138,
+      "kcal": 675,
+      "elevation": 32.0,
+      "points": 0,
+      "effort": 13.089851325145442,
+      "heart_eff": 0.02356
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 8.04,
+      "duration_min": 43.0,
+      "pace": "5:21",
+      "pace_raw": 5.348,
+      "hr": 135,
+      "kcal": 538,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 12.511627906976743,
+      "heart_eff": 0.02308
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 38.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 114,
+      "kcal": 313,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.186573670444638,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 16.01,
+      "duration_min": 80.0,
+      "pace": "5:00",
+      "pace_raw": 5.0,
+      "hr": 147,
+      "kcal": 1077,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 13.454091193004373,
+      "heart_eff": 0.02267
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 10.58,
+      "duration_min": 54.8,
+      "pace": "5:11",
+      "pace_raw": 5.179,
+      "hr": 140,
+      "kcal": 687,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 12.532684706597749,
+      "heart_eff": 0.02299
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Bogotá, D.C. Carrera",
+      "type": "running",
+      "dist_km": 7.47,
+      "duration_min": 47.5,
+      "pace": "6:21",
+      "pace_raw": 6.352,
+      "hr": 128,
+      "kcal": 520,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 10.95505617977528,
+      "heart_eff": 0.02049
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 73.0,
+      "pace": "5:13",
+      "pace_raw": 5.211,
+      "hr": 138,
+      "kcal": 917,
+      "elevation": 30.0,
+      "points": 0,
+      "effort": 12.558776535037662,
+      "heart_eff": 0.02317
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 35.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 111,
+      "kcal": 280,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.007626310772164,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 11.02,
+      "duration_min": 58.2,
+      "pace": "5:17",
+      "pace_raw": 5.278,
+      "hr": 137,
+      "kcal": 724,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 12.446991404011461,
+      "heart_eff": 0.02304
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Soacha - Carrera larga",
+      "type": "running",
+      "dist_km": 20.05,
+      "duration_min": 98.3,
+      "pace": "4:54",
+      "pace_raw": 4.902,
+      "hr": 151,
+      "kcal": 1346,
+      "elevation": 127.0,
+      "points": 0,
+      "effort": 13.697421981004071,
+      "heart_eff": 0.02252
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 13.21,
+      "duration_min": 74.5,
+      "pace": "5:38",
+      "pace_raw": 5.636,
+      "hr": 138,
+      "kcal": 883,
+      "elevation": 60.0,
+      "points": 0,
+      "effort": 11.85765443151298,
+      "heart_eff": 0.02143
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 16.1,
+      "duration_min": 81.2,
+      "pace": "5:03",
+      "pace_raw": 5.045,
+      "hr": 142,
+      "kcal": 1060,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 13.05150831110199,
+      "heart_eff": 0.02327
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 33.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 125,
+      "kcal": 337,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.089820359281438,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 0.87,
+      "duration_min": 5.7,
+      "pace": "6:29",
+      "pace_raw": 6.488,
+      "hr": 133,
+      "kcal": 66,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 11.647058823529411,
+      "heart_eff": 0.01931
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 10.78,
+      "duration_min": 56.4,
+      "pace": "5:14",
+      "pace_raw": 5.233,
+      "hr": 122,
+      "kcal": 540,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.574468085106384,
+      "heart_eff": 0.02611
+    },
     {
       "date": "2026-06-06",
       "name": "Soacha Carrera",
@@ -1202,21 +2313,336 @@
       "points": 0,
       "effort": 11.344262295081966,
       "heart_eff": 0.02415
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 12.58,
+      "duration_min": 69.9,
+      "pace": "5:34",
+      "pace_raw": 5.559,
+      "hr": 132,
+      "kcal": 810,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 11.585220500595947,
+      "heart_eff": 0.02271
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 17.02,
+      "duration_min": 76.8,
+      "pace": "4:31",
+      "pace_raw": 4.514,
+      "hr": 153,
+      "kcal": 1139,
+      "elevation": 46.0,
+      "points": 0,
+      "effort": 14.824295010845988,
+      "heart_eff": 0.02413
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Soacha - Recuperación",
+      "type": "running",
+      "dist_km": 1.22,
+      "duration_min": 20.6,
+      "pace": "16:50",
+      "pace_raw": 16.837,
+      "hr": 120,
+      "kcal": 199,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 9.683698296836983,
+      "heart_eff": 0.00824
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 24.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 120,
+      "kcal": 249,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.04032258064516,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 0.87,
+      "duration_min": 5.8,
+      "pace": "6:45",
+      "pace_raw": 6.758,
+      "hr": 128,
+      "kcal": 62,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 10.5982905982906,
+      "heart_eff": 0.01923
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Lawndale Carrera",
+      "type": "running",
+      "dist_km": 3.02,
+      "duration_min": 23.9,
+      "pace": "7:56",
+      "pace_raw": 7.932,
+      "hr": 112,
+      "kcal": 214,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 8.94773519163763,
+      "heart_eff": 0.01875
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Redondo Beach Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 1.27,
+      "duration_min": 4.8,
+      "pace": "3:49",
+      "pace_raw": 3.819,
+      "hr": 147,
+      "kcal": 68,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 14.020618556701033,
+      "heart_eff": 0.02963
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Redondo Beach Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 7.24,
+      "duration_min": 45.8,
+      "pace": "6:20",
+      "pace_raw": 6.328,
+      "hr": 134,
+      "kcal": 545,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 11.895234630774826,
+      "heart_eff": 0.01965
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Manhattan Beach Carrera",
+      "type": "running",
+      "dist_km": 15.52,
+      "duration_min": 81.3,
+      "pace": "5:14",
+      "pace_raw": 5.239,
+      "hr": 131,
+      "kcal": 1016,
+      "elevation": 93.0,
+      "points": 0,
+      "effort": 12.494363599098177,
+      "heart_eff": 0.02428
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Pico Rivera - Recuperación",
+      "type": "running",
+      "dist_km": 12.02,
+      "duration_min": 64.8,
+      "pace": "5:24",
+      "pace_raw": 5.394,
+      "hr": 124,
+      "kcal": 770,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 11.879660581126254,
+      "heart_eff": 0.02491
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 12.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 80,
+      "kcal": 7,
+      "elevation": null,
+      "points": 0,
+      "effort": 0.5660377358490566,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Pico Rivera - Base",
+      "type": "running",
+      "dist_km": 8.02,
+      "duration_min": 44.0,
+      "pace": "5:29",
+      "pace_raw": 5.484,
+      "hr": 121,
+      "kcal": 515,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 11.708980674497916,
+      "heart_eff": 0.02511
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 4.01,
+      "duration_min": 22.8,
+      "pace": "5:40",
+      "pace_raw": 5.672,
+      "hr": 127,
+      "kcal": 276,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 12.131868131868131,
+      "heart_eff": 0.02313
+    },
+    {
+      "date": "2026-09-05",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 45.4,
+      "pace": "5:02",
+      "pace_raw": 5.036,
+      "hr": 139,
+      "kcal": 606,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 13.352919573999266,
+      "heart_eff": 0.02381
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Soacha - Carrera larga",
+      "type": "running",
+      "dist_km": 14.53,
+      "duration_min": 72.4,
+      "pace": "4:59",
+      "pace_raw": 4.984,
+      "hr": 146,
+      "kcal": 986,
+      "elevation": 72.0,
+      "points": 0,
+      "effort": 13.612517257248044,
+      "heart_eff": 0.0229
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 9.2,
+      "duration_min": 49.9,
+      "pace": "5:26",
+      "pace_raw": 5.428,
+      "hr": 139,
+      "kcal": 618,
+      "elevation": 42.0,
+      "points": 0,
+      "effort": 12.376502002670227,
+      "heart_eff": 0.02209
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 10.02,
+      "duration_min": 49.5,
+      "pace": "4:56",
+      "pace_raw": 4.941,
+      "hr": 141,
+      "kcal": 636,
+      "elevation": 39.0,
+      "points": 0,
+      "effort": 12.844160215415686,
+      "heart_eff": 0.02391
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Soacha - Base",
+      "type": "running",
+      "dist_km": 4.4,
+      "duration_min": 25.0,
+      "pace": "5:40",
+      "pace_raw": 5.671,
+      "hr": 132,
+      "kcal": 298,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 11.935914552736984,
+      "heart_eff": 0.02227
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 15.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 111,
+      "kcal": 132,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.32807570977918,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Soacha Carrera",
+      "type": "running",
+      "dist_km": 9.63,
+      "duration_min": 49.4,
+      "pace": "5:08",
+      "pace_raw": 5.127,
+      "hr": 140,
+      "kcal": 633,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 12.813765182186236,
+      "heart_eff": 0.02321
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Soacha - Carrera larga",
+      "type": "running",
+      "dist_km": 16.2,
+      "duration_min": 77.5,
+      "pace": "4:47",
+      "pace_raw": 4.786,
+      "hr": 146,
+      "kcal": 1024,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 13.204384268214056,
+      "heart_eff": 0.02385
     }
   ],
   "weekly": [
     {
-      "week": "2026-06-01/2026-06-07",
-      "total_km": 32.05,
-      "sessions": 2,
-      "avg_hr": 140,
-      "avg_pace": 5.282,
-      "total_kcal": 2148,
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 107.67,
+      "sessions": 8,
+      "avg_hr": 134,
+      "avg_pace": 6.033,
+      "total_kcal": 7059,
       "running": {
-        "km": 32.05,
-        "sessions": 2,
-        "avg_hr": 140,
-        "avg_pace": 5.282
+        "km": 107.67,
+        "sessions": 8,
+        "avg_hr": 134,
+        "avg_pace": 6.033
       },
       "cycling": {
         "km": 0,
@@ -1230,7 +2656,277 @@
         "minutos": 0,
         "sessions": 0
       },
-      "total_sessions": 2
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 54.4,
+      "sessions": 5,
+      "avg_hr": 140,
+      "avg_pace": 5.149,
+      "total_kcal": 3632,
+      "running": {
+        "km": 54.4,
+        "sessions": 5,
+        "avg_hr": 140,
+        "avg_pace": 5.149
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 101.42,
+      "sessions": 8,
+      "avg_hr": 132,
+      "avg_pace": 6.996,
+      "total_kcal": 6588,
+      "running": {
+        "km": 101.42,
+        "sessions": 8,
+        "avg_hr": 132,
+        "avg_pace": 6.996
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 87.01,
+      "sessions": 8,
+      "avg_hr": 132,
+      "avg_pace": 5.944,
+      "total_kcal": 5650,
+      "running": {
+        "km": 87.01,
+        "sessions": 8,
+        "avg_hr": 132,
+        "avg_pace": 5.944
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 72.4,
+      "sessions": 8,
+      "avg_hr": 131,
+      "avg_pace": 5.606,
+      "total_kcal": 4722,
+      "running": {
+        "km": 72.4,
+        "sessions": 8,
+        "avg_hr": 131,
+        "avg_pace": 5.606
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 89.77,
+      "sessions": 6,
+      "avg_hr": 129,
+      "avg_pace": 5.293,
+      "total_kcal": 5654,
+      "running": {
+        "km": 89.77,
+        "sessions": 6,
+        "avg_hr": 129,
+        "avg_pace": 5.293
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 14,
+        "sessions": 1
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 39.24,
+      "sessions": 4,
+      "avg_hr": 134,
+      "avg_pace": 5.356,
+      "total_kcal": 2639,
+      "running": {
+        "km": 39.24,
+        "sessions": 4,
+        "avg_hr": 134,
+        "avg_pace": 5.356
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 61.13,
+      "sessions": 7,
+      "avg_hr": 128,
+      "avg_pace": 5.928,
+      "total_kcal": 4176,
+      "running": {
+        "km": 61.13,
+        "sessions": 7,
+        "avg_hr": 128,
+        "avg_pace": 5.928
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 36,
+        "sessions": 2
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 48.56,
+      "sessions": 5,
+      "avg_hr": 138,
+      "avg_pace": 5.135,
+      "total_kcal": 3536,
+      "running": {
+        "km": 48.56,
+        "sessions": 5,
+        "avg_hr": 138,
+        "avg_pace": 5.135
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 38,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 63.13,
+      "sessions": 5,
+      "avg_hr": 139,
+      "avg_pace": 5.384,
+      "total_kcal": 4474,
+      "running": {
+        "km": 63.13,
+        "sessions": 5,
+        "avg_hr": 139,
+        "avg_pace": 5.384
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 35,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 73.01,
+      "sessions": 6,
+      "avg_hr": 136,
+      "avg_pace": 5.494,
+      "total_kcal": 5034,
+      "running": {
+        "km": 73.01,
+        "sessions": 6,
+        "avg_hr": 136,
+        "avg_pace": 5.494
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 33,
+        "sessions": 1
+      },
+      "total_sessions": 7
     },
     {
       "week": "2026-06-08/2026-06-14",
@@ -1504,16 +3200,70 @@
     },
     {
       "week": "2026-08-17/2026-08-23",
-      "total_km": 8.22,
+      "total_km": 66.96,
+      "sessions": 9,
+      "avg_hr": 131,
+      "avg_pace": 6.95,
+      "total_kcal": 4821,
+      "running": {
+        "km": 66.96,
+        "sessions": 9,
+        "avg_hr": 131,
+        "avg_pace": 6.95
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 25,
+        "sessions": 1
+      },
+      "total_sessions": 10
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 12.02,
       "sessions": 1,
       "avg_hr": 124,
-      "avg_pace": 5.566,
-      "total_kcal": 519,
+      "avg_pace": 5.394,
+      "total_kcal": 777,
       "running": {
-        "km": 8.22,
+        "km": 12.02,
         "sessions": 1,
         "avg_hr": 124,
-        "avg_pace": 5.566
+        "avg_pace": 5.394
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 12,
+        "sessions": 1
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 35.57,
+      "sessions": 4,
+      "avg_hr": 133,
+      "avg_pace": 5.294,
+      "total_kcal": 2383,
+      "running": {
+        "km": 35.57,
+        "sessions": 4,
+        "avg_hr": 133,
+        "avg_pace": 5.294
       },
       "cycling": {
         "km": 0,
@@ -1527,16 +3277,61 @@
         "minutos": 0,
         "sessions": 0
       },
-      "total_sessions": 1
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 49.45,
+      "sessions": 5,
+      "avg_hr": 140,
+      "avg_pace": 5.191,
+      "total_kcal": 3341,
+      "running": {
+        "km": 49.45,
+        "sessions": 5,
+        "avg_hr": 140,
+        "avg_pace": 5.191
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 16,
+        "sessions": 1
+      },
+      "total_sessions": 6
     }
   ],
   "acwr": {
-    "valor": 0.98,
+    "valor": 1.17,
     "status": "optimal",
     "confiable": true,
-    "semana": "2026-08-10/2026-08-16",
+    "semana": "2026-09-07/2026-09-13",
     "series": {
       "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.3,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.31,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.2,
+          "status": "optimal"
+        },
         {
           "weekStart": "2026-06-01",
           "weekEnd": "2026-06-07",
@@ -1601,11 +3396,53 @@
           "weekStart": "2026-08-10",
           "weekEnd": "2026-08-16",
           "valor": 0.98,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.93,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.18,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.17,
           "status": "optimal"
         }
       ],
       "running": [
         {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.3,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.31,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.2,
+          "status": "optimal"
+        },
+        {
           "weekStart": "2026-06-01",
           "weekEnd": "2026-06-07",
           "valor": 1.17,
@@ -1670,10 +3507,52 @@
           "weekEnd": "2026-08-16",
           "valor": 0.98,
           "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.93,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.18,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.17,
+          "status": "optimal"
         }
       ],
       "cycling": [],
       "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 2.88,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 2.06,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.28,
+          "status": "optimal"
+        },
         {
           "weekStart": "2026-06-01",
           "weekEnd": "2026-06-07",
@@ -1739,135 +3618,177 @@
           "weekEnd": "2026-08-16",
           "valor": 1.24,
           "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.81,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.51,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.2,
+          "status": "optimal"
         }
       ]
     }
   },
   "pulse": {
-    "semana": "10–16 ago 2026",
-    "score": 81,
-    "headline": "Semana sólida a dos semanas del maratón",
-    "subheadline": "Carga controlada y largo final bien ejecutado",
-    "readiness": 78,
-    "aiVerdict": "Álvaro, cerraste la semana con 71.2 km distribuidos en seis sesiones, incluyendo un largo de casi 24 km a ritmo controlado el domingo, lo que demuestra que tu cuerpo está respondiendo bien a la carga acumulada de las últimas semanas. Tu historial de las últimas ocho semanas muestra una progresión inteligente con picos bien espaciados, y esta semana representa una bajada oportuna respecto al pico de 104 km de hace dos semanas, exactamente lo que necesitas en la recta final. Con solo 14 días para el Maratón de Sydney, tu carga está en zona segura y la frecuencia cardíaca promedio de tus sesiones refleja un esfuerzo aeróbico sostenible. El foco ahora debe ser preservar lo ganado: reducir volumen progresivamente, mantener intensidad puntual y llegar a la largada con piernas frescas.",
+    "semana": "2026-09-07/2026-09-13",
+    "score": 85,
+    "headline": "Semana estable con ritmo más rápido",
+    "subheadline": "Volumen y carga total sin cambios relevantes",
+    "readiness": 87,
+    "aiVerdict": "Álvaro, esta semana mantuviste un volumen de running estable respecto a tu patrón reciente, pero con un ritmo medio más rápido y una frecuencia cardíaca media más alta. La carga total de entrenamiento se mantuvo estable, sin aumentos relevantes en otras disciplinas, lo que indica que seguiste activo pero sin sobrecargar el sistema. De cara a la próxima semana, el plan debe reducir el volumen y priorizar la recuperación, ya que las restricciones actuales exigen una descarga significativa tras varias semanas de alta consistencia.",
     "strengths": [
-      "Largo final de 23.87 km a 5:02/km con FC controlada, señal de buena base aeróbica",
-      "Semana de reducción bien ejecutada tras el pico de 104 km dos semanas atrás",
-      "Consistencia de seis sesiones sin señales de sobrecarga en zona de carga segura"
+      "Volumen de running estable",
+      "Consistencia en días activos",
+      "Carga total en zona segura"
     ],
     "warnings": [
-      "Con 14 días para la carrera, cualquier sesión larga o intensa adicional ya no suma fitness y sí puede sumar fatiga",
-      "La sesión de fuerza de esta semana fue la única en el ciclo reciente; evitar introducir estímulos nuevos en el taper"
+      "Ritmo más rápido acompañado de mayor frecuencia cardíaca",
+      "No se cuenta con datos de dolor o fatiga autorreportados"
     ],
     "keyMetrics": [
       {
-        "label": "Volumen semanal",
-        "value": "71.2 km",
-        "trend": "down",
-        "status": "green",
-        "note": "Reducción correcta tras pico de 104 km"
-      },
-      {
-        "label": "Sesiones de running",
-        "value": "6",
+        "label": "Volumen running semanal",
+        "value": "49.45 km",
         "trend": "stable",
         "status": "green",
-        "note": "Frecuencia sostenida sin sobrecargar"
+        "note": "Consistente con tu promedio reciente"
       },
       {
-        "label": "FC promedio running",
-        "value": "130 bpm",
-        "trend": "stable",
-        "status": "green",
-        "note": "Zona aeróbica eficiente"
-      },
-      {
-        "label": "Ritmo largo dominical",
-        "value": "5:02/km",
-        "trend": "stable",
-        "status": "green",
-        "note": "Muy cercano al ritmo objetivo de maratón"
-      },
-      {
-        "label": "Carga ACWR",
-        "value": "Zona segura",
-        "trend": "stable",
-        "status": "green",
-        "note": "Ideal para iniciar taper final"
-      },
-      {
-        "label": "Días para Sydney",
-        "value": "14",
-        "trend": "down",
+        "label": "Ritmo medio running",
+        "value": "5:11/km",
+        "trend": "up",
         "status": "yellow",
-        "note": "Ventana de taper activa desde hoy"
+        "note": "Ritmo más rápido que tu media"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "267.1 min",
+        "trend": "stable",
+        "status": "green",
+        "note": "Sin cambios relevantes"
       }
     ],
-    "weekPlan": [
-      {
-        "day": "Lun",
-        "type": "Recuperación activa",
-        "km": "8 km",
-        "notes": "Trote suave a 5:30–5:45/km, FC por debajo de 125 bpm. Prioriza movilidad post-sesión."
+    "weeklyPlan": {
+      "week": "2026-09-14/2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "objective": "Reducir volumen y priorizar recuperación post-ciclo",
+      "rationale": "Esta semana necesitas bajar el volumen y la intensidad para favorecer la recuperación, ya que vienes de varias semanas estables y exigentes. El plan prescribe solo sesiones fáciles y días de descanso, en línea con las restricciones actuales.",
+      "summary": {
+        "totalKm": 20.5,
+        "runningSessions": 3,
+        "strengthSessions": 0
       },
-      {
-        "day": "Mar",
-        "type": "Descanso",
-        "km": "—",
-        "notes": "Descanso completo o caminata ligera. Hidratación y sueño prioritarios."
-      },
-      {
-        "day": "Mié",
-        "type": "Rodaje con strides",
-        "km": "10 km",
-        "notes": "8 km suaves + 4 strides de 100 m a ritmo de 10K. Activa las piernas sin acumular fatiga."
-      },
-      {
-        "day": "Jue",
-        "type": "Descanso",
-        "km": "—",
-        "notes": "Recuperación total. Puedes hacer 20 min de movilidad o yoga suave."
-      },
-      {
-        "day": "Vie",
-        "type": "Rodaje de activación",
-        "km": "6 km",
-        "notes": "Ritmo conversacional, 5:20–5:30/km. Últimos 2 km a ritmo objetivo de maratón para calibrar sensaciones."
-      },
-      {
-        "day": "Sáb",
-        "type": "Descanso pre-carrera",
-        "km": "—",
-        "notes": "Descanso completo. Prepara logística de carrera, hidratación y nutrición del día siguiente."
-      },
-      {
-        "day": "Dom",
-        "type": "Maratón de Sydney",
-        "km": "42.2 km",
-        "notes": "Sal conservador los primeros 10 km a 5:10–5:15/km. Mantén ritmo objetivo 5:04/km del km 10 al 30. Gestiona los últimos 12 km según sensaciones."
-      }
-    ],
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Lun",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre para recuperación completa.",
+          "purpose": "Facilitar recuperación general"
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Mar",
+          "type": "Running fácil",
+          "km": "6.5 km",
+          "notes": "Corre a ritmo cómodo, no más rápido que 5:30/km.",
+          "purpose": "Estimular circulación y mantener base aeróbica"
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Mié",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Recuperación total, sin actividad exigente.",
+          "purpose": "Permitir asimilación de cargas previas"
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Jue",
+          "type": "Running fácil",
+          "km": "7 km",
+          "notes": "Mantén un ritmo relajado, entre 5:30 y 5:45/km.",
+          "purpose": "Trabajo aeróbico suave"
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Vie",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prioriza descanso activo si lo deseas.",
+          "purpose": "Recuperación y prevención de fatiga"
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sáb",
+          "type": "Running fácil",
+          "km": "7 km",
+          "notes": "Corre a ritmo fácil, no más rápido que 5:30/km.",
+          "purpose": "Mantener ritmo sin fatigar"
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Dom",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Recuperación total, sin actividad estructurada.",
+          "purpose": "Consolidar frescura para próximos ciclos"
+        }
+      ]
+    },
     "injuryRisk": {
       "level": "low",
-      "score": 22,
-      "topRisk": "Tren inferior (cuádriceps / isquiotibiales)",
-      "action": "Evitar sesiones largas o de alta intensidad esta semana. Priorizar rodajes cortos, estiramientos y sueño reparador para llegar sin fatiga acumulada a Sydney."
+      "signal": "No se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Mantener atención a señales físicas y priorizar descanso esta semana"
     },
-    "funFact": "Álvaro, en las últimas 8 semanas acumulaste más de 564 km de running, el equivalente a correr de Bogotá a Medellín y de regreso, con kilómetros de sobra.",
-    "seoulTip": null,
     "projection": {
-      "tiempo": "2:56:12",
-      "ritmo": "4:11",
+      "tiempo": "2:47:54",
+      "ritmo": "3:59",
       "confianza": "media",
-      "contexto": "Basado en tu Media maratón del 28 de junio. Sin datos suficientes de FC para ajustar por preparación.",
-      "referencia": "Media maratón del 28 de junio de 2026 en 1:25:30 (FC 165 bpm)",
+      "contexto": "Estimación basada en tu resultado anterior, sin ajuste por frecuencia cardíaca.",
+      "referencia": "Maratón del 26 de abril de 2026 en 2:49:42 (FC 155 bpm)",
       "notaAltitud": null
     }
   },
   "semanaAnalizada": {
-    "inicio": "2026-08-10",
-    "fin": "2026-08-16"
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
   },
   "taper": [],
-  "retos": []
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "complete",
+    "followUp": {
+      "question": "¿Cuál es tu próximo objetivo después de Sydney?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta nos ayudará a completar el contexto de tu próxima entrega."
+    },
+    "race": {
+      "state": "completed",
+      "name": "Maratón de Sydney",
+      "date": "2026-08-30",
+      "confirmationSource": "team_confirmation",
+      "confirmedOn": "2026-09-15"
+    }
+  }
 }

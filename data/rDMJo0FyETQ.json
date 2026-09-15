@@ -1,0 +1,2998 @@
+{
+  "meta": {
+    "userId": "46542",
+    "nombre": "CARLOS DAVID MONTOYA",
+    "genero": "Male",
+    "edad": 36,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:00",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "22:40",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "47:27",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Carrera de las Rosas",
+      "fecha": "2026-09-27",
+      "label": "21K",
+      "diasPrep": 13
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-15T02:56:29.606329Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-18",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 6.94,
+      "duration_min": 41.8,
+      "pace": "6:01",
+      "pace_raw": 6.018,
+      "hr": 134,
+      "kcal": 483,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.559633027522937,
+      "heart_eff": 0.02067
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 55.6,
+      "duration_min": 186.2,
+      "pace": "3:21",
+      "pace_raw": 3.348,
+      "hr": 130,
+      "kcal": 1849,
+      "elevation": 1124.0,
+      "points": 0,
+      "effort": 9.931071524483036,
+      "heart_eff": 0.03828
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 9.0,
+      "duration_min": 55.6,
+      "pace": "6:11",
+      "pace_raw": 6.177,
+      "hr": 158,
+      "kcal": 816,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.676258992805755,
+      "heart_eff": 0.01708
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 5.04,
+      "duration_min": 33.6,
+      "pace": "6:39",
+      "pace_raw": 6.657,
+      "hr": 142,
+      "kcal": 402,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.976166832174775,
+      "heart_eff": 0.01763
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 7.69,
+      "duration_min": 44.9,
+      "pace": "5:50",
+      "pace_raw": 5.839,
+      "hr": 156,
+      "kcal": 616,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.719376391982182,
+      "heart_eff": 0.0183
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.75,
+      "duration_min": 49.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 141,
+      "kcal": 578,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.71225937183384,
+      "heart_eff": 0.00579
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 8.84,
+      "duration_min": 47.7,
+      "pace": "5:23",
+      "pace_raw": 5.391,
+      "hr": 150,
+      "kcal": 663,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 13.904229290457883,
+      "heart_eff": 0.02061
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.57,
+      "duration_min": 42.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 126,
+      "kcal": 405,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.533150255001962,
+      "heart_eff": 0.00752
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.82,
+      "duration_min": 43.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 136,
+      "kcal": 474,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.993428681870892,
+      "heart_eff": 0.00697
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 4.03,
+      "duration_min": 25.0,
+      "pace": "6:13",
+      "pace_raw": 6.219,
+      "hr": 146,
+      "kcal": 323,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.902796271637815,
+      "heart_eff": 0.01835
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 7.35,
+      "duration_min": 45.0,
+      "pace": "6:08",
+      "pace_raw": 6.132,
+      "hr": 141,
+      "kcal": 531,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.786903440621533,
+      "heart_eff": 0.01928
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.88,
+      "duration_min": 44.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 146,
+      "kcal": 560,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.462908011869438,
+      "heart_eff": 0.00627
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.35,
+      "duration_min": 34.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 137,
+      "kcal": 398,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.513982642237222,
+      "heart_eff": 0.0062
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 8.89,
+      "duration_min": 60.1,
+      "pace": "6:46",
+      "pace_raw": 6.769,
+      "hr": 142,
+      "kcal": 778,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.934330839567748,
+      "heart_eff": 0.01734
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.05,
+      "duration_min": 48.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 137,
+      "kcal": 552,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.420689655172414,
+      "heart_eff": 0.00704
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 44.94,
+      "duration_min": 120.0,
+      "pace": "2:40",
+      "pace_raw": 2.67,
+      "hr": 148,
+      "kcal": 1589,
+      "elevation": 696.0,
+      "points": 0,
+      "effort": 13.241666666666667,
+      "heart_eff": 0.04217
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 39.99,
+      "duration_min": 83.8,
+      "pace": "2:06",
+      "pace_raw": 2.096,
+      "hr": 133,
+      "kcal": 911,
+      "elevation": 294.0,
+      "points": 0,
+      "effort": 10.86896003181547,
+      "heart_eff": 0.05979
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 4.61,
+      "duration_min": 28.0,
+      "pace": "6:04",
+      "pace_raw": 6.073,
+      "hr": 150,
+      "kcal": 384,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.714285714285714,
+      "heart_eff": 0.01829
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 8.15,
+      "duration_min": 50.1,
+      "pace": "6:09",
+      "pace_raw": 6.148,
+      "hr": 154,
+      "kcal": 685,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.677204658901829,
+      "heart_eff": 0.0176
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.35,
+      "duration_min": 46.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 134,
+      "kcal": 496,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.759219088937092,
+      "heart_eff": 0.00719
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.3,
+      "duration_min": 40.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 127,
+      "kcal": 412,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.26578073089701,
+      "heart_eff": 0.00717
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 12.75,
+      "duration_min": 70.0,
+      "pace": "5:30",
+      "pace_raw": 5.492,
+      "hr": 138,
+      "kcal": 844,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.054272792192336,
+      "heart_eff": 0.02199
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 70.82,
+      "duration_min": 135.0,
+      "pace": "1:54",
+      "pace_raw": 1.907,
+      "hr": 135,
+      "kcal": 1521,
+      "elevation": 644.0,
+      "points": 0,
+      "effort": 11.263885460380154,
+      "heart_eff": 0.06474
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.3,
+      "duration_min": 57.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 131,
+      "kcal": 614,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.598388952819333,
+      "heart_eff": 0.00616
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.02,
+      "duration_min": 27.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 124,
+      "kcal": 262,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.703703703703704,
+      "heart_eff": 0.00679
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.77,
+      "duration_min": 52.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 116,
+      "kcal": 458,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.663303909205549,
+      "heart_eff": 0.00753
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 5.96,
+      "duration_min": 39.1,
+      "pace": "6:34",
+      "pace_raw": 6.567,
+      "hr": 146,
+      "kcal": 519,
+      "elevation": 201.0,
+      "points": 0,
+      "effort": 13.268001704303366,
+      "heart_eff": 0.01738
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 6.56,
+      "duration_min": 35.0,
+      "pace": "5:20",
+      "pace_raw": 5.34,
+      "hr": 135,
+      "kcal": 406,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.58896289248335,
+      "heart_eff": 0.02311
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 9.41,
+      "duration_min": 53.0,
+      "pace": "5:38",
+      "pace_raw": 5.637,
+      "hr": 156,
+      "kcal": 755,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.231856738925543,
+      "heart_eff": 0.01895
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.27,
+      "duration_min": 57.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 136,
+      "kcal": 638,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.183172655565293,
+      "heart_eff": 0.00713
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.25,
+      "duration_min": 51.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 135,
+      "kcal": 577,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.142581268104282,
+      "heart_eff": 0.0069
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 28.71,
+      "duration_min": 51.6,
+      "pace": "1:48",
+      "pace_raw": 1.796,
+      "hr": 160,
+      "kcal": 759,
+      "elevation": 30.0,
+      "points": 0,
+      "effort": 14.718810601163542,
+      "heart_eff": 0.058
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 29.9,
+      "duration_min": 51.5,
+      "pace": "1:43",
+      "pace_raw": 1.721,
+      "hr": 160,
+      "kcal": 759,
+      "elevation": 86.0,
+      "points": 0,
+      "effort": 14.74740932642487,
+      "heart_eff": 0.06052
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 3.84,
+      "duration_min": 20.1,
+      "pace": "5:14",
+      "pace_raw": 5.235,
+      "hr": 163,
+      "kcal": 310,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 15.422885572139302,
+      "heart_eff": 0.01953
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 26.04,
+      "duration_min": 105.1,
+      "pace": "4:02",
+      "pace_raw": 4.037,
+      "hr": 144,
+      "kcal": 1265,
+      "elevation": 851.0,
+      "points": 0,
+      "effort": 12.036156041864892,
+      "heart_eff": 0.02867
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.74,
+      "duration_min": 10.1,
+      "pace": "5:50",
+      "pace_raw": 5.829,
+      "hr": 141,
+      "kcal": 122,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.059308072487644,
+      "heart_eff": 0.02028
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 14.22,
+      "duration_min": 80.1,
+      "pace": "5:38",
+      "pace_raw": 5.631,
+      "hr": 143,
+      "kcal": 1029,
+      "elevation": 160.0,
+      "points": 0,
+      "effort": 12.849115504682622,
+      "heart_eff": 0.02069
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.0,
+      "duration_min": 21.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 140,
+      "kcal": 264,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.14723926380368,
+      "heart_eff": 0.00553
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.1,
+      "duration_min": 45.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 139,
+      "kcal": 525,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.559633027522937,
+      "heart_eff": 0.00762
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 10.74,
+      "duration_min": 58.0,
+      "pace": "5:24",
+      "pace_raw": 5.403,
+      "hr": 151,
+      "kcal": 775,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.354394026421597,
+      "heart_eff": 0.02042
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.15,
+      "duration_min": 54.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 133,
+      "kcal": 596,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.929095354523227,
+      "heart_eff": 0.00717
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 4.15,
+      "duration_min": 23.9,
+      "pace": "5:45",
+      "pace_raw": 5.752,
+      "hr": 141,
+      "kcal": 283,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.841004184100418,
+      "heart_eff": 0.02055
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 43.41,
+      "duration_min": 101.7,
+      "pace": "2:21",
+      "pace_raw": 2.343,
+      "hr": 153,
+      "kcal": 1380,
+      "elevation": 679.0,
+      "points": 0,
+      "effort": 13.569321533923304,
+      "heart_eff": 0.04649
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 38.23,
+      "duration_min": 101.5,
+      "pace": "2:39",
+      "pace_raw": 2.654,
+      "hr": 153,
+      "kcal": 1373,
+      "elevation": 783.0,
+      "points": 0,
+      "effort": 13.52931515848251,
+      "heart_eff": 0.04104
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 3.26,
+      "duration_min": 15.1,
+      "pace": "4:38",
+      "pace_raw": 4.637,
+      "hr": 149,
+      "kcal": 205,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 13.561190738699008,
+      "heart_eff": 0.02411
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Triathlon swimming",
+      "type": "swimming",
+      "dist_km": 0.3,
+      "duration_min": 8.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 108,
+      "kcal": 65,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.81563126252505,
+      "heart_eff": 0.00551
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Triathlon cycling",
+      "type": "cycling",
+      "dist_km": 1.32,
+      "duration_min": 9.2,
+      "pace": "6:59",
+      "pace_raw": 6.99,
+      "hr": 158,
+      "kcal": 134,
+      "elevation": 406.0,
+      "points": 0,
+      "effort": 14.538878842676311,
+      "heart_eff": 0.01508
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Triathlon swimming",
+      "type": "swimming",
+      "dist_km": 0.66,
+      "duration_min": 12.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 136,
+      "kcal": 143,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.39442231075697,
+      "heart_eff": 0.00646
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 13.52,
+      "duration_min": 75.0,
+      "pace": "5:33",
+      "pace_raw": 5.547,
+      "hr": 141,
+      "kcal": 941,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.54387913796934,
+      "heart_eff": 0.02131
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 33.86,
+      "duration_min": 60.1,
+      "pace": "1:46",
+      "pace_raw": 1.775,
+      "hr": 148,
+      "kcal": 781,
+      "elevation": 244.0,
+      "points": 0,
+      "effort": 12.995008319467553,
+      "heart_eff": 0.06345
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.26,
+      "duration_min": 64.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 114,
+      "kcal": 499,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.700617283950618,
+      "heart_eff": 0.00805
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 11.33,
+      "duration_min": 63.1,
+      "pace": "5:34",
+      "pace_raw": 5.569,
+      "hr": 145,
+      "kcal": 786,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.456418383518225,
+      "heart_eff": 0.02064
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.6,
+      "duration_min": 62.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 133,
+      "kcal": 673,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.846091861402096,
+      "heart_eff": 0.00604
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.65,
+      "duration_min": 8.7,
+      "pace": "5:17",
+      "pace_raw": 5.29,
+      "hr": 154,
+      "kcal": 119,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.625954198473284,
+      "heart_eff": 0.02045
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 54.13,
+      "duration_min": 105.0,
+      "pace": "1:56",
+      "pace_raw": 1.94,
+      "hr": 154,
+      "kcal": 1456,
+      "elevation": 157.0,
+      "points": 0,
+      "effort": 13.862265947318312,
+      "heart_eff": 0.05577
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 52.22,
+      "duration_min": 96.0,
+      "pace": "1:50",
+      "pace_raw": 1.838,
+      "hr": 156,
+      "kcal": 1350,
+      "elevation": 80.0,
+      "points": 0,
+      "effort": 14.0673845085099,
+      "heart_eff": 0.05813
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 2.75,
+      "duration_min": 15.0,
+      "pace": "5:28",
+      "pace_raw": 5.464,
+      "hr": 154,
+      "kcal": 213,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 14.168514412416851,
+      "heart_eff": 0.0198
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 11.37,
+      "duration_min": 60.0,
+      "pace": "5:17",
+      "pace_raw": 5.276,
+      "hr": 135,
+      "kcal": 720,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.0,
+      "heart_eff": 0.0234
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.25,
+      "duration_min": 53.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 140,
+      "kcal": 655,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.319749216300941,
+      "heart_eff": 0.00546
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 8.73,
+      "duration_min": 40.1,
+      "pace": "4:36",
+      "pace_raw": 4.599,
+      "hr": 151,
+      "kcal": 565,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.078073089700997,
+      "heart_eff": 0.024
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.7,
+      "duration_min": 42.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 115,
+      "kcal": 369,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.601398601398602,
+      "heart_eff": 0.00764
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.8,
+      "duration_min": 42.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 134,
+      "kcal": 478,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.318074191002367,
+      "heart_eff": 0.00596
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 8.67,
+      "duration_min": 49.1,
+      "pace": "5:40",
+      "pace_raw": 5.665,
+      "hr": 153,
+      "kcal": 673,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.70672097759674,
+      "heart_eff": 0.01922
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.25,
+      "duration_min": 37.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 129,
+      "kcal": 398,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.538393645189762,
+      "heart_eff": 0.0066
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.4,
+      "duration_min": 59.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 133,
+      "kcal": 669,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.307042253521127,
+      "heart_eff": 0.00628
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 12.66,
+      "duration_min": 25.1,
+      "pace": "1:59",
+      "pace_raw": 1.985,
+      "hr": 144,
+      "kcal": 314,
+      "elevation": 44.0,
+      "points": 0,
+      "effort": 12.493368700265252,
+      "heart_eff": 0.05829
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 4.94,
+      "duration_min": 25.1,
+      "pace": "5:05",
+      "pace_raw": 5.076,
+      "hr": 154,
+      "kcal": 363,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.471760797342194,
+      "heart_eff": 0.02132
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 3.59,
+      "duration_min": 21.9,
+      "pace": "6:06",
+      "pace_raw": 6.094,
+      "hr": 132,
+      "kcal": 240,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.983981693363845,
+      "heart_eff": 0.0207
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 12.25,
+      "duration_min": 60.0,
+      "pace": "4:54",
+      "pace_raw": 4.9,
+      "hr": 139,
+      "kcal": 751,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.513190780338794,
+      "heart_eff": 0.02447
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Open water swimming",
+      "type": "swimming",
+      "dist_km": 1.1,
+      "duration_min": 19.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 127,
+      "kcal": 207,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.419463087248323,
+      "heart_eff": 0.00724
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Open water swimming",
+      "type": "swimming",
+      "dist_km": 1.4,
+      "duration_min": 37.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 137,
+      "kcal": 446,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.043204320432045,
+      "heart_eff": 0.00458
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 0.58,
+      "duration_min": 39.0,
+      "pace": "—",
+      "pace_raw": 67.073,
+      "hr": 151,
+      "kcal": 534,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.674775928297056,
+      "heart_eff": 0.00164
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.58,
+      "duration_min": 55.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 110,
+      "kcal": 463,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.297491039426523,
+      "heart_eff": 0.00793
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 0.5,
+      "duration_min": 25.1,
+      "pace": "—",
+      "pace_raw": 49.729,
+      "hr": 154,
+      "kcal": 363,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.471760797342194,
+      "heart_eff": 0.00218
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 50.34,
+      "duration_min": 114.5,
+      "pace": "2:16",
+      "pace_raw": 2.274,
+      "hr": 152,
+      "kcal": 1679,
+      "elevation": 402.0,
+      "points": 0,
+      "effort": 14.670161642638707,
+      "heart_eff": 0.04822
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 51.75,
+      "duration_min": 114.5,
+      "pace": "2:13",
+      "pace_raw": 2.211,
+      "hr": 152,
+      "kcal": 1693,
+      "elevation": 416.0,
+      "points": 0,
+      "effort": 14.792485801660114,
+      "heart_eff": 0.04958
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 2.78,
+      "duration_min": 20.0,
+      "pace": "7:12",
+      "pace_raw": 7.205,
+      "hr": 153,
+      "kcal": 309,
+      "elevation": 85.0,
+      "points": 0,
+      "effort": 15.43713572023314,
+      "heart_eff": 0.01511
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 12.42,
+      "duration_min": 60.0,
+      "pace": "4:50",
+      "pace_raw": 4.835,
+      "hr": 136,
+      "kcal": 771,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.842865074958357,
+      "heart_eff": 0.02535
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.35,
+      "duration_min": 47.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 139,
+      "kcal": 596,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.52978276103714,
+      "heart_eff": 0.00669
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 8.17,
+      "duration_min": 40.1,
+      "pace": "4:55",
+      "pace_raw": 4.91,
+      "hr": 140,
+      "kcal": 531,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.241895261845386,
+      "heart_eff": 0.02424
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.9,
+      "duration_min": 49.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 132,
+      "kcal": 579,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.65771812080537,
+      "heart_eff": 0.00636
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 13.93,
+      "duration_min": 42.7,
+      "pace": "3:04",
+      "pace_raw": 3.066,
+      "hr": 153,
+      "kcal": 631,
+      "elevation": 495.0,
+      "points": 0,
+      "effort": 14.777517564402809,
+      "heart_eff": 0.03553
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.68,
+      "duration_min": 16.8,
+      "pace": "9:59",
+      "pace_raw": 9.979,
+      "hr": 139,
+      "kcal": 218,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.989076464746772,
+      "heart_eff": 0.01201
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 8.28,
+      "duration_min": 25.1,
+      "pace": "3:02",
+      "pace_raw": 3.036,
+      "hr": 79,
+      "kcal": 54,
+      "elevation": 51.0,
+      "points": 0,
+      "effort": 2.1485411140583555,
+      "heart_eff": 0.06948
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 14.83,
+      "duration_min": 58.5,
+      "pace": "3:57",
+      "pace_raw": 3.944,
+      "hr": 129,
+      "kcal": 622,
+      "elevation": 530.0,
+      "points": 0,
+      "effort": 10.635508691935025,
+      "heart_eff": 0.03275
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 13.12,
+      "duration_min": 37.0,
+      "pace": "2:49",
+      "pace_raw": 2.817,
+      "hr": 106,
+      "kcal": 257,
+      "elevation": 152.0,
+      "points": 0,
+      "effort": 6.952209197475202,
+      "heart_eff": 0.0558
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 8.08,
+      "duration_min": 40.1,
+      "pace": "4:58",
+      "pace_raw": 4.961,
+      "hr": 132,
+      "kcal": 507,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.653910149750415,
+      "heart_eff": 0.02545
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 2.4,
+      "duration_min": 53.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 138,
+      "kcal": 703,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.243328100470958,
+      "heart_eff": 0.0058
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.5,
+      "duration_min": 30.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 123,
+      "kcal": 339,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.018418201516793,
+      "heart_eff": 0.00696
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.18,
+      "duration_min": 42.1,
+      "pace": "—",
+      "pace_raw": 35.854,
+      "hr": 131,
+      "kcal": 520,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.336892052194544,
+      "heart_eff": 0.00355
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.4,
+      "duration_min": 32.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 136,
+      "kcal": 410,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.700051626226124,
+      "heart_eff": 0.00634
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 0.77,
+      "duration_min": 15.0,
+      "pace": "19:29",
+      "pace_raw": 19.476,
+      "hr": 150,
+      "kcal": 206,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.702882483370288,
+      "heart_eff": 0.0057
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.35,
+      "duration_min": 29.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 121,
+      "kcal": 290,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.942857142857143,
+      "heart_eff": 0.00674
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Triathlon swimming",
+      "type": "swimming",
+      "dist_km": 0.93,
+      "duration_min": 20.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 125,
+      "kcal": 217,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.637254901960786,
+      "heart_eff": 0.00606
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 31.7,
+      "duration_min": 67.5,
+      "pace": "2:08",
+      "pace_raw": 2.131,
+      "hr": 167,
+      "kcal": 1158,
+      "elevation": 526.0,
+      "points": 0,
+      "effort": 17.142857142857142,
+      "heart_eff": 0.04683
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Triathlon cycling",
+      "type": "cycling",
+      "dist_km": 30.91,
+      "duration_min": 68.1,
+      "pace": "2:12",
+      "pace_raw": 2.202,
+      "hr": 167,
+      "kcal": 1064,
+      "elevation": 392.0,
+      "points": 0,
+      "effort": 15.631733594515183,
+      "heart_eff": 0.04532
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Triathlon running",
+      "type": "running",
+      "dist_km": 5.16,
+      "duration_min": 26.4,
+      "pace": "5:07",
+      "pace_raw": 5.115,
+      "hr": 170,
+      "kcal": 427,
+      "elevation": 95.0,
+      "points": 0,
+      "effort": 16.18445988629185,
+      "heart_eff": 0.01916
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.63,
+      "duration_min": 40.3,
+      "pace": "24:39",
+      "pace_raw": 24.658,
+      "hr": 137,
+      "kcal": 531,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.181630119983451,
+      "heart_eff": 0.00493
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 21.01,
+      "duration_min": 143.3,
+      "pace": "6:49",
+      "pace_raw": 6.822,
+      "hr": 150,
+      "kcal": 2199,
+      "elevation": 124.0,
+      "points": 0,
+      "effort": 15.340076735263342,
+      "heart_eff": 0.01629
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 5.67,
+      "duration_min": 40.0,
+      "pace": "7:03",
+      "pace_raw": 7.055,
+      "hr": 128,
+      "kcal": 479,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.970012494793837,
+      "heart_eff": 0.01846
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Stretching",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 37.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 103,
+      "kcal": 289,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.669172932330827,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Cycling",
+      "type": "cycling",
+      "dist_km": 79.02,
+      "duration_min": 197.2,
+      "pace": "2:30",
+      "pace_raw": 2.495,
+      "hr": 143,
+      "kcal": 2598,
+      "elevation": 1483.0,
+      "points": 0,
+      "effort": 13.176669484361792,
+      "heart_eff": 0.04671
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 9.42,
+      "duration_min": 59.2,
+      "pace": "6:18",
+      "pace_raw": 6.292,
+      "hr": 138,
+      "kcal": 802,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 13.535864978902953,
+      "heart_eff": 0.01919
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 1.2,
+      "duration_min": 27.9,
+      "pace": "23:11",
+      "pace_raw": 23.18,
+      "hr": 139,
+      "kcal": 330,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.842105263157894,
+      "heart_eff": 0.00517
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 12.02,
+      "duration_min": 67.1,
+      "pace": "5:35",
+      "pace_raw": 5.583,
+      "hr": 140,
+      "kcal": 807,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 12.029813664596274,
+      "heart_eff": 0.02132
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Stretching",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 41.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 75,
+      "kcal": 126,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 3.066937119675456,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 11.39,
+      "duration_min": 67.3,
+      "pace": "5:54",
+      "pace_raw": 5.906,
+      "hr": 146,
+      "kcal": 854,
+      "elevation": 114.0,
+      "points": 0,
+      "effort": 12.692593510032202,
+      "heart_eff": 0.01933
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 5.4,
+      "duration_min": 43.8,
+      "pace": "8:07",
+      "pace_raw": 8.113,
+      "hr": 142,
+      "kcal": 522,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 11.913275009509318,
+      "heart_eff": 0.01446
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.18,
+      "duration_min": 35.2,
+      "pace": "5:41",
+      "pace_raw": 5.691,
+      "hr": 145,
+      "kcal": 458,
+      "elevation": 66.0,
+      "points": 0,
+      "effort": 13.0175272382757,
+      "heart_eff": 0.02019
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Stretching",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 43.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 95,
+      "kcal": 251,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 5.778971603990791,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.36,
+      "duration_min": 51.4,
+      "pace": "8:05",
+      "pace_raw": 8.082,
+      "hr": 123,
+      "kcal": 521,
+      "elevation": 154.0,
+      "points": 0,
+      "effort": 10.129617627997408,
+      "heart_eff": 0.01676
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.01,
+      "duration_min": 35.2,
+      "pace": "5:51",
+      "pace_raw": 5.848,
+      "hr": 149,
+      "kcal": 476,
+      "elevation": 60.0,
+      "points": 0,
+      "effort": 13.535545023696683,
+      "heart_eff": 0.01912
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 0.72,
+      "duration_min": 17.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 108,
+      "kcal": 137,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.988338192419826,
+      "heart_eff": 0.00676
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 3.48,
+      "duration_min": 19.4,
+      "pace": "5:34",
+      "pace_raw": 5.565,
+      "hr": 138,
+      "kcal": 227,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 11.7312661498708,
+      "heart_eff": 0.0217
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 21.46,
+      "duration_min": 105.2,
+      "pace": "4:54",
+      "pace_raw": 4.903,
+      "hr": 174,
+      "kcal": 1708,
+      "elevation": 89.0,
+      "points": 0,
+      "effort": 16.23059866962306,
+      "heart_eff": 0.01953
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Pool swimming",
+      "type": "swimming",
+      "dist_km": 1.0,
+      "duration_min": 28.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 112,
+      "kcal": 235,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.308780200353565,
+      "heart_eff": 0.00828
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Treadmill running",
+      "type": "running",
+      "dist_km": 0.59,
+      "duration_min": 60.6,
+      "pace": "—",
+      "pace_raw": 102.882,
+      "hr": 110,
+      "kcal": 547,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.03137039075399,
+      "heart_eff": 0.00147
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Stretching",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 44.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 270,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.081081081081082,
+      "heart_eff": 0
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 15.94,
+      "sessions": 2,
+      "avg_hr": 146,
+      "avg_pace": 6.098,
+      "total_kcal": 3148,
+      "running": {
+        "km": 15.94,
+        "sessions": 2,
+        "avg_hr": 146,
+        "avg_pace": 6.098
+      },
+      "cycling": {
+        "km": 55.6,
+        "sessions": 1
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 5.04,
+      "sessions": 1,
+      "avg_hr": 142,
+      "avg_pace": 6.657,
+      "total_kcal": 402,
+      "running": {
+        "km": 5.04,
+        "sessions": 1,
+        "avg_hr": 142,
+        "avg_pace": 6.657
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 20.56,
+      "sessions": 3,
+      "avg_hr": 151,
+      "avg_pace": 5.816,
+      "total_kcal": 3059,
+      "running": {
+        "km": 20.56,
+        "sessions": 3,
+        "avg_hr": 151,
+        "avg_pace": 5.816
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 5140,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 20.85,
+      "sessions": 3,
+      "avg_hr": 144,
+      "avg_pace": 6.325,
+      "total_kcal": 5703,
+      "running": {
+        "km": 20.85,
+        "sessions": 3,
+        "avg_hr": 144,
+        "avg_pace": 6.325
+      },
+      "cycling": {
+        "km": 84.93,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 5280,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 20.9,
+      "sessions": 2,
+      "avg_hr": 146,
+      "avg_pace": 5.82,
+      "total_kcal": 4572,
+      "running": {
+        "km": 20.9,
+        "sessions": 2,
+        "avg_hr": 146,
+        "avg_pace": 5.82
+      },
+      "cycling": {
+        "km": 70.82,
+        "sessions": 1
+      },
+      "swimming": {
+        "metros": 4950,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 12.52,
+      "sessions": 2,
+      "avg_hr": 140,
+      "avg_pace": 5.954,
+      "total_kcal": 1645,
+      "running": {
+        "km": 12.52,
+        "sessions": 2,
+        "avg_hr": 140,
+        "avg_pace": 5.954
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 2790,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 29.21,
+      "sessions": 4,
+      "avg_hr": 151,
+      "avg_pace": 5.583,
+      "total_kcal": 6478,
+      "running": {
+        "km": 29.21,
+        "sessions": 4,
+        "avg_hr": 151,
+        "avg_pace": 5.583
+      },
+      "cycling": {
+        "km": 84.65,
+        "sessions": 3
+      },
+      "swimming": {
+        "metros": 5520,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 10
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 31.67,
+      "sessions": 4,
+      "avg_hr": 146,
+      "avg_pace": 5.335,
+      "total_kcal": 6420,
+      "running": {
+        "km": 31.67,
+        "sessions": 4,
+        "avg_hr": 146,
+        "avg_pace": 5.335
+      },
+      "cycling": {
+        "km": 82.96,
+        "sessions": 3
+      },
+      "swimming": {
+        "metros": 5210,
+        "sessions": 4
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 11
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 27.1,
+      "sessions": 4,
+      "avg_hr": 147,
+      "avg_pace": 5.4,
+      "total_kcal": 7252,
+      "running": {
+        "km": 27.1,
+        "sessions": 4,
+        "avg_hr": 147,
+        "avg_pace": 5.4
+      },
+      "cycling": {
+        "km": 140.21,
+        "sessions": 3
+      },
+      "swimming": {
+        "metros": 7110,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 10
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 8.73,
+      "sessions": 1,
+      "avg_hr": 151,
+      "avg_pace": 4.599,
+      "total_kcal": 1412,
+      "running": {
+        "km": 8.73,
+        "sessions": 1,
+        "avg_hr": 151,
+        "avg_pace": 4.599
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 3500,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 29.45,
+      "sessions": 4,
+      "avg_hr": 144,
+      "avg_pace": 5.434,
+      "total_kcal": 3615,
+      "running": {
+        "km": 29.45,
+        "sessions": 4,
+        "avg_hr": 144,
+        "avg_pace": 5.434
+      },
+      "cycling": {
+        "km": 12.66,
+        "sessions": 1
+      },
+      "swimming": {
+        "metros": 4750,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 16.28,
+      "sessions": 4,
+      "avg_hr": 148,
+      "avg_pace": 32.21,
+      "total_kcal": 6854,
+      "running": {
+        "km": 16.28,
+        "sessions": 4,
+        "avg_hr": 148,
+        "avg_pace": 32.21
+      },
+      "cycling": {
+        "km": 102.09,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 6330,
+        "sessions": 3
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 17.93,
+      "sessions": 3,
+      "avg_hr": 137,
+      "avg_pace": 6.617,
+      "total_kcal": 4102,
+      "running": {
+        "km": 17.93,
+        "sessions": 3,
+        "avg_hr": 137,
+        "avg_pace": 6.617
+      },
+      "cycling": {
+        "km": 50.16,
+        "sessions": 4
+      },
+      "swimming": {
+        "metros": 4300,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 1.95,
+      "sessions": 2,
+      "avg_hr": 140,
+      "avg_pace": 27.665,
+      "total_kcal": 1475,
+      "running": {
+        "km": 1.95,
+        "sessions": 2,
+        "avg_hr": 140,
+        "avg_pace": 27.665
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 2900,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 5.16,
+      "sessions": 1,
+      "avg_hr": 170,
+      "avg_pace": 5.115,
+      "total_kcal": 3156,
+      "running": {
+        "km": 5.16,
+        "sessions": 1,
+        "avg_hr": 170,
+        "avg_pace": 5.115
+      },
+      "cycling": {
+        "km": 62.61,
+        "sessions": 2
+      },
+      "swimming": {
+        "metros": 2280,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 1.63,
+      "sessions": 1,
+      "avg_hr": 137,
+      "avg_pace": 24.658,
+      "total_kcal": 531,
+      "running": {
+        "km": 1.63,
+        "sessions": 1,
+        "avg_hr": 137,
+        "avg_pace": 24.658
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 21.01,
+      "sessions": 1,
+      "avg_hr": 150,
+      "avg_pace": 6.822,
+      "total_kcal": 2199,
+      "running": {
+        "km": 21.01,
+        "sessions": 1,
+        "avg_hr": 150,
+        "avg_pace": 6.822
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 15.09,
+      "sessions": 2,
+      "avg_hr": 133,
+      "avg_pace": 6.673,
+      "total_kcal": 4168,
+      "running": {
+        "km": 15.09,
+        "sessions": 2,
+        "avg_hr": 133,
+        "avg_pace": 6.673
+      },
+      "cycling": {
+        "km": 79.02,
+        "sessions": 1
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 38,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 13.22,
+      "sessions": 2,
+      "avg_hr": 140,
+      "avg_pace": 14.381,
+      "total_kcal": 1137,
+      "running": {
+        "km": 13.22,
+        "sessions": 2,
+        "avg_hr": 140,
+        "avg_pace": 14.381
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 11.39,
+      "sessions": 1,
+      "avg_hr": 146,
+      "avg_pace": 5.906,
+      "total_kcal": 980,
+      "running": {
+        "km": 11.39,
+        "sessions": 1,
+        "avg_hr": 146,
+        "avg_pace": 5.906
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 41,
+        "sessions": 1
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 5.4,
+      "sessions": 1,
+      "avg_hr": 142,
+      "avg_pace": 8.113,
+      "total_kcal": 522,
+      "running": {
+        "km": 5.4,
+        "sessions": 1,
+        "avg_hr": 142,
+        "avg_pace": 8.113
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 12.54,
+      "sessions": 2,
+      "avg_hr": 134,
+      "avg_pace": 6.886,
+      "total_kcal": 1230,
+      "running": {
+        "km": 12.54,
+        "sessions": 2,
+        "avg_hr": 134,
+        "avg_pace": 6.886
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 43,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 30.95,
+      "sessions": 3,
+      "avg_hr": 154,
+      "avg_pace": 5.439,
+      "total_kcal": 2548,
+      "running": {
+        "km": 30.95,
+        "sessions": 3,
+        "avg_hr": 154,
+        "avg_pace": 5.439
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 720,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 0.59,
+      "sessions": 1,
+      "avg_hr": 110,
+      "avg_pace": 102.882,
+      "total_kcal": 782,
+      "running": {
+        "km": 0.59,
+        "sessions": 1,
+        "avg_hr": 110,
+        "avg_pace": 102.882
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1000,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-09-14/2026-09-20",
+      "total_km": 0,
+      "sessions": 0,
+      "avg_hr": 0,
+      "avg_pace": 0.0,
+      "total_kcal": 270,
+      "running": {
+        "km": 0,
+        "sessions": 0,
+        "avg_hr": 0,
+        "avg_pace": 0.0
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 44,
+        "sessions": 1
+      },
+      "total_sessions": 1
+    }
+  ],
+  "acwr": {
+    "valor": 0.75,
+    "status": "undertraining",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.4,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.19,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.45,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.05,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.28,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.8,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.52,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.28,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.72,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.23,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.55,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.55,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.74,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.39,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.95,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.75,
+          "status": "undertraining"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.28,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.02,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.33,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.22,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.23,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.75,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.6,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 2.5,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.28,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.88,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.62,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.55,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.12,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 2.02,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.49,
+          "status": "undertraining"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.47,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.28,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.5,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.97,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.29,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.39,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.19,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.43,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.45,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.22,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.39,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.51,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.83,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.54,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.96,
+          "status": "optimal"
+        }
+      ],
+      "strength": [
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 2.09,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 2.06,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 64,
+    "headline": "Reducción marcada de volumen antes del afinamiento",
+    "subheadline": "Menos running y carga total esta semana",
+    "readiness": 68,
+    "aiVerdict": "Carlos David, esta semana tuviste una caída muy pronunciada en el volumen de running y en la carga total de entrenamiento, con solo una sesión corta y menos tiempo activo en general. Esta reducción es más fuerte de lo habitual para la fase previa al afinamiento, lo que puede favorecer la recuperación, pero también señala una baja carga sostenida que conviene monitorear para no perder ritmo competitivo. De cara a los próximos días, el plan se enfocará en retomar un volumen moderado y mantener estímulos clave, priorizando la frescura para llegar bien a la Carrera de las Rosas.",
+    "strengths": [
+      "Aprovechaste la semana para reducir fatiga antes del afinamiento",
+      "Incluiste natación como estímulo cruzado",
+      "Mantienes regularidad en días activos"
+    ],
+    "warnings": [],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "0.59 km",
+        "trend": "down",
+        "status": "red",
+        "note": "Reducción marcada respecto a semanas previas"
+      },
+      {
+        "label": "Sesiones running",
+        "value": "1 sesiones",
+        "trend": "stable",
+        "status": "yellow",
+        "note": "Frecuencia baja, pero consistente con afinamiento"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "88.9 min",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Menor tiempo activo general"
+      }
+    ],
+    "weeklyPlan": {
+      "week": "2026-09-14/2026-09-20",
+      "startDate": "2026-09-14",
+      "endDate": "2026-09-20",
+      "objective": "Recuperar estímulo de running y llegar fresco al 21K",
+      "rationale": "Vienes de una semana con baja carga y poco running, por lo que el plan busca retomar un volumen moderado y mantener la intensidad controlada, sin exceder los límites del afinamiento. Así llegas con buenas sensaciones y sin fatiga acumulada a la Carrera de las Rosas.",
+      "summary": {
+        "totalKm": 9.0,
+        "runningSessions": 2,
+        "strengthSessions": 0
+      },
+      "sessions": [
+        {
+          "date": "2026-09-14",
+          "day": "Lun",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prioriza recuperación.",
+          "purpose": "Favorecer recuperación muscular"
+        },
+        {
+          "date": "2026-09-15",
+          "day": "Mar",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Sin running, puedes incluir movilidad suave si lo sientes necesario.",
+          "purpose": "Recuperación activa opcional"
+        },
+        {
+          "date": "2026-09-16",
+          "day": "Mié",
+          "type": "Running easy",
+          "km": "3.5 km",
+          "notes": "Corre a ritmo cómodo, más lento que 5:10/km, sin buscar exigencia.",
+          "purpose": "Activar piernas y retomar sensaciones de carrera"
+        },
+        {
+          "date": "2026-09-17",
+          "day": "Jue",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "No sumar kilómetros, foco en descanso.",
+          "purpose": "Llegar fresco a los próximos estímulos"
+        },
+        {
+          "date": "2026-09-18",
+          "day": "Vie",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Sin running, puedes hacer estiramientos suaves.",
+          "purpose": "Mantener frescura"
+        },
+        {
+          "date": "2026-09-19",
+          "day": "Sáb",
+          "type": "Descanso",
+          "km": "—",
+          "notes": "Día libre, prepárate mentalmente para la semana de carrera.",
+          "purpose": "Recuperación total"
+        },
+        {
+          "date": "2026-09-20",
+          "day": "Dom",
+          "type": "Short long run",
+          "km": "5.5 km",
+          "notes": "Ritmo suave, controlando la respiración, sin acelerar más allá de 5:10/km.",
+          "purpose": "Mantener fondo y confianza, sin fatigar"
+        }
+      ]
+    },
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Monitorea sensaciones y evita sumar intensidad extra esta semana"
+    },
+    "projection": {
+      "tiempo": "1:43:19",
+      "ritmo": "4:54",
+      "confianza": "media",
+      "contexto": "Estimación basada en tu resultado anterior, sin ajuste por frecuencia cardíaca.",
+      "referencia": "Media maratón del 6 de septiembre de 2026 en 1:45:12 (FC 174 bpm)",
+      "notaAltitud": null
+    }
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "complete"
+  }
+}

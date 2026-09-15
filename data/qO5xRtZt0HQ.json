@@ -1,0 +1,3787 @@
+{
+  "meta": {
+    "userId": "17889",
+    "nombre": "CESAR HOYOS",
+    "genero": "Male",
+    "edad": 29,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "0:02",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "17:53",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "36:26",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "55K montaña en Jardín / ultra",
+      "fecha": "2026-10-04",
+      "label": "55K",
+      "diasPrep": 20
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-14T22:49:54.731247Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.08,
+      "duration_min": 53.8,
+      "pace": "5:20",
+      "pace_raw": 5.337,
+      "hr": 127,
+      "kcal": 534,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 9.922576649117373,
+      "heart_eff": 0.02458
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 25.3,
+      "duration_min": 132.2,
+      "pace": "5:14",
+      "pace_raw": 5.227,
+      "hr": 161,
+      "kcal": 1776,
+      "elevation": 117.0,
+      "points": 0,
+      "effort": 13.432497163746376,
+      "heart_eff": 0.0198
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 12.93,
+      "duration_min": 84.6,
+      "pace": "6:33",
+      "pace_raw": 6.542,
+      "hr": 142,
+      "kcal": 1078,
+      "elevation": 52.0,
+      "points": 0,
+      "effort": 12.742316784869978,
+      "heart_eff": 0.01794
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.61,
+      "duration_min": 19.0,
+      "pace": "11:47",
+      "pace_raw": 11.781,
+      "hr": 126,
+      "kcal": 162,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.541300527240773,
+      "heart_eff": 0.01122
+    },
+    {
+      "date": "2026-03-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 4.34,
+      "duration_min": 17.8,
+      "pace": "4:06",
+      "pace_raw": 4.097,
+      "hr": 172,
+      "kcal": 323,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 18.163074039362698,
+      "heart_eff": 0.02365
+    },
+    {
+      "date": "2026-03-26",
+      "name": "10 x  1.0km @ 16.5 km/h   3'38 min/km Med 157 (Máx 176) lpm / 2Mín Med 155 lpm;",
+      "type": "running",
+      "dist_km": 17.46,
+      "duration_min": 86.2,
+      "pace": "4:56",
+      "pace_raw": 4.935,
+      "hr": 142,
+      "kcal": 901,
+      "elevation": 53.0,
+      "points": 0,
+      "effort": 10.456479690522244,
+      "heart_eff": 0.02378
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 2.74,
+      "duration_min": 31.7,
+      "pace": "11:34",
+      "pace_raw": 11.559,
+      "hr": 125,
+      "kcal": 268,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 8.458705944239874,
+      "heart_eff": 0.01154
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.04,
+      "duration_min": 36.9,
+      "pace": "3:41",
+      "pace_raw": 3.679,
+      "hr": 188,
+      "kcal": 739,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 20.009025270758123,
+      "heart_eff": 0.0241
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.09,
+      "duration_min": 7.5,
+      "pace": "6:52",
+      "pace_raw": 6.868,
+      "hr": 138,
+      "kcal": 161,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 21.466666666666665,
+      "heart_eff": 0.01756
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 20.07,
+      "duration_min": 213.1,
+      "pace": "10:37",
+      "pace_raw": 10.62,
+      "hr": 141,
+      "kcal": 2221,
+      "elevation": 1507.0,
+      "points": 0,
+      "effort": 10.423152131403988,
+      "heart_eff": 0.01113
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 2.08,
+      "duration_min": 10.6,
+      "pace": "5:04",
+      "pace_raw": 5.073,
+      "hr": 133,
+      "kcal": 117,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 11.072555205047319,
+      "heart_eff": 0.02468
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.5,
+      "duration_min": 13.8,
+      "pace": "9:12",
+      "pace_raw": 9.196,
+      "hr": 128,
+      "kcal": 136,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 9.878934624697337,
+      "heart_eff": 0.01414
+    },
+    {
+      "date": "2026-04-01",
+      "name": "5 x  1.0km @ 16.1 km/h   3'43 min/km Med 154 (Máx 162) lpm / 3Mín Med 144 lpm;3 x  2.0km @ 15.9 km/h   3'45 min/km Med 138 (Máx 142) lpm / 3Mín Med 131 lpm;2 x ;;",
+      "type": "running",
+      "dist_km": 27.31,
+      "duration_min": 135.4,
+      "pace": "4:57",
+      "pace_raw": 4.957,
+      "hr": 139,
+      "kcal": 1258,
+      "elevation": 138.0,
+      "points": 0,
+      "effort": 9.292133448233411,
+      "heart_eff": 0.02419
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.42,
+      "duration_min": 12.9,
+      "pace": "9:07",
+      "pace_raw": 9.113,
+      "hr": 151,
+      "kcal": 168,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 12.972972972972974,
+      "heart_eff": 0.01211
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 43.64,
+      "duration_min": 376.1,
+      "pace": "8:37",
+      "pace_raw": 8.618,
+      "hr": 151,
+      "kcal": 4677,
+      "elevation": 1910.0,
+      "points": 0,
+      "effort": 12.43662471193051,
+      "heart_eff": 0.01281
+    },
+    {
+      "date": "2026-04-07",
+      "name": "5 x  3.0km @ 15.4 km/h   3'54 min/km Med 176 (Máx 190) lpm / 4Mín Med 145 lpm;1 x  1.0km @ 18.5 km/h   3'14 min/km Med 175 (Máx 188) lpm / 4Mín Med 145 lpm;",
+      "type": "running",
+      "dist_km": 22.22,
+      "duration_min": 110.8,
+      "pace": "4:59",
+      "pace_raw": 4.989,
+      "hr": 160,
+      "kcal": 1490,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 13.441587731168246,
+      "heart_eff": 0.02088
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 9.09,
+      "duration_min": 92.5,
+      "pace": "10:10",
+      "pace_raw": 10.172,
+      "hr": 142,
+      "kcal": 903,
+      "elevation": 583.0,
+      "points": 0,
+      "effort": 9.76568132660418,
+      "heart_eff": 0.01154
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.98,
+      "duration_min": 19.1,
+      "pace": "9:38",
+      "pace_raw": 9.638,
+      "hr": 147,
+      "kcal": 226,
+      "elevation": 55.0,
+      "points": 0,
+      "effort": 11.842794759825328,
+      "heart_eff": 0.01176
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.75,
+      "duration_min": 15.3,
+      "pace": "8:45",
+      "pace_raw": 8.756,
+      "hr": 104,
+      "kcal": 104,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 6.7752442996742674,
+      "heart_eff": 0.01829
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.3,
+      "duration_min": 9.5,
+      "pace": "7:20",
+      "pace_raw": 7.33,
+      "hr": 157,
+      "kcal": 158,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 16.63157894736842,
+      "heart_eff": 0.01447
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.73,
+      "duration_min": 12.9,
+      "pace": "7:25",
+      "pace_raw": 7.425,
+      "hr": 163,
+      "kcal": 187,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 14.533678756476684,
+      "heart_eff": 0.01375
+    },
+    {
+      "date": "2026-04-11",
+      "name": "4 x  3.0km @ 15.2 km/h   3'56 min/km Med 172 (Máx 198) lpm / 4Mín Med 136 lpm;1 x  400m @ 18.8 km/h   3'11 min/km Med 105 (Máx 105) lpm / 4Mín Med 127 lpm;",
+      "type": "running",
+      "dist_km": 21.76,
+      "duration_min": 120.0,
+      "pace": "5:31",
+      "pace_raw": 5.516,
+      "hr": 146,
+      "kcal": 1223,
+      "elevation": 126.0,
+      "points": 0,
+      "effort": 10.191666666666666,
+      "heart_eff": 0.02069
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 10.05,
+      "duration_min": 119.4,
+      "pace": "11:53",
+      "pace_raw": 11.882,
+      "hr": 156,
+      "kcal": 1488,
+      "elevation": 1378.0,
+      "points": 0,
+      "effort": 12.462311557788944,
+      "heart_eff": 0.00899
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 8.09,
+      "duration_min": 114.6,
+      "pace": "14:10",
+      "pace_raw": 14.167,
+      "hr": 145,
+      "kcal": 1161,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 10.13089005235602,
+      "heart_eff": 0.00811
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.36,
+      "duration_min": 11.4,
+      "pace": "8:23",
+      "pace_raw": 8.388,
+      "hr": 105,
+      "kcal": 87,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 7.60932944606414,
+      "heart_eff": 0.0189
+    },
+    {
+      "date": "2026-04-15",
+      "name": "14 x  400m @ 18.7 km/h   3'12 min/km Med 151 (Máx 164) lpm / 3Mín Med 154 lpm;",
+      "type": "running",
+      "dist_km": 18.05,
+      "duration_min": 99.7,
+      "pace": "5:31",
+      "pace_raw": 5.523,
+      "hr": 147,
+      "kcal": 1030,
+      "elevation": 100.0,
+      "points": 0,
+      "effort": 10.330992978936811,
+      "heart_eff": 0.02052
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 20.14,
+      "duration_min": 103.1,
+      "pace": "5:07",
+      "pace_raw": 5.118,
+      "hr": 163,
+      "kcal": 1382,
+      "elevation": 66.0,
+      "points": 0,
+      "effort": 13.406628940986257,
+      "heart_eff": 0.01998
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.75,
+      "duration_min": 10.5,
+      "pace": "5:59",
+      "pace_raw": 5.988,
+      "hr": 108,
+      "kcal": 102,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 9.745222929936306,
+      "heart_eff": 0.02576
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 4.91,
+      "duration_min": 17.4,
+      "pace": "3:32",
+      "pace_raw": 3.541,
+      "hr": 201,
+      "kcal": 395,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 22.70114942528736,
+      "heart_eff": 0.02341
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.7,
+      "duration_min": 47.5,
+      "pace": "7:05",
+      "pace_raw": 7.079,
+      "hr": 172,
+      "kcal": 757,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 15.9536354056902,
+      "heart_eff": 0.01369
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.93,
+      "duration_min": 44.3,
+      "pace": "6:24",
+      "pace_raw": 6.398,
+      "hr": 167,
+      "kcal": 706,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 15.924812030075188,
+      "heart_eff": 0.0156
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 22.45,
+      "duration_min": 118.6,
+      "pace": "5:17",
+      "pace_raw": 5.282,
+      "hr": 181,
+      "kcal": 2040,
+      "elevation": 1068.0,
+      "points": 0,
+      "effort": 17.20309205903022,
+      "heart_eff": 0.01744
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.69,
+      "duration_min": 13.4,
+      "pace": "7:58",
+      "pace_raw": 7.962,
+      "hr": 90,
+      "kcal": 70,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 5.217391304347826,
+      "heart_eff": 0.02323
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.4,
+      "duration_min": 11.4,
+      "pace": "8:10",
+      "pace_raw": 8.166,
+      "hr": 147,
+      "kcal": 142,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 12.437956204379562,
+      "heart_eff": 0.01387
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.75,
+      "duration_min": 12.5,
+      "pace": "7:07",
+      "pace_raw": 7.121,
+      "hr": 138,
+      "kcal": 151,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 12.096128170894527,
+      "heart_eff": 0.01693
+    },
+    {
+      "date": "2026-04-23",
+      "name": "10 x  400m @ 18.3 km/h   3'16 min/km Med 153 (Máx 167) lpm / 3Mín Med 154 lpm;",
+      "type": "running",
+      "dist_km": 15.06,
+      "duration_min": 86.6,
+      "pace": "5:45",
+      "pace_raw": 5.753,
+      "hr": 146,
+      "kcal": 852,
+      "elevation": 91.0,
+      "points": 0,
+      "effort": 9.83644410236675,
+      "heart_eff": 0.01984
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.32,
+      "duration_min": 10.9,
+      "pace": "8:14",
+      "pace_raw": 8.226,
+      "hr": 120,
+      "kcal": 101,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 9.280245022970904,
+      "heart_eff": 0.01687
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.92,
+      "duration_min": 19.4,
+      "pace": "10:04",
+      "pace_raw": 10.068,
+      "hr": 144,
+      "kcal": 231,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 11.937984496124031,
+      "heart_eff": 0.01149
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 75.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 123,
+      "kcal": 568,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.551517837358741,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.45,
+      "duration_min": 9.6,
+      "pace": "6:39",
+      "pace_raw": 6.644,
+      "hr": 93,
+      "kcal": 52,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 5.416666666666667,
+      "heart_eff": 0.02694
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.71,
+      "duration_min": 10.7,
+      "pace": "6:15",
+      "pace_raw": 6.249,
+      "hr": 104,
+      "kcal": 106,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 9.9375,
+      "heart_eff": 0.02563
+    },
+    {
+      "date": "2026-04-25",
+      "name": "1 x  3.0km @ 17.6 km/h   3'24 min/km Med 193 (Máx 208) lpm / 3Mín Med 159 lpm;",
+      "type": "running",
+      "dist_km": 11.55,
+      "duration_min": 69.0,
+      "pace": "5:59",
+      "pace_raw": 5.98,
+      "hr": 141,
+      "kcal": 679,
+      "elevation": 64.0,
+      "points": 0,
+      "effort": 9.833454018826938,
+      "heart_eff": 0.01977
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 19.5,
+      "duration_min": 98.2,
+      "pace": "5:02",
+      "pace_raw": 5.036,
+      "hr": 161,
+      "kcal": 1271,
+      "elevation": 288.0,
+      "points": 0,
+      "effort": 12.940777193280162,
+      "heart_eff": 0.02055
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.38,
+      "duration_min": 12.9,
+      "pace": "9:22",
+      "pace_raw": 9.365,
+      "hr": 114,
+      "kcal": 103,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 7.963917525773196,
+      "heart_eff": 0.01561
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.3,
+      "duration_min": 11.4,
+      "pace": "8:44",
+      "pace_raw": 8.736,
+      "hr": 142,
+      "kcal": 131,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 11.508052708638361,
+      "heart_eff": 0.01344
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.87,
+      "duration_min": 16.5,
+      "pace": "8:52",
+      "pace_raw": 8.86,
+      "hr": 142,
+      "kcal": 289,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 17.479838709677416,
+      "heart_eff": 0.01323
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.59,
+      "duration_min": 39.2,
+      "pace": "24:36",
+      "pace_raw": 24.598,
+      "hr": 93,
+      "kcal": 189,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 4.81733220050977,
+      "heart_eff": 0.00728
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.26,
+      "duration_min": 7.4,
+      "pace": "5:51",
+      "pace_raw": 5.842,
+      "hr": 99,
+      "kcal": 46,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 6.244343891402715,
+      "heart_eff": 0.02877
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 26.01,
+      "duration_min": 145.8,
+      "pace": "5:36",
+      "pace_raw": 5.607,
+      "hr": 150,
+      "kcal": 1623,
+      "elevation": 259.0,
+      "points": 0,
+      "effort": 11.129142857142856,
+      "heart_eff": 0.01981
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.43,
+      "duration_min": 11.6,
+      "pace": "8:06",
+      "pace_raw": 8.101,
+      "hr": 151,
+      "kcal": 150,
+      "elevation": 5.0,
+      "points": 0,
+      "effort": 12.931034482758621,
+      "heart_eff": 0.01361
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.7,
+      "duration_min": 13.8,
+      "pace": "8:08",
+      "pace_raw": 8.127,
+      "hr": 153,
+      "kcal": 189,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 13.695652173913043,
+      "heart_eff": 0.01339
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 21.27,
+      "duration_min": 101.8,
+      "pace": "4:47",
+      "pace_raw": 4.788,
+      "hr": 141,
+      "kcal": 1070,
+      "elevation": 93.0,
+      "points": 0,
+      "effort": 10.509084956621379,
+      "heart_eff": 0.02469
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.43,
+      "duration_min": 12.1,
+      "pace": "8:28",
+      "pace_raw": 8.473,
+      "hr": 110,
+      "kcal": 90,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 7.4277854195323245,
+      "heart_eff": 0.01785
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.74,
+      "duration_min": 13.5,
+      "pace": "7:45",
+      "pace_raw": 7.744,
+      "hr": 97,
+      "kcal": 78,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 5.792079207920792,
+      "heart_eff": 0.02218
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 49.16,
+      "duration_min": 585.7,
+      "pace": "11:55",
+      "pace_raw": 11.914,
+      "hr": 119,
+      "kcal": 3779,
+      "elevation": 3010.0,
+      "points": 0,
+      "effort": 6.452475811041548,
+      "heart_eff": 0.01176
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.87,
+      "duration_min": 16.3,
+      "pace": "8:43",
+      "pace_raw": 8.712,
+      "hr": 135,
+      "kcal": 173,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 10.613496932515337,
+      "heart_eff": 0.01416
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 92.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 117,
+      "kcal": 649,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.0276123443421765,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-06",
+      "name": "3 x  5.0km @ 16.4 km/h   3'39 min/km Med 184 (Máx 201) lpm / 4Mín Med 142 lpm;",
+      "type": "running",
+      "dist_km": 23.25,
+      "duration_min": 124.7,
+      "pace": "5:22",
+      "pace_raw": 5.365,
+      "hr": 158,
+      "kcal": 1590,
+      "elevation": 179.0,
+      "points": 0,
+      "effort": 12.748897501002272,
+      "heart_eff": 0.01966
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 25.01,
+      "duration_min": 174.5,
+      "pace": "6:59",
+      "pace_raw": 6.977,
+      "hr": 135,
+      "kcal": 1557,
+      "elevation": 266.0,
+      "points": 0,
+      "effort": 8.921783974787507,
+      "heart_eff": 0.0177
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 85.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 118,
+      "kcal": 556,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.48396501457726,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 21.37,
+      "duration_min": 108.4,
+      "pace": "5:04",
+      "pace_raw": 5.073,
+      "hr": 160,
+      "kcal": 1371,
+      "elevation": 337.0,
+      "points": 0,
+      "effort": 12.643713495235167,
+      "heart_eff": 0.02053
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.89,
+      "duration_min": 24.1,
+      "pace": "12:44",
+      "pace_raw": 12.729,
+      "hr": 82,
+      "kcal": 88,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 3.6539792387543253,
+      "heart_eff": 0.01596
+    },
+    {
+      "date": "2026-05-13",
+      "name": "20 x 3Mín @ 16.1 km/h   3'44 min/km Med 174 (Máx 199) lpm / 3Mín Med 150 lpm;",
+      "type": "running",
+      "dist_km": 30.55,
+      "duration_min": 161.0,
+      "pace": "5:16",
+      "pace_raw": 5.27,
+      "hr": 158,
+      "kcal": 1921,
+      "elevation": 114.0,
+      "points": 0,
+      "effort": 11.930441983231548,
+      "heart_eff": 0.02001
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 12.53,
+      "duration_min": 92.2,
+      "pace": "7:21",
+      "pace_raw": 7.357,
+      "hr": 134,
+      "kcal": 878,
+      "elevation": 77.0,
+      "points": 0,
+      "effort": 9.52622061482821,
+      "heart_eff": 0.0169
+    },
+    {
+      "date": "2026-05-16",
+      "name": "16 x  0.6km @ 16.0 km/h   3'45 min/km Med 147 (Máx 164) lpm / 3Mín Med 141 lpm;",
+      "type": "running",
+      "dist_km": 20.79,
+      "duration_min": 117.6,
+      "pace": "5:39",
+      "pace_raw": 5.656,
+      "hr": 143,
+      "kcal": 1033,
+      "elevation": 77.0,
+      "points": 0,
+      "effort": 8.784013605442178,
+      "heart_eff": 0.0206
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.31,
+      "duration_min": 10.1,
+      "pace": "7:44",
+      "pace_raw": 7.734,
+      "hr": 161,
+      "kcal": 144,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 14.257425742574258,
+      "heart_eff": 0.01337
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.86,
+      "duration_min": 21.1,
+      "pace": "11:18",
+      "pace_raw": 11.302,
+      "hr": 134,
+      "kcal": 238,
+      "elevation": 55.0,
+      "points": 0,
+      "effort": 11.29746835443038,
+      "heart_eff": 0.011
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 7.6,
+      "duration_min": 72.5,
+      "pace": "9:32",
+      "pace_raw": 9.528,
+      "hr": 167,
+      "kcal": 1079,
+      "elevation": 1047.0,
+      "points": 0,
+      "effort": 14.89302967563837,
+      "heart_eff": 0.01047
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 7.86,
+      "duration_min": 86.0,
+      "pace": "10:57",
+      "pace_raw": 10.942,
+      "hr": 118,
+      "kcal": 696,
+      "elevation": 103.0,
+      "points": 0,
+      "effort": 8.097731239092495,
+      "heart_eff": 0.01291
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.64,
+      "duration_min": 24.1,
+      "pace": "14:39",
+      "pace_raw": 14.656,
+      "hr": 115,
+      "kcal": 327,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 13.596673596673597,
+      "heart_eff": 0.00989
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.25,
+      "duration_min": 17.1,
+      "pace": "13:35",
+      "pace_raw": 13.586,
+      "hr": 107,
+      "kcal": 121,
+      "elevation": 55.0,
+      "points": 0,
+      "effort": 7.096774193548387,
+      "heart_eff": 0.01146
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 39.18,
+      "duration_min": 309.5,
+      "pace": "7:54",
+      "pace_raw": 7.9,
+      "hr": 144,
+      "kcal": 3029,
+      "elevation": 1623.0,
+      "points": 0,
+      "effort": 9.786225835980831,
+      "heart_eff": 0.01465
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Swimming",
+      "type": "swimming",
+      "dist_km": 0.33,
+      "duration_min": 11.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 122,
+      "kcal": 100,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.486562942008486,
+      "heart_eff": 0.01134
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Swimming",
+      "type": "swimming",
+      "dist_km": 0.82,
+      "duration_min": 42.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 118,
+      "kcal": 1041,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 24.58087367178276,
+      "heart_eff": 0.01308
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 20.05,
+      "duration_min": 108.1,
+      "pace": "5:23",
+      "pace_raw": 5.392,
+      "hr": 153,
+      "kcal": 1262,
+      "elevation": 95.0,
+      "points": 0,
+      "effort": 11.674375578168362,
+      "heart_eff": 0.0202
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 88.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 116,
+      "kcal": 587,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.650302114803625,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.35,
+      "duration_min": 17.5,
+      "pace": "12:59",
+      "pace_raw": 12.989,
+      "hr": 117,
+      "kcal": 140,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 8.007626310772164,
+      "heart_eff": 0.01096
+    },
+    {
+      "date": "2026-05-23",
+      "name": "10 x  1.0km @ 16.7 km/h   3'35 min/km Med 177 (Máx 194) lpm / 3Mín Med 148 lpm;",
+      "type": "running",
+      "dist_km": 22.86,
+      "duration_min": 116.3,
+      "pace": "5:05",
+      "pace_raw": 5.088,
+      "hr": 157,
+      "kcal": 1429,
+      "elevation": 88.0,
+      "points": 0,
+      "effort": 12.283667621776505,
+      "heart_eff": 0.02086
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.11,
+      "duration_min": 10.4,
+      "pace": "9:24",
+      "pace_raw": 9.393,
+      "hr": 121,
+      "kcal": 89,
+      "elevation": 46.0,
+      "points": 0,
+      "effort": 8.544,
+      "heart_eff": 0.01464
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 30.03,
+      "duration_min": 168.0,
+      "pace": "5:36",
+      "pace_raw": 5.596,
+      "hr": 140,
+      "kcal": 1826,
+      "elevation": 241.0,
+      "points": 0,
+      "effort": 10.866891489783773,
+      "heart_eff": 0.02127
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 18.71,
+      "duration_min": 100.5,
+      "pace": "5:22",
+      "pace_raw": 5.37,
+      "hr": 143,
+      "kcal": 1039,
+      "elevation": 66.0,
+      "points": 0,
+      "effort": 10.343454454952713,
+      "heart_eff": 0.0217
+    },
+    {
+      "date": "2026-05-28",
+      "name": "6 x 5Mín @ 17.2 km/h   3'29 min/km Med 181 (Máx 200) lpm / 5Mín Med 144 lpm;",
+      "type": "running",
+      "dist_km": 17.75,
+      "duration_min": 92.4,
+      "pace": "5:12",
+      "pace_raw": 5.205,
+      "hr": 152,
+      "kcal": 1014,
+      "elevation": 99.0,
+      "points": 0,
+      "effort": 10.977986286539156,
+      "heart_eff": 0.02106
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 77.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 122,
+      "kcal": 564,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.280550774526678,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 7.95,
+      "duration_min": 64.1,
+      "pace": "8:04",
+      "pace_raw": 8.063,
+      "hr": 157,
+      "kcal": 0,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 0.0,
+      "heart_eff": 0.01318
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 3.63,
+      "duration_min": 32.2,
+      "pace": "8:51",
+      "pace_raw": 8.856,
+      "hr": 164,
+      "kcal": 507,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 15.753495598135682,
+      "heart_eff": 0.01147
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 42.58,
+      "duration_min": 362.0,
+      "pace": "8:30",
+      "pace_raw": 8.501,
+      "hr": 153,
+      "kcal": 4121,
+      "elevation": 202.0,
+      "points": 0,
+      "effort": 11.383453800469592,
+      "heart_eff": 0.01281
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.38,
+      "duration_min": 60.1,
+      "pace": "5:48",
+      "pace_raw": 5.795,
+      "hr": 126,
+      "kcal": 493,
+      "elevation": 47.0,
+      "points": 0,
+      "effort": 8.198447893569845,
+      "heart_eff": 0.02282
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 86.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 114,
+      "kcal": 537,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.18307426597582,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 12.38,
+      "duration_min": 73.5,
+      "pace": "5:56",
+      "pace_raw": 5.939,
+      "hr": 154,
+      "kcal": 859,
+      "elevation": 62.0,
+      "points": 0,
+      "effort": 11.687074829931973,
+      "heart_eff": 0.01821
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 15.54,
+      "duration_min": 120.6,
+      "pace": "7:45",
+      "pace_raw": 7.758,
+      "hr": 152,
+      "kcal": 1467,
+      "elevation": 124.0,
+      "points": 0,
+      "effort": 12.164179104477613,
+      "heart_eff": 0.01413
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.67,
+      "duration_min": 21.8,
+      "pace": "13:02",
+      "pace_raw": 13.034,
+      "hr": 115,
+      "kcal": 173,
+      "elevation": 8.0,
+      "points": 0,
+      "effort": 7.9479326186830015,
+      "heart_eff": 0.01112
+    },
+    {
+      "date": "2026-06-06",
+      "name": "5 x  400m @ 18.3 km/h   3'16 min/km Med 155 (Máx 181) lpm / 2Mín Med 167 lpm;",
+      "type": "running",
+      "dist_km": 13.38,
+      "duration_min": 73.9,
+      "pace": "5:31",
+      "pace_raw": 5.519,
+      "hr": 144,
+      "kcal": 737,
+      "elevation": 68.0,
+      "points": 0,
+      "effort": 9.977436823104695,
+      "heart_eff": 0.02097
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 4.95,
+      "duration_min": 36.3,
+      "pace": "7:20",
+      "pace_raw": 7.335,
+      "hr": 78,
+      "kcal": 215,
+      "elevation": 102.0,
+      "points": 0,
+      "effort": 5.922865013774105,
+      "heart_eff": 0.02912
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 22.29,
+      "duration_min": 139.7,
+      "pace": "6:16",
+      "pace_raw": 6.269,
+      "hr": 96,
+      "kcal": 733,
+      "elevation": 1075.0,
+      "points": 0,
+      "effort": 5.246331862101873,
+      "heart_eff": 0.0277
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.1,
+      "duration_min": 9.2,
+      "pace": "8:22",
+      "pace_raw": 8.364,
+      "hr": 0,
+      "kcal": 69,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 7.472924187725632,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.34,
+      "duration_min": 67.2,
+      "pace": "6:30",
+      "pace_raw": 6.494,
+      "hr": 101,
+      "kcal": 424,
+      "elevation": 47.0,
+      "points": 0,
+      "effort": 6.3142218912881605,
+      "heart_eff": 0.02542
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 4.46,
+      "duration_min": 24.1,
+      "pace": "5:24",
+      "pace_raw": 5.405,
+      "hr": 149,
+      "kcal": 320,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.259668508287293,
+      "heart_eff": 0.02068
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 22.76,
+      "duration_min": 116.3,
+      "pace": "5:07",
+      "pace_raw": 5.109,
+      "hr": 164,
+      "kcal": 1511,
+      "elevation": 106.0,
+      "points": 0,
+      "effort": 12.994123548803211,
+      "heart_eff": 0.01989
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 74.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 110,
+      "kcal": 460,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.180026869682042,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-13",
+      "name": "20 x  200m @ 19.5 km/h   3'04 min/km Med 142 (Máx 158) lpm / 2Mín Med 152 lpm;",
+      "type": "running",
+      "dist_km": 15.85,
+      "duration_min": 100.5,
+      "pace": "6:20",
+      "pace_raw": 6.339,
+      "hr": 139,
+      "kcal": 912,
+      "elevation": 103.0,
+      "points": 0,
+      "effort": 9.074626865671641,
+      "heart_eff": 0.01891
+    },
+    {
+      "date": "2026-06-14",
+      "name": "15 km cruz roja, la carrera del siglo",
+      "type": "running",
+      "dist_km": 15.07,
+      "duration_min": 55.2,
+      "pace": "3:40",
+      "pace_raw": 3.663,
+      "hr": 170,
+      "kcal": 925,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 16.757246376811594,
+      "heart_eff": 0.02676
+    },
+    {
+      "date": "2026-06-15",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 15.07,
+      "duration_min": 94.6,
+      "pace": "6:17",
+      "pace_raw": 6.279,
+      "hr": 122,
+      "kcal": 712,
+      "elevation": 60.0,
+      "points": 0,
+      "effort": 7.52377597745685,
+      "heart_eff": 0.02175
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 15.0,
+      "duration_min": 76.4,
+      "pace": "5:06",
+      "pace_raw": 5.094,
+      "hr": 143,
+      "kcal": 792,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 10.36197121674662,
+      "heart_eff": 0.02288
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 7.76,
+      "duration_min": 56.7,
+      "pace": "7:18",
+      "pace_raw": 7.304,
+      "hr": 0,
+      "kcal": 533,
+      "elevation": 44.0,
+      "points": 0,
+      "effort": 9.400352733686066,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 51.02,
+      "duration_min": 330.0,
+      "pace": "6:28",
+      "pace_raw": 6.469,
+      "hr": 142,
+      "kcal": 3211,
+      "elevation": 226.0,
+      "points": 0,
+      "effort": 9.729811625675472,
+      "heart_eff": 0.01814
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 84.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 111,
+      "kcal": 520,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.135693215339233,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-24",
+      "name": "6 x 5Mín @ 15.4 km/h   3'53 min/km Med 167 (Máx 182) lpm / 2Mín Med 134 lpm;",
+      "type": "running",
+      "dist_km": 12.11,
+      "duration_min": 67.2,
+      "pace": "5:33",
+      "pace_raw": 5.549,
+      "hr": 146,
+      "kcal": 711,
+      "elevation": 44.0,
+      "points": 0,
+      "effort": 10.577733696999752,
+      "heart_eff": 0.02057
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 232.0,
+      "duration_min": 1976.3,
+      "pace": "8:31",
+      "pace_raw": 8.519,
+      "hr": 149,
+      "kcal": 2750,
+      "elevation": 1629.0,
+      "points": 0,
+      "effort": 1.391453942874491,
+      "heart_eff": 0.01313
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 23.0,
+      "duration_min": 488.9,
+      "pace": "21:16",
+      "pace_raw": 21.26,
+      "hr": 123,
+      "kcal": 3628,
+      "elevation": 1845.0,
+      "points": 0,
+      "effort": 7.42023452413417,
+      "heart_eff": 0.00637
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 37.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 95,
+      "kcal": 235,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.200527704485489,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-08",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.35,
+      "duration_min": 60.9,
+      "pace": "5:53",
+      "pace_raw": 5.886,
+      "hr": 152,
+      "kcal": 847,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 13.900437636761488,
+      "heart_eff": 0.01863
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 82.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 120,
+      "kcal": 659,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.987878787878788,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-10",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 4.3,
+      "duration_min": 31.6,
+      "pace": "7:21",
+      "pace_raw": 7.344,
+      "hr": 133,
+      "kcal": 345,
+      "elevation": 66.0,
+      "points": 0,
+      "effort": 10.911966262519767,
+      "heart_eff": 0.01706
+    },
+    {
+      "date": "2026-07-10",
+      "name": "20 x  400m @ 17.8 km/h   3'21 min/km Med 139 (Máx 140) lpm / 3Mín Med 142 lpm;",
+      "type": "running",
+      "dist_km": 20.2,
+      "duration_min": 112.7,
+      "pace": "5:35",
+      "pace_raw": 5.578,
+      "hr": 143,
+      "kcal": 1275,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 11.314894246413251,
+      "heart_eff": 0.0209
+    },
+    {
+      "date": "2026-07-11",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.83,
+      "duration_min": 27.4,
+      "pace": "14:58",
+      "pace_raw": 14.967,
+      "hr": 114,
+      "kcal": 225,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 8.19672131147541,
+      "heart_eff": 0.00976
+    },
+    {
+      "date": "2026-07-12",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 25.67,
+      "duration_min": 210.2,
+      "pace": "8:11",
+      "pace_raw": 8.191,
+      "hr": 149,
+      "kcal": 2643,
+      "elevation": 1058.0,
+      "points": 0,
+      "effort": 12.570749108204518,
+      "heart_eff": 0.01366
+    },
+    {
+      "date": "2026-07-15",
+      "name": "6 x 3Mín @ 16.2 km/h   3'42 min/km Med 174 (Máx 197) lpm / 3Mín Med 145 lpm;4 x 3Mín @ 16.3 km/h   3'40 min/km Med 159 (Máx 187) lpm / 3Mín Med 142 lpm;",
+      "type": "running",
+      "dist_km": 16.65,
+      "duration_min": 93.8,
+      "pace": "5:38",
+      "pace_raw": 5.632,
+      "hr": 151,
+      "kcal": 1131,
+      "elevation": 71.0,
+      "points": 0,
+      "effort": 12.059712102363605,
+      "heart_eff": 0.0196
+    },
+    {
+      "date": "2026-07-15",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 1.3,
+      "duration_min": 19.0,
+      "pace": "14:40",
+      "pace_raw": 14.664,
+      "hr": 106,
+      "kcal": 141,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 7.408056042031523,
+      "heart_eff": 0.01072
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.29,
+      "duration_min": 61.9,
+      "pace": "6:01",
+      "pace_raw": 6.017,
+      "hr": 123,
+      "kcal": 578,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 9.337641357027463,
+      "heart_eff": 0.02252
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 4.28,
+      "duration_min": 39.6,
+      "pace": "9:16",
+      "pace_raw": 9.273,
+      "hr": 138,
+      "kcal": 432,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 10.895334174022699,
+      "heart_eff": 0.01302
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Swimming",
+      "type": "swimming",
+      "dist_km": 0.2,
+      "duration_min": 16.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 118,
+      "kcal": 149,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 9.15983606557377,
+      "heart_eff": 0.01094
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 8.25,
+      "duration_min": 56.6,
+      "pace": "6:51",
+      "pace_raw": 6.855,
+      "hr": 137,
+      "kcal": 628,
+      "elevation": 222.0,
+      "points": 0,
+      "effort": 11.101944608131998,
+      "heart_eff": 0.01774
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.04,
+      "duration_min": 12.7,
+      "pace": "12:12",
+      "pace_raw": 12.199,
+      "hr": 140,
+      "kcal": 153,
+      "elevation": 12.0,
+      "points": 0,
+      "effort": 12.09486166007905,
+      "heart_eff": 0.00976
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 46.31,
+      "duration_min": 307.3,
+      "pace": "6:38",
+      "pace_raw": 6.637,
+      "hr": 175,
+      "kcal": 4767,
+      "elevation": 2281.0,
+      "points": 0,
+      "effort": 15.511687184771409,
+      "heart_eff": 0.01435
+    },
+    {
+      "date": "2026-07-22",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.29,
+      "duration_min": 46.4,
+      "pace": "7:22",
+      "pace_raw": 7.369,
+      "hr": 161,
+      "kcal": 651,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 14.045307443365695,
+      "heart_eff": 0.01404
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 15.54,
+      "duration_min": 91.5,
+      "pace": "5:54",
+      "pace_raw": 5.892,
+      "hr": 164,
+      "kcal": 1551,
+      "elevation": 48.0,
+      "points": 0,
+      "effort": 16.94464675892207,
+      "heart_eff": 0.01725
+    },
+    {
+      "date": "2026-07-27",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 90.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 125,
+      "kcal": 748,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.237885462555067,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 2.97,
+      "duration_min": 22.8,
+      "pace": "7:41",
+      "pace_raw": 7.68,
+      "hr": 142,
+      "kcal": 283,
+      "elevation": 11.0,
+      "points": 0,
+      "effort": 12.403214024835647,
+      "heart_eff": 0.01528
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 16.0,
+      "duration_min": 102.1,
+      "pace": "6:23",
+      "pace_raw": 6.382,
+      "hr": 139,
+      "kcal": 1061,
+      "elevation": 147.0,
+      "points": 0,
+      "effort": 10.388381201044385,
+      "heart_eff": 0.01878
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 4.03,
+      "duration_min": 34.0,
+      "pace": "8:27",
+      "pace_raw": 8.445,
+      "hr": 146,
+      "kcal": 437,
+      "elevation": 49.0,
+      "points": 0,
+      "effort": 12.834067547723937,
+      "heart_eff": 0.01351
+    },
+    {
+      "date": "2026-07-31",
+      "name": "20 x  400m @ 18.0 km/h   3'20 min/km Med 159 (Máx 183) lpm / 3Mín Med 153 lpm;",
+      "type": "running",
+      "dist_km": 18.07,
+      "duration_min": 89.0,
+      "pace": "4:56",
+      "pace_raw": 4.929,
+      "hr": 154,
+      "kcal": 1064,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 11.948343627175744,
+      "heart_eff": 0.02195
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 2.33,
+      "duration_min": 20.4,
+      "pace": "8:46",
+      "pace_raw": 8.77,
+      "hr": 141,
+      "kcal": 279,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 13.676470588235295,
+      "heart_eff": 0.01348
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 6.72,
+      "duration_min": 41.5,
+      "pace": "6:11",
+      "pace_raw": 6.179,
+      "hr": 119,
+      "kcal": 426,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 10.265060240963855,
+      "heart_eff": 0.02266
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.42,
+      "duration_min": 10.3,
+      "pace": "7:16",
+      "pace_raw": 7.268,
+      "hr": 83,
+      "kcal": 62,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 5.990338164251208,
+      "heart_eff": 0.02761
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 22.51,
+      "duration_min": 228.3,
+      "pace": "10:08",
+      "pace_raw": 10.14,
+      "hr": 151,
+      "kcal": 2789,
+      "elevation": 1377.0,
+      "points": 0,
+      "effort": 12.216381953569863,
+      "heart_eff": 0.01089
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.41,
+      "duration_min": 11.4,
+      "pace": "8:07",
+      "pace_raw": 8.114,
+      "hr": 146,
+      "kcal": 142,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 12.437956204379562,
+      "heart_eff": 0.01406
+    },
+    {
+      "date": "2026-08-05",
+      "name": "9 x 5Mín @ 16.4 km/h   3'40 min/km Med 174 (Máx 197) lpm / 5Mín Med 139 lpm;",
+      "type": "running",
+      "dist_km": 22.42,
+      "duration_min": 115.0,
+      "pace": "5:08",
+      "pace_raw": 5.129,
+      "hr": 152,
+      "kcal": 1350,
+      "elevation": 116.0,
+      "points": 0,
+      "effort": 11.73913043478261,
+      "heart_eff": 0.02138
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Fondo progresivo",
+      "type": "running",
+      "dist_km": 16.01,
+      "duration_min": 85.7,
+      "pace": "5:21",
+      "pace_raw": 5.352,
+      "hr": 0,
+      "kcal": 986,
+      "elevation": 319.0,
+      "points": 0,
+      "effort": 11.509727626459144,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 3.49,
+      "duration_min": 24.5,
+      "pace": "7:01",
+      "pace_raw": 7.017,
+      "hr": 153,
+      "kcal": 402,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 16.41933287950987,
+      "heart_eff": 0.01552
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.47,
+      "duration_min": 12.6,
+      "pace": "8:34",
+      "pace_raw": 8.56,
+      "hr": 142,
+      "kcal": 155,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.3342175066313,
+      "heart_eff": 0.0137
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.03,
+      "duration_min": 43.6,
+      "pace": "4:21",
+      "pace_raw": 4.351,
+      "hr": 165,
+      "kcal": 664,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 15.223538402751242,
+      "heart_eff": 0.02321
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 57.7,
+      "pace": "6:24",
+      "pace_raw": 6.406,
+      "hr": 130,
+      "kcal": 593,
+      "elevation": 74.0,
+      "points": 0,
+      "effort": 10.27136258660508,
+      "heart_eff": 0.02001
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Swimming",
+      "type": "swimming",
+      "dist_km": 0.65,
+      "duration_min": 21.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 114,
+      "kcal": 251,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.557943207981582,
+      "heart_eff": 0.01128
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 18.16,
+      "duration_min": 139.6,
+      "pace": "7:41",
+      "pace_raw": 7.682,
+      "hr": 147,
+      "kcal": 1860,
+      "elevation": 1014.0,
+      "points": 0,
+      "effort": 13.32855607309208,
+      "heart_eff": 0.01476
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 10.03,
+      "duration_min": 58.3,
+      "pace": "5:49",
+      "pace_raw": 5.815,
+      "hr": 131,
+      "kcal": 604,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 10.354285714285714,
+      "heart_eff": 0.02188
+    },
+    {
+      "date": "2026-08-12",
+      "name": "1 x  3.0km @ 17.8 km/h   3'22 min/km Med 160 (Máx 174) lpm / 5Mín Med 153 lpm;",
+      "type": "running",
+      "dist_km": 20.51,
+      "duration_min": 103.2,
+      "pace": "5:02",
+      "pace_raw": 5.031,
+      "hr": 150,
+      "kcal": 1275,
+      "elevation": 137.0,
+      "points": 0,
+      "effort": 12.358642972536348,
+      "heart_eff": 0.02209
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 9.28,
+      "duration_min": 64.8,
+      "pace": "6:59",
+      "pace_raw": 6.985,
+      "hr": 154,
+      "kcal": 948,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 14.618350038550503,
+      "heart_eff": 0.01549
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 70.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 116,
+      "kcal": 572,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 8.11539371009695,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-14",
+      "name": "10 x  0.6km @ 17.5 km/h   3'26 min/km Med 158 (Máx 179) lpm / 4Mín Med 141 lpm;",
+      "type": "running",
+      "dist_km": 14.28,
+      "duration_min": 75.7,
+      "pace": "5:18",
+      "pace_raw": 5.3,
+      "hr": 143,
+      "kcal": 773,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 10.213609337150407,
+      "heart_eff": 0.02199
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 31.8,
+      "duration_min": 158.6,
+      "pace": "4:59",
+      "pace_raw": 4.987,
+      "hr": 0,
+      "kcal": 2177,
+      "elevation": 175.0,
+      "points": 0,
+      "effort": 13.726355611601514,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.54,
+      "duration_min": 14.4,
+      "pace": "9:22",
+      "pace_raw": 9.363,
+      "hr": 154,
+      "kcal": 198,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 13.75,
+      "heart_eff": 0.01155
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 24.02,
+      "duration_min": 120.7,
+      "pace": "5:01",
+      "pace_raw": 5.023,
+      "hr": 163,
+      "kcal": 1811,
+      "elevation": 142.0,
+      "points": 0,
+      "effort": 15.010360547036884,
+      "heart_eff": 0.02036
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.04,
+      "duration_min": 8.0,
+      "pace": "7:41",
+      "pace_raw": 7.679,
+      "hr": 145,
+      "kcal": 117,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 14.594594594594593,
+      "heart_eff": 0.01497
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 77.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 115,
+      "kcal": 567,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 7.350907519446845,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.41,
+      "duration_min": 11.8,
+      "pace": "8:19",
+      "pace_raw": 8.322,
+      "hr": 159,
+      "kcal": 169,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 14.382978723404255,
+      "heart_eff": 0.0126
+    },
+    {
+      "date": "2026-08-21",
+      "name": "4 x  5.0km @ 15.3 km/h   3'55 min/km Med 180 (Máx 198) lpm / 4Mín Med 146 lpm;",
+      "type": "running",
+      "dist_km": 30.06,
+      "duration_min": 145.0,
+      "pace": "4:49",
+      "pace_raw": 4.824,
+      "hr": 161,
+      "kcal": 2263,
+      "elevation": 76.0,
+      "points": 0,
+      "effort": 15.606896551724137,
+      "heart_eff": 0.02146
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 25.84,
+      "duration_min": 150.9,
+      "pace": "5:50",
+      "pace_raw": 5.841,
+      "hr": 142,
+      "kcal": 1584,
+      "elevation": 115.0,
+      "points": 0,
+      "effort": 10.493540907585293,
+      "heart_eff": 0.02009
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 11.22,
+      "duration_min": 61.4,
+      "pace": "5:28",
+      "pace_raw": 5.467,
+      "hr": 136,
+      "kcal": 645,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 10.51059206952743,
+      "heart_eff": 0.02241
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 15.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 115,
+      "kcal": 206,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.7180910099889,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-25",
+      "name": "12 x  1.0km @ 17.1 km/h   3'30 min/km Med 124 (Máx 125) lpm / 3Mín Med 127 lpm;",
+      "type": "running",
+      "dist_km": 20.17,
+      "duration_min": 107.9,
+      "pace": "5:21",
+      "pace_raw": 5.348,
+      "hr": 129,
+      "kcal": 986,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 9.140914709517924,
+      "heart_eff": 0.02416
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 21.28,
+      "duration_min": 153.2,
+      "pace": "7:12",
+      "pace_raw": 7.196,
+      "hr": 134,
+      "kcal": 1596,
+      "elevation": 217.0,
+      "points": 0,
+      "effort": 10.421155729676787,
+      "heart_eff": 0.01728
+    },
+    {
+      "date": "2026-08-28",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 4.12,
+      "duration_min": 34.5,
+      "pace": "8:22",
+      "pace_raw": 8.362,
+      "hr": 127,
+      "kcal": 395,
+      "elevation": 54.0,
+      "points": 0,
+      "effort": 11.454809086515224,
+      "heart_eff": 0.01569
+    },
+    {
+      "date": "2026-08-28",
+      "name": "30 x  400m @ 17.1 km/h   3'30 min/km Med 140 (Máx 142) lpm / 3Mín Med 134 lpm;",
+      "type": "running",
+      "dist_km": 25.24,
+      "duration_min": 135.3,
+      "pace": "5:22",
+      "pace_raw": 5.36,
+      "hr": 139,
+      "kcal": 1301,
+      "elevation": 15.0,
+      "points": 0,
+      "effort": 9.615668883961566,
+      "heart_eff": 0.02237
+    },
+    {
+      "date": "2026-08-29",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 28.47,
+      "duration_min": 431.2,
+      "pace": "15:09",
+      "pace_raw": 15.146,
+      "hr": 134,
+      "kcal": 4312,
+      "elevation": 2718.0,
+      "points": 0,
+      "effort": 10.0,
+      "heart_eff": 0.00821
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 14.8,
+      "duration_min": 55.2,
+      "pace": "3:44",
+      "pace_raw": 3.731,
+      "hr": 188,
+      "kcal": 1096,
+      "elevation": 57.0,
+      "points": 0,
+      "effort": 19.843089921544962,
+      "heart_eff": 0.02376
+    },
+    {
+      "date": "2026-09-01",
+      "name": "12 x 3Mín @ 15.5 km/h   3'52 min/km Med 159 (Máx 182) lpm / 2Mín Med 137 lpm;",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 81.2,
+      "pace": "5:48",
+      "pace_raw": 5.796,
+      "hr": 146,
+      "kcal": 984,
+      "elevation": 13.0,
+      "points": 0,
+      "effort": 12.11822660098522,
+      "heart_eff": 0.0197
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.68,
+      "duration_min": 10.2,
+      "pace": "6:03",
+      "pace_raw": 6.058,
+      "hr": 152,
+      "kcal": 139,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 13.64975450081833,
+      "heart_eff": 0.0181
+    },
+    {
+      "date": "2026-09-04",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 1.61,
+      "duration_min": 5.2,
+      "pace": "3:12",
+      "pace_raw": 3.195,
+      "hr": 0,
+      "kcal": 110,
+      "elevation": 14.0,
+      "points": 0,
+      "effort": 21.35922330097087,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 0.67,
+      "duration_min": 8.2,
+      "pace": "12:15",
+      "pace_raw": 12.25,
+      "hr": 151,
+      "kcal": 124,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 15.15274949083503,
+      "heart_eff": 0.009
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 43.07,
+      "duration_min": 166.8,
+      "pace": "3:52",
+      "pace_raw": 3.872,
+      "hr": 184,
+      "kcal": 3001,
+      "elevation": 231.0,
+      "points": 0,
+      "effort": 17.991606714628297,
+      "heart_eff": 0.02339
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 12.04,
+      "duration_min": 62.1,
+      "pace": "5:10",
+      "pace_raw": 5.16,
+      "hr": 143,
+      "kcal": 739,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 11.900161030595813,
+      "heart_eff": 0.02258
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Hiking",
+      "type": "walking",
+      "dist_km": 6.29,
+      "duration_min": 48.8,
+      "pace": "7:45",
+      "pace_raw": 7.758,
+      "hr": 148,
+      "kcal": 611,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 12.524769388452341,
+      "heart_eff": 0.01451
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Running",
+      "type": "running",
+      "dist_km": 15.41,
+      "duration_min": 100.1,
+      "pace": "6:30",
+      "pace_raw": 6.498,
+      "hr": 135,
+      "kcal": 1218,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 12.163781624500665,
+      "heart_eff": 0.019
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Gym",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 81.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 111,
+      "kcal": 570,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 6.983867674086175,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-11",
+      "name": "20 x  400m @ 18.2 km/h   3'17 min/km Med 134 (Máx 135) lpm / 3Mín Med 136 lpm;",
+      "type": "running",
+      "dist_km": 21.23,
+      "duration_min": 123.2,
+      "pace": "5:48",
+      "pace_raw": 5.804,
+      "hr": 141,
+      "kcal": 1307,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 10.610201596536328,
+      "heart_eff": 0.02037
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Trail running",
+      "type": "running",
+      "dist_km": 26.16,
+      "duration_min": 345.2,
+      "pace": "13:12",
+      "pace_raw": 13.198,
+      "hr": 133,
+      "kcal": 2917,
+      "elevation": 1842.0,
+      "points": 0,
+      "effort": 8.448950036205648,
+      "heart_eff": 0.0095
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 54.26,
+      "sessions": 5,
+      "avg_hr": 146,
+      "avg_pace": 6.597,
+      "total_kcal": 3873,
+      "running": {
+        "km": 54.26,
+        "sessions": 5,
+        "avg_hr": 146,
+        "avg_pace": 6.597
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 51.4,
+      "sessions": 5,
+      "avg_hr": 147,
+      "avg_pace": 7.532,
+      "total_kcal": 4290,
+      "running": {
+        "km": 51.4,
+        "sessions": 5,
+        "avg_hr": 147,
+        "avg_pace": 7.532
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 75.95,
+      "sessions": 5,
+      "avg_hr": 140,
+      "avg_pace": 7.391,
+      "total_kcal": 6356,
+      "running": {
+        "km": 75.95,
+        "sessions": 5,
+        "avg_hr": 140,
+        "avg_pace": 7.391
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 77.97,
+      "sessions": 9,
+      "avg_hr": 147,
+      "avg_pace": 8.875,
+      "total_kcal": 6940,
+      "running": {
+        "km": 77.97,
+        "sessions": 9,
+        "avg_hr": 147,
+        "avg_pace": 8.875
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 82.29,
+      "sessions": 8,
+      "avg_hr": 156,
+      "avg_pace": 5.915,
+      "total_kcal": 6499,
+      "running": {
+        "km": 82.29,
+        "sessions": 8,
+        "avg_hr": 156,
+        "avg_pace": 5.915
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 55.43,
+      "sessions": 9,
+      "avg_hr": 127,
+      "avg_pace": 6.793,
+      "total_kcal": 4223,
+      "running": {
+        "km": 55.43,
+        "sessions": 9,
+        "avg_hr": 127,
+        "avg_pace": 6.793
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 75,
+        "sessions": 1
+      },
+      "total_sessions": 11
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 110.14,
+      "sessions": 12,
+      "avg_hr": 126,
+      "avg_pace": 9.346,
+      "total_kcal": 7737,
+      "running": {
+        "km": 110.14,
+        "sessions": 12,
+        "avg_hr": 126,
+        "avg_pace": 9.346
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 12
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 50.13,
+      "sessions": 3,
+      "avg_hr": 143,
+      "avg_pace": 7.018,
+      "total_kcal": 4525,
+      "running": {
+        "km": 50.13,
+        "sessions": 3,
+        "avg_hr": 143,
+        "avg_pace": 7.018
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 178,
+        "sessions": 2
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 143.05,
+      "sessions": 9,
+      "avg_hr": 147,
+      "avg_pace": 7.862,
+      "total_kcal": 10925,
+      "running": {
+        "km": 143.05,
+        "sessions": 9,
+        "avg_hr": 147,
+        "avg_pace": 7.862
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 12
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 74.05,
+      "sessions": 4,
+      "avg_hr": 143,
+      "avg_pace": 6.367,
+      "total_kcal": 6474,
+      "running": {
+        "km": 74.05,
+        "sessions": 4,
+        "avg_hr": 143,
+        "avg_pace": 6.367
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1150,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 88,
+        "sessions": 1
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 90.62,
+      "sessions": 5,
+      "avg_hr": 154,
+      "avg_pace": 7.199,
+      "total_kcal": 7245,
+      "running": {
+        "km": 90.62,
+        "sessions": 5,
+        "avg_hr": 154,
+        "avg_pace": 7.199
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 78,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 80.02,
+      "sessions": 7,
+      "avg_hr": 107,
+      "avg_pace": 6.711,
+      "total_kcal": 5283,
+      "running": {
+        "km": 80.02,
+        "sessions": 7,
+        "avg_hr": 107,
+        "avg_pace": 6.711
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 87,
+        "sessions": 1
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 68.48,
+      "sessions": 5,
+      "avg_hr": 145,
+      "avg_pace": 5.402,
+      "total_kcal": 4552,
+      "running": {
+        "km": 68.48,
+        "sessions": 5,
+        "avg_hr": 145,
+        "avg_pace": 5.402
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 74,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 88.85,
+      "sessions": 4,
+      "avg_hr": 102,
+      "avg_pace": 6.287,
+      "total_kcal": 5248,
+      "running": {
+        "km": 88.85,
+        "sessions": 4,
+        "avg_hr": 102,
+        "avg_pace": 6.287
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 244.11,
+      "sessions": 2,
+      "avg_hr": 148,
+      "avg_pace": 7.034,
+      "total_kcal": 3981,
+      "running": {
+        "km": 244.11,
+        "sessions": 2,
+        "avg_hr": 148,
+        "avg_pace": 7.034
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 85,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 0,
+      "sessions": 0,
+      "avg_hr": 0,
+      "avg_pace": 0.0,
+      "total_kcal": 3628,
+      "running": {
+        "km": 0,
+        "sessions": 0,
+        "avg_hr": 0,
+        "avg_pace": 0.0
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 60.52,
+      "sessions": 4,
+      "avg_hr": 144,
+      "avg_pace": 6.75,
+      "total_kcal": 6229,
+      "running": {
+        "km": 60.52,
+        "sessions": 4,
+        "avg_hr": 144,
+        "avg_pace": 6.75
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 120,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 82.54,
+      "sessions": 5,
+      "avg_hr": 145,
+      "avg_pace": 7.468,
+      "total_kcal": 7979,
+      "running": {
+        "km": 82.54,
+        "sessions": 5,
+        "avg_hr": 145,
+        "avg_pace": 7.468
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 200,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 21.83,
+      "sessions": 2,
+      "avg_hr": 162,
+      "avg_pace": 6.63,
+      "total_kcal": 2202,
+      "running": {
+        "km": 21.83,
+        "sessions": 2,
+        "avg_hr": 162,
+        "avg_pace": 6.63
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 67.05,
+      "sessions": 6,
+      "avg_hr": 131,
+      "avg_pace": 7.278,
+      "total_kcal": 7149,
+      "running": {
+        "km": 67.05,
+        "sessions": 6,
+        "avg_hr": 131,
+        "avg_pace": 7.278
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 91,
+        "sessions": 1
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 82.0,
+      "sessions": 8,
+      "avg_hr": 129,
+      "avg_pace": 6.576,
+      "total_kcal": 6403,
+      "running": {
+        "km": 82.0,
+        "sessions": 8,
+        "avg_hr": 129,
+        "avg_pace": 6.576
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 650,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 9
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 54.1,
+      "sessions": 4,
+      "avg_hr": 144,
+      "avg_pace": 5.783,
+      "total_kcal": 4172,
+      "running": {
+        "km": 54.1,
+        "sessions": 4,
+        "avg_hr": 144,
+        "avg_pace": 5.783
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 70,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 115.71,
+      "sessions": 7,
+      "avg_hr": 132,
+      "avg_pace": 6.577,
+      "total_kcal": 8886,
+      "running": {
+        "km": 115.71,
+        "sessions": 7,
+        "avg_hr": 132,
+        "avg_pace": 6.577
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 77,
+        "sessions": 1
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 121.18,
+      "sessions": 6,
+      "avg_hr": 143,
+      "avg_pace": 7.041,
+      "total_kcal": 10537,
+      "running": {
+        "km": 121.18,
+        "sessions": 6,
+        "avg_hr": 143,
+        "avg_pace": 7.041
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 15,
+        "sessions": 1
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 61.04,
+      "sessions": 5,
+      "avg_hr": 127,
+      "avg_pace": 6.234,
+      "total_kcal": 4358,
+      "running": {
+        "km": 61.04,
+        "sessions": 5,
+        "avg_hr": 127,
+        "avg_pace": 6.234
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 74.84,
+      "sessions": 4,
+      "avg_hr": 138,
+      "avg_pace": 7.665,
+      "total_kcal": 7362,
+      "running": {
+        "km": 74.84,
+        "sessions": 4,
+        "avg_hr": 138,
+        "avg_pace": 7.665
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 82,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    }
+  ],
+  "acwr": {
+    "valor": 0.91,
+    "status": "optimal",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.72,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.71,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.63,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.85,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.3,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.53,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.46,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.16,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.09,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.78,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.36,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.46,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.66,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.91,
+          "status": "optimal"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 1.69,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.7,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.07,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.63,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.84,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.93,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 1.61,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.8,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.59,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.11,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.16,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.4,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.42,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.66,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.86,
+          "status": "optimal"
+        }
+      ],
+      "cycling": [],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.33,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.38,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.91,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 1.38,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 2.35,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.72,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 1.75,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.29,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.37,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 1.88,
+          "status": "high_risk"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 87,
+    "headline": "Resumen semanal; plan pendiente de revisión",
+    "subheadline": "El plan no está incluido en esta entrega",
+    "readiness": 91,
+    "aiVerdict": "César, registraste menos running que el promedio de cuatro semanas, pero más que la semana anterior. La carga de fuerza está elevada y el tiempo total de entrenamiento aumentó.",
+    "strengths": [],
+    "warnings": [
+      "Carga de fuerza elevada; presta atención a tus sensaciones."
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "74.84 km",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Menor que el promedio reciente, pero más que la semana anterior"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "761 min",
+        "trend": "up",
+        "status": "green",
+        "note": "Aumento por más minutos en fuerza"
+      },
+      {
+        "label": "Ritmo medio running",
+        "value": "7:40/km",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Ritmo más lento que semanas previas"
+      }
+    ],
+    "weeklyPlan": null,
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no hay datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Monitorea sensaciones tras sesiones de fuerza y prioriza recuperación"
+    },
+    "projection": null
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "partial",
+    "plan": {
+      "title": "Antes de completar tu plan",
+      "description": "Tu análisis está disponible. El plan está pendiente de revisión para considerar la carga de fuerza y las características de tu carrera de 55K de montaña."
+    },
+    "projection": {
+      "title": "Tu referencia anterior",
+      "reference": "Maratón del 6 de septiembre de 2026 en 2:46:48 (FC 184 bpm)",
+      "description": "Un resultado de maratón no basta para estimar tu tiempo en 55K de montaña sin conocer el desnivel y el terreno."
+    },
+    "followUp": {
+      "question": "¿Puedes compartir el recorrido o el desnivel de tu carrera de Jardín?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta nos ayudará a completar el contexto de tu próxima entrega."
+    }
+  }
+}

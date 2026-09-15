@@ -1,0 +1,3225 @@
+{
+  "meta": {
+    "userId": "31979",
+    "nombre": "ROCHY TORREGROZA",
+    "genero": "Female",
+    "edad": 60,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:59",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "28:46",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "1:03:53",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "Media Maratón del Café",
+      "fecha": "2026-11-29",
+      "label": "21K",
+      "diasPrep": 76
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-15T02:59:04.058279Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-17",
+      "name": "Pereira - X Series",
+      "type": "running",
+      "dist_km": 9.67,
+      "duration_min": 68.4,
+      "pace": "7:04",
+      "pace_raw": 7.072,
+      "hr": 132,
+      "kcal": 577,
+      "elevation": 43.0,
+      "points": 0,
+      "effort": 8.437728491347794,
+      "heart_eff": 0.01786
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 2.54,
+      "duration_min": 104.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 94,
+      "kcal": 412,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 3.9495127017095384,
+      "heart_eff": 0.00432
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.25,
+      "duration_min": 64.2,
+      "pace": "6:57",
+      "pace_raw": 6.944,
+      "hr": 131,
+      "kcal": 555,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 8.644859813084112,
+      "heart_eff": 0.01832
+    },
+    {
+      "date": "2026-03-22",
+      "name": "Armenia Carrera",
+      "type": "running",
+      "dist_km": 21.04,
+      "duration_min": 139.5,
+      "pace": "6:38",
+      "pace_raw": 6.631,
+      "hr": 147,
+      "kcal": 1352,
+      "elevation": 225.0,
+      "points": 0,
+      "effort": 9.690598494803487,
+      "heart_eff": 0.0171
+    },
+    {
+      "date": "2026-03-23",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.45,
+      "duration_min": 55.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 84,
+      "kcal": 212,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.797014925373134,
+      "heart_eff": 0.00661
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.31,
+      "duration_min": 77.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 100,
+      "kcal": 347,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 4.460154241645244,
+      "heart_eff": 0.0028
+    },
+    {
+      "date": "2026-03-27",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 48.2,
+      "pace": "6:53",
+      "pace_raw": 6.876,
+      "hr": 126,
+      "kcal": 422,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 8.758215150466967,
+      "heart_eff": 0.01923
+    },
+    {
+      "date": "2026-03-28",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.51,
+      "duration_min": 64.7,
+      "pace": "7:37",
+      "pace_raw": 7.61,
+      "hr": 130,
+      "kcal": 540,
+      "elevation": 116.0,
+      "points": 0,
+      "effort": 8.341915550978372,
+      "heart_eff": 0.01685
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.42,
+      "duration_min": 67.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 83,
+      "kcal": 246,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.659806595586412,
+      "heart_eff": 0.00576
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.37,
+      "duration_min": 81.4,
+      "pace": "7:51",
+      "pace_raw": 7.853,
+      "hr": 125,
+      "kcal": 632,
+      "elevation": 142.0,
+      "points": 0,
+      "effort": 7.764127764127764,
+      "heart_eff": 0.01698
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.2,
+      "duration_min": 70.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 99,
+      "kcal": 308,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 4.348235294117647,
+      "heart_eff": 0.00284
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 74.9,
+      "pace": "7:29",
+      "pace_raw": 7.485,
+      "hr": 131,
+      "kcal": 632,
+      "elevation": 170.0,
+      "points": 0,
+      "effort": 8.434163701067614,
+      "heart_eff": 0.01699
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.02,
+      "duration_min": 78.2,
+      "pace": "7:48",
+      "pace_raw": 7.805,
+      "hr": 124,
+      "kcal": 602,
+      "elevation": 137.0,
+      "points": 0,
+      "effort": 7.698209718670077,
+      "heart_eff": 0.01722
+    },
+    {
+      "date": "2026-04-05",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 1.02,
+      "duration_min": 53.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 102,
+      "kcal": 276,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.175,
+      "heart_eff": 0.00691
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Pereira - Zona 2",
+      "type": "running",
+      "dist_km": 9.94,
+      "duration_min": 79.4,
+      "pace": "7:59",
+      "pace_raw": 7.985,
+      "hr": 122,
+      "kcal": 597,
+      "elevation": 121.0,
+      "points": 0,
+      "effort": 7.5188916876574305,
+      "heart_eff": 0.01711
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 0.96,
+      "duration_min": 98.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 90,
+      "kcal": 355,
+      "elevation": 32.0,
+      "points": 0,
+      "effort": 3.6065018625126988,
+      "heart_eff": 0.0018
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Pereira - Series: Z.F.C. 3",
+      "type": "running",
+      "dist_km": 10.1,
+      "duration_min": 68.8,
+      "pace": "6:49",
+      "pace_raw": 6.812,
+      "hr": 139,
+      "kcal": 619,
+      "elevation": 37.0,
+      "points": 0,
+      "effort": 8.994914022765803,
+      "heart_eff": 0.0176
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.68,
+      "duration_min": 70.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 80,
+      "kcal": 232,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.283018867924528,
+      "heart_eff": 0.00798
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.74,
+      "duration_min": 77.8,
+      "pace": "7:59",
+      "pace_raw": 7.99,
+      "hr": 119,
+      "kcal": 588,
+      "elevation": 177.0,
+      "points": 0,
+      "effort": 7.5578406169665815,
+      "heart_eff": 0.01753
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 14.04,
+      "duration_min": 96.3,
+      "pace": "6:51",
+      "pace_raw": 6.856,
+      "hr": 138,
+      "kcal": 899,
+      "elevation": 181.0,
+      "points": 0,
+      "effort": 9.33702613813398,
+      "heart_eff": 0.01762
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.55,
+      "duration_min": 54.3,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 82,
+      "kcal": 184,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.389622351857538,
+      "heart_eff": 0.00871
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.29,
+      "duration_min": 106.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 448,
+      "elevation": 37.0,
+      "points": 0,
+      "effort": 4.221105527638191,
+      "heart_eff": 0.00207
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Pereira - 3 Series x5",
+      "type": "running",
+      "dist_km": 8.02,
+      "duration_min": 59.4,
+      "pace": "7:24",
+      "pace_raw": 7.404,
+      "hr": 134,
+      "kcal": 512,
+      "elevation": 43.0,
+      "points": 0,
+      "effort": 8.624368332397529,
+      "heart_eff": 0.0168
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 61.2,
+      "pace": "7:39",
+      "pace_raw": 7.649,
+      "hr": 124,
+      "kcal": 490,
+      "elevation": 122.0,
+      "points": 0,
+      "effort": 8.002177463255308,
+      "heart_eff": 0.01757
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 95.8,
+      "pace": "6:50",
+      "pace_raw": 6.84,
+      "hr": 143,
+      "kcal": 902,
+      "elevation": 178.0,
+      "points": 0,
+      "effort": 9.413811097582188,
+      "heart_eff": 0.01704
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 79.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 65,
+      "kcal": 122,
+      "elevation": null,
+      "points": 0,
+      "effort": 1.536846525299181,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.62,
+      "duration_min": 74.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 74,
+      "kcal": 218,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.914438502673797,
+      "heart_eff": 0.01119
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 0.65,
+      "duration_min": 51.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 89,
+      "kcal": 190,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 3.665594855305466,
+      "heart_eff": 0.00236
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 6.09,
+      "duration_min": 45.8,
+      "pace": "7:31",
+      "pace_raw": 7.519,
+      "hr": 126,
+      "kcal": 368,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 8.034934497816595,
+      "heart_eff": 0.0176
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.5,
+      "duration_min": 59.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 87,
+      "kcal": 248,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.1610738255033555,
+      "heart_eff": 0.0077
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 6.3,
+      "duration_min": 48.5,
+      "pace": "7:42",
+      "pace_raw": 7.692,
+      "hr": 124,
+      "kcal": 387,
+      "elevation": 82.0,
+      "points": 0,
+      "effort": 7.9848693259972485,
+      "heart_eff": 0.01748
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 102.7,
+      "pace": "6:51",
+      "pace_raw": 6.846,
+      "hr": 143,
+      "kcal": 980,
+      "elevation": 181.0,
+      "points": 0,
+      "effort": 9.539260220635951,
+      "heart_eff": 0.01703
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 103.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 72,
+      "kcal": 223,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.1612017444677756,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 6.17,
+      "duration_min": 44.1,
+      "pace": "7:09",
+      "pace_raw": 7.148,
+      "hr": 125,
+      "kcal": 374,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 8.483931947069943,
+      "heart_eff": 0.01865
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.07,
+      "duration_min": 90.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 87,
+      "kcal": 311,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 3.42951663297188,
+      "heart_eff": 0.00226
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.09,
+      "duration_min": 72.5,
+      "pace": "8:58",
+      "pace_raw": 8.965,
+      "hr": 114,
+      "kcal": 491,
+      "elevation": 187.0,
+      "points": 0,
+      "effort": 6.7693014705882355,
+      "heart_eff": 0.01631
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.8,
+      "duration_min": 62.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 81,
+      "kcal": 230,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.677058353317346,
+      "heart_eff": 0.00998
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 75.3,
+      "pace": "7:31",
+      "pace_raw": 7.524,
+      "hr": 131,
+      "kcal": 630,
+      "elevation": 148.0,
+      "points": 0,
+      "effort": 8.364682451869884,
+      "heart_eff": 0.01691
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 101.8,
+      "pace": "6:47",
+      "pace_raw": 6.78,
+      "hr": 139,
+      "kcal": 937,
+      "elevation": 171.0,
+      "points": 0,
+      "effort": 9.208845208845208,
+      "heart_eff": 0.01768
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 6.0,
+      "duration_min": 46.0,
+      "pace": "7:40",
+      "pace_raw": 7.669,
+      "hr": 128,
+      "kcal": 365,
+      "elevation": 29.0,
+      "points": 0,
+      "effort": 7.926167209554833,
+      "heart_eff": 0.01698
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 67.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 84,
+      "kcal": 207,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.065153010858835,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.06,
+      "duration_min": 87.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 93,
+      "kcal": 339,
+      "elevation": 23.0,
+      "points": 0,
+      "effort": 3.8705994291151287,
+      "heart_eff": 0.00218
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.05,
+      "duration_min": 48.5,
+      "pace": "6:53",
+      "pace_raw": 6.876,
+      "hr": 136,
+      "kcal": 435,
+      "elevation": 26.0,
+      "points": 0,
+      "effort": 8.969072164948454,
+      "heart_eff": 0.01782
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.17,
+      "duration_min": 55.5,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 69,
+      "kcal": 123,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.2142214221422143,
+      "heart_eff": 0.013
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 68.5,
+      "pace": "7:37",
+      "pace_raw": 7.612,
+      "hr": 127,
+      "kcal": 558,
+      "elevation": 138.0,
+      "points": 0,
+      "effort": 8.140043763676148,
+      "heart_eff": 0.01724
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 15.02,
+      "duration_min": 102.4,
+      "pace": "6:49",
+      "pace_raw": 6.821,
+      "hr": 138,
+      "kcal": 938,
+      "elevation": 176.0,
+      "points": 0,
+      "effort": 9.157175398633257,
+      "heart_eff": 0.0177
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 48.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 79,
+      "kcal": 138,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.831737346101231,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-12",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.22,
+      "duration_min": 49.9,
+      "pace": "6:55",
+      "pace_raw": 6.912,
+      "hr": 130,
+      "kcal": 449,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 8.99499165275459,
+      "heart_eff": 0.01855
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 0.78,
+      "duration_min": 68.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 96,
+      "kcal": 301,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 4.383495145631068,
+      "heart_eff": 0.00196
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Pereira - K + Funcional",
+      "type": "running",
+      "dist_km": 4.22,
+      "duration_min": 35.0,
+      "pace": "8:18",
+      "pace_raw": 8.299,
+      "hr": 125,
+      "kcal": 294,
+      "elevation": 20.0,
+      "points": 0,
+      "effort": 8.404001905669366,
+      "heart_eff": 0.01606
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Pereira - K + Funcional",
+      "type": "running",
+      "dist_km": 2.57,
+      "duration_min": 19.2,
+      "pace": "7:30",
+      "pace_raw": 7.498,
+      "hr": 139,
+      "kcal": 186,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 9.670710571923744,
+      "heart_eff": 0.01599
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.7,
+      "duration_min": 59.4,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 79,
+      "kcal": 204,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.4362717574396404,
+      "heart_eff": 0.01023
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.33,
+      "duration_min": 49.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 71,
+      "kcal": 136,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.769857433808554,
+      "heart_eff": 0.00955
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 11.93,
+      "duration_min": 70.9,
+      "pace": "5:57",
+      "pace_raw": 5.945,
+      "hr": 148,
+      "kcal": 751,
+      "elevation": 61.0,
+      "points": 0,
+      "effort": 10.592383638928068,
+      "heart_eff": 0.01894
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.53,
+      "duration_min": 54.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 84,
+      "kcal": 201,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.716486902927581,
+      "heart_eff": 0.00551
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 63.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 72,
+      "kcal": 143,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.2367049009384776,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.15,
+      "duration_min": 79.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 102,
+      "kcal": 374,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 4.72520530638029,
+      "heart_eff": 0.00238
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Pereira - K + Funcional",
+      "type": "running",
+      "dist_km": 10.79,
+      "duration_min": 91.7,
+      "pace": "8:30",
+      "pace_raw": 8.497,
+      "hr": 128,
+      "kcal": 739,
+      "elevation": 53.0,
+      "points": 0,
+      "effort": 8.06181818181818,
+      "heart_eff": 0.01532
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 34.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 84,
+      "kcal": 116,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.334930522280786,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Natación en piscina",
+      "type": "swimming",
+      "dist_km": 0.5,
+      "duration_min": 72.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 80,
+      "kcal": 240,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.296703296703297,
+      "heart_eff": 0.00546
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 2.81,
+      "duration_min": 20.4,
+      "pace": "7:16",
+      "pace_raw": 7.26,
+      "hr": 116,
+      "kcal": 166,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 8.143908421913329,
+      "heart_eff": 0.01978
+    },
+    {
+      "date": "2026-05-25",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 72.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 78,
+      "kcal": 199,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.7353951890034365,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Pereira - 3 Series x5",
+      "type": "running",
+      "dist_km": 7.55,
+      "duration_min": 52.6,
+      "pace": "6:58",
+      "pace_raw": 6.974,
+      "hr": 140,
+      "kcal": 500,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 9.49667616334283,
+      "heart_eff": 0.01707
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 55.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 86,
+      "kcal": 188,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.3661593554162934,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 0.64,
+      "duration_min": 52.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 100,
+      "kcal": 246,
+      "elevation": 36.0,
+      "points": 0,
+      "effort": 4.651749133312323,
+      "heart_eff": 0.00203
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Pereira - K+ Resistencia",
+      "type": "running",
+      "dist_km": 7.75,
+      "duration_min": 69.3,
+      "pace": "8:56",
+      "pace_raw": 8.934,
+      "hr": 126,
+      "kcal": 551,
+      "elevation": 53.0,
+      "points": 0,
+      "effort": 7.954764196342637,
+      "heart_eff": 0.0148
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 47.6,
+      "pace": "6:48",
+      "pace_raw": 6.794,
+      "hr": 124,
+      "kcal": 413,
+      "elevation": 34.0,
+      "points": 0,
+      "effort": 8.667366211962225,
+      "heart_eff": 0.01978
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 42.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 83,
+      "kcal": 153,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.6313291139240507,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Pereira - X 1Series",
+      "type": "running",
+      "dist_km": 8.17,
+      "duration_min": 61.9,
+      "pace": "7:35",
+      "pace_raw": 7.58,
+      "hr": 130,
+      "kcal": 534,
+      "elevation": 38.0,
+      "points": 0,
+      "effort": 8.626817447495961,
+      "heart_eff": 0.01691
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.12,
+      "duration_min": 81.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 389,
+      "elevation": 27.0,
+      "points": 0,
+      "effort": 4.793592113370302,
+      "heart_eff": 0.00236
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Pereira - K+ Resistencia",
+      "type": "running",
+      "dist_km": 7.63,
+      "duration_min": 70.8,
+      "pace": "9:17",
+      "pace_raw": 9.276,
+      "hr": 121,
+      "kcal": 540,
+      "elevation": 54.0,
+      "points": 0,
+      "effort": 7.6325088339222615,
+      "heart_eff": 0.01484
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.63,
+      "duration_min": 57.5,
+      "pace": "6:40",
+      "pace_raw": 6.665,
+      "hr": 122,
+      "kcal": 502,
+      "elevation": 43.0,
+      "points": 0,
+      "effort": 8.72537659327926,
+      "heart_eff": 0.02049
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 13.01,
+      "duration_min": 89.4,
+      "pace": "6:52",
+      "pace_raw": 6.871,
+      "hr": 137,
+      "kcal": 841,
+      "elevation": 198.0,
+      "points": 0,
+      "effort": 9.408912921872085,
+      "heart_eff": 0.0177
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 80.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 74,
+      "kcal": 204,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.526315789473684,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.09,
+      "duration_min": 79.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 91,
+      "kcal": 325,
+      "elevation": 28.0,
+      "points": 0,
+      "effort": 4.10612760581175,
+      "heart_eff": 0.00252
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.21,
+      "duration_min": 51.8,
+      "pace": "7:11",
+      "pace_raw": 7.181,
+      "hr": 114,
+      "kcal": 419,
+      "elevation": 60.0,
+      "points": 0,
+      "effort": 8.094011590470059,
+      "heart_eff": 0.02035
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 5.02,
+      "duration_min": 32.9,
+      "pace": "6:33",
+      "pace_raw": 6.548,
+      "hr": 142,
+      "kcal": 333,
+      "elevation": 18.0,
+      "points": 0,
+      "effort": 10.13184584178499,
+      "heart_eff": 0.01792
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 14.01,
+      "duration_min": 101.3,
+      "pace": "7:14",
+      "pace_raw": 7.228,
+      "hr": 136,
+      "kcal": 914,
+      "elevation": 168.0,
+      "points": 0,
+      "effort": 9.02567478604345,
+      "heart_eff": 0.01695
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 73.1,
+      "pace": "8:07",
+      "pace_raw": 8.117,
+      "hr": 120,
+      "kcal": 542,
+      "elevation": 147.0,
+      "points": 0,
+      "effort": 7.411121239744758,
+      "heart_eff": 0.01711
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.19,
+      "duration_min": 63.6,
+      "pace": "6:55",
+      "pace_raw": 6.923,
+      "hr": 126,
+      "kcal": 553,
+      "elevation": 33.0,
+      "points": 0,
+      "effort": 8.688138256087981,
+      "heart_eff": 0.0191
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 5.54,
+      "duration_min": 39.6,
+      "pace": "7:09",
+      "pace_raw": 7.148,
+      "hr": 119,
+      "kcal": 333,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 8.412631578947368,
+      "heart_eff": 0.01959
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.41,
+      "duration_min": 101.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 76,
+      "kcal": 278,
+      "elevation": 21.0,
+      "points": 0,
+      "effort": 2.747488057980563,
+      "heart_eff": 0.00304
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 93.6,
+      "pace": "7:48",
+      "pace_raw": 7.796,
+      "hr": 127,
+      "kcal": 761,
+      "elevation": 175.0,
+      "points": 0,
+      "effort": 8.127447490210038,
+      "heart_eff": 0.01683
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 54.7,
+      "pace": "6:50",
+      "pace_raw": 6.832,
+      "hr": 133,
+      "kcal": 501,
+      "elevation": 131.0,
+      "points": 0,
+      "effort": 9.15347137637028,
+      "heart_eff": 0.01834
+    },
+    {
+      "date": "2026-07-27",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 83.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 79,
+      "kcal": 245,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.947663926208141,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Pereira - Escalera  2, 3, 2",
+      "type": "running",
+      "dist_km": 10.24,
+      "duration_min": 70.3,
+      "pace": "6:52",
+      "pace_raw": 6.866,
+      "hr": 136,
+      "kcal": 644,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 9.156398104265403,
+      "heart_eff": 0.01785
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.09,
+      "duration_min": 70.6,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 98,
+      "kcal": 332,
+      "elevation": 19.0,
+      "points": 0,
+      "effort": 4.703659976387249,
+      "heart_eff": 0.00263
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Pereira - Zona 2",
+      "type": "running",
+      "dist_km": 7.31,
+      "duration_min": 53.7,
+      "pace": "7:21",
+      "pace_raw": 7.348,
+      "hr": 114,
+      "kcal": 418,
+      "elevation": 30.0,
+      "points": 0,
+      "effort": 7.781569965870307,
+      "heart_eff": 0.01989
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 66.7,
+      "pace": "7:24",
+      "pace_raw": 7.402,
+      "hr": 128,
+      "kcal": 589,
+      "elevation": 139.0,
+      "points": 0,
+      "effort": 8.834999999999999,
+      "heart_eff": 0.01759
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 17.01,
+      "duration_min": 113.4,
+      "pace": "6:40",
+      "pace_raw": 6.668,
+      "hr": 140,
+      "kcal": 1102,
+      "elevation": 195.0,
+      "points": 0,
+      "effort": 9.71495739053776,
+      "heart_eff": 0.01785
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 72.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 76,
+      "kcal": 196,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.7222222222222223,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-04",
+      "name": "Pereira - 3 Series x5",
+      "type": "running",
+      "dist_km": 8.77,
+      "duration_min": 68.0,
+      "pace": "7:45",
+      "pace_raw": 7.752,
+      "hr": 132,
+      "kcal": 553,
+      "elevation": 45.0,
+      "points": 0,
+      "effort": 8.132352941176471,
+      "heart_eff": 0.01629
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 1.33,
+      "duration_min": 55.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 101,
+      "kcal": 273,
+      "elevation": 20.0,
+      "points": 0,
+      "effort": 4.963636363636364,
+      "heart_eff": 0.00399
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 93.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 79,
+      "kcal": 261,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.8019323671497585,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Pereira - X 1Series",
+      "type": "running",
+      "dist_km": 5.01,
+      "duration_min": 37.2,
+      "pace": "7:26",
+      "pace_raw": 7.435,
+      "hr": 134,
+      "kcal": 318,
+      "elevation": 35.0,
+      "points": 0,
+      "effort": 8.544558889386476,
+      "heart_eff": 0.01673
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 3.02,
+      "duration_min": 17.7,
+      "pace": "5:52",
+      "pace_raw": 5.865,
+      "hr": 144,
+      "kcal": 175,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 9.877704609595485,
+      "heart_eff": 0.01973
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 18.0,
+      "duration_min": 130.3,
+      "pace": "7:14",
+      "pace_raw": 7.239,
+      "hr": 136,
+      "kcal": 1130,
+      "elevation": 171.0,
+      "points": 0,
+      "effort": 8.67007672634271,
+      "heart_eff": 0.01693
+    },
+    {
+      "date": "2026-08-13",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 53.3,
+      "pace": "7:37",
+      "pace_raw": 7.61,
+      "hr": 119,
+      "kcal": 424,
+      "elevation": 82.0,
+      "points": 0,
+      "effort": 7.952485151609878,
+      "heart_eff": 0.0184
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.0,
+      "duration_min": 68.9,
+      "pace": "7:39",
+      "pace_raw": 7.654,
+      "hr": 126,
+      "kcal": 566,
+      "elevation": 127.0,
+      "points": 0,
+      "effort": 8.212817412333736,
+      "heart_eff": 0.01728
+    },
+    {
+      "date": "2026-08-16",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 20.01,
+      "duration_min": 154.7,
+      "pace": "7:44",
+      "pace_raw": 7.73,
+      "hr": 126,
+      "kcal": 1192,
+      "elevation": 228.0,
+      "points": 0,
+      "effort": 7.706896551724139,
+      "heart_eff": 0.01711
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 54.1,
+      "pace": "7:43",
+      "pace_raw": 7.723,
+      "hr": 122,
+      "kcal": 428,
+      "elevation": 75.0,
+      "points": 0,
+      "effort": 7.908838928241454,
+      "heart_eff": 0.01769
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Pereira - X 1Series",
+      "type": "running",
+      "dist_km": 10.0,
+      "duration_min": 69.2,
+      "pace": "6:55",
+      "pace_raw": 6.921,
+      "hr": 134,
+      "kcal": 623,
+      "elevation": 69.0,
+      "points": 0,
+      "effort": 9.002890173410405,
+      "heart_eff": 0.01797
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Pereira Caminar",
+      "type": "walking",
+      "dist_km": 3.0,
+      "duration_min": 37.8,
+      "pace": "12:35",
+      "pace_raw": 12.576,
+      "hr": 102,
+      "kcal": 184,
+      "elevation": 63.0,
+      "points": 0,
+      "effort": 4.872021182700794,
+      "heart_eff": 0.01299
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 48.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 74,
+      "kcal": 122,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.5068493150684934,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 87.8,
+      "pace": "7:19",
+      "pace_raw": 7.309,
+      "hr": 128,
+      "kcal": 749,
+      "elevation": 151.0,
+      "points": 0,
+      "effort": 8.532371368900703,
+      "heart_eff": 0.01781
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 15.01,
+      "duration_min": 109.2,
+      "pace": "7:16",
+      "pace_raw": 7.274,
+      "hr": 133,
+      "kcal": 951,
+      "elevation": 180.0,
+      "points": 0,
+      "effort": 8.71145038167939,
+      "heart_eff": 0.01723
+    },
+    {
+      "date": "2026-08-24",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 91.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 76,
+      "kcal": 233,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.553891121666058,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-25",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 75.1,
+      "pace": "7:30",
+      "pace_raw": 7.501,
+      "hr": 129,
+      "kcal": 617,
+      "elevation": 176.0,
+      "points": 0,
+      "effort": 8.21936056838366,
+      "heart_eff": 0.01722
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 13.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 74,
+      "kcal": 35,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.681992337164751,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Pereira HIIT",
+      "type": "other",
+      "dist_km": 0.97,
+      "duration_min": 63.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 80,
+      "kcal": 190,
+      "elevation": 16.0,
+      "points": 0,
+      "effort": 2.9772786628362495,
+      "heart_eff": 0.00319
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 9.01,
+      "duration_min": 65.7,
+      "pace": "7:18",
+      "pace_raw": 7.298,
+      "hr": 127,
+      "kcal": 562,
+      "elevation": 96.0,
+      "points": 0,
+      "effort": 8.549695740365111,
+      "heart_eff": 0.01798
+    },
+    {
+      "date": "2026-08-29",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 12.02,
+      "duration_min": 90.8,
+      "pace": "7:34",
+      "pace_raw": 7.561,
+      "hr": 128,
+      "kcal": 758,
+      "elevation": 157.0,
+      "points": 0,
+      "effort": 8.343423225096313,
+      "heart_eff": 0.01722
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 12.01,
+      "duration_min": 96.8,
+      "pace": "8:04",
+      "pace_raw": 8.066,
+      "hr": 121,
+      "kcal": 732,
+      "elevation": 178.0,
+      "points": 0,
+      "effort": 7.55807950438823,
+      "heart_eff": 0.01707
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 7.01,
+      "duration_min": 50.7,
+      "pace": "7:14",
+      "pace_raw": 7.233,
+      "hr": 131,
+      "kcal": 446,
+      "elevation": 76.0,
+      "points": 0,
+      "effort": 8.799736928641895,
+      "heart_eff": 0.01759
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 53.4,
+      "pace": "6:40",
+      "pace_raw": 6.671,
+      "hr": 132,
+      "kcal": 494,
+      "elevation": 87.0,
+      "points": 0,
+      "effort": 9.24804992199688,
+      "heart_eff": 0.01892
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 21.01,
+      "duration_min": 140.6,
+      "pace": "6:42",
+      "pace_raw": 6.692,
+      "hr": 143,
+      "kcal": 1336,
+      "elevation": 123.0,
+      "points": 0,
+      "effort": 9.504387004979844,
+      "heart_eff": 0.01742
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 84.0,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 74,
+      "kcal": 205,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.4390243902439024,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 95.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 87,
+      "kcal": 336,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.510971786833856,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-09-12",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 59.0,
+      "pace": "7:21",
+      "pace_raw": 7.355,
+      "hr": 127,
+      "kcal": 502,
+      "elevation": 106.0,
+      "points": 0,
+      "effort": 8.515691263782866,
+      "heart_eff": 0.01784
+    },
+    {
+      "date": "2026-09-13",
+      "name": "Pereira Carrera",
+      "type": "running",
+      "dist_km": 10.01,
+      "duration_min": 72.2,
+      "pace": "7:13",
+      "pace_raw": 7.216,
+      "hr": 137,
+      "kcal": 662,
+      "elevation": 141.0,
+      "points": 0,
+      "effort": 9.164743885556069,
+      "heart_eff": 0.01686
+    },
+    {
+      "date": "2026-09-14",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 88.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 77,
+      "kcal": 240,
+      "elevation": null,
+      "points": 0,
+      "effort": 2.699662542182227,
+      "heart_eff": 0
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 39.96,
+      "sessions": 3,
+      "avg_hr": 137,
+      "avg_pace": 6.882,
+      "total_kcal": 2896,
+      "running": {
+        "km": 39.96,
+        "sessions": 3,
+        "avg_hr": 137,
+        "avg_pace": 6.882
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 15.52,
+      "sessions": 2,
+      "avg_hr": 128,
+      "avg_pace": 7.243,
+      "total_kcal": 1767,
+      "running": {
+        "km": 15.52,
+        "sessions": 2,
+        "avg_hr": 128,
+        "avg_pace": 7.243
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 870,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 30.4,
+      "sessions": 3,
+      "avg_hr": 127,
+      "avg_pace": 7.714,
+      "total_kcal": 2450,
+      "running": {
+        "km": 30.4,
+        "sessions": 3,
+        "avg_hr": 127,
+        "avg_pace": 7.714
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1020,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 43.82,
+      "sessions": 4,
+      "avg_hr": 130,
+      "avg_pace": 7.411,
+      "total_kcal": 3290,
+      "running": {
+        "km": 43.82,
+        "sessions": 4,
+        "avg_hr": 130,
+        "avg_pace": 7.411
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 680,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 30.04,
+      "sessions": 3,
+      "avg_hr": 134,
+      "avg_pace": 7.298,
+      "total_kcal": 2536,
+      "running": {
+        "km": 30.04,
+        "sessions": 3,
+        "avg_hr": 134,
+        "avg_pace": 7.298
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 550,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 27.4,
+      "sessions": 3,
+      "avg_hr": 131,
+      "avg_pace": 7.352,
+      "total_kcal": 2513,
+      "running": {
+        "km": 27.4,
+        "sessions": 3,
+        "avg_hr": 131,
+        "avg_pace": 7.352
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1120,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 79,
+        "sessions": 1
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 39.28,
+      "sessions": 4,
+      "avg_hr": 127,
+      "avg_pace": 7.604,
+      "total_kcal": 3196,
+      "running": {
+        "km": 39.28,
+        "sessions": 4,
+        "avg_hr": 127,
+        "avg_pace": 7.604
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 800,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 103,
+        "sessions": 1
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 37.08,
+      "sessions": 4,
+      "avg_hr": 132,
+      "avg_pace": 7.245,
+      "total_kcal": 2965,
+      "running": {
+        "km": 37.08,
+        "sessions": 4,
+        "avg_hr": 132,
+        "avg_pace": 7.245
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 170,
+        "sessions": 1
+      },
+      "strength": {
+        "minutos": 68,
+        "sessions": 1
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 25.94,
+      "sessions": 4,
+      "avg_hr": 136,
+      "avg_pace": 7.163,
+      "total_kcal": 2459,
+      "running": {
+        "km": 25.94,
+        "sessions": 4,
+        "avg_hr": 136,
+        "avg_pace": 7.163
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1030,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 49,
+        "sessions": 1
+      },
+      "total_sessions": 8
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 13.6,
+      "sessions": 2,
+      "avg_hr": 122,
+      "avg_pace": 7.878,
+      "total_kcal": 1979,
+      "running": {
+        "km": 13.6,
+        "sessions": 2,
+        "avg_hr": 122,
+        "avg_pace": 7.878
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 1030,
+        "sessions": 2
+      },
+      "strength": {
+        "minutos": 99,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 22.31,
+      "sessions": 3,
+      "avg_hr": 130,
+      "avg_pace": 7.567,
+      "total_kcal": 2097,
+      "running": {
+        "km": 22.31,
+        "sessions": 3,
+        "avg_hr": 130,
+        "avg_pace": 7.567
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 129,
+        "sessions": 2
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 37.44,
+      "sessions": 4,
+      "avg_hr": 128,
+      "avg_pace": 7.598,
+      "total_kcal": 2959,
+      "running": {
+        "km": 37.44,
+        "sessions": 4,
+        "avg_hr": 128,
+        "avg_pace": 7.598
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 42,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 26.24,
+      "sessions": 3,
+      "avg_hr": 131,
+      "avg_pace": 6.986,
+      "total_kcal": 2195,
+      "running": {
+        "km": 26.24,
+        "sessions": 3,
+        "avg_hr": 131,
+        "avg_pace": 6.986
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 81,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 9.01,
+      "sessions": 1,
+      "avg_hr": 120,
+      "avg_pace": 8.117,
+      "total_kcal": 542,
+      "running": {
+        "km": 9.01,
+        "sessions": 1,
+        "avg_hr": 120,
+        "avg_pace": 8.117
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 34.75,
+      "sessions": 4,
+      "avg_hr": 126,
+      "avg_pace": 7.175,
+      "total_kcal": 2426,
+      "running": {
+        "km": 34.75,
+        "sessions": 4,
+        "avg_hr": 126,
+        "avg_pace": 7.175
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 43.57,
+      "sessions": 4,
+      "avg_hr": 130,
+      "avg_pace": 7.071,
+      "total_kcal": 3330,
+      "running": {
+        "km": 43.57,
+        "sessions": 4,
+        "avg_hr": 130,
+        "avg_pace": 7.071
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 83,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 34.8,
+      "sessions": 4,
+      "avg_hr": 136,
+      "avg_pace": 7.073,
+      "total_kcal": 2906,
+      "running": {
+        "km": 34.8,
+        "sessions": 4,
+        "avg_hr": 136,
+        "avg_pace": 7.073
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 165,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 36.02,
+      "sessions": 3,
+      "avg_hr": 124,
+      "avg_pace": 7.665,
+      "total_kcal": 2182,
+      "running": {
+        "km": 36.02,
+        "sessions": 3,
+        "avg_hr": 124,
+        "avg_pace": 7.665
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 44.03,
+      "sessions": 4,
+      "avg_hr": 129,
+      "avg_pace": 7.307,
+      "total_kcal": 3057,
+      "running": {
+        "km": 44.03,
+        "sessions": 4,
+        "avg_hr": 129,
+        "avg_pace": 7.307
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 49,
+        "sessions": 1
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 43.05,
+      "sessions": 4,
+      "avg_hr": 126,
+      "avg_pace": 7.607,
+      "total_kcal": 3127,
+      "running": {
+        "km": 43.05,
+        "sessions": 4,
+        "avg_hr": 126,
+        "avg_pace": 7.607
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 104,
+        "sessions": 2
+      },
+      "total_sessions": 7
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 36.03,
+      "sessions": 3,
+      "avg_hr": 135,
+      "avg_pace": 6.865,
+      "total_kcal": 2276,
+      "running": {
+        "km": 36.03,
+        "sessions": 3,
+        "avg_hr": 135,
+        "avg_pace": 6.865
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-09-07/2026-09-13",
+      "total_km": 18.02,
+      "sessions": 2,
+      "avg_hr": 132,
+      "avg_pace": 7.286,
+      "total_kcal": 1705,
+      "running": {
+        "km": 18.02,
+        "sessions": 2,
+        "avg_hr": 132,
+        "avg_pace": 7.286
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 180,
+        "sessions": 2
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-09-14/2026-09-20",
+      "total_km": 0,
+      "sessions": 0,
+      "avg_hr": 0,
+      "avg_pace": 0.0,
+      "total_kcal": 240,
+      "running": {
+        "km": 0,
+        "sessions": 0,
+        "avg_hr": 0,
+        "avg_pace": 0.0
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 89,
+        "sessions": 1
+      },
+      "total_sessions": 1
+    }
+  ],
+  "acwr": {
+    "valor": 0.56,
+    "status": "undertraining",
+    "confiable": true,
+    "semana": "2026-09-07/2026-09-13",
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.64,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.47,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.95,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 3.19,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 2.02,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.16,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.94,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.16,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.07,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.9,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.56,
+          "status": "undertraining"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.83,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 0.5,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.5,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.03,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 3.19,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 2.02,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 1.14,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.94,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.12,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.09,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 0.53,
+          "status": "undertraining"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 3.34,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.56,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.15,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        }
+      ],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.65,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.5,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.53,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.92,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 2.66,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.66,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.31,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-09-07",
+          "weekEnd": "2026-09-13",
+          "valor": 2.16,
+          "status": "high_risk"
+        }
+      ]
+    }
+  },
+  "pulse": {
+    "semana": "2026-09-07/2026-09-13",
+    "score": 62,
+    "headline": "Resumen semanal; plan pendiente de revisión",
+    "subheadline": "El plan no está incluido en esta entrega",
+    "readiness": 61,
+    "aiVerdict": "Rochy, registraste menos running que tu promedio reciente y carga de fuerza elevada. La combinación de esas señales requiere revisar el plan antes de presentarlo.",
+    "strengths": [],
+    "warnings": [
+      "Carga de fuerza elevada; presta atención a tus sensaciones."
+    ],
+    "keyMetrics": [
+      {
+        "label": "Volumen running semanal",
+        "value": "18.02 km",
+        "trend": "down",
+        "status": "red",
+        "note": "Significativamente menor que el promedio"
+      },
+      {
+        "label": "Sesiones running",
+        "value": "2 sesiones",
+        "trend": "down",
+        "status": "red",
+        "note": "Frecuencia reducida"
+      },
+      {
+        "label": "Carga total (todas disciplinas)",
+        "value": "310.9 min",
+        "trend": "down",
+        "status": "yellow",
+        "note": "Menor carga global"
+      }
+    ],
+    "weeklyPlan": null,
+    "injuryRisk": {
+      "level": "low",
+      "signal": "no se cuenta con datos de dolor o fatiga autorreportados",
+      "area": null,
+      "action": "Mantén atención a señales de fatiga y ajusta si es necesario"
+    },
+    "projection": null
+  },
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [
+    {
+      "id": 1273,
+      "name": "Reto",
+      "org": "SWETRO COMMUNITY",
+      "type": "distancia",
+      "typeIcon": "🏃",
+      "goal": [
+        {
+          "activity_type": "running",
+          "variable": "distance",
+          "condition": "greater_than_or_equal_to",
+          "value": 20000.0,
+          "unit": "km",
+          "value_in_unit": 20.0
+        }
+      ],
+      "unit": "km",
+      "userProgress": 0,
+      "startDate": "",
+      "endDate": "",
+      "daysLeft": 0,
+      "totalDays": 0,
+      "participants": 0,
+      "status": "completed",
+      "virtual": true,
+      "rank": null,
+      "totalRanked": 0,
+      "prizeTiers": [],
+      "description": "",
+      "leaderboard": [
+        {
+          "full_name": "Mario Francisco B.",
+          "gender": "Male",
+          "age": 44,
+          "country": "COL",
+          "is_complete": false,
+          "position": 0,
+          "position_by_gender": null,
+          "position_by_gender_and_age_category": null,
+          "position_by_country": null,
+          "total_number_activities": 0,
+          "total_distance_in_meters": 0.0,
+          "total_duration_in_seconds": 0,
+          "total_active_kilocalories": 0,
+          "total_elevation_gain_in_meters": 0.0,
+          "total_average_pace_in_minutes_per_kilometer": 0.0,
+          "total_average_heart_rate_in_beats_per_minute": 0.0
+        },
+        {
+          "full_name": "Cesar Ricardo S.",
+          "gender": "Male",
+          "age": 38,
+          "country": "PER",
+          "is_complete": true,
+          "position": 1,
+          "position_by_gender": 1,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": 1,
+          "total_number_activities": 13,
+          "total_distance_in_meters": 130240.50732421875,
+          "total_duration_in_seconds": 37774,
+          "total_active_kilocalories": 8250,
+          "total_elevation_gain_in_meters": 4249.0,
+          "total_average_pace_in_minutes_per_kilometer": 6.05473733819842,
+          "total_average_heart_rate_in_beats_per_minute": 0.0
+        },
+        {
+          "full_name": "Ferney Eduardo M.",
+          "gender": "Male",
+          "age": 33,
+          "country": "COL",
+          "is_complete": true,
+          "position": 2,
+          "position_by_gender": 2,
+          "position_by_gender_and_age_category": 2,
+          "position_by_country": 1,
+          "total_number_activities": 10,
+          "total_distance_in_meters": 106286.18762207031,
+          "total_duration_in_seconds": 35179,
+          "total_active_kilocalories": 6044,
+          "total_elevation_gain_in_meters": 2103.0,
+          "total_average_pace_in_minutes_per_kilometer": 5.695790212669741,
+          "total_average_heart_rate_in_beats_per_minute": 130.8
+        },
+        {
+          "full_name": "Fabián R.",
+          "gender": "Male",
+          "age": 37,
+          "country": "COL",
+          "is_complete": true,
+          "position": 3,
+          "position_by_gender": 3,
+          "position_by_gender_and_age_category": 3,
+          "position_by_country": 2,
+          "total_number_activities": 6,
+          "total_distance_in_meters": 95655.5400390625,
+          "total_duration_in_seconds": 25428,
+          "total_active_kilocalories": 5283,
+          "total_elevation_gain_in_meters": 632.0,
+          "total_average_pace_in_minutes_per_kilometer": 4.488379578084667,
+          "total_average_heart_rate_in_beats_per_minute": 139.33333333333334
+        },
+        {
+          "full_name": "Javier V.",
+          "gender": "Male",
+          "age": 54,
+          "country": "COL",
+          "is_complete": true,
+          "position": 4,
+          "position_by_gender": 4,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": 3,
+          "total_number_activities": 5,
+          "total_distance_in_meters": 72519.08203125,
+          "total_duration_in_seconds": 29954,
+          "total_active_kilocalories": 4023,
+          "total_elevation_gain_in_meters": 1327.0,
+          "total_average_pace_in_minutes_per_kilometer": 6.781470982610989,
+          "total_average_heart_rate_in_beats_per_minute": 125.2
+        }
+      ]
+    },
+    {
+      "id": 1267,
+      "name": "Reto",
+      "org": "SWETRO COMMUNITY",
+      "type": "distancia",
+      "typeIcon": "🏃",
+      "goal": [
+        {
+          "activity_type": "running",
+          "variable": "duration",
+          "condition": "greater_than_or_equal_to",
+          "value": 5400.0,
+          "unit": "min",
+          "value_in_unit": 90.0
+        }
+      ],
+      "unit": "km",
+      "userProgress": 0,
+      "startDate": "",
+      "endDate": "",
+      "daysLeft": 0,
+      "totalDays": 0,
+      "participants": 0,
+      "status": "completed",
+      "virtual": true,
+      "rank": null,
+      "totalRanked": 0,
+      "prizeTiers": [],
+      "description": "",
+      "leaderboard": [
+        {
+          "full_name": "OSCAR C.",
+          "gender": "Male",
+          "age": 42,
+          "country": "COL",
+          "is_complete": true,
+          "position": 1,
+          "position_by_gender": 1,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 1,
+          "total_distance_in_meters": 52009.0,
+          "total_duration_in_seconds": 29420,
+          "total_active_kilocalories": 5226,
+          "total_elevation_gain_in_meters": 1608.0,
+          "total_average_pace_in_minutes_per_kilometer": 9.427855435277227,
+          "total_average_heart_rate_in_beats_per_minute": 123.0
+        },
+        {
+          "full_name": "Victor P.",
+          "gender": "Male",
+          "age": 44,
+          "country": "PER",
+          "is_complete": true,
+          "position": 2,
+          "position_by_gender": 2,
+          "position_by_gender_and_age_category": 2,
+          "position_by_country": null,
+          "total_number_activities": 2,
+          "total_distance_in_meters": 45013.0,
+          "total_duration_in_seconds": 15748,
+          "total_active_kilocalories": 3218,
+          "total_elevation_gain_in_meters": 568.0,
+          "total_average_pace_in_minutes_per_kilometer": 5.858016422679884,
+          "total_average_heart_rate_in_beats_per_minute": 127.5
+        },
+        {
+          "full_name": "Juan Pablo G.",
+          "gender": "Male",
+          "age": 44,
+          "country": "COL",
+          "is_complete": true,
+          "position": 3,
+          "position_by_gender": 3,
+          "position_by_gender_and_age_category": 3,
+          "position_by_country": null,
+          "total_number_activities": 2,
+          "total_distance_in_meters": 32492.890625,
+          "total_duration_in_seconds": 13555,
+          "total_active_kilocalories": 1855,
+          "total_elevation_gain_in_meters": 1648.0,
+          "total_average_pace_in_minutes_per_kilometer": 6.5108459244310914,
+          "total_average_heart_rate_in_beats_per_minute": 133.0
+        },
+        {
+          "full_name": "Christian R.",
+          "gender": "Male",
+          "age": 35,
+          "country": "COL",
+          "is_complete": true,
+          "position": 4,
+          "position_by_gender": 4,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 2,
+          "total_distance_in_meters": 41036.8896484375,
+          "total_duration_in_seconds": 13307,
+          "total_active_kilocalories": 2428,
+          "total_elevation_gain_in_meters": 175.0,
+          "total_average_pace_in_minutes_per_kilometer": 6.445253787516476,
+          "total_average_heart_rate_in_beats_per_minute": 142.0
+        },
+        {
+          "full_name": "Clara M.",
+          "gender": "Female",
+          "age": 56,
+          "country": "COL",
+          "is_complete": true,
+          "position": 5,
+          "position_by_gender": 1,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 4,
+          "total_distance_in_meters": 37115.269775390625,
+          "total_duration_in_seconds": 13153,
+          "total_active_kilocalories": 2093,
+          "total_elevation_gain_in_meters": 105.0,
+          "total_average_pace_in_minutes_per_kilometer": 5.65937092957752,
+          "total_average_heart_rate_in_beats_per_minute": 141.25
+        }
+      ]
+    },
+    {
+      "id": 1257,
+      "name": "Reto",
+      "org": "SWETRO COMMUNITY",
+      "type": "distancia",
+      "typeIcon": "🏃",
+      "goal": [
+        {
+          "activity_type": "running",
+          "variable": "distance",
+          "condition": "greater_than_or_equal_to",
+          "value": 20000.0,
+          "unit": "km",
+          "value_in_unit": 20.0
+        }
+      ],
+      "unit": "km",
+      "userProgress": 0,
+      "startDate": "",
+      "endDate": "",
+      "daysLeft": 0,
+      "totalDays": 0,
+      "participants": 0,
+      "status": "completed",
+      "virtual": true,
+      "rank": null,
+      "totalRanked": 0,
+      "prizeTiers": [],
+      "description": "",
+      "leaderboard": [
+        {
+          "full_name": "Ferney Eduardo M.",
+          "gender": "Male",
+          "age": 33,
+          "country": "COL",
+          "is_complete": true,
+          "position": 1,
+          "position_by_gender": 1,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 7,
+          "total_distance_in_meters": 124365.978515625,
+          "total_duration_in_seconds": 43647,
+          "total_active_kilocalories": 7076,
+          "total_elevation_gain_in_meters": 2724.0,
+          "total_average_pace_in_minutes_per_kilometer": 5.846290860277118,
+          "total_average_heart_rate_in_beats_per_minute": 117.85714285714286
+        },
+        {
+          "full_name": "Ivan D.",
+          "gender": "Male",
+          "age": 57,
+          "country": "COL",
+          "is_complete": true,
+          "position": 2,
+          "position_by_gender": 2,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 7,
+          "total_distance_in_meters": 93041.82,
+          "total_duration_in_seconds": 27245,
+          "total_active_kilocalories": 5395,
+          "total_elevation_gain_in_meters": 193.0,
+          "total_average_pace_in_minutes_per_kilometer": 4.8779895515692075,
+          "total_average_heart_rate_in_beats_per_minute": 167.0
+        },
+        {
+          "full_name": "Eyder B.",
+          "gender": "Male",
+          "age": 46,
+          "country": "COL",
+          "is_complete": true,
+          "position": 3,
+          "position_by_gender": 3,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 6,
+          "total_distance_in_meters": 75301.169921875,
+          "total_duration_in_seconds": 25392,
+          "total_active_kilocalories": 4402,
+          "total_elevation_gain_in_meters": 696.0,
+          "total_average_pace_in_minutes_per_kilometer": 5.878181410744776,
+          "total_average_heart_rate_in_beats_per_minute": 151.5
+        },
+        {
+          "full_name": "Maria Eugenia O.",
+          "gender": "Female",
+          "age": 49,
+          "country": "COL",
+          "is_complete": true,
+          "position": 4,
+          "position_by_gender": 1,
+          "position_by_gender_and_age_category": 1,
+          "position_by_country": null,
+          "total_number_activities": 9,
+          "total_distance_in_meters": 74910.05041503906,
+          "total_duration_in_seconds": 29101,
+          "total_active_kilocalories": 3833,
+          "total_elevation_gain_in_meters": 2907.0,
+          "total_average_pace_in_minutes_per_kilometer": 6.5314848994518275,
+          "total_average_heart_rate_in_beats_per_minute": 147.55555555555554
+        },
+        {
+          "full_name": "Eder F.",
+          "gender": "Male",
+          "age": 46,
+          "country": "COL",
+          "is_complete": true,
+          "position": 5,
+          "position_by_gender": 4,
+          "position_by_gender_and_age_category": 2,
+          "position_by_country": null,
+          "total_number_activities": 9,
+          "total_distance_in_meters": 72502.53857421875,
+          "total_duration_in_seconds": 25444,
+          "total_active_kilocalories": 4581,
+          "total_elevation_gain_in_meters": 269.0,
+          "total_average_pace_in_minutes_per_kilometer": 8.613740810395344,
+          "total_average_heart_rate_in_beats_per_minute": 124.0
+        }
+      ]
+    }
+  ],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "partial",
+    "plan": {
+      "title": "Antes de completar tu plan",
+      "description": "Tu análisis está disponible. Estamos revisando la combinación de running y fuerza antes de incluir el plan semanal, porque la carga de fuerza registrada es elevada."
+    },
+    "projection": {
+      "title": "Tu referencia anterior",
+      "reference": "Media maratón del 22 de marzo de 2026 en 2:19:30 (FC 147 bpm)",
+      "description": "Esta es una marca histórica, no un pronóstico para tu próxima carrera. La proyección está pendiente de revisión."
+    },
+    "followUp": {
+      "question": "¿Las sesiones de fuerza registradas corresponden a tu rutina habitual o aumentaste la carga?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta nos ayudará a completar el contexto de tu próxima entrega."
+    }
+  }
+}

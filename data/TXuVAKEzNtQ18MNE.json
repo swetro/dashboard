@@ -1,0 +1,2220 @@
+{
+  "meta": {
+    "userId": "15602",
+    "nombre": "DAVID CASTAÑEDA",
+    "genero": "Male",
+    "edad": 48,
+    "pais": "COL",
+    "avatar": "🇨🇴",
+    "prs": [
+      {
+        "dist": "1K",
+        "mark": "4:55",
+        "color": "#9CA0AA"
+      },
+      {
+        "dist": "5K",
+        "mark": "27:15",
+        "color": "#3D7EFF"
+      },
+      {
+        "dist": "10K",
+        "mark": "57:47",
+        "color": "#7EB8FF"
+      }
+    ],
+    "metaCarrera": {
+      "nombre": "¿Cuál es tu próxima carrera?",
+      "fecha": "2027-01-01",
+      "label": "META",
+      "diasPrep": 109
+    },
+    "planPreferences": {},
+    "isPro": true,
+    "generadoEn": "2026-09-15T03:49:48.032134Z"
+  },
+  "activities": [
+    {
+      "date": "2026-03-19",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 6.02,
+      "duration_min": 36.4,
+      "pace": "6:03",
+      "pace_raw": 6.049,
+      "hr": 156,
+      "kcal": 433,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.890160183066362,
+      "heart_eff": 0.01765
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Chía Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 5.97,
+      "duration_min": 36.8,
+      "pace": "6:10",
+      "pace_raw": 6.17,
+      "hr": 152,
+      "kcal": 418,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.348416289592759,
+      "heart_eff": 0.01777
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 7.38,
+      "duration_min": 47.1,
+      "pace": "6:23",
+      "pace_raw": 6.38,
+      "hr": 135,
+      "kcal": 504,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 10.700636942675159,
+      "heart_eff": 0.01934
+    },
+    {
+      "date": "2026-03-29",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 17.34,
+      "duration_min": 124.2,
+      "pace": "7:10",
+      "pace_raw": 7.163,
+      "hr": 152,
+      "kcal": 1309,
+      "elevation": 328.0,
+      "points": 0,
+      "effort": 10.538038373809204,
+      "heart_eff": 0.01531
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Chía Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 6.86,
+      "duration_min": 46.8,
+      "pace": "6:49",
+      "pace_raw": 6.82,
+      "hr": 145,
+      "kcal": 488,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.431065194157464,
+      "heart_eff": 0.01685
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Chía - Sprint",
+      "type": "running",
+      "dist_km": 7.21,
+      "duration_min": 43.6,
+      "pace": "6:03",
+      "pace_raw": 6.048,
+      "hr": 158,
+      "kcal": 504,
+      "elevation": 25.0,
+      "points": 0,
+      "effort": 11.550802139037433,
+      "heart_eff": 0.01744
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 7.1,
+      "duration_min": 43.1,
+      "pace": "6:04",
+      "pace_raw": 6.075,
+      "hr": 155,
+      "kcal": 493,
+      "elevation": 24.0,
+      "points": 0,
+      "effort": 11.425260718424102,
+      "heart_eff": 0.0177
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 6.07,
+      "duration_min": 36.3,
+      "pace": "5:58",
+      "pace_raw": 5.973,
+      "hr": 143,
+      "kcal": 382,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.528249885163069,
+      "heart_eff": 0.0195
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.28,
+      "duration_min": 33.4,
+      "pace": "6:20",
+      "pace_raw": 6.332,
+      "hr": 147,
+      "kcal": 362,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.82751744765703,
+      "heart_eff": 0.0179
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 6.16,
+      "duration_min": 38.5,
+      "pace": "6:15",
+      "pace_raw": 6.25,
+      "hr": 128,
+      "kcal": 340,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.838821490467938,
+      "heart_eff": 0.02083
+    },
+    {
+      "date": "2026-04-12",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 6.37,
+      "duration_min": 39.3,
+      "pace": "6:10",
+      "pace_raw": 6.17,
+      "hr": 148,
+      "kcal": 452,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.501272264631044,
+      "heart_eff": 0.01825
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Chía - Sprint",
+      "type": "running",
+      "dist_km": 6.98,
+      "duration_min": 44.8,
+      "pace": "6:25",
+      "pace_raw": 6.423,
+      "hr": 148,
+      "kcal": 503,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.219330855018587,
+      "heart_eff": 0.01753
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Chía Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 6.99,
+      "duration_min": 47.4,
+      "pace": "6:46",
+      "pace_raw": 6.774,
+      "hr": 140,
+      "kcal": 494,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 10.432946145723337,
+      "heart_eff": 0.01757
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Maximiza tu torso.",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 94.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 99,
+      "kcal": 446,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.707952146375792,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 12.58,
+      "duration_min": 80.1,
+      "pace": "6:22",
+      "pace_raw": 6.37,
+      "hr": 154,
+      "kcal": 908,
+      "elevation": 218.0,
+      "points": 0,
+      "effort": 11.335830212234708,
+      "heart_eff": 0.01699
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 8.04,
+      "duration_min": 49.2,
+      "pace": "6:07",
+      "pace_raw": 6.118,
+      "hr": 156,
+      "kcal": 566,
+      "elevation": 41.0,
+      "points": 0,
+      "effort": 11.50796340223653,
+      "heart_eff": 0.01746
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 11.9,
+      "duration_min": 77.7,
+      "pace": "6:31",
+      "pace_raw": 6.524,
+      "hr": 146,
+      "kcal": 840,
+      "elevation": 22.0,
+      "points": 0,
+      "effort": 10.815450643776824,
+      "heart_eff": 0.01749
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 7.67,
+      "duration_min": 61.5,
+      "pace": "8:01",
+      "pace_raw": 8.017,
+      "hr": 133,
+      "kcal": 505,
+      "elevation": 3.0,
+      "points": 0,
+      "effort": 8.209157409916012,
+      "heart_eff": 0.01563
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Anaeróbica",
+      "type": "running",
+      "dist_km": 6.42,
+      "duration_min": 39.9,
+      "pace": "6:13",
+      "pace_raw": 6.214,
+      "hr": 127,
+      "kcal": 324,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.127090301003344,
+      "heart_eff": 0.02112
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.12,
+      "duration_min": 30.2,
+      "pace": "5:54",
+      "pace_raw": 5.908,
+      "hr": 160,
+      "kcal": 358,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.834710743801653,
+      "heart_eff": 0.01762
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.53,
+      "duration_min": 30.1,
+      "pace": "5:27",
+      "pace_raw": 5.445,
+      "hr": 162,
+      "kcal": 350,
+      "elevation": 6.0,
+      "points": 0,
+      "effort": 11.61504424778761,
+      "heart_eff": 0.01889
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 7.33,
+      "duration_min": 44.3,
+      "pace": "6:03",
+      "pace_raw": 6.046,
+      "hr": 152,
+      "kcal": 506,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.417826250470101,
+      "heart_eff": 0.01814
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 8.01,
+      "duration_min": 48.0,
+      "pace": "5:59",
+      "pace_raw": 5.986,
+      "hr": 148,
+      "kcal": 549,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 11.449426485922835,
+      "heart_eff": 0.01881
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Chía - Tempo run",
+      "type": "running",
+      "dist_km": 8.22,
+      "duration_min": 49.9,
+      "pace": "6:04",
+      "pace_raw": 6.067,
+      "hr": 148,
+      "kcal": 575,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 11.530748663101605,
+      "heart_eff": 0.01856
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 4.64,
+      "duration_min": 42.2,
+      "pace": "9:06",
+      "pace_raw": 9.1,
+      "hr": 128,
+      "kcal": 375,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.889766890557093,
+      "heart_eff": 0.0143
+    },
+    {
+      "date": "2026-05-24",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 15.23,
+      "duration_min": 107.4,
+      "pace": "7:03",
+      "pace_raw": 7.05,
+      "hr": 144,
+      "kcal": 1095,
+      "elevation": 386.0,
+      "points": 0,
+      "effort": 10.198696057125117,
+      "heart_eff": 0.01642
+    },
+    {
+      "date": "2026-05-28",
+      "name": "30 minutos a tope",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 69.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 95,
+      "kcal": 312,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.472049689440994,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 18.24,
+      "duration_min": 115.5,
+      "pace": "6:20",
+      "pace_raw": 6.335,
+      "hr": 145,
+      "kcal": 1246,
+      "elevation": 76.0,
+      "points": 0,
+      "effort": 10.783210731285159,
+      "heart_eff": 0.01814
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Chía - Tempo run",
+      "type": "running",
+      "dist_km": 8.71,
+      "duration_min": 60.2,
+      "pace": "6:55",
+      "pace_raw": 6.91,
+      "hr": 142,
+      "kcal": 609,
+      "elevation": 1.0,
+      "points": 0,
+      "effort": 10.119080587094988,
+      "heart_eff": 0.01699
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 19.94,
+      "duration_min": 127.7,
+      "pace": "6:24",
+      "pace_raw": 6.405,
+      "hr": 149,
+      "kcal": 1409,
+      "elevation": 40.0,
+      "points": 0,
+      "effort": 11.030793319415448,
+      "heart_eff": 0.01746
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 4.27,
+      "duration_min": 39.3,
+      "pace": "9:13",
+      "pace_raw": 9.211,
+      "hr": 131,
+      "kcal": 336,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.553245651251592,
+      "heart_eff": 0.01381
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 16.65,
+      "duration_min": 114.6,
+      "pace": "6:53",
+      "pace_raw": 6.887,
+      "hr": 148,
+      "kcal": 1215,
+      "elevation": 374.0,
+      "points": 0,
+      "effort": 10.59901134050596,
+      "heart_eff": 0.01635
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Chía - Tempo run",
+      "type": "running",
+      "dist_km": 8.45,
+      "duration_min": 53.8,
+      "pace": "6:22",
+      "pace_raw": 6.363,
+      "hr": 150,
+      "kcal": 588,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.936143831370117,
+      "heart_eff": 0.01746
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 3.61,
+      "duration_min": 28.0,
+      "pace": "7:45",
+      "pace_raw": 7.758,
+      "hr": 134,
+      "kcal": 267,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.530041641879833,
+      "heart_eff": 0.01602
+    },
+    {
+      "date": "2026-06-20",
+      "name": "BodyPump",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 71.7,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 112,
+      "kcal": 421,
+      "elevation": null,
+      "points": 0,
+      "effort": 5.871687587168759,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Chía - Carrera larga",
+      "type": "running",
+      "dist_km": 20.46,
+      "duration_min": 128.9,
+      "pace": "6:18",
+      "pace_raw": 6.301,
+      "hr": 151,
+      "kcal": 1429,
+      "elevation": 134.0,
+      "points": 0,
+      "effort": 11.084680025856498,
+      "heart_eff": 0.01752
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Chía - Tempo run",
+      "type": "running",
+      "dist_km": 6.16,
+      "duration_min": 36.1,
+      "pace": "5:51",
+      "pace_raw": 5.855,
+      "hr": 154,
+      "kcal": 429,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.89463955637708,
+      "heart_eff": 0.01847
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 23.48,
+      "duration_min": 145.6,
+      "pace": "6:12",
+      "pace_raw": 6.201,
+      "hr": 150,
+      "kcal": 1618,
+      "elevation": 79.0,
+      "points": 0,
+      "effort": 11.111365457250772,
+      "heart_eff": 0.01792
+    },
+    {
+      "date": "2026-07-02",
+      "name": "BodyPump",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 69.1,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 123,
+      "kcal": 472,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.829033035929588,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 3.86,
+      "duration_min": 31.1,
+      "pace": "8:05",
+      "pace_raw": 8.078,
+      "hr": 148,
+      "kcal": 333,
+      "elevation": 214.0,
+      "points": 0,
+      "effort": 10.690208667736758,
+      "heart_eff": 0.01393
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Chía - Carrera larga",
+      "type": "running",
+      "dist_km": 19.4,
+      "duration_min": 142.3,
+      "pace": "7:20",
+      "pace_raw": 7.338,
+      "hr": 142,
+      "kcal": 1370,
+      "elevation": 427.0,
+      "points": 0,
+      "effort": 9.625292740046838,
+      "heart_eff": 0.01599
+    },
+    {
+      "date": "2026-07-08",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.5,
+      "duration_min": 34.6,
+      "pace": "6:17",
+      "pace_raw": 6.283,
+      "hr": 144,
+      "kcal": 371,
+      "elevation": 17.0,
+      "points": 0,
+      "effort": 10.727710843373494,
+      "heart_eff": 0.01842
+    },
+    {
+      "date": "2026-07-10",
+      "name": "Chía Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 5.46,
+      "duration_min": 32.9,
+      "pace": "6:01",
+      "pace_raw": 6.016,
+      "hr": 154,
+      "kcal": 384,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.689497716894977,
+      "heart_eff": 0.01798
+    },
+    {
+      "date": "2026-07-13",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 25.6,
+      "duration_min": 161.8,
+      "pace": "6:19",
+      "pace_raw": 6.32,
+      "hr": 148,
+      "kcal": 1738,
+      "elevation": 59.0,
+      "points": 0,
+      "effort": 10.740550005149862,
+      "heart_eff": 0.01782
+    },
+    {
+      "date": "2026-07-16",
+      "name": "BodyPump",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 57.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 124,
+      "kcal": 425,
+      "elevation": null,
+      "points": 0,
+      "effort": 7.346585998271391,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-19",
+      "name": "Chía - Carrera larga",
+      "type": "running",
+      "dist_km": 21.01,
+      "duration_min": 134.7,
+      "pace": "6:25",
+      "pace_raw": 6.409,
+      "hr": 150,
+      "kcal": 1475,
+      "elevation": 100.0,
+      "points": 0,
+      "effort": 10.952970297029704,
+      "heart_eff": 0.01733
+    },
+    {
+      "date": "2026-07-23",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 5.65,
+      "duration_min": 35.4,
+      "pace": "6:16",
+      "pace_raw": 6.265,
+      "hr": 128,
+      "kcal": 310,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.75294117647059,
+      "heart_eff": 0.02077
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Chía - Sprint",
+      "type": "running",
+      "dist_km": 7.44,
+      "duration_min": 46.1,
+      "pace": "6:12",
+      "pace_raw": 6.203,
+      "hr": 144,
+      "kcal": 512,
+      "elevation": 4.0,
+      "points": 0,
+      "effort": 11.094257854821235,
+      "heart_eff": 0.01865
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 5.22,
+      "duration_min": 31.9,
+      "pace": "6:08",
+      "pace_raw": 6.126,
+      "hr": 122,
+      "kcal": 267,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.35680751173709,
+      "heart_eff": 0.0223
+    },
+    {
+      "date": "2026-07-25",
+      "name": "BodyPump",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 67.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 116,
+      "kcal": 443,
+      "elevation": null,
+      "points": 0,
+      "effort": 6.529108327192336,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Chía - Carrera larga",
+      "type": "running",
+      "dist_km": 20.42,
+      "duration_min": 136.8,
+      "pace": "6:42",
+      "pace_raw": 6.699,
+      "hr": 147,
+      "kcal": 1467,
+      "elevation": 442.0,
+      "points": 0,
+      "effort": 10.723684210526315,
+      "heart_eff": 0.01693
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Chía - Tempo run",
+      "type": "running",
+      "dist_km": 7.47,
+      "duration_min": 44.4,
+      "pace": "5:57",
+      "pace_raw": 5.944,
+      "hr": 150,
+      "kcal": 526,
+      "elevation": 7.0,
+      "points": 0,
+      "effort": 11.846846846846848,
+      "heart_eff": 0.01869
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Chía Entrenamiento en pista",
+      "type": "running",
+      "dist_km": 4.79,
+      "duration_min": 35.7,
+      "pace": "7:27",
+      "pace_raw": 7.453,
+      "hr": 140,
+      "kcal": 378,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 10.588235294117647,
+      "heart_eff": 0.01597
+    },
+    {
+      "date": "2026-08-01",
+      "name": "BodyPump",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 192.9,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 91,
+      "kcal": 595,
+      "elevation": null,
+      "points": 0,
+      "effort": 3.085032837884549,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-02",
+      "name": "Bogotá, D.C. - Carrera larga",
+      "type": "running",
+      "dist_km": 28.04,
+      "duration_min": 171.5,
+      "pace": "6:07",
+      "pace_raw": 6.115,
+      "hr": 149,
+      "kcal": 2025,
+      "elevation": 113.0,
+      "points": 0,
+      "effort": 11.809875583203732,
+      "heart_eff": 0.01829
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Tempo run",
+      "type": "running",
+      "dist_km": 4.16,
+      "duration_min": 23.9,
+      "pace": "5:45",
+      "pace_raw": 5.75,
+      "hr": 128,
+      "kcal": 237,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.902506963788301,
+      "heart_eff": 0.02263
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Chía - Sprint",
+      "type": "running",
+      "dist_km": 9.08,
+      "duration_min": 59.3,
+      "pace": "6:32",
+      "pace_raw": 6.527,
+      "hr": 148,
+      "kcal": 665,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.220472440944881,
+      "heart_eff": 0.01725
+    },
+    {
+      "date": "2026-08-09",
+      "name": "Chía Carrera",
+      "type": "running",
+      "dist_km": 18.5,
+      "duration_min": 126.7,
+      "pace": "6:51",
+      "pace_raw": 6.848,
+      "hr": 146,
+      "kcal": 1325,
+      "elevation": 388.0,
+      "points": 0,
+      "effort": 10.456398789951335,
+      "heart_eff": 0.01667
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Fuerza",
+      "type": "strength",
+      "dist_km": 0,
+      "duration_min": 61.8,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 95,
+      "kcal": 296,
+      "elevation": null,
+      "points": 0,
+      "effort": 4.789644012944984,
+      "heart_eff": 0
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 7.75,
+      "duration_min": 38.2,
+      "pace": "4:56",
+      "pace_raw": 4.933,
+      "hr": 143,
+      "kcal": 418,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.937636284343654,
+      "heart_eff": 0.02362
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 13.19,
+      "duration_min": 70.3,
+      "pace": "5:20",
+      "pace_raw": 5.328,
+      "hr": 140,
+      "kcal": 686,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.760493241640978,
+      "heart_eff": 0.02234
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.96,
+      "duration_min": 35.1,
+      "pace": "5:53",
+      "pace_raw": 5.884,
+      "hr": 149,
+      "kcal": 420,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 11.97718631178707,
+      "heart_eff": 0.01901
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 8.26,
+      "duration_min": 51.6,
+      "pace": "6:15",
+      "pace_raw": 6.245,
+      "hr": 133,
+      "kcal": 530,
+      "elevation": null,
+      "points": 0,
+      "effort": 10.274636510500807,
+      "heart_eff": 0.02006
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Chía - Sprint",
+      "type": "running",
+      "dist_km": 9.36,
+      "duration_min": 55.9,
+      "pace": "5:58",
+      "pace_raw": 5.969,
+      "hr": 154,
+      "kcal": 687,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.297136038186157,
+      "heart_eff": 0.01813
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Entrenamiento en cinta",
+      "type": "running",
+      "dist_km": 2.34,
+      "duration_min": 22.2,
+      "pace": "9:28",
+      "pace_raw": 9.467,
+      "hr": 117,
+      "kcal": 182,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.20435762584523,
+      "heart_eff": 0.01505
+    },
+    {
+      "date": "2026-08-22",
+      "name": "Recuperación",
+      "type": "other",
+      "dist_km": 2.34,
+      "duration_min": 22.2,
+      "pace": "—",
+      "pace_raw": 0,
+      "hr": 117,
+      "kcal": 182,
+      "elevation": null,
+      "points": 0,
+      "effort": 8.210526315789473,
+      "heart_eff": 0.01505
+    },
+    {
+      "date": "2026-08-23",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 7.63,
+      "duration_min": 43.5,
+      "pace": "5:42",
+      "pace_raw": 5.706,
+      "hr": 150,
+      "kcal": 524,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.03675344563553,
+      "heart_eff": 0.01947
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Bogotá, D.C. - Base",
+      "type": "running",
+      "dist_km": 12.39,
+      "duration_min": 81.1,
+      "pace": "6:33",
+      "pace_raw": 6.547,
+      "hr": 149,
+      "kcal": 942,
+      "elevation": 81.0,
+      "points": 0,
+      "effort": 11.610517666392768,
+      "heart_eff": 0.01708
+    },
+    {
+      "date": "2026-08-28",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.96,
+      "duration_min": 34.6,
+      "pace": "5:49",
+      "pace_raw": 5.816,
+      "hr": 153,
+      "kcal": 413,
+      "elevation": 10.0,
+      "points": 0,
+      "effort": 11.91919191919192,
+      "heart_eff": 0.01873
+    },
+    {
+      "date": "2026-08-29",
+      "name": "Chía - Base",
+      "type": "running",
+      "dist_km": 5.57,
+      "duration_min": 33.0,
+      "pace": "5:55",
+      "pace_raw": 5.916,
+      "hr": 153,
+      "kcal": 406,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.321699544764794,
+      "heart_eff": 0.01841
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Base",
+      "type": "running",
+      "dist_km": 7.13,
+      "duration_min": 42.3,
+      "pace": "5:56",
+      "pace_raw": 5.935,
+      "hr": 126,
+      "kcal": 411,
+      "elevation": null,
+      "points": 0,
+      "effort": 9.71248523040567,
+      "heart_eff": 0.02229
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Chía - Tempo",
+      "type": "running",
+      "dist_km": 8.06,
+      "duration_min": 47.2,
+      "pace": "5:51",
+      "pace_raw": 5.854,
+      "hr": 149,
+      "kcal": 571,
+      "elevation": 0.0,
+      "points": 0,
+      "effort": 12.101730837160016,
+      "heart_eff": 0.01911
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Chía - Recuperación",
+      "type": "running",
+      "dist_km": 5.83,
+      "duration_min": 39.1,
+      "pace": "6:42",
+      "pace_raw": 6.708,
+      "hr": 137,
+      "kcal": 428,
+      "elevation": 9.0,
+      "points": 0,
+      "effort": 10.941627609714528,
+      "heart_eff": 0.01813
+    },
+    {
+      "date": "2026-09-06",
+      "name": "Medellín Carrera",
+      "type": "running",
+      "dist_km": 42.36,
+      "duration_min": 264.2,
+      "pace": "6:14",
+      "pace_raw": 6.238,
+      "hr": 154,
+      "kcal": 3107,
+      "elevation": 233.0,
+      "points": 0,
+      "effort": 11.759288462751531,
+      "heart_eff": 0.01735
+    }
+  ],
+  "weekly": [
+    {
+      "week": "2026-03-16/2026-03-22",
+      "total_km": 11.99,
+      "sessions": 2,
+      "avg_hr": 154,
+      "avg_pace": 6.11,
+      "total_kcal": 851,
+      "running": {
+        "km": 11.99,
+        "sessions": 2,
+        "avg_hr": 154,
+        "avg_pace": 6.11
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-03-23/2026-03-29",
+      "total_km": 24.72,
+      "sessions": 2,
+      "avg_hr": 144,
+      "avg_pace": 6.771,
+      "total_kcal": 1813,
+      "running": {
+        "km": 24.72,
+        "sessions": 2,
+        "avg_hr": 144,
+        "avg_pace": 6.771
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-03-30/2026-04-05",
+      "total_km": 14.07,
+      "sessions": 2,
+      "avg_hr": 152,
+      "avg_pace": 6.434,
+      "total_kcal": 992,
+      "running": {
+        "km": 14.07,
+        "sessions": 2,
+        "avg_hr": 152,
+        "avg_pace": 6.434
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-04-06/2026-04-12",
+      "total_km": 30.98,
+      "sessions": 5,
+      "avg_hr": 144,
+      "avg_pace": 6.16,
+      "total_kcal": 2029,
+      "running": {
+        "km": 30.98,
+        "sessions": 5,
+        "avg_hr": 144,
+        "avg_pace": 6.16
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-04-13/2026-04-19",
+      "total_km": 13.97,
+      "sessions": 2,
+      "avg_hr": 144,
+      "avg_pace": 6.598,
+      "total_kcal": 997,
+      "running": {
+        "km": 13.97,
+        "sessions": 2,
+        "avg_hr": 144,
+        "avg_pace": 6.598
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-04-20/2026-04-26",
+      "total_km": 12.58,
+      "sessions": 1,
+      "avg_hr": 154,
+      "avg_pace": 6.37,
+      "total_kcal": 1354,
+      "running": {
+        "km": 12.58,
+        "sessions": 1,
+        "avg_hr": 154,
+        "avg_pace": 6.37
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 95,
+        "sessions": 1
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-04-27/2026-05-03",
+      "total_km": 19.94,
+      "sessions": 2,
+      "avg_hr": 151,
+      "avg_pace": 6.321,
+      "total_kcal": 1406,
+      "running": {
+        "km": 19.94,
+        "sessions": 2,
+        "avg_hr": 151,
+        "avg_pace": 6.321
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-05-04/2026-05-10",
+      "total_km": 24.74,
+      "sessions": 4,
+      "avg_hr": 146,
+      "avg_pace": 6.396,
+      "total_kcal": 1537,
+      "running": {
+        "km": 24.74,
+        "sessions": 4,
+        "avg_hr": 146,
+        "avg_pace": 6.396
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-05-11/2026-05-17",
+      "total_km": 15.34,
+      "sessions": 2,
+      "avg_hr": 150,
+      "avg_pace": 6.016,
+      "total_kcal": 1055,
+      "running": {
+        "km": 15.34,
+        "sessions": 2,
+        "avg_hr": 150,
+        "avg_pace": 6.016
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-05-18/2026-05-24",
+      "total_km": 28.09,
+      "sessions": 3,
+      "avg_hr": 140,
+      "avg_pace": 7.406,
+      "total_kcal": 2045,
+      "running": {
+        "km": 28.09,
+        "sessions": 3,
+        "avg_hr": 140,
+        "avg_pace": 7.406
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-05-25/2026-05-31",
+      "total_km": 18.24,
+      "sessions": 1,
+      "avg_hr": 145,
+      "avg_pace": 6.335,
+      "total_kcal": 1558,
+      "running": {
+        "km": 18.24,
+        "sessions": 1,
+        "avg_hr": 145,
+        "avg_pace": 6.335
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 70,
+        "sessions": 1
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-06-01/2026-06-07",
+      "total_km": 8.71,
+      "sessions": 1,
+      "avg_hr": 142,
+      "avg_pace": 6.91,
+      "total_kcal": 609,
+      "running": {
+        "km": 8.71,
+        "sessions": 1,
+        "avg_hr": 142,
+        "avg_pace": 6.91
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-06-08/2026-06-14",
+      "total_km": 40.86,
+      "sessions": 3,
+      "avg_hr": 143,
+      "avg_pace": 7.501,
+      "total_kcal": 2960,
+      "running": {
+        "km": 40.86,
+        "sessions": 3,
+        "avg_hr": 143,
+        "avg_pace": 7.501
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-06-15/2026-06-21",
+      "total_km": 32.52,
+      "sessions": 3,
+      "avg_hr": 145,
+      "avg_pace": 6.807,
+      "total_kcal": 2705,
+      "running": {
+        "km": 32.52,
+        "sessions": 3,
+        "avg_hr": 145,
+        "avg_pace": 6.807
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 72,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-06-22/2026-06-28",
+      "total_km": 6.16,
+      "sessions": 1,
+      "avg_hr": 154,
+      "avg_pace": 5.855,
+      "total_kcal": 429,
+      "running": {
+        "km": 6.16,
+        "sessions": 1,
+        "avg_hr": 154,
+        "avg_pace": 5.855
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 1
+    },
+    {
+      "week": "2026-06-29/2026-07-05",
+      "total_km": 46.74,
+      "sessions": 3,
+      "avg_hr": 147,
+      "avg_pace": 7.206,
+      "total_kcal": 3793,
+      "running": {
+        "km": 46.74,
+        "sessions": 3,
+        "avg_hr": 147,
+        "avg_pace": 7.206
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 69,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-07-06/2026-07-12",
+      "total_km": 10.96,
+      "sessions": 2,
+      "avg_hr": 149,
+      "avg_pace": 6.149,
+      "total_kcal": 755,
+      "running": {
+        "km": 10.96,
+        "sessions": 2,
+        "avg_hr": 149,
+        "avg_pace": 6.149
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 2
+    },
+    {
+      "week": "2026-07-13/2026-07-19",
+      "total_km": 46.61,
+      "sessions": 2,
+      "avg_hr": 149,
+      "avg_pace": 6.364,
+      "total_kcal": 3638,
+      "running": {
+        "km": 46.61,
+        "sessions": 2,
+        "avg_hr": 149,
+        "avg_pace": 6.364
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 58,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-07-20/2026-07-26",
+      "total_km": 38.73,
+      "sessions": 4,
+      "avg_hr": 135,
+      "avg_pace": 6.323,
+      "total_kcal": 2999,
+      "running": {
+        "km": 38.73,
+        "sessions": 4,
+        "avg_hr": 135,
+        "avg_pace": 6.323
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 68,
+        "sessions": 1
+      },
+      "total_sessions": 5
+    },
+    {
+      "week": "2026-07-27/2026-08-02",
+      "total_km": 40.3,
+      "sessions": 3,
+      "avg_hr": 146,
+      "avg_pace": 6.504,
+      "total_kcal": 3524,
+      "running": {
+        "km": 40.3,
+        "sessions": 3,
+        "avg_hr": 146,
+        "avg_pace": 6.504
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 193,
+        "sessions": 1
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-08-03/2026-08-09",
+      "total_km": 31.74,
+      "sessions": 3,
+      "avg_hr": 141,
+      "avg_pace": 6.375,
+      "total_kcal": 2227,
+      "running": {
+        "km": 31.74,
+        "sessions": 3,
+        "avg_hr": 141,
+        "avg_pace": 6.375
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-10/2026-08-16",
+      "total_km": 20.94,
+      "sessions": 2,
+      "avg_hr": 142,
+      "avg_pace": 5.13,
+      "total_kcal": 1400,
+      "running": {
+        "km": 20.94,
+        "sessions": 2,
+        "avg_hr": 142,
+        "avg_pace": 5.13
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 62,
+        "sessions": 1
+      },
+      "total_sessions": 3
+    },
+    {
+      "week": "2026-08-17/2026-08-23",
+      "total_km": 33.55,
+      "sessions": 5,
+      "avg_hr": 141,
+      "avg_pace": 6.654,
+      "total_kcal": 2525,
+      "running": {
+        "km": 33.55,
+        "sessions": 5,
+        "avg_hr": 141,
+        "avg_pace": 6.654
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 6
+    },
+    {
+      "week": "2026-08-24/2026-08-30",
+      "total_km": 31.05,
+      "sessions": 4,
+      "avg_hr": 145,
+      "avg_pace": 6.053,
+      "total_kcal": 2172,
+      "running": {
+        "km": 31.05,
+        "sessions": 4,
+        "avg_hr": 145,
+        "avg_pace": 6.053
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 4
+    },
+    {
+      "week": "2026-08-31/2026-09-06",
+      "total_km": 56.25,
+      "sessions": 3,
+      "avg_hr": 147,
+      "avg_pace": 6.267,
+      "total_kcal": 4106,
+      "running": {
+        "km": 56.25,
+        "sessions": 3,
+        "avg_hr": 147,
+        "avg_pace": 6.267
+      },
+      "cycling": {
+        "km": 0,
+        "sessions": 0
+      },
+      "swimming": {
+        "metros": 0,
+        "sessions": 0
+      },
+      "strength": {
+        "minutos": 0,
+        "sessions": 0
+      },
+      "total_sessions": 3
+    }
+  ],
+  "acwr": {
+    "valor": null,
+    "status": null,
+    "confiable": false,
+    "semana": null,
+    "series": {
+      "aerobic": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.35,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 1.08,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.73,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.77,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.03,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.23,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.35,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.44,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.67,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.68,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.03,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.65,
+          "status": "high_risk"
+        }
+      ],
+      "running": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.86,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-05-18",
+          "weekEnd": "2026-05-24",
+          "valor": 1.35,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 0.85,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.49,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.73,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 1.29,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.27,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.48,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.44,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.67,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.04,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 1.24,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.82,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.5,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 1.09,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 1.11,
+          "status": "optimal"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.69,
+          "status": "high_risk"
+        }
+      ],
+      "cycling": [
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 1.98,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 1.92,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 1.07,
+          "status": "insufficient_data"
+        }
+      ],
+      "strength": [
+        {
+          "weekStart": "2026-05-11",
+          "weekEnd": "2026-05-17",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-05-25",
+          "weekEnd": "2026-05-31",
+          "valor": 4.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-01",
+          "weekEnd": "2026-06-07",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-08",
+          "weekEnd": "2026-06-14",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-15",
+          "weekEnd": "2026-06-21",
+          "valor": 2.03,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-22",
+          "weekEnd": "2026-06-28",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-06-29",
+          "weekEnd": "2026-07-05",
+          "valor": 1.96,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-06",
+          "weekEnd": "2026-07-12",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-13",
+          "weekEnd": "2026-07-19",
+          "valor": 1.82,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-07-20",
+          "weekEnd": "2026-07-26",
+          "valor": 1.39,
+          "status": "elevated"
+        },
+        {
+          "weekStart": "2026-07-27",
+          "weekEnd": "2026-08-02",
+          "valor": 2.42,
+          "status": "high_risk"
+        },
+        {
+          "weekStart": "2026-08-03",
+          "weekEnd": "2026-08-09",
+          "valor": 0.0,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-10",
+          "weekEnd": "2026-08-16",
+          "valor": 0.77,
+          "status": "undertraining"
+        },
+        {
+          "weekStart": "2026-08-17",
+          "weekEnd": "2026-08-23",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-24",
+          "weekEnd": "2026-08-30",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        },
+        {
+          "weekStart": "2026-08-31",
+          "weekEnd": "2026-09-06",
+          "valor": 0.0,
+          "status": "insufficient_data"
+        }
+      ]
+    }
+  },
+  "pulse": null,
+  "semanaAnalizada": {
+    "inicio": "2026-09-07",
+    "fin": "2026-09-13"
+  },
+  "taper": [],
+  "retos": [],
+  "delivery": {
+    "version": "20260914-v2-entrega",
+    "status": "insufficient_data",
+    "notice": {
+      "title": "Sin registros del 7 al 13 de septiembre",
+      "description": "Tu historial incluye la maratón del 6 de septiembre. No tenemos actividades registradas del 7 al 13: puede corresponder a descanso o a actividades pendientes de sincronización. No generamos un puntaje ni un plan para esa semana con datos insuficientes."
+    },
+    "followUp": {
+      "question": "¿Del 7 al 13 de septiembre descansaste después de la maratón o faltan actividades por sincronizar?",
+      "instruction": "Responde al correo con el que recibiste este reporte. Tu respuesta nos ayudará a completar el contexto de tu próxima entrega."
+    }
+  }
+}
